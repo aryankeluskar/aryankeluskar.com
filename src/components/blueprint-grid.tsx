@@ -36,8 +36,8 @@ export function BlueprintGrid() {
         className="absolute inset-0"
         style={{
           backgroundImage: `
-            linear-gradient(to right, rgb(var(--primary)) 1px, transparent 1px),
-            linear-gradient(to bottom, rgb(var(--primary)) 1px, transparent 1px)
+            linear-gradient(to right, rgb(var(--grid-color)) 1px, transparent 1px),
+            linear-gradient(to bottom, rgb(var(--grid-color)) 1px, transparent 1px)
           `,
           backgroundSize: '24px 24px',
         }}

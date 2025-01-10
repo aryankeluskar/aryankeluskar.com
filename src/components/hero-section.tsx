@@ -30,19 +30,19 @@ export function HeroSection() {
             href={DATA.resumeUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="nameButtons px-[3vw] py-[1.5vh] mx-[1vw] font-solway font-semibold text-[2.3vh] text-black bg-[rgba(0,255,75,0.33)] hover:bg-[rgba(0,255,75,0.5)] transition-colors"
+            className="nameButtons px-[3vw] py-[1.5vh] mx-[1vw] font-solway font-semibold text-[2.3vh] text-foreground bg-[rgba(0,255,75,0.33)] hover:bg-[rgba(0,255,75,0.5)] transition-colors"
           >
             resume
           </Link>
           <Link 
             href="#projects"
-            className="nameButtons px-[3vw] py-[1.5vh] mx-[1vw] font-solway font-semibold text-[2.3vh] text-black bg-[rgba(24,0,255,0.33)] hover:bg-[rgba(24,0,255,0.5)] transition-colors"
+            className="nameButtons px-[3vw] py-[1.5vh] mx-[1vw] font-solway font-semibold text-[2.3vh] text-foreground bg-[rgba(24,0,255,0.33)] hover:bg-[rgba(24,0,255,0.5)] transition-colors"
           >
             projects
           </Link>
           <Link 
             href="#contact"
-            className="nameButtons px-[3vw] py-[1.5vh] mx-[1vw] font-solway font-semibold text-[2.3vh] text-black bg-[rgba(255,0,0,0.33)] hover:bg-[rgba(255,0,0,0.5)] transition-colors"
+            className="nameButtons px-[3vw] py-[1.5vh] mx-[1vw] font-solway font-semibold text-[2.3vh] text-foreground bg-[rgba(255,0,0,0.33)] hover:bg-[rgba(255,0,0,0.5)] transition-colors"
           >
             contact
           </Link>
