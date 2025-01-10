@@ -5,11 +5,19 @@ import { DATA } from "@/data/resume";
 import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
 import { Inter as FontSans } from "next/font/google";
+import { Solway } from "next/font/google";
 import "./globals.css";
+import { BlueprintGrid } from "@/components/blueprint-grid";
 
 const fontSans = FontSans({
   subsets: ["latin"],
   variable: "--font-sans",
+});
+
+const solway = Solway({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "700", "800"],
+  variable: "--font-solway",
 });
 
 export const metadata: Metadata = {
@@ -19,6 +27,11 @@ export const metadata: Metadata = {
     template: `%s | ${DATA.name}`,
   },
   description: DATA.description,
+  icons: {
+    icon: '/some pfp.jpg',
+    shortcut: '/some pfp.jpg',
+    apple: '/some pfp.jpg',
+  },
   openGraph: {
     title: `${DATA.name}`,
     description: DATA.description,
@@ -58,11 +71,13 @@ export default function RootLayout({
       <body
         className={cn(
           "min-h-screen bg-background font-sans antialiased max-w-2xl mx-auto py-12 sm:py-24 px-6",
-          fontSans.variable
+          fontSans.variable,
+          solway.variable
         )}
       >
         <ThemeProvider attribute="class" defaultTheme="light">
           <TooltipProvider delayDuration={0}>
+            <BlueprintGrid />
             {children}
             <Navbar />
           </TooltipProvider>

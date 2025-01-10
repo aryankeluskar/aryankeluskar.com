@@ -5,12 +5,13 @@ export const DATA = {
   name: "Aryan Keluskar",
   initials: "AK",
   url: "https://aryankeluskar.com",
+  resumeUrl: "https://aryankeluskar.com/resume",
   location: "Tempe, AZ",
   locationLink: "https://www.google.com/maps/place/sanfrancisco",
-  description:
-    "18, i build scalable fast backends and ios apps. i love to meet people; develop impactful fast software; and to innovate & inspire!",
+  description: "18, i build scalable fast backends and ios apps.",
+  description2: "i love to meet people; develop impactful fast software; and to innovate & inspire!",
   summary:
-      "I'm an 18 year old college junior with a passion for problem solving, learning intricate concepts, and building products. I was first exposed to coding when I was 10. Solving problems by converting my thoughts to tangible results in languages that feel incredibly cryptic has been one of the most amazing feelings ever. ",
+      "I'm an 18 year old college junior studying computer science and statistics with a passion for solving problems, learning intricate concepts, and building products. I was first exposed to coding when I was 10. Solving problems by converting my thoughts to tangible results in languages that feel incredibly cryptic has been one of the most amazing feelings ever. ",
     // "At the end of 2022, I quit my job as a software engineer to go fulltime into building and scaling my own SaaS businesses. In the past, [I pursued a double degree in computer science and business](/#education), [interned at big tech companies in Silicon Valley](https://www.youtube.com/watch?v=d-LJ2e5qKdE), and [competed in over 21 hackathons for fun](/#hackathons). I also had the pleasure of being a part of the first ever in-person cohort of buildspace called [buildspace sf1](https://buildspace.so/sf1).",
   avatarUrl: "/me.png",
   skills: [
@@ -31,34 +32,34 @@ export const DATA = {
     { href: "/blog", icon: NotebookIcon, label: "Blog" },
   ],
   contact: {
-    email: "hello@example.com",
-    tel: "+123456789",
+    email: "aryankeluskar6@gmail.com",
+    tel: "+16025526402",
     social: {
       GitHub: {
         name: "GitHub",
-        url: "https://dub.sh/dillion-github",
+        url: "https://dub.sh/aryans-github",
         icon: Icons.github,
 
         navbar: true,
       },
       LinkedIn: {
         name: "LinkedIn",
-        url: "https://dub.sh/dillion-linkedin",
+        url: "https://dub.sh/aryans-linkedin",
         icon: Icons.linkedin,
 
         navbar: true,
       },
       X: {
         name: "X",
-        url: "https://dub.sh/dillion-twitter",
+        url: "https://dub.sh/aryans-twitter",
         icon: Icons.x,
 
         navbar: true,
       },
-      Youtube: {
-        name: "Youtube",
-        url: "https://dub.sh/dillion-youtube",
-        icon: Icons.youtube,
+      Strava: {
+        name: "Strava",
+        url: "https://dub.sh/aryans-strava",
+        icon: Icons.strava,
         navbar: true,
       },
       email: {

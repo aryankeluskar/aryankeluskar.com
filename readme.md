@@ -11,15 +11,17 @@ This is the repository for my personal website. It is a static website that is h
 
 # TODO
 
-- [x] Add a favicon
-- [ ] Make the hero image semi-elliptical
-- [ ] Have hyperlinks and images to hometowns
-- [x] Update the resume link
-- [ ] Add projects to the projects page
+- [x] Add a favicon which is same as aryankeluskar.com
+- [ ] Make the hero image semi-elliptical like sohamdaga.com
+- [ ] Have hyperlinks and beautiful sunset images to hometowns, in order: Chandler, AZ; Hyderabad, TS; Mumbai, MH
+- [x] Update the resume link to aryankeluskar.com/resume
 - [ ] Paralax scrolling on the home page
-- [ ] Use `Solway` font
-- [ ] Blueprint-like grid pattern in the background
-- [ ] Add Buttons to Resume, Projects, and Contact below hero
+- [x] Use `Solway` font for text
+- [x] Blueprint-like grid pattern in the background like aryankeluskar.com
+- [x] Add Buttons for Resume, Projects, and Contact just below hero which are colored like aryankeluskar.com
+
+# Future
+- [ ] Add projects to the projects page
 - [ ] Expand on hackathon wins and conferences
 - [ ] Add color
 - [ ] Cycling adventures(?)
