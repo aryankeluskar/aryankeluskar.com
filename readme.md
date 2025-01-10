@@ -4,9 +4,8 @@ This is the repository for my personal website. It is a static website that is h
 
 - Scripting: [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
 - Styling: [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
-- Deployment: [GitHub Pages](https://pages.github.com/), (Future: [Vercel](https://vercel.com))
+- Deployment & SSL: [Vercel](https://vercel.com)
 - Domain: [Cloudflare Registrar](https://www.cloudflare.com/products/registrar/)
-- SSL: Vercel
 - Analytics: [dub.sh](https://dub.sh)
 
 # TODO
