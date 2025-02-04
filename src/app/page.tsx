@@ -90,9 +90,9 @@ export default function Page() {
                 description={project.description}
                 dates={project.dates}
                 tags={project.technologies}
-                image={project.image}
-                video={project.video}
-                links={project.links}
+                {...(project.image && { image: project.image })}
+                {...(project.video && { video: project.video })}
+                {...(project.links && { links: project.links })}
               />
             ))}
           </div>
@@ -121,13 +121,13 @@ export default function Page() {
           <ul className="mb-4 ml-4 divide-y divide-dashed border-l">
             {DATA.hackathons.map((project) => (
               <HackathonCard
-                key={project.title + project.dates}
+                key={project.title}
                 title={project.title}
-                description={project.description}
-                location={project.location}
-                dates={project.dates}
-                image={project.image}
-                links={project.links}
+                {...(project.description && { description: project.description })}
+                {...(project.dates && { dates: project.dates })}
+                {...(project.location && { location: project.location })}
+                {...(project.image && { image: project.image })}
+                {...(project.links && { links: project.links })}
               />
             ))}
           </ul>

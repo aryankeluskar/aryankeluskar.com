@@ -1,6 +1,28 @@
 import { Icons } from "@/components/icons";
 import { HomeIcon, NotebookIcon } from "lucide-react";
 
+type ProjectType = {
+  title: string;
+  href: string;
+  dates: string;
+  active: boolean;
+  description: string;
+  technologies: string[];
+  image?: string;
+  video?: string;
+  links?: Array<{ href: string; label: string }>;
+};
+
+type HackathonType = {
+  title: string;
+  project?: string;
+  image?: string;
+  dates?: string;
+  location?: string;
+  description?: string;
+  links?: Array<{ href: string; label: string }>;
+};
+
 export const DATA = {
   name: "Aryan Keluskar",
   initials: "AK",
@@ -27,12 +49,9 @@ export const DATA = {
       image: "/hackmit.png",
       description: "Awarded 1000$ for `Best Use of AI without an API`",
       dates: "September 2024",
-      location: "Cambridge, MA",
-      // links: [
-        //   { href: "https://devpost.com/software/ai-in-education-by-scaleup", label: "Devpost" }
-        // ]
-      },
-      {
+      location: "Cambridge, MA"
+    },
+    {
       title: "SFHacks 2024 (Sponsor Track 🏆)",
       project: "https://devpost.com/software/ai-in-education-by-scaleup",
       image: "/sfhacks.png",
@@ -70,7 +89,7 @@ export const DATA = {
       dates: "November 2023",
       location: "Tempe, AZ"
     }
-  ],
+  ] as HackathonType[],
   skills: [
     "Java",
     "C++", 
@@ -188,10 +207,8 @@ export const DATA = {
       description: "Developed a full stack web-app that reduces food wastage by delivering automated expiry notifications, generating personalized recipes, and creating a peer-to-peer network for surplus food.",
       technologies: ["ReactJS", "NodeJS", "TypeScript", "Python", "Google Cloud"],
       // image: "/freshuntil.png",
-      // video: null,
-      // links: [
-      //   { href: "https://git.new/fresh", label: "GitHub" }
-      // ]
+      video: null,
+      // links: [{ href: "https://git.new/fresh", label: "GitHub" }]
     },
     {
       title: "EasyWire",
@@ -209,5 +226,5 @@ export const DATA = {
       description: "Created an API to convert Spotify songs or playlists to YouTube within 0.2 seconds. Improved performance by 12x with multi-threading and developed a unique scoring algorithm which maximizes speed and accuracy.",
       technologies: ["TypeScript", "Python", "FastAPI", "HTML", "CSS", "Google Cloud"]
     }
-  ]
+  ] as ProjectType[]
 } as const;
