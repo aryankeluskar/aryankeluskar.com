@@ -10,7 +10,11 @@ type ProjectType = {
   technologies: string[];
   image?: string;
   video?: string;
-  links?: Array<{ href: string; label: string }>;
+  links?: readonly {
+    icon: React.ReactNode;
+    type: string;
+    href: string;
+  }[];
 };
 
 type HackathonType = {
@@ -20,7 +24,11 @@ type HackathonType = {
   dates?: string;
   location?: string;
   description?: string;
-  links?: Array<{ href: string; label: string }>;
+  links?: readonly {
+    icon: React.ReactNode;
+    title: string;
+    href: string;
+  }[];
 };
 
 export const DATA = {
@@ -41,7 +49,12 @@ export const DATA = {
       image: "/calhacks.png",
       dates: "October 2024",
       location: "Berkeley, CA",
-      description: "Won the Best Use of Google Cloud Award"
+      description: "Won the Best Use of Google Cloud Award",
+      links: [{
+        icon: Icons.devpost,
+        title: "DevPost",
+        href: "https://devpost.com/software/ai-in-education-by-scaleup"
+      }]
     },
     {
       title: "HackMIT 2024 (Sponsor Prize 🏆)",
@@ -208,7 +221,11 @@ export const DATA = {
       technologies: ["ReactJS", "NodeJS", "TypeScript", "Python", "Google Cloud"],
       // image: "/freshuntil.png",
       video: null,
-      // links: [{ href: "https://git.new/fresh", label: "GitHub" }]
+      links: [{ 
+        icon: Icons.github,
+        type: "GitHub",
+        href: "https://git.new/fresh"
+      }]
     },
     {
       title: "EasyWire",
