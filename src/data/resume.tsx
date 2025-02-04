@@ -44,6 +44,14 @@ export const DATA = {
   avatarUrl: "/me.png",
   hackathons: [
     {
+      title: "HackIllinois 2025",
+      project: "https://devpost.com/software/ai-in-education-by-scaleup",
+      image: "/hackillinois.png",
+      dates: "February 2025",
+      location: "Urbana-Champaign, IL",
+      description: "DM if you are participating and want to team up!",
+    },
+    {
       title: "CalHacks 2024",
       project: "https://devpost.com/software/ai-in-education-by-scaleup",
       image: "/calhacks.png",
@@ -60,7 +68,7 @@ export const DATA = {
       title: "HackMIT 2024 (Sponsor Prize 🏆)",
       project: "https://devpost.com/software/ai-in-education-by-scaleup",
       image: "/hackmit.png",
-      description: "Awarded 1000$ for `Best Use of AI without an API`",
+      description: "Awarded 1000$ in `Best Use of AI without an API`",
       dates: "September 2024",
       location: "Cambridge, MA"
     },
@@ -73,14 +81,6 @@ export const DATA = {
       location: "San Francisco, CA"
     },
     {
-      title: "AI in Education by ScaleU (Honorable Mention 🏆)",
-      project: "https://devpost.com/software/ai-in-education-by-scaleup",
-      image: "/scaleup.png",
-      description: "Won the Best Use of Google Cloud Award",
-      dates: "October 2023",
-      location: "Scottsdale, AZ"
-    },
-    {
       title: "LAHacks 2024",
       project: "https://devpost.com/software/ai-in-education-by-scaleup",
       image: "/lahacks.png",
@@ -89,12 +89,27 @@ export const DATA = {
       location: "Los Angeles, CA"
     },
     {
+      title: "WiCS Coding Contest 2024 + HKD Code-a-thon 2024",
+      image: "/wics.png",
+      description: "Won 1st Place Undergraduate Team (out of 150+ participants) at WiCS and 1st Place Overall at HKD Code-a-thon. Both of these were Leetcode-style coding competitions with questions in Data Structures and Algorithms.",
+      dates: "March 2024",
+      location: "Tempe, AZ"
+    },
+    {
       title: "SunHacks 2023",
       project: "https://devpost.com/software/ai-in-education-by-scaleup",
       image: "/sunhacks.png",
       description: "Won the Best Use of Google Cloud Award",
       dates: "November 2023",
       location: "Tempe, AZ"
+    },
+    {
+      title: "AI in Education by ScaleU (Honorable Mention 🏆)",
+      project: "https://devpost.com/software/ai-in-education-by-scaleup",
+      image: "/scaleup.png",
+      description: "Won the Best Use of Google Cloud Award",
+      dates: "October 2023",
+      location: "Scottsdale, AZ"
     },
     {
       title: "Opportunity Hack 2023 (Finalist)",
