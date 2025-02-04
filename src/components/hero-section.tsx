@@ -1,6 +1,7 @@
 import { DATA } from "@/data/resume";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import Link from "next/link";
+import Markdown from "react-markdown";
 
 export function HeroSection() {
   return (
@@ -11,12 +12,14 @@ export function HeroSection() {
             <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none font-solway">
               {`Hi, I'm ${DATA.name.split(" ")[0]} 👋`}
             </h1>
-            <p className="max-w-[600px] md:text-xl">
-              {DATA.description}
-            </p>
-            <p className="max-w-[600px] md:text-xl">
+            <div className="max-w-[600px] md:text-xl">
+              <Markdown className="prose max-w-full text-pretty font-sans dark:prose-invert">
+                {DATA.description}
+              </Markdown>
+            </div>
+            {/* <p className="max-w-[600px] md:text-xl">
                 {DATA.description2}
-            </p>
+            </p> */}
           </div>
           <Avatar className="size-28 border">
             <AvatarImage alt={DATA.name} src={DATA.avatarUrl} />
@@ -50,4 +53,4 @@ export function HeroSection() {
       </div>
     </section>
   );
-} 
+}

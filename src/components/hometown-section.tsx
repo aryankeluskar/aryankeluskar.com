@@ -22,7 +22,7 @@ const HOMETOWNS = [
 export function HometownSection() {
   return (
     <section id="hometowns" className="py-12">
-      <h2 className="text-xl font-bold font-solway mb-6">My Hometowns</h2>
+      <h2 className="text-xl font-bold font-solway mb-6">Sunsets From My Hometowns</h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {HOMETOWNS.map((hometown, index) => (
           <Link
