@@ -14,45 +14,61 @@ export const DATA = {
   avatarUrl: "/me.png",
   hackathons: [
     {
-      title: "HackMIT 2024",
+      title: "CalHacks 2024",
+      project: "https://devpost.com/software/ai-in-education-by-scaleup",
+      image: "/calhacks.png",
+      dates: "October 2024",
+      location: "Berkeley, CA",
+      description: "Won the Best Use of Google Cloud Award"
+    },
+    {
+      title: "HackMIT 2024 (Sponsor Prize 🏆)",
       project: "https://devpost.com/software/ai-in-education-by-scaleup",
       image: "/hackmit.png",
-      description: "Won the Best Use of Google Cloud Award"
-    },
-    {
-      title: "SFHacks 2024",
+      description: "Awarded 1000$ for `Best Use of AI without an API`",
+      dates: "September 2024",
+      location: "Cambridge, MA",
+      // links: [
+        //   { href: "https://devpost.com/software/ai-in-education-by-scaleup", label: "Devpost" }
+        // ]
+      },
+      {
+      title: "SFHacks 2024 (Sponsor Track 🏆)",
       project: "https://devpost.com/software/ai-in-education-by-scaleup",
       image: "/sfhacks.png",
-      description: "Won the Best Use of Google Cloud Award"
+      description: "Won the Best Use of Google Cloud Award",
+      dates: "April 2024",
+      location: "San Francisco, CA"
     },
     {
-      title: "AI in Education by ScaleU",
+      title: "AI in Education by ScaleU (Honorable Mention 🏆)",
       project: "https://devpost.com/software/ai-in-education-by-scaleup",
       image: "/scaleup.png",
-      description: "Won the Best Use of Google Cloud Award"
+      description: "Won the Best Use of Google Cloud Award",
+      dates: "October 2023",
+      location: "Scottsdale, AZ"
     },
     {
       title: "WiCS Coding Contest 2024",
       image: "/wics.png",
-      description: "Won the Best Use of Google Cloud Award"
-    },
-    {
-      title: "CalHacks 2024",
-      project: "https://devpost.com/software/ai-in-education-by-scaleup",
-      image: "/calhacks.png",
-      description: "Won the Best Use of Google Cloud Award"
+      description: "1st Place Undergraduate Team (out of 150+ participants)",
+      dates: "March 2024",
     },
     {
       title: "LAHacks 2024",
       project: "https://devpost.com/software/ai-in-education-by-scaleup",
       image: "/lahacks.png",
-      description: "Won the Best Use of Google Cloud Award"
+      description: "Won the Best Use of Google Cloud Award",
+      dates: "April 2024",
+      location: "Los Angeles, CA"
     },
     {
       title: "SunHacks 2023",
       project: "https://devpost.com/software/ai-in-education-by-scaleup",
       image: "/sunhacks.png",
-      description: "Won the Best Use of Google Cloud Award"
+      description: "Won the Best Use of Google Cloud Award",
+      dates: "November 2023",
+      location: "Tempe, AZ"
     }
   ],
   skills: [
@@ -127,7 +143,7 @@ export const DATA = {
       logoUrl: "/asu.png",
       start: "April 2024",
       end: "Present",
-      description: <>Fine-tuned <span style={{fontWeight: 'bold', color: '#74AA9C'}}>OpenAI</span>'s GPT-4o and 4o-mini models using <span style={{fontWeight: 'bold', color: '#306998'}}>Python</span> to improve comprehension of ambiguous human text, and co-authored an <span style={{fontWeight: 'bold', color: '#00629B'}}>IEEE</span> BigData paper with Professor Huan Liu and PhD Students.</>
+      description: <>Fine-tuned <span style={{fontWeight: 'bold', color: '#74AA9C'}}>OpenAI</span>&apos;s GPT-4o and 4o-mini models using <span style={{fontWeight: 'bold', color: '#306998'}}>Python</span> to improve comprehension of ambiguous human text, and co-authored an <span style={{fontWeight: 'bold', color: '#00629B'}}>IEEE</span> BigData paper with Professor Huan Liu and PhD Students.</>
     },
     {
       company: "The Biodesign Institute – Qiyun Lab",
@@ -170,7 +186,12 @@ export const DATA = {
       dates: "2024",
       active: true,
       description: "Developed a full stack web-app that reduces food wastage by delivering automated expiry notifications, generating personalized recipes, and creating a peer-to-peer network for surplus food.",
-      technologies: ["ReactJS", "NodeJS", "TypeScript", "Python", "Google Cloud"]
+      technologies: ["ReactJS", "NodeJS", "TypeScript", "Python", "Google Cloud"],
+      // image: "/freshuntil.png",
+      // video: null,
+      // links: [
+      //   { href: "https://git.new/fresh", label: "GitHub" }
+      // ]
     },
     {
       title: "EasyWire",
