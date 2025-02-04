@@ -6,7 +6,7 @@ This is the repository for my personal website. It is a static website that is h
 - Styling: [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
 - Deployment & SSL: [Vercel](https://vercel.com)
 - Domain: [Cloudflare Registrar](https://www.cloudflare.com/products/registrar/)
-- Analytics: [dub.sh](https://dub.sh)
+- Analytics: [dub.sh](https://dub.sh) and [umami.is](https://umami.is/)
 
 # TODO
 
