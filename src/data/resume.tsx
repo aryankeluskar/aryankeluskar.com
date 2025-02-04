@@ -81,12 +81,6 @@ export const DATA = {
       location: "Scottsdale, AZ"
     },
     {
-      title: "WiCS Coding Contest 2024",
-      image: "/wics.png",
-      description: "1st Place Undergraduate Team (out of 150+ participants)",
-      dates: "March 2024",
-    },
-    {
       title: "LAHacks 2024",
       project: "https://devpost.com/software/ai-in-education-by-scaleup",
       image: "/lahacks.png",
@@ -100,6 +94,14 @@ export const DATA = {
       image: "/sunhacks.png",
       description: "Won the Best Use of Google Cloud Award",
       dates: "November 2023",
+      location: "Tempe, AZ"
+    },
+    {
+      title: "Opportunity Hack 2023 (Finalist)",
+      project: "https://devpost.com/software/ai-in-education-by-scaleup",
+      image: "/opportunityhack.png",
+      description: "Top 5 Finalist out of 100+ participants",
+      dates: "October 2023",
       location: "Tempe, AZ"
     }
   ] as HackathonType[],
