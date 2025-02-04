@@ -51,7 +51,7 @@ export const DATA = {
       location: "Berkeley, CA",
       description: "Won the Best Use of Google Cloud Award",
       links: [{
-        icon: Icons.devpost,
+        icon: <Icons.devpost className="size-4" />,
         title: "DevPost",
         href: "https://devpost.com/software/ai-in-education-by-scaleup"
       }]
@@ -222,7 +222,7 @@ export const DATA = {
       // image: "/freshuntil.png",
       video: null,
       links: [{ 
-        icon: Icons.github,
+        icon: <Icons.github className="size-4" />,
         type: "GitHub",
         href: "https://git.new/fresh"
       }]
