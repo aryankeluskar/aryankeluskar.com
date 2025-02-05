@@ -37,15 +37,9 @@ export function HackathonCard({
         )}
         <h2 className="font-semibold leading-none">{title}</h2>
         {location && (
-          <p className="text-sm text-muted-foreground flex items-center gap-2">
-            {location}
-          </p>
-        )}
-        
-        {description && (
-          <span className="prose dark:prose-invert text-sm text-muted-foreground flex items-center gap-2">
+          <span className="text-sm text-muted-foreground flex items-center gap-2">
             {links && links.length > 0 && (
-              <span className="flex flex-row flex-wrap items-start gap-1">
+              <span className="flex flex-row flex-wrap my-1 items-start gap-1">
                 {links?.map((link, idx) => (
                   <Link href={link.href} key={idx}>
                     <Badge key={idx} title={link.title} className="flex gap-1">
@@ -56,6 +50,24 @@ export function HackathonCard({
                 ))}
               </span>
             )}
+            {location}
+          </span>
+        )}
+        
+        {description && (
+          <span className="prose dark:prose-invert text-sm text-muted-foreground flex items-center gap-2">
+            {/* {links && links.length > 0 && (
+              <span className="flex flex-row flex-wrap items-start gap-1">
+                {links?.map((link, idx) => (
+                  <Link href={link.href} key={idx}>
+                    <Badge key={idx} title={link.title} className="flex gap-1">
+                      {link.icon}
+                      {link.title}
+                    </Badge>
+                  </Link>
+                ))}
+              </span>
+            )} */}
             {description}
           </span>
         )}
