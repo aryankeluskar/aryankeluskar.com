@@ -209,7 +209,7 @@ export const DATA = {
       badges: [],
       location: "Arizona State University",
       title: "Undergraduate Researcher",
-      logoUrl: "/asu.png",
+      logoUrl: "/cropped-asu-icon.png",
       start: "April 2024",
       end: "Present",
       description: <>Fine-tuned OpenAI&apos;s <span style={{fontWeight: 'bold', color: '#74AA9C'}}>GPT-4o</span> and 4o-mini models using <span style={{fontWeight: 'bold', color: '#306998'}}>Python</span> to improve comprehension of ambiguous human text, and co-authored an <span style={{fontWeight: 'bold', color: '#00629B'}}>IEEE</span> BigData paper with Professor Huan Liu and PhD Students.</>
@@ -220,7 +220,7 @@ export const DATA = {
       badges: [],
       location: "Arizona State University",
       title: "Software Engineering Intern", 
-      logoUrl: "/biodesign.png",
+      logoUrl: "/skbio.webp",
       start: "May 2024",
       end: "August 2024",
       description: <>Created benchmarking and training scripts for Language Models using <span style={{fontWeight: 'bold', color: '#eb8f00'}}>HuggingFace</span> and <span style={{fontWeight: 'bold', color: '#306998'}}>Python</span> with PyTorch & Transformers libraries. Increased code coverage by 12.5% and resolved codebase warnings by 91.4%. Developed statistical models to improve gut microbe analysis significance by 10%.</>
@@ -231,7 +231,7 @@ export const DATA = {
       badges: [],
       location: "Remote",
       title: "Website Development Intern",
-      logoUrl: "/rcv.png",
+      logoUrl: "/rcv.jpeg",
       start: "June 2023", 
       end: "July 2023",
         description: <>Developed backend infrastructure for static assets and 3D models integration using <span style={{fontWeight: 'bold', color: '#306998'}}>JavaScript</span> and <span style={{fontWeight: 'bold', color: '#00629B'}}>React.js</span>, yielding 46% surge in customer satisfaction. Created <span style={{fontWeight: 'bold', color: '#eb8f00'}}>Power BI</span> dashboards and automated data collection using Google Analytics API, increasing click-through-rate by 29%.</>
@@ -242,7 +242,7 @@ export const DATA = {
       school: "Arizona State University (Barrett Honors)",
       href: "https://asu.edu",
       degree: <><strong>BS in Computer Science</strong>, Minor in Statistics</>,
-      logoUrl: "/asu.png",
+      logoUrl: "/maroon.webp",
       start: "August 2023",
       end: "May 2026",
       description: "GPA: 3.94\nCoursework: Data Structures & Algorithms, Programming with C/C++, Computer Organization, Assembly, Object-Oriented Programming, Digital Design, Software Engineering, Operating Systems, Information Assurance."
