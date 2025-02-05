@@ -14,7 +14,7 @@ export function BlueprintGrid() {
       if (scrollPosition <= fadeStartPoint) {
         setOpacity(0.08); // Initial subtle opacity
       } else if (scrollPosition >= fadeEndPoint) {
-        setOpacity(0);
+        setOpacity(0.02);
       } else {
         const fadeRange = fadeEndPoint - fadeStartPoint;
         const currentPosition = scrollPosition - fadeStartPoint;

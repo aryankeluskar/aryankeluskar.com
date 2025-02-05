@@ -4,17 +4,17 @@ import Image from "next/image";
 const HOMETOWNS = [
   {
     name: "Chandler, AZ",
-    image: "/hometowns/chandler.jpg",
+    image: "/hometowns/chandler.webp",
     mapUrl: "https://maps.google.com/?q=Chandler,AZ",
   },
   {
     name: "Hyderabad, TS",
-    image: "/hometowns/hyderabad.jpg",
+    image: "/hometowns/hps.webp",
     mapUrl: "https://maps.google.com/?q=Hyderabad,Telangana,India",
   },
   {
     name: "Mumbai, MH",
-    image: "/hometowns/mumbai.jpg",
+    image: "/hometowns/dadar.jpg",
     mapUrl: "https://maps.google.com/?q=Mumbai,Maharashtra,India",
   },
 ];
@@ -22,7 +22,8 @@ const HOMETOWNS = [
 export function HometownSection() {
   return (
     <section id="hometowns" className="py-12">
-      <h2 className="text-xl font-bold font-solway mb-6">Sunsets From My Hometowns</h2>
+      <h2 className="text-xl font-bold font-solway mb-6">I Grew Up in Six Cities</h2>
+      <p className="text-sm mb-6">Here are some of my favorite skies:</p>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {HOMETOWNS.map((hometown, index) => (
           <Link
@@ -30,7 +31,7 @@ export function HometownSection() {
             href={hometown.mapUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="group relative overflow-hidden rounded-lg aspect-video hover:scale-105 transition-transform duration-300"
+            className="group relative overflow-hidden rounded-lg aspect-[3/4] hover:scale-105 transition-transform duration-300"
           >
             <Image
               src={hometown.image}

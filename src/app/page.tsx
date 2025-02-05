@@ -56,7 +56,7 @@ export default function Page() {
       </section>
       <section id="skills">
         <div className="flex min-h-0 flex-col gap-y-3">
-          <h2 className="text-xl font-bold">Skills</h2>
+          <h2 className="text-xl font-bold">Skills & Tech Stack</h2>
           <div className="flex flex-wrap gap-1">
             {DATA.skills.map((skill) => (
               <Badge key={skill}>{skill}</Badge>

@@ -13,7 +13,7 @@ interface ResumeCardProps {
   logoUrl: string;
   altText: string;
   title: string;
-  subtitle?: string;
+  subtitle?: string | React.ReactNode;
   href?: string;
   badges?: readonly string[];
   period: string;
@@ -30,7 +30,7 @@ export const ResumeCard = ({
   description,
 }: ResumeCardProps) => {
   return (
-      <Card className="flex">
+      <Card className="flex pb-4">
         <div className="flex-none">
           <Avatar className="border size-12 m-auto bg-muted-background dark:bg-foreground">
             <AvatarImage
@@ -46,7 +46,7 @@ export const ResumeCard = ({
             <div className="flex items-center justify-between gap-x-2 text-base">
               <h3 className="inline-flex items-center justify-center font-semibold leading-none text-xs sm:text-sm">
                 <span className="text-m">
-                <a href={href || "#"} className="hover:underline">
+                <a href={href || "#"} className="hover:underline" target="_blank">
                   {title}
                 </a>
                 </span>
@@ -71,7 +71,7 @@ export const ResumeCard = ({
             {subtitle && <div className="font-sans text-xs">{subtitle}</div>}
           </CardHeader>
           {description && (
-            <div className="mt-2 text-xs sm:text-sm pr-6 pb-4">
+            <div className="mt-2 text-xs sm:text-sm pr-6">
               {description}
             </div>
           )}
