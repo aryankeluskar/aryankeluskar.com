@@ -51,7 +51,7 @@ export function BlueprintGrid() {
   }, []);
 
   const baseOpacity = opacity;
-  const spotlightOpacity = baseOpacity + (isOverText ? -0.02 : 0.06);
+  const spotlightOpacity = baseOpacity + (isOverText ? -0.02 : 0.035);
 
   if (!isMounted) {
     return null;

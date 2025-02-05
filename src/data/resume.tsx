@@ -114,9 +114,14 @@ export const DATA = {
       title: "SunHacks 2023",
       // project: "https://devpost.com/software/ai-in-education-by-scaleup",
       image: "/sunhacks.png",
-      // description: "Won the Best Use of Google Cloud Award",
+      description: "B",
       dates: "November 2023",
-      location: "Tempe, AZ"
+      location: "Tempe, AZ",
+      links: [{
+        // icon: <Icons.devpost className="size-4" />,
+        title: "TradeDaddy",
+        href: "https://devpost.com/software/tradedaddy?ref_content=my-projects-tab&ref_feature=my_projects"
+      }]
     },
     {
       title: "AI in Education by ScaleU (Honorable Mention 🏆)",
@@ -279,19 +284,18 @@ export const DATA = {
     ]
     },
     {
-      title: "FreshUntil",
-      href: "https://git.new/fresh",
+      title: "irina (AI for Minesweeper)",
+      href: "https://git.new/irina",
       dates: "2024",
       active: true,
-      description: "Developed a full stack web-app that reduces food wastage by delivering automated expiry notifications, generating personalized recipes, and creating a peer-to-peer network for surplus food.",
-      technologies: ["ReactJS", "NodeJS", "TypeScript", "Python", "Google Cloud"],
-      // image: "/freshuntil.png",
-      video: null,
-      links: [{ 
+      description: "Artificial Intelligence that solves Minesweeper in record-breaking time. Uses a probabilistic approach, scans the grid, calls a Reinforcement Learning model to make decisions based on the existing grid.",
+      technologies: ["Reinforcement Learning", "Python", "TensorFlow", "Pytorch", "Jupyter Notebook"],
+      links: [{
         icon: <Icons.github className="size-4" />,
         type: "GitHub",
-        href: "https://git.new/fresh"
-      }]
+        href: "https://git.new/irina"
+      }
+    ]
     },
     {
       title: "MelodySyncer",
@@ -311,6 +315,86 @@ export const DATA = {
         href: "https://dub.sh/melodysyncer"
       }
     ]
+    },
+    {
+      title: "FreshUntil",
+      href: "https://git.new/fresh",
+      dates: "2024",
+      active: true,
+      description: "Developed a full stack web-app that reduces food wastage by delivering automated expiry notifications, generating personalized recipes, and creating a peer-to-peer network to share surplus food.",
+      technologies: ["ReactJS", "NodeJS", "TypeScript", "Python", "Google Cloud"],
+      // image: "/freshuntil.png",
+      video: null,
+      links: [{ 
+        icon: <Icons.github className="size-4" />,
+        type: "GitHub",
+        href: "https://git.new/fresh"
+      }]
+    },
+    {
+      title: "AMRAS",
+      href: "https://git.new/ecmo-bridge",
+      dates: "2024",
+      active: true,
+      description: "Web-app designed to efficiently allocate Extracorporeal Membrane Oxygenation (ECMO) machines to patients in critical need using a dynamic matching algorithm. Built for Mayo Clinic Phoenix, in a 6-member team.",
+      technologies: ["ReactJS", "NodeJS", "TypeScript", "Python", "Google Cloud"],
+      links: [{
+        icon: <Icons.github className="size-4" />,
+        type: "GitHub",
+        href: "https://git.new/ecmo-bridge"
+      },
+      {
+        icon: <Icons.globe className="size-4" />,
+        type: "Website",
+        href: "https://dub.sh/amras"
+      }
+    ]
+    },
+    {
+      title: "EdComposer",
+      href: "https://git.new/edcomposer",
+      dates: "2024",
+      active: true,
+      description: "EdComposer is the best and the most efficient way to make beautiful educational videos with just one pdf and one prompt. Built in a 4-member team in October 2023, using cloud-rendering to generate slideshow-style videos.",
+      technologies: ["TypeScript", "Python", "FastAPI", "HTML", "CSS", "Google Cloud"],
+      links: [{
+        icon: <Icons.github className="size-4" />,
+        type: "GitHub",
+        href: "https://git.new/edcomposer"
+      }
+    ]
+    },
+    {
+      title: "IMDB Analysis",
+      href: "github.com/aryankeluskar/IMDB-Genres-Analysis",
+      dates: "2024",
+      active: true,
+      description: "Filtered IMDB&apos;s dataset of over 730,000 entries using SQL, producing a robust and reliable dataset. Developed a data processing and visualization algorithm in Python. Used Seasonal Trend Decomposition and Monte Carlo Dropout to forecast movie ratings.",
+      technologies: ["Python", "SQL", "Julia", "DataFrames", "Plots", "Monte Carlo Dropout", "Time Series"],
+      links: [{
+        icon: <Icons.github className="size-4" />,
+        type: "GitHub",
+        href: "https://github.com/aryankeluskar/IMDB-Genres-Analysis"
+      }
+    ]
+    },
+    {
+      title: "Portfolio",
+      href: "https://aryankeluskar.com",
+      dates: "2024",
+      active: true,
+      description: "Personal website built with Next.js, Tailwind CSS, and TypeScript. Hosted on Vercel. I mean, you are looking at it right now. Shoutout to magicui for this amazing design!\n\nPS: Notice how the cursor has it's own personal spotlight wherever it goes.",
+      technologies: ["Next.js", "Tailwind CSS", "TypeScript", "Vercel"],
+      links: [{
+        icon: <Icons.github className="size-4" />,
+        type: "GitHub",
+        href: "https://github.com/aryankeluskar/aryankeluskar.com"
+      },
+      {
+        icon: <Icons.globe className="size-4" />,
+        type: "Website",
+        href: "https://aryankeluskar.com"
+      }]
     }
   ] as ProjectType[]
 } as const;

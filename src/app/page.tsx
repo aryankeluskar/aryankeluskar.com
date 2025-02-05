@@ -1,3 +1,5 @@
+"use client";
+
 import { HackathonCard } from "@/components/hackathon-card";
 import { ProjectCard } from "@/components/project-card";
 import { ResumeCard } from "@/components/resume-card";
@@ -8,8 +10,14 @@ import Link from "next/link";
 import Markdown from "react-markdown";
 import { HeroSection } from "@/components/hero-section";
 import { HometownSection } from "@/components/hometown-section";
+import { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { ChevronDown, ChevronUp } from "lucide-react";
 
 export default function Page() {
+  const [showAllProjects, setShowAllProjects] = useState(false);
+  const visibleProjects = showAllProjects ? DATA.projects : DATA.projects.slice(0, 4);
+
   return (
     <main className="flex flex-col min-h-[100dvh] space-y-10">
       <HeroSection />
@@ -82,7 +90,7 @@ export default function Page() {
             </div>
           </div>
           <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 max-w-[800px] mx-auto">
-            {DATA.projects.map((project) => (
+            {visibleProjects.map((project) => (
               <ProjectCard
                 href={project.href}
                 key={project.title}
@@ -96,25 +104,44 @@ export default function Page() {
               />
             ))}
           </div>
+          {DATA.projects.length > 4 && (
+            <div className="flex justify-center mt-8 mb-0">
+              <Button
+                variant="ghost"
+                onClick={() => setShowAllProjects(!showAllProjects)}
+                className="gap-2 hover:bg-transparent"
+              >
+                {showAllProjects ? (
+                  <>
+                    Show Less
+                    <ChevronUp className="h-4 w-4" />
+                  </>
+                ) : (
+                  <>
+                    Show More ({DATA.projects.length - 4})
+                    <ChevronDown className="h-4 w-4" />
+                  </>
+                )}
+              </Button>
+            </div>
+          )}
         </div>
       </section>
       <section id="hackathons">
-        <div className="space-y-12 w-full py-12">
+        <div className="space-y-12 w-full pb-12">
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
             <div className="space-y-2">
               <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
                 Hackathons
               </div>
               <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
-                I like building things
+                I like hacking things (a lot)
               </h2>
-              <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+              <p className="text-muted-foreground md:text-lg/relaxed lg:text-base/relaxed xl:text-lg/relaxed">
                 During my time in university, I attended{" "}
-                {DATA.hackathons.length}+ hackathons. People from around the
-                country would come together and build incredible things in 2-3
-                days. It was eye-opening to see the endless possibilities
+                {DATA.hackathons.length}+ hackathons. It was eye-opening to see the endless possibilities
                 brought to life by a group of motivated and passionate
-                individuals.
+                individuals within 2-3 days. I have made some of my best friends and memories at these hackathons :)
               </p>
             </div>
           </div>
