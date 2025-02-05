@@ -49,6 +49,8 @@ export function ProjectCard({
       <Link
         href={href || "#"}
         className={cn("block cursor-pointer", className)}
+        target="_blank"
+        rel="noopener noreferrer"
       >
         {video && (
           <video
@@ -76,7 +78,7 @@ export function ProjectCard({
             <CardTitle className="mr-auto text-base">{title}</CardTitle>
             <div className="flex items-center space-x-2">
               {links?.map((link, idx) => (
-                <Link href={link?.href} key={idx} target="_blank">
+                <Link href={link?.href} key={idx} target="_blank" rel="noopener noreferrer">
                   <Badge key={idx} className="flex gap-2 px-2 py-1 text-[10px]">
                     {link.icon}
                     {link.type}

@@ -46,7 +46,7 @@ export const ResumeCard = ({
             <div className="flex items-center justify-between gap-x-2 text-base">
               <h3 className="inline-flex items-center justify-center font-semibold leading-none text-xs sm:text-sm">
                 <span className="text-m">
-                <a href={href || "#"} className="hover:underline" target="_blank">
+                <a href={href || "#"} className="hover:underline" target="_blank" rel="noopener noreferrer">
                   {title}
                 </a>
                 </span>
