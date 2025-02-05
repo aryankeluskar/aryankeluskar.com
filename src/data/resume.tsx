@@ -39,7 +39,7 @@ export const DATA = {
   location: "Tempe, AZ",
   locationLink: "https://www.google.com/maps/place/tempe",
   description: "I love CS, Stats & Bagels. 19, building fast backends, scalable language models, and iOS apps. Experienced in full-stack development, machine learning, data analysis, and C++. \n\nBuilding [easywire](https://dub.sh/easywire).",
-  summary: "I'm an 18 year old college junior studying computer science and statistics with a passion for solving problems, learning intricate concepts, and building products. I was first exposed to coding when I was 10. Solving problems by converting my thoughts to tangible results in languages that feel incredibly cryptic has been one of the most amazing feelings ever! \n\nI grew up with a deep passion for mathematics, and continue to use bayesian statistics to read the world around me. I have won awards at prestigious hackathons such as HackMIT 2024 and SFHacks 2024. When I'm not coding, I'm probably cycling until I run out of roads",
+  summary: "I'm an 18 year old college junior studying computer science and statistics with a passion for solving problems, learning intricate concepts, and building products. I was first exposed to coding when I was 10. Solving problems by converting my thoughts to tangible results in languages that feel incredibly cryptic has been one of the most amazing feelings ever! \n\nI grew up with a deep passion for mathematics, and use bayesian statistics to read the world around me. I have won awards at prestigious hackathons such as HackMIT 2024 and SFHacks 2024. When I'm not coding, I'm probably cycling until I run out of roads",
   // avatarUrl: "/professional.jpg",
   avatarUrl: "/pfp.jpg",
   hackathons: [
@@ -57,7 +57,7 @@ export const DATA = {
       image: "/calhacks.png",
       dates: "October 2024",
       location: "Berkeley, CA",
-      description: "Built a full stack web-app that allows users to track their medication schedules, and uses multi-modal AI to check-in on them and detect for potential side effects.",
+      description: "Built a full stack web-app that allows users to track their medication schedules. Designed a multi-modal Agentic AI System to check-in on patients and detect for potential side effects using sentiment analysis.",
       links: [{
         // icon: <Icons.devpost className="size-4" />,
         title: "CuraRx",
@@ -68,7 +68,7 @@ export const DATA = {
       title: "HackMIT 2024 (Sponsor Prize 🏆)",
       project: "https://devpost.com/software/ai-in-education-by-scaleup",
       image: "/hackmit.png",
-      description: "Awarded 1000$ in `Best Use of AI without an API`! Built the backend that uses Language Models to re-rank resumes and web-crawl to validate applicant resumes.",
+      description: "Awarded 1000$ in `Best Use of AI without an API`! Built a Python-Flask backend that uses Language Models to re-rank resumes and web-crawl to validate applicant resumes.",
       dates: "September 2024",
       location: "Cambridge, MA",
       links: [{
