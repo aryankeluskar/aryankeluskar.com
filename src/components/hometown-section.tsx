@@ -1,5 +1,8 @@
+'use client';
+
 import Link from "next/link";
 import Image from "next/image";
+import { useState, useEffect } from 'react';
 
 const HOMETOWNS = [
   {
@@ -20,6 +23,16 @@ const HOMETOWNS = [
 ];
 
 export function HometownSection() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth <= 767);
+    
+    checkMobile(); // Initial check
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
   return (
     <section id="hometowns" className="py-12">
       <h2 className="text-xl font-bold font-solway mb-6">I Grew Up in Six Cities</h2>
@@ -31,7 +44,9 @@ export function HometownSection() {
             href={hometown.mapUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="group relative overflow-hidden rounded-lg aspect-[3/4] hover:scale-105 transition-transform duration-300"
+            className={`group relative overflow-hidden rounded-lg ${
+              isMobile ? 'aspect-[4/3]' : 'aspect-[3/4]'
+            } hover:scale-105 transition-transform duration-300`}
           >
             <Image
               src={hometown.image}
