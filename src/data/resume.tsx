@@ -212,7 +212,7 @@ export const DATA = {
       logoUrl: "/asu.png",
       start: "April 2024",
       end: "Present",
-      description: <>Fine-tuned OpenAI's <span style={{fontWeight: 'bold', color: '#74AA9C'}}>GPT-4o</span> and 4o-mini models using <span style={{fontWeight: 'bold', color: '#306998'}}>Python</span> to improve comprehension of ambiguous human text, and co-authored an <span style={{fontWeight: 'bold', color: '#00629B'}}>IEEE</span> BigData paper with Professor Huan Liu and PhD Students.</>
+      description: <>Fine-tuned OpenAI&apos;s <span style={{fontWeight: 'bold', color: '#74AA9C'}}>GPT-4o</span> and 4o-mini models using <span style={{fontWeight: 'bold', color: '#306998'}}>Python</span> to improve comprehension of ambiguous human text, and co-authored an <span style={{fontWeight: 'bold', color: '#00629B'}}>IEEE</span> BigData paper with Professor Huan Liu and PhD Students.</>
     },
     {
       company: "The Biodesign Institute – Qiyun Lab",
