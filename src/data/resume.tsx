@@ -1,5 +1,5 @@
 import { Icons } from "@/components/icons";
-import { HomeIcon, NotebookIcon } from "lucide-react";
+import { BriefcaseIcon, HomeIcon, HammerIcon, NotebookIcon } from "lucide-react";
 
 type ProjectType = {
   title: string;
@@ -57,10 +57,10 @@ export const DATA = {
       image: "/calhacks.png",
       dates: "October 2024",
       location: "Berkeley, CA",
-      description: "Won the Best Use of Google Cloud Award",
+      description: "Built a full stack web-app that allows users to track their medication schedules, and uses multi-modal AI to check-in on them and detect for potential side effects.",
       links: [{
         // icon: <Icons.devpost className="size-4" />,
-        title: "Cura Rx",
+        title: "CuraRx",
         href: "https://devpost.com/software/cura-rx"
       }]
     },
@@ -68,7 +68,7 @@ export const DATA = {
       title: "HackMIT 2024 (Sponsor Prize 🏆)",
       project: "https://devpost.com/software/ai-in-education-by-scaleup",
       image: "/hackmit.png",
-      description: "Awarded 1000$ in `Best Use of AI without an API`",
+      description: "Awarded 1000$ in `Best Use of AI without an API`! Built the backend that uses Language Models to re-rank resumes and web-crawl to validate applicant resumes.",
       dates: "September 2024",
       location: "Cambridge, MA",
       links: [{
@@ -81,7 +81,7 @@ export const DATA = {
       title: "SFHacks 2024 (Sponsor Track 🏆)",
       project: "https://devpost.com/software/ai-in-education-by-scaleup",
       image: "/sfhacks.png",
-      description: "Won the Best Use of Google Cloud Award",
+      description: "Won the Best Use of AI and VerbWire Track!",
       dates: "April 2024",
       location: "San Francisco, CA",
       links: [{
@@ -94,7 +94,7 @@ export const DATA = {
       title: "LAHacks 2024",
       project: "https://devpost.com/software/ai-in-education-by-scaleup",
       image: "/lahacks.png",
-      description: "Won the Best Use of Google Cloud Award",
+      description: "Built a full stack web-app designed to help individuals manage their groceries more efficiently. We aim to Minimize Waste & Maximize Taste.",
       dates: "April 2024",
       location: "Los Angeles, CA",
       links: [{
@@ -112,9 +112,9 @@ export const DATA = {
     },
     {
       title: "SunHacks 2023",
-      project: "https://devpost.com/software/ai-in-education-by-scaleup",
+      // project: "https://devpost.com/software/ai-in-education-by-scaleup",
       image: "/sunhacks.png",
-      description: "Won the Best Use of Google Cloud Award",
+      // description: "Won the Best Use of Google Cloud Award",
       dates: "November 2023",
       location: "Tempe, AZ"
     },
@@ -122,7 +122,7 @@ export const DATA = {
       title: "AI in Education by ScaleU (Honorable Mention 🏆)",
       project: "https://devpost.com/software/ai-in-education-by-scaleup",
       image: "/scaleup.png",
-      description: "Won the Best Use of Google Cloud Award",
+      // description: "Won the Best Use of Google Cloud Award",
       dates: "October 2023",
       location: "Scottsdale, AZ"
     },
@@ -158,11 +158,12 @@ export const DATA = {
   ],
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
+    { href: "#work", icon: BriefcaseIcon, label: "Work" },
+    { href: "#projects", icon: HammerIcon, label: "Projects" },
     // { href: "/blog", icon: NotebookIcon, label: "Blog" }
   ],
   contact: {
     email: "contact@aryankeluskar.com",
-    tel: "+16025526402",
     social: {
       GitHub: {
         name: "GitHub",
@@ -176,7 +177,7 @@ export const DATA = {
         icon: Icons.linkedin,
         navbar: true
       },
-      X: {
+      Twitter: {
         name: "Twitter",
         url: "https://dub.sh/aryans-twitter",
         icon: Icons.x,

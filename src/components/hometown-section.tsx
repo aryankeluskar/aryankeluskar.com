@@ -36,7 +36,7 @@ export function HometownSection() {
   return (
     <section id="hometowns" className="py-12">
       <h2 className="text-xl font-bold font-solway mb-6">I Grew Up in Six Cities</h2>
-      <p className="text-sm mb-6">Here are some of my favorite skies:</p>
+      <p className="text-sm mb-6">Here are some of my favorite clicks:</p>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {HOMETOWNS.map((hometown, index) => (
           <Link

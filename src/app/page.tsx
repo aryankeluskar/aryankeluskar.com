@@ -145,7 +145,7 @@ export default function Page() {
             <p className="mx-auto max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
               Want to chat? Just shoot me a text{" "}
               <Link
-                href={DATA.contact.social.X.url}
+                href={DATA.contact.social.Twitter.url}
                 className="text-blue-500 hover:underline"
               >
                 on twitter
@@ -155,8 +155,9 @@ export default function Page() {
                 href={`mailto:${DATA.contact.email}`}
                 className="text-blue-500 hover:underline"
               >
-                {DATA.contact.email}. 
+                {DATA.contact.email}
               </Link>
+              .
             </p>
           </div>
         </div>
