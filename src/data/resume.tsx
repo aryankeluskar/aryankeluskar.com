@@ -39,7 +39,7 @@ export const DATA = {
   location: "Tempe, AZ",
   locationLink: "https://www.google.com/maps/place/tempe",
   description: "I love CS, Stats & Bagels. 19, building fast backends, scalable language models, and iOS apps. Experienced in full-stack development, machine learning, data analysis, and C++. \n\nBuilding [easywire](https://dub.sh/easywire).",
-  summary: "I'm a 19 year old college junior studying computer science and statistics with a passion for solving problems, learning intricate concepts, and building products. I was first exposed to coding when I was 10. Solving problems by converting my thoughts to tangible results in languages that feel incredibly cryptic has been one of the most amazing feelings ever! \n\nI grew up with a deep passion for mathematics, and use bayesian statistics to read the world around me. I have won awards at prestigious hackathons such as HackMIT 2024 and SFHacks 2024. When I'm not coding, I'm probably cycling until I run out of roads",
+  summary: "I'm a 19 year old college junior studying computer science and statistics with a passion for solving problems, learning intricate concepts, and building products. I was first exposed to coding when I was 10. Solving problems by converting my thoughts to tangible results in languages that feel incredibly cryptic has been one of the most amazing feelings ever! \n\nI grew up with a deep passion for mathematics, and use bayesian statistics to read the world around me. I have won awards at prestigious hackathons such as HackMIT 2024 and SFHacks 2024. When I'm not coding, I'm probably cycling until I run out of roads.",
   // avatarUrl: "/professional.jpg",
   avatarUrl: "/pfp.jpg",
   hackathons: [
@@ -114,7 +114,7 @@ export const DATA = {
       title: "SunHacks 2023",
       // project: "https://devpost.com/software/ai-in-education-by-scaleup",
       image: "/sunhacks.png",
-      description: "B",
+      description: "Built a peer-to-peer equipment rental marketplace for students. Disqualified since I was too young (I mentored this hackathon the very next year. Talk about redemption).",
       dates: "November 2023",
       location: "Tempe, AZ",
       links: [{
