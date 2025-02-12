@@ -135,7 +135,7 @@ export default function Page() {
                 Hackathons
               </div>
               <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
-                I like hacking things (a lot)
+                I like hacking things <span className="whitespace-nowrap">(a lot)</span>
               </h2>
               <p className="text-muted-foreground md:text-lg/relaxed lg:text-base/relaxed xl:text-lg/relaxed">
                 During my time in university, I attended{" "}
