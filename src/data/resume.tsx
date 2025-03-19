@@ -38,22 +38,27 @@ export const DATA = {
   resumeUrl: "https://dub.sh/aryans-resume",
   location: "Tempe, AZ",
   locationLink: "https://www.google.com/maps/place/tempe",
-  description: "I love CS, Stats & Bagels. 19, building fast backends, scalable language models, and iOS apps. Experienced in full-stack development, machine learning, data analysis, and C++. \n\nBuilding [easywire](https://dub.sh/easywire).",
-  summary: "I'm a 19 year old college junior studying computer science and statistics with a passion for solving problems, learning intricate concepts, and building products. I was first exposed to coding when I was 10. Solving problems by converting my thoughts to tangible results in languages that feel incredibly cryptic has been one of the most amazing feelings ever! \n\nI grew up with a deep passion for mathematics, and use bayesian statistics to read the world around me. I have won awards at prestigious hackathons such as HackMIT 2024 and SFHacks 2024. When I'm not coding, I'm probably cycling until I run out of roads.",
+  description: "I love CS, Stats & Bagels. 19, building fast backends, scalable language models, and iOS apps. Experienced in full-stack development, machine learning, data analysis, and C++. \n\nBuilding [alice](https://dub.sh/wonderland) and [easywire](https://dub.sh/easywire).",
+  summary: "I'm a 19 year old college junior studying computer science and statistics with a passion for solving problems, learning intricate concepts, and building products. I was first exposed to coding when I was 10. Solving problems by converting my thoughts to tangible results in languages that feel incredibly cryptic has been one of the most amazing feelings ever! \n\nI grew up with a deep passion for mathematics, and use bayesian statistics to read the world around me. I have won awards at prestigious hackathons such as HackMIT 2024 and SFHacks 2024. When I'm not coding, I'm probably [cycling](https://www.strava.com/activities/13329957326) until I run out of roads.",
   // avatarUrl: "/professional.jpg",
   avatarUrl: "/pfp.jpg",
   hackathons: [
     {
       title: "HackIllinois 2025",
-      project: "https://devpost.com/software/ai-in-education-by-scaleup",
+      // project: "https://devpost.com/software/ai-in-education-by-scaleup",
       image: "/hackillinois.png",
       dates: "February 2025",
       location: "Urbana-Champaign, IL",
-      description: "DM if you are participating and want to team up!",
+      description: "Built a chrome extension allowing researchers to learn more about the papers cited by simply hovering over the citations. Learned a ton about Model Context Protocol (MCPs) and PDF.js rendering engine.",
+      links: [{
+        // icon: <Icons.devpost className="size-4" />,
+        title: "Alice",
+        href: "https://devpost.com/software/alice-w0lpjo"
+      }]
     },
     {
       title: "CalHacks 2024",
-      project: "https://devpost.com/software/ai-in-education-by-scaleup",
+      // project: "https://devpost.com/software/ai-in-education-by-scaleup",
       image: "/calhacks.png",
       dates: "October 2024",
       location: "Berkeley, CA",
@@ -66,7 +71,7 @@ export const DATA = {
     },
     {
       title: "HackMIT 2024 (Sponsor Prize 🏆)",
-      project: "https://devpost.com/software/ai-in-education-by-scaleup",
+      // project: "https://devpost.com/software/ai-in-education-by-scaleup",
       image: "/hackmit.png",
       description: "Awarded 1000$ in `Best Use of AI without an API`! Built a Python-Flask backend that uses Language Models to re-rank resumes and web-crawl to validate applicant resumes.",
       dates: "September 2024",
@@ -79,7 +84,7 @@ export const DATA = {
     },
     {
       title: "SFHacks 2024 (Sponsor Track 🏆)",
-      project: "https://devpost.com/software/ai-in-education-by-scaleup",
+      // project: "https://devpost.com/software/ai-in-education-by-scaleup",
       image: "/sfhacks.png",
       description: "Won the Best Use of AI and VerbWire Track!",
       dates: "April 2024",
@@ -92,7 +97,7 @@ export const DATA = {
     },
     {
       title: "LAHacks 2024",
-      project: "https://devpost.com/software/ai-in-education-by-scaleup",
+      // project: "https://devpost.com/software/ai-in-education-by-scaleup",
       image: "/lahacks.png",
       description: "Built a full stack web-app designed to help individuals manage their groceries more efficiently. We aim to Minimize Waste & Maximize Taste.",
       dates: "April 2024",
@@ -112,7 +117,7 @@ export const DATA = {
     },
     {
       title: "SunHacks 2023",
-      // project: "https://devpost.com/software/ai-in-education-by-scaleup",
+      // // project: "https://devpost.com/software/ai-in-education-by-scaleup",
       image: "/sunhacks.png",
       description: "Built a peer-to-peer equipment rental marketplace for students. Disqualified since I was too young (I mentored this hackathon the very next year. Talk about redemption).",
       dates: "November 2023",
@@ -125,7 +130,7 @@ export const DATA = {
     },
     {
       title: "AI in Education by ScaleU (Honorable Mention 🏆)",
-      project: "https://devpost.com/software/ai-in-education-by-scaleup",
+      // project: "https://devpost.com/software/ai-in-education-by-scaleup",
       image: "/scaleup.png",
       // description: "Won the Best Use of Google Cloud Award",
       dates: "October 2023",
@@ -133,7 +138,7 @@ export const DATA = {
     },
     {
       title: "Opportunity Hack 2023 (Finalist)",
-      project: "https://devpost.com/software/ai-in-education-by-scaleup",
+      // project: "https://devpost.com/software/ai-in-education-by-scaleup",
       image: "/opportunityhack.png",
       description: "Top 5 Finalist out of 100+ participants",
       dates: "October 2023",
@@ -218,7 +223,7 @@ export const DATA = {
       logoUrl: "/cropped-asu-icon.png",
       start: "April 2024",
       end: "Present",
-      description: <>Fine-tuned OpenAI&apos;s <span style={{fontWeight: 'bold', color: '#74AA9C'}}>GPT-4o</span> and 4o-mini models using <span style={{fontWeight: 'bold', color: '#306998'}}>Python</span> to improve comprehension of ambiguous human text, and co-authored an <span style={{fontWeight: 'bold', color: '#00629B'}}>IEEE</span> BigData paper with Professor Huan Liu and PhD Students.</>
+      description: <>Fine-tuned OpenAI&apos;s <span style={{fontWeight: 'bold', color: '#74AA9C'}}>GPT-4o</span> and 4o-mini models using <span style={{fontWeight: 'bold', color: '#306998'}}>Python</span> to improve comprehension of ambiguous human text, and co-authored an <span style={{fontWeight: 'bold', color: '#00629B'}}>IEEE</span> BigData paper with Prof. Huan Liu and Amrita Bhattacharjee.</>
     },
     {
       company: "The Biodesign Institute – Qiyun Lab",
