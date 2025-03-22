@@ -53,7 +53,7 @@ export const DATA = {
       links: [{
         // icon: <Icons.devpost className="size-4" />,
         title: "Alice",
-        href: "https://devpost.com/software/alice-w0lpjo"
+        href: "https://dub.sh/wonderland"
       }]
     },
     {
@@ -269,6 +269,39 @@ export const DATA = {
     }
   ],
   projects: [
+    {
+      title: "Alice",
+      href: "https://dub.sh/wonderland",
+      dates: "2025",
+      active: true,
+      description: "Chrome and Brave Browser Extension that provides instant context, summaries, and code implementations for cited papers. Developed custom algorithms and optimized LLM pipelines to extract information from PDFs for basically free.",
+      technologies: ["JavaScript", "TypeScript", "gulp.js", "Chrome", "HTML", "CSS", "Rest API", "Gemini", "Claude"],
+      links: [{
+        icon: <Icons.github className="size-4" />,
+        type: "GitHub",
+        href: "https://git.new/wonderland"
+      },
+      {
+        icon: <Icons.chrome className="size-4" />,
+        type: "Extension",
+        href: "https://dub.sh/wonderland"
+      }
+    ]
+    },
+    {
+      title: "canvas-mcp",
+      href: "https://git.new/canvas-mcp",
+      dates: "2024",
+      active: true,
+      description: "Built an AI-agent protocol that allows you to query your courses in the AI app of your choice. This MCP Server is a collection of Canvas LMS tools for the [model context protocol](https://modelcontextprotocol.io/introduction). Try now or feel free to dm me, looking for beta testers!",
+      technologies: ["Python", "JavaScript", "httpx", "Rest API", "FastMCP", "UV", "Anthropic", "EdTech", "Agentic AI"],
+      links: [{
+        icon: <Icons.github className="size-4" />,
+        type: "GitHub",
+        href: "https://git.new/canvas-mcp"
+      }
+    ]
+    },
     {
       title: "EasyWire",
       href: "https://dub.sh/easywire",

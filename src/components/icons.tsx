@@ -1,12 +1,30 @@
 import { GlobeIcon, MailIcon } from "lucide-react";
 
-export type IconProps = JSX.IntrinsicElements['svg'];
+export type IconProps = JSX.IntrinsicElements["svg"];
 
 export const Icons = {
+  chrome: (props: IconProps) => (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      x="0px"
+      y="0px"
+      width="24"
+      height="24"
+      viewBox="0 0 50 50"
+      fill="currentColor"
+      {...props}
+    >
+      <path d="M 25 2 C 12.317 2 2 12.317 2 25 C 2 37.683 12.317 48 25 48 C 37.683 48 48 37.683 48 25 C 48 12.317 37.683 2 25 2 z M 8.0429688 12.664062 L 15.046875 24.076172 C 15.514875 18.994172 19.798 15 25 15 L 43.462891 15 C 43.813891 15.646 44.125203 16.316 44.408203 17 L 30.974609 17 C 33.412609 18.825 35 21.727 35 25 C 35 26.787 34.522266 28.463016 33.697266 29.916016 C 33.690266 29.930016 33.691594 29.944984 33.683594 29.958984 L 24.537109 45.976562 C 23.790109 45.959562 23.054125 45.902547 22.328125 45.810547 L 28.976562 34.171875 C 27.756563 34.702875 26.413 35 25 35 C 21.441 35 18.318875 33.124406 16.546875 30.316406 C 16.523875 30.287406 16.496562 30.264422 16.476562 30.232422 L 6.8320312 14.515625 C 7.2030312 13.874625 7.6079688 13.259062 8.0429688 12.664062 z M 25 17 A 8 8 0 0 0 17 25 A 8 8 0 0 0 25 33 A 8 8 0 0 0 33 25 A 8 8 0 0 0 25 17 z"></path>
+    </svg>
+  ),
   globe: (props: IconProps) => <GlobeIcon {...props} />,
   email: (props: IconProps) => <MailIcon {...props} />,
   devpost: (props: IconProps) => (
-    <svg viewBox="0 0 280.3 242.7" xmlns="http://www.w3.org/2000/svg" {...props}>
+    <svg
+      viewBox="0 0 280.3 242.7"
+      xmlns="http://www.w3.org/2000/svg"
+      {...props}
+    >
       <path
         fill="currentColor"
         d="M133.7 76.8h-18.6v43.7h18.6c11.6 0 17.7-8.2 17.7-21.9 0-13.7-6-21.8-17.7-21.8zM210.2 0h-70.1L70.1 0H0l140.1 242.7L280.3 0z"
@@ -235,8 +253,15 @@ export const Icons = {
   strava: (props: IconProps) => (
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" {...props}>
       <title>Strava</title>
-      <path d="M41.03 47.852l-5.572-10.976h-8.172L41.03 64l13.736-27.124h-8.18" fill="currentColor" opacity="0.6" />
-      <path d="M27.898 21.944l7.564 14.928h11.124L27.898 0 9.234 36.876H20.35" fill="currentColor" />
+      <path
+        d="M41.03 47.852l-5.572-10.976h-8.172L41.03 64l13.736-27.124h-8.18"
+        fill="currentColor"
+        opacity="0.6"
+      />
+      <path
+        d="M27.898 21.944l7.564 14.928h11.124L27.898 0 9.234 36.876H20.35"
+        fill="currentColor"
+      />
     </svg>
   ),
   // googleScholar: (props: IconProps) => (
