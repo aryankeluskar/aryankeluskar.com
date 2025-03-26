@@ -78,7 +78,7 @@ export default function RootLayout({
       </head>
       <body
         className={cn(
-          "min-h-screen bg-background font-sans antialiased w-1/2 mx-auto py-12 sm:py-24 px-6",
+          "min-h-screen bg-background font-sans antialiased w-1/2 md:w-2/3 sm:w-full mx-auto py-12 sm:py-24 px-6",
           fontSans.variable,
           solway.variable
         )}
