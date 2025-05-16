@@ -223,7 +223,7 @@ export const DATA = {
       logoUrl: "/cropped-asu-icon.png",
       start: "April 2024",
       end: "Present",
-      description: <>Fine-tuned OpenAI&apos;s <span style={{fontWeight: 'bold', color: '#74AA9C'}}>GPT-4o</span> and 4o-mini models using <span style={{fontWeight: 'bold', color: '#306998'}}>Python</span> to improve comprehension of ambiguous human text, and co-authored an <span style={{fontWeight: 'bold', color: '#00629B'}}>IEEE</span> BigData paper with Prof. Huan Liu and Dr. Amrita Bhattacharjee.</>
+      description: <>Fine-tuned OpenAI&apos;s <span style={{fontWeight: 'bold', color: '#74AA9C'}}>GPT-4o</span> and 4o-mini models using <span style={{fontWeight: 'bold', color: 'var(--python-color, #306998)'}}>Python</span> to improve comprehension of ambiguous human text, and co-authored an <span style={{fontWeight: 'bold', color: '#00629B'}}>IEEE</span> BigData paper with Prof. Huan Liu and Dr. Amrita Bhattacharjee.</>
     },
     {
       company: "The Biodesign Institute – Qiyun Lab",
@@ -234,7 +234,7 @@ export const DATA = {
       logoUrl: "/skbio.webp",
       start: "May 2024",
       end: "August 2024",
-      description: <>Saved over <span style={{fontWeight: 'bold', color: '#3e9c35'}}>$3,080</span> in GPU costs and <span style={{fontWeight: 'bold', color: '#3e9c35'}}>6 weeks</span> in training and inference times by implementing Model Distillation & Flash Attention for Protein Language Models. Created benchmarking scripts using <span style={{fontWeight: 'bold', color: '#eb8f00'}}>HuggingFace</span> and <span style={{fontWeight: 'bold', color: '#306998'}}>Python</span> with PyTorch & Transformers libraries. Wrote unit tests to increase code coverage by 12.5%. Developed statistical models to improve gut microbe analysis.</>
+      description: <>Saved over <span style={{fontWeight: 'bold', color: '#3e9c35'}}>$3,080</span> in GPU costs and <span style={{fontWeight: 'bold', color: '#3e9c35'}}>6 weeks</span> in training and inference times by implementing Model Distillation & Flash Attention for Protein Language Models. Created benchmarking scripts using <span style={{fontWeight: 'bold', color: '#eb8f00'}}>HuggingFace</span> and <span style={{fontWeight: 'bold', color: 'var(--python-color, #306998)'}}>Python</span> with PyTorch & Transformers libraries. Wrote unit tests to increase code coverage by 12.5%. Developed statistical models to improve gut microbe analysis.</>
     },
     {
       company: "RCV Innovations Pvt. Ltd.",
