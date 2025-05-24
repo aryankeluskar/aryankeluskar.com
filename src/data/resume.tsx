@@ -38,7 +38,7 @@ export const DATA = {
   resumeUrl: "https://dub.sh/aryans-resume",
   location: "Tempe, AZ",
   locationLink: "https://www.google.com/maps/place/tempe",
-  description: "I love CS, Stats & Bagels. 19, building fast backends, scalable language models, and iOS apps. Experienced in full-stack development, machine learning, data analysis, and C++. \n\nBuilding [alice](https://dub.sh/wonderland) and [easywire](https://dub.sh/easywire).",
+  description: "19, building fast backends, scalable language models, and iOS apps. Experienced in full-stack development, machine learning, data analysis, and C++ \n\nBuilding [alice](https://dub.sh/wonderland) and [easywire](https://dub.sh/easywire).",
   summary: "I'm a 19 year old college junior studying computer science and statistics with a passion for solving problems, learning intricate concepts, and building products. I was first exposed to coding when I was 10. Solving problems by converting my thoughts to tangible results in languages that feel incredibly cryptic has been one of the most amazing feelings ever! \n\nI grew up with a deep passion for mathematics, and use bayesian statistics to read the world around me. I have won awards at prestigious hackathons such as HackMIT 2024 and SFHacks 2024. When I'm not coding, I'm probably [cycling](https://www.strava.com/activities/13329957326) until I run out of roads.",
   // avatarUrl: "/professional.jpg",
   avatarUrl: "/pfp.jpg",
@@ -215,6 +215,17 @@ export const DATA = {
   },
   work: [
     {
+      company: "HealthGC",
+      href: "",
+      badges: [],
+      location: "Los Angeles, CA",
+      title: "Artificial Intelligence Research Intern",
+      logoUrl: "/healthgc.jpeg",
+      start: "May 2025",
+      end: "August 2025",
+      description: <>Seed-stage startup backed by the <span style={{fontWeight: 'bold', color: 'var(--python-color, #306998)'}}>Floodgate</span> Fund. Building and optimizing large-language model pipelines for data processing, and developing state-of-the-art voice agents.</>
+    },
+    {
       company: "Data Mining and Machine Learning Lab",
       href: "https://dmml.asu.edu/",
       badges: [],
@@ -223,10 +234,10 @@ export const DATA = {
       logoUrl: "/cropped-asu-icon.png",
       start: "April 2024",
       end: "Present",
-      description: <>Fine-tuned OpenAI&apos;s <span style={{fontWeight: 'bold', color: '#74AA9C'}}>GPT-4o</span> and 4o-mini models using <span style={{fontWeight: 'bold', color: 'var(--python-color, #306998)'}}>Python</span> to improve comprehension of ambiguous human text, and co-authored an <span style={{fontWeight: 'bold', color: '#00629B'}}>IEEE</span> BigData paper with Prof. Huan Liu and Dr. Amrita Bhattacharjee.</>
+      description: <>Filtered text datasets with over a million rows and fine-tuned large-language models using <span style={{fontWeight: 'bold', color: 'var(--python-color, #306998)'}}>Python</span> to improve comprehension of ambiguous human text, and co-authored an <span style={{fontWeight: 'bold', color: '#00629B'}}>IEEE</span> BigData paper with Prof. Huan Liu and Dr. Amrita Bhattacharjee.</>
     },
     {
-      company: "The Biodesign Institute – Qiyun Lab",
+      company: "The Biodesign Institute",
       href: "https://scikit.bio",
       badges: [],
       location: "Arizona State University",
