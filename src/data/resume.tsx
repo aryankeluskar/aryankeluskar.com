@@ -248,7 +248,7 @@ export const DATA = {
       description: <>Saved over <span style={{fontWeight: 'bold', color: '#3e9c35'}}>$3,080</span> in GPU costs and <span style={{fontWeight: 'bold', color: '#3e9c35'}}>6 weeks</span> in training and inference times by implementing Model Distillation & Flash Attention for Protein Language Models. Created benchmarking scripts using <span style={{fontWeight: 'bold', color: '#eb8f00'}}>HuggingFace</span> and <span style={{fontWeight: 'bold', color: 'var(--python-color, #306998)'}}>Python</span> with PyTorch & Transformers libraries. Wrote unit tests to increase code coverage by 12.5%. Developed statistical models to improve gut microbe analysis.</>
     },
     {
-      company: "RCV Innovations Pvt. Ltd.",
+      company: "RCV Innovations",
       href: "https://rcvinnovations.com/",
       badges: [],
       location: "Remote",
