@@ -29,7 +29,7 @@ export function HeroSection() {
 
         {/* Navigation Buttons */}
         <div className="flex flex-wrap gap-4 pt-10">
-          <Link 
+          <Link
             href={DATA.resumeUrl}
             target="_blank"
             rel="noopener noreferrer"
@@ -37,13 +37,13 @@ export function HeroSection() {
           >
             resume
           </Link>
-          <Link 
+          <Link
             href="#projects"
             className="px-11 py-2.5 font-solway font-semibold text-sm sm:text-base text-foreground bg-[rgba(24,0,255,0.33)] hover:bg-[rgba(24,0,255,0.5)] transition-colors "
           >
             projects
           </Link>
-          <Link 
+          <Link
             href="#contact"
             className="px-11 py-2.5 font-solway font-semibold text-sm sm:text-base text-foreground bg-[rgba(255,0,0,0.33)] hover:bg-[rgba(255,0,0,0.5)] transition-colors "
           >

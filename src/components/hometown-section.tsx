@@ -1,8 +1,8 @@
-'use client';
+"use client";
 
 import Link from "next/link";
 import Image from "next/image";
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from "react";
 
 const HOMETOWNS = [
   {
@@ -27,15 +27,17 @@ export function HometownSection() {
 
   useEffect(() => {
     const checkMobile = () => setIsMobile(window.innerWidth <= 767);
-    
+
     checkMobile(); // Initial check
-    window.addEventListener('resize', checkMobile);
-    return () => window.removeEventListener('resize', checkMobile);
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
   }, []);
 
   return (
     <section id="hometowns" className="py-12">
-      <h2 className="text-xl font-bold font-solway mb-6">I Grew Up in Six Cities</h2>
+      <h2 className="text-xl font-bold font-solway mb-6">
+        I Grew Up in Six Cities
+      </h2>
       <p className="text-sm mb-6">Here are some of my favorite clicks:</p>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {HOMETOWNS.map((hometown, index) => (
@@ -45,7 +47,7 @@ export function HometownSection() {
             target="_blank"
             rel="noopener noreferrer"
             className={`group relative overflow-hidden rounded-lg ${
-              isMobile ? 'aspect-[4/3]' : 'aspect-[3/4]'
+              isMobile ? "aspect-[4/3]" : "aspect-[3/4]"
             } hover:scale-105 transition-transform duration-300`}
           >
             <Image
@@ -65,4 +67,4 @@ export function HometownSection() {
       </div>
     </section>
   );
-} 
+}

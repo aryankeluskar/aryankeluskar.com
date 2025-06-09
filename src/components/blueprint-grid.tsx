@@ -14,7 +14,7 @@ export function BlueprintGrid() {
       const scrollPosition = window.scrollY;
       const fadeStartPoint = 100;
       const fadeEndPoint = 400;
-      
+
       if (scrollPosition <= fadeStartPoint) {
         setOpacity(0.08);
       } else if (scrollPosition >= fadeEndPoint) {
@@ -22,7 +22,7 @@ export function BlueprintGrid() {
       } else {
         const fadeRange = fadeEndPoint - fadeStartPoint;
         const currentPosition = scrollPosition - fadeStartPoint;
-        const newOpacity = 0.08 * (1 - (currentPosition / fadeRange));
+        const newOpacity = 0.08 * (1 - currentPosition / fadeRange);
         setOpacity(newOpacity);
       }
     };
@@ -30,23 +30,25 @@ export function BlueprintGrid() {
     const handleMouseMove = (event: MouseEvent) => {
       const { clientX, clientY } = event;
       // Only store the client coordinates, not the absolute position
-      setMousePosition({ 
-        x: clientX, 
-        y: clientY  // Remove window.scrollY from here
+      setMousePosition({
+        x: clientX,
+        y: clientY, // Remove window.scrollY from here
       });
 
       // Check for text elements in any section
       const element = document.elementFromPoint(clientX, clientY);
-      const isText = element?.closest('h1, h2, h3, p, span, .prose, .nameButtons, article, .text-muted-foreground, div[role="heading"]');
+      const isText = element?.closest(
+        'h1, h2, h3, p, span, .prose, .nameButtons, article, .text-muted-foreground, div[role="heading"]',
+      );
       setIsOverText(!!isText);
     };
 
     handleScroll(); // Initial scroll position
-    window.addEventListener('scroll', handleScroll);
-    window.addEventListener('mousemove', handleMouseMove);
+    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("mousemove", handleMouseMove);
     return () => {
-      window.removeEventListener('scroll', handleScroll);
-      window.removeEventListener('mousemove', handleMouseMove);
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("mousemove", handleMouseMove);
     };
   }, []);
 
@@ -58,9 +60,7 @@ export function BlueprintGrid() {
   }
 
   return (
-    <div 
-      className="fixed inset-0 -z-50 h-full w-full"
-    >
+    <div className="fixed inset-0 -z-50 h-full w-full">
       <div
         className="absolute inset-0"
         style={{
@@ -68,7 +68,7 @@ export function BlueprintGrid() {
             linear-gradient(to right, rgb(var(--grid-color)) 1px, transparent 1px),
             linear-gradient(to bottom, rgb(var(--grid-color)) 1px, transparent 1px)
           `,
-          backgroundSize: '24px 24px',
+          backgroundSize: "24px 24px",
           opacity: baseOpacity,
         }}
       />
@@ -79,13 +79,13 @@ export function BlueprintGrid() {
             linear-gradient(to right, rgb(var(--grid-color)) 1px, transparent 1px),
             linear-gradient(to bottom, rgb(var(--grid-color)) 1px, transparent 1px)
           `,
-          backgroundSize: '24px 24px',
+          backgroundSize: "24px 24px",
           opacity: spotlightOpacity,
           mask: `radial-gradient(circle at ${mousePosition.x}px ${mousePosition.y}px, black 0%, transparent 150px)`,
           WebkitMask: `radial-gradient(circle at ${mousePosition.x}px ${mousePosition.y}px, black 0%, transparent 150px)`,
-          pointerEvents: 'none',
+          pointerEvents: "none",
         }}
       />
     </div>
   );
-} 
+}

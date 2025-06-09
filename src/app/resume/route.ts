@@ -1,6 +1,6 @@
-import { redirect } from 'next/navigation';
-import { NextResponse } from 'next/server';
+import { redirect } from "next/navigation";
+import { NextResponse } from "next/server";
 
 export async function GET() {
-  return NextResponse.redirect('https://dub.sh/aryans-resume', { status: 301 });
-} 
+  return NextResponse.redirect("https://dub.sh/aryans-resume", { status: 301 });
+}

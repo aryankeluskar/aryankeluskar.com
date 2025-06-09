@@ -8,21 +8,24 @@ import { Badge } from "@/components/ui/badge";
 import { DATA } from "@/data/resume";
 import Link from "next/link";
 import Markdown from "react-markdown";
-import { HeroSection } from "@/components/hero-section";
+import { HeroSection as Hero } from "@/components/hero-section";
 import { HometownSection } from "@/components/hometown-section";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { ChevronDown, ChevronUp } from "lucide-react";
+import { Publications } from "@/components/sections/publications";
 
 export default function Page() {
   const [showAllProjects, setShowAllProjects] = useState(false);
-  const visibleProjects = showAllProjects ? DATA.projects : DATA.projects.slice(0, 6);
+  const visibleProjects = showAllProjects
+    ? DATA.projects
+    : DATA.projects.slice(0, 6);
 
   return (
     <main className="flex flex-col min-h-[100dvh] space-y-10">
-      <HeroSection />
+      <Hero />
       <section id="about">
-        <h2 className="text-xl font-bold font-solway">About</h2>
+        <h2 className="text-xl font-bold">About</h2>
         <Markdown className="prose max-w-full text-pretty font-sans text-sm text-muted-foreground dark:prose-invert">
           {DATA.summary}
         </Markdown>
@@ -39,7 +42,6 @@ export default function Page() {
               title={work.company}
               subtitle={work.title}
               href={work.href}
-              badges={work.badges}
               period={`${work.start} - ${work.end ?? "Present"}`}
               description={work.description}
             />
@@ -83,9 +85,8 @@ export default function Page() {
                 Check out my latest work
               </h2>
               <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                I&apos;ve worked on a variety of projects, from simple
-                websites to complex iOS applications. Here are a few of my
-                favorites.
+                I&apos;ve worked on a variety of projects, from simple websites
+                to complex iOS applications. Here are a few of my favorites.
               </p>
             </div>
           </div>
@@ -127,6 +128,7 @@ export default function Page() {
           )}
         </div>
       </section>
+      {/* <Publications /> */}
       <section id="hackathons">
         <div className="space-y-12 w-full pb-12">
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
@@ -135,13 +137,15 @@ export default function Page() {
                 Hackathons
               </div>
               <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
-                I like hacking things <span className="whitespace-nowrap">(a lot)</span>
+                I like hacking things{" "}
+                <span className="whitespace-nowrap">(a lot)</span>
               </h2>
               <p className="text-muted-foreground md:text-lg/relaxed lg:text-base/relaxed xl:text-lg/relaxed">
                 During my time in university, I attended{" "}
-                {DATA.hackathons.length}+ hackathons. It was eye-opening to see the endless possibilities
-                brought to life by a group of motivated and passionate
-                individuals within 2-3 days. I have made some of my best friends and memories at these hackathons :)
+                {DATA.hackathons.length}+ hackathons. It was eye-opening to see
+                the endless possibilities brought to life by a group of
+                motivated and passionate individuals within 2-3 days. I have
+                made some of my best friends and memories at these hackathons :)
               </p>
             </div>
           </div>
@@ -150,7 +154,9 @@ export default function Page() {
               <HackathonCard
                 key={project.title}
                 title={project.title}
-                {...(project.description && { description: project.description })}
+                {...(project.description && {
+                  description: project.description,
+                })}
                 {...(project.dates && { dates: project.dates })}
                 {...(project.location && { location: project.location })}
                 {...(project.image && { image: project.image })}

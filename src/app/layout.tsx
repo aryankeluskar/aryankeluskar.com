@@ -29,9 +29,9 @@ export const metadata: Metadata = {
   },
   description: DATA.description,
   icons: {
-    icon: '/some pfp.jpg',
-    shortcut: '/some pfp.jpg',
-    apple: '/some pfp.jpg',
+    icon: "/some pfp.jpg",
+    shortcut: "/some pfp.jpg",
+    apple: "/some pfp.jpg",
   },
   openGraph: {
     title: `${DATA.name}`,
@@ -70,8 +70,8 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <Script 
-          src="https://cloud.umami.is/script.js" 
+        <Script
+          src="https://cloud.umami.is/script.js"
           data-website-id="19f7b60d-c6ba-468a-8f90-25fe1473c03c"
           strategy="afterInteractive"
         />
@@ -80,7 +80,7 @@ export default function RootLayout({
         className={cn(
           "min-h-screen bg-background font-sans antialiased max-w-2xl mx-auto py-12 sm:py-24 px-6",
           fontSans.variable,
-          solway.variable
+          solway.variable,
         )}
       >
         <ThemeProvider attribute="class" defaultTheme="light">
