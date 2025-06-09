@@ -1,6 +1,8 @@
 import { GlobeIcon, MailIcon } from "lucide-react";
 
-export type IconProps = JSX.IntrinsicElements["svg"];
+export type IconProps = React.SVGProps<SVGSVGElement> & {
+  viewBox?: string;
+};
 
 export const Icons = {
   chrome: (props: IconProps) => (

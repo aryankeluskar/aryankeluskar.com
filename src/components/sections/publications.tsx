@@ -4,6 +4,46 @@ import { DATA } from "@/data/resume";
 import { LinkIcon } from "lucide-react";
 import React from "react";
 
+// Separate component for author list with expand/collapse functionality
+function AuthorList({ authors }: { authors: string[] }) {
+  const [isExpanded, setIsExpanded] = React.useState(false);
+  
+  const fullAuthorList = authors
+    .map(
+      (author, index) =>
+        `<span key="${index}">${author}${index < authors.length - 1 ? ", " : ""}</span>`,
+    )
+    .join("");
+
+  const truncateAuthors = (
+    authors: string,
+    maxLength: number,
+  ) => {
+    if (authors.length <= maxLength) return authors;
+    return authors.slice(0, maxLength) + "...";
+  };
+
+  return (
+    <>
+      <span
+        dangerouslySetInnerHTML={{
+          __html: isExpanded
+            ? fullAuthorList
+            : truncateAuthors(fullAuthorList, 310),
+        }}
+      />
+      {fullAuthorList.length > 250 && (
+        <button
+          onClick={() => setIsExpanded(!isExpanded)}
+          className=""
+        >
+          {isExpanded ? "... (collapse)" : "... (see all)"}
+        </button>
+      )}
+    </>
+  );
+}
+
 export function Publications() {
   return (
     <section id="publications" className="scroll-mt-16 py-12">
@@ -43,43 +83,7 @@ export function Publications() {
               {" "}
               {/* Adjusted font size for readability */}
               <div className="text-gray-700 dark:text-gray-300">
-                {(() => {
-                  const [isExpanded, setIsExpanded] = React.useState(false);
-                  const fullAuthorList = publication.authors
-                    .map(
-                      (author, index) =>
-                        `<span key="${index}">${author}${index < publication.authors.length - 1 ? ", " : ""}</span>`,
-                    )
-                    .join("");
-
-                  const truncateAuthors = (
-                    authors: string,
-                    maxLength: number,
-                  ) => {
-                    if (authors.length <= maxLength) return authors;
-                    return authors.slice(0, maxLength) + "...";
-                  };
-
-                  return (
-                    <>
-                      <span
-                        dangerouslySetInnerHTML={{
-                          __html: isExpanded
-                            ? fullAuthorList
-                            : truncateAuthors(fullAuthorList, 310),
-                        }}
-                      />
-                      {fullAuthorList.length > 250 && (
-                        <button
-                          onClick={() => setIsExpanded(!isExpanded)}
-                          className=""
-                        >
-                          {isExpanded ? "... (collapse)" : "... (see all)"}
-                        </button>
-                      )}
-                    </>
-                  );
-                })()}
+                <AuthorList authors={publication.authors} />
               </div>
               {publication.contributionNote && (
                 <div className="mt-1 text-xs md:text-sm font-semibold">
