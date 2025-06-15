@@ -7,7 +7,7 @@ import React from "react";
 // Separate component for author list with expand/collapse functionality
 function AuthorList({ authors }: { authors: string[] }) {
   const [isExpanded, setIsExpanded] = React.useState(false);
-  
+
   const fullAuthorList = authors
     .map(
       (author, index) =>
@@ -15,10 +15,7 @@ function AuthorList({ authors }: { authors: string[] }) {
     )
     .join("");
 
-  const truncateAuthors = (
-    authors: string,
-    maxLength: number,
-  ) => {
+  const truncateAuthors = (authors: string, maxLength: number) => {
     if (authors.length <= maxLength) return authors;
     return authors.slice(0, maxLength) + "...";
   };
@@ -33,10 +30,7 @@ function AuthorList({ authors }: { authors: string[] }) {
         }}
       />
       {fullAuthorList.length > 250 && (
-        <button
-          onClick={() => setIsExpanded(!isExpanded)}
-          className=""
-        >
+        <button onClick={() => setIsExpanded(!isExpanded)} className="">
           {isExpanded ? "... (collapse)" : "... (see all)"}
         </button>
       )}

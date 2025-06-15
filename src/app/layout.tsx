@@ -9,6 +9,7 @@ import { Solway } from "next/font/google";
 import "./globals.css";
 import { BlueprintGrid } from "@/components/blueprint-grid";
 import Script from "next/script";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -90,6 +91,7 @@ export default function RootLayout({
             <Navbar />
           </TooltipProvider>
         </ThemeProvider>
+        <SpeedInsights />
       </body>
     </html>
   );
