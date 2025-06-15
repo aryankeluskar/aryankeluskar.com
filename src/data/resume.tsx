@@ -526,9 +526,10 @@ export const DATA = {
       dates: "2024",
       active: true,
       description:
-        "Created a **sub-200ms** API to convert Spotify playlists to YouTube. Used multi-threading and developed a unique scoring algorithm which maximizes speed and accuracy.",
+        "Created a **sub-100ms** API to convert Spotify playlists to YouTube in Rust 🦀. Used multi-threading and developed a unique scoring algorithm which maximizes accuracy.",
       technologies: [
-        "TypeScript",
+        "Rust",
+        "Tokio",
         "Python",
         "FastAPI",
         "HTML",
