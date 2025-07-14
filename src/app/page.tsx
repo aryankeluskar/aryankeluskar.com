@@ -25,9 +25,12 @@ export default function Page() {
     <main className="flex flex-col min-h-[100dvh] space-y-10">
       <Hero />
       <section id="about">
-        <h2 className="text-xl font-bold">About</h2>
-        <Markdown className="prose max-w-full text-pretty font-sans text-sm text-muted-foreground dark:prose-invert">
-          {DATA.summary}
+        <h2 className="text-xl font-bold bg-white w-min">About</h2>
+        <Markdown className="prose max-w-full bg-white text-pretty font-sans text-sm text-muted-foreground dark:prose-invert mb-4 mt-2">
+          {DATA.summary1}
+        </Markdown>
+        <Markdown className="prose max-w-full bg-white text-pretty font-sans text-sm text-muted-foreground dark:prose-invert">
+          {DATA.summary2}
         </Markdown>
       </section>
       <HometownSection />

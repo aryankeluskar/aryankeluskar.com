@@ -58,11 +58,15 @@ export const DATA = {
   location: "Tempe, AZ",
   locationLink: "https://www.google.com/maps/place/tempe",
   description:
-    "19, building fast backends, scalable language models, and iOS apps. Experienced in full-stack development, machine learning, data analysis, and C++ \n\nBuilding [alice](https://dub.sh/wonderland) and [easywire](https://dub.sh/easywire).",
-  summary:
-    "I'm a 19 year old college junior studying computer science and statistics with a passion for solving problems, learning intricate concepts, and building products. I was first exposed to coding when I was 10. Solving problems by converting my thoughts to tangible results in languages that feel incredibly cryptic has been one of the most amazing feelings ever! \n\nI grew up with a deep passion for mathematics, and use bayesian statistics to read the world around me. I have won awards at prestigious hackathons such as HackMIT 2024 and SFHacks 2024. When I'm not coding, I'm probably [cycling](https://www.strava.com/activities/13329957326) until I run out of roads.",
-  // avatarUrl: "/professional.jpg",
-  avatarUrl: "/pfp.jpg",
+    "19, building fast backends, scalable language models, and iOS apps. I live to learn, create, and ship. Experienced in full-stack development, machine learning, and data analysis.",
+  current:
+    "Building [alice](https://dub.sh/wonderland) and [easywire](https://dub.sh/easywire).",
+  summary1:
+    "I love to solve problems, learn intricate concepts, and build products. Solving daunting & ambiguous problems demands clarity under chaos, and the quest to create intuitive designs with scalable engineering is my ikigai. I'm presently a computer science and statistics senior at ASU.",
+  summary2:
+    "I grew up with a deep passion for mathematics, and use bayesian statistics to explain the world around me. I have won awards at prestigious hackathons such as HackMIT 2024 and SFHacks 2024. In my free time, I'm probably reading psychoanalysis rabbit-holes or [cycling](https://www.strava.com/activities/13329957326) until I run out of roads.",
+  // avatarUrl: "/professional.webp",
+  avatarUrl: "/pfp.webp",
   hackathons: [
     {
       title: "HackIllinois 2025",
