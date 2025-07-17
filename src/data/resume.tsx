@@ -282,7 +282,7 @@ export const DATA = {
       badges: [],
       location: "Los Angeles, CA",
       title: "Artificial Intelligence Research Intern",
-      logoUrl: "/healthgc.jpeg",
+      logoUrl: "/healthgc.webp",
       start: "May 2025",
       end: "August 2025",
       description: (
@@ -307,7 +307,7 @@ export const DATA = {
       badges: [],
       location: "Arizona State University",
       title: "Undergraduate Researcher",
-      logoUrl: "/cropped-asu-icon.png",
+      logoUrl: "/cropped-asu-icon.webp",
       start: "April 2024",
       end: "Present",
       description: (
@@ -370,7 +370,7 @@ export const DATA = {
       badges: [],
       location: "Remote",
       title: "Website Development Intern",
-      logoUrl: "/rcv.jpeg",
+      logoUrl: "/rcv.webp",
       start: "June 2023",
       end: "July 2023",
       description: (
@@ -409,7 +409,7 @@ export const DATA = {
       school: "Buildspace",
       href: "https://buildspace.so",
       degree: "nights & weekends s5",
-      logoUrl: "/buildspace.jpg",
+      logoUrl: "/buildspace.webp",
       start: "May 2024",
       end: "June 2024",
       description: "Completed the Full Stack Developer course.",
@@ -554,29 +554,28 @@ export const DATA = {
       ],
     },
     {
-      title: "FreshUntil",
-      href: "https://git.new/fresh",
-      dates: "2024",
+      title: "SEOthing",
+      href: "https://npmjs.com/package/seothing",
+      dates: "2025",
       active: true,
       description:
-        "Full stack web-app that reduces food wastage by automating expiry notifications, generating custom recipes, and creating a peer-to-peer network to share surplus food.",
+        "CLI tool to skyrocket your Lighthouse score by converting images to WebP format, generating meta tags, and optimizing for better performance. `npx seothing`",
       technologies: [
-        "ReactJS",
-        "NodeJS",
-        "TypeScript",
-        "Python",
-        "Google Cloud",
+        "JavaScript",
+        "Gemini API",
+        "Node.js",
+        "npm",
+        "CLI",
+        "Image Compression",
       ],
-      // image: "/freshuntil.png",
-      video: null,
       links: [
         {
           icon: <Icons.github className="size-4" />,
           type: "GitHub",
-          href: "https://git.new/fresh",
+          href: "https://git.new/seothing",
         },
       ],
-    },
+    },   
     {
       title: "AMRAS",
       href: "https://git.new/ecmo-bridge",
@@ -603,6 +602,30 @@ export const DATA = {
           href: "https://dub.sh/amras",
         },
       ],
+    },    
+    {
+      title: "FreshUntil",
+      href: "https://git.new/fresh",
+      dates: "2024",
+      active: true,
+      description:
+        "Full stack web-app that reduces food wastage by automating expiry notifications, generating custom recipes, and creating a peer-to-peer network to share surplus food.",
+      technologies: [
+        "ReactJS",
+        "NodeJS",
+        "TypeScript",
+        "Python",
+        "Google Cloud",
+      ],
+      // image: "/freshuntil.png",
+      video: null,
+      links: [
+        {
+          icon: <Icons.github className="size-4" />,
+          type: "GitHub",
+          href: "https://git.new/fresh",
+        },
+      ],
     },
     {
       title: "EdComposer",
@@ -624,6 +647,34 @@ export const DATA = {
           icon: <Icons.github className="size-4" />,
           type: "GitHub",
           href: "https://git.new/edcomposer",
+        },
+      ],
+    },
+    {
+      title: "PicThis",
+      href: "https://npmjs.com/package/picthis",
+      dates: "2025",
+      active: true,
+      description:
+        "CLI tool to convert images to WebP format, reducing file sizes by at least 90% and automatically updating code references. `npx picthis`",
+      technologies: [
+        "JavaScript",
+        "TypeScript",
+        "Node.js",
+        "npm",
+        "CLI",
+        "Image Compression",
+      ],
+      links: [
+        {
+          icon: <Icons.github className="size-4" />,
+          type: "GitHub",
+          href: "https://git.new/picthis",
+        },        
+        {
+          icon: <Icons.globe className="size-4" />,
+          type: "NPM",
+          href: "https://npmjs.com/package/picthis",
         },
       ],
     },
@@ -657,7 +708,7 @@ export const DATA = {
       dates: "2024",
       active: true,
       description:
-        "Personal website built with Next.js, Tailwind CSS, and TypeScript. Hosted on Vercel. I mean, you are looking at it right now. Shoutout to magicui for this amazing design!\n\nPS: Notice how the cursor has it's own personal spotlight wherever it goes.",
+        "Personal website built with Next.js, Tailwind CSS, and TypeScript. Hosted on Vercel. I mean, you are looking at it right now. Shoutout to magicui for this amazing design!\n\nPS: Notice how the cursor has it's own mini-spotlight wherever it goes.",
       technologies: ["Next.js", "Tailwind CSS", "TypeScript", "Vercel"],
       links: [
         {
