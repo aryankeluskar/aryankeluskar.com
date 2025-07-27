@@ -13,7 +13,7 @@ export function HeroSection() {
               {`Hi, I'm ${DATA.name.split(" ")[0]} 👋`}
             </h1>
             <div className="max-w-[600px] md:text-xl">
-              <Markdown className="prose max-w-full w-fit text-pretty font-sans dark:prose-invert bg-white mb-4">
+              <Markdown className="prose max-w-full w-fit text-pretty font-sans dark:prose-invert bg-white dark:bg-black mb-4">
                 {DATA.description}
               </Markdown>
             </div>
@@ -44,7 +44,8 @@ export function HeroSection() {
           </Link>
           <Link
             href="#projects"
-            className="px-11 py-2.5 font-solway font-semibold text-sm sm:text-base text-foreground bg-[rgba(24,0,255,0.33)] hover:bg-[rgba(24,0,255,0.5)] transition-colors "
+            className="px-11 py-2.5 font-solway font-semibold text-sm sm:text-base text-foreground bg-[rgba(2,0,255,0.33)] hover:bg-[rgba(2,0,255,0.5)] transition-colors "
+            // className="px-11 py-2.5 font-solway font-semibold text-sm sm:text-base text-foreground bg-[rgba(0,149,255,0.33)] hover:bg-[rgba(0,149,255,0.5)] transition-colors "
           >
             projects
           </Link>

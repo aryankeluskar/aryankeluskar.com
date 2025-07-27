@@ -25,11 +25,25 @@ export default function Page() {
     <main className="flex flex-col min-h-[100dvh] space-y-10">
       <Hero />
       <section id="about">
-        <h2 className="text-xl font-bold bg-white w-min">About</h2>
-        <Markdown className="prose max-w-full bg-white text-pretty font-sans text-sm text-muted-foreground dark:prose-invert mb-4 mt-2">
+        <h2 className="text-xl font-bold bg-white dark:bg-black w-min">tldr</h2>
+        <div className="relative w-full mt-3 mb-8 p-4">
+          <img
+            src="/tldr.webp"
+            alt="tldr"
+            className="w-full h-auto dark:hidden"
+          />
+          <img
+            src="/tldr-dark.webp"
+            alt="tldr"
+            className="w-full h-auto hidden dark:block"
+          />
+        </div>
+
+        <h2 className="text-xl font-bold bg-white dark:bg-black w-min">About</h2>
+        <Markdown className="prose max-w-full bg-white dark:bg-black text-pretty font-sans text-sm text-muted-foreground dark:prose-invert mb-4 mt-2">
           {DATA.summary1}
         </Markdown>
-        <Markdown className="prose max-w-full bg-white text-pretty font-sans text-sm text-muted-foreground dark:prose-invert">
+        <Markdown className="prose max-w-full bg-white dark:bg-black text-pretty font-sans text-sm text-muted-foreground dark:prose-invert">
           {DATA.summary2}
         </Markdown>
       </section>
@@ -77,12 +91,15 @@ export default function Page() {
           </div>
         </div>
       </section>
+
+      {/* <Publications /> */}
+
       <section id="projects">
         <div className="space-y-12 w-full py-12">
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
             <div className="space-y-2">
               <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
-                My Projects
+                Projects
               </div>
               <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
                 Check out my latest work
@@ -131,7 +148,6 @@ export default function Page() {
           )}
         </div>
       </section>
-      {/* <Publications /> */}
       <section id="hackathons">
         <div className="space-y-12 w-full pb-12">
           <div className="flex flex-col items-center justify-center space-y-4 text-center">

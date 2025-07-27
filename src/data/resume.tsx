@@ -29,6 +29,8 @@ type PublicationType = {
   venue: string;
   imageSrc?: string;
   contributionNote?: string;
+  citation?: string;
+  citationLink?: string;
   links?: readonly {
     icon?: React.ReactNode;
     title: string;
@@ -69,8 +71,15 @@ export const DATA = {
   avatarUrl: "/pfp.webp",
   hackathons: [
     {
+      title: "HackMIT 2025",
+      image: "/hackmit.png",
+      dates: "September 2025",
+      location: "Cambridge, MA",
+      description:
+        "If you're participating as well, let's connect!"
+    },
+    {
       title: "HackIllinois 2025",
-      // project: "https://devpost.com/software/ai-in-education-by-scaleup",
       image: "/hackillinois.png",
       dates: "February 2025",
       location: "Urbana-Champaign, IL",
@@ -193,8 +202,10 @@ export const DATA = {
       title:
         "Do LLMs Understand Ambiguity in Text? A Case Study in Open-world Question Answering",
       href: "https://ieeexplore.ieee.org/abstract/document/10825265",
-      authors: ["<u>Aryan Keluskar</u>", "Amrita Bhattacharjee", "Huan Liu"],
+      authors: ["<b>Aryan Keluskar</b>", "Amrita Bhattacharjee", "Huan Liu"],
       venue: "IEEE International Conference on Big Data 2024, Washington DC",
+      citation: "11 citations",
+      citationLink: "https://scholar.google.com/scholar?oi=bibs&hl=en1&cites=10776899312694291117&as_sdt=5",
       links: [
         {
           title: "Google Scholar",
@@ -206,6 +217,58 @@ export const DATA = {
         },
       ],
     },
+    // {
+    //   title:
+    //     "Scikit-bio: a fundamental Python library for biological omic data analysis",
+    //   href: "https://ieeexplore.ieee.org/abstract/document/10825265",
+    //   authors: [
+    //     "Matthew Aton",
+    //     "Daniel McDonald",
+    //     "Jorge Cañardo Alastuey",
+    //     "Raeed Azom",
+    //     "Paarth Batra",
+    //     "Valentyn Bezshapkin",
+    //     "Evan Bolyen",
+    //     "Alexander Cagle",
+    //     "J. Gregory Caporaso",
+    //     "Justine W. Debelius",
+    //     "Kestrel Gorlick",
+    //     "Nirmitha Hamsanipally",
+    //     "Lars Hunger",
+    //     "<b>Aryan Keluskar</b>",
+    //     "Disen Liao",
+    //     "Yang Young Lu",
+    //     "Jose A. Navas-Molina",
+    //     "Anders Pitman",
+    //     "Jai Ram Rideout",
+    //     "Anton Sazonov",
+    //     "Bharath Sathappan",
+    //     "Karen Schwarzberg Lipson",
+    //     "Igor Sfiligoi",
+    //     "Chris Tapo",
+    //     "Yoshiki Vázquez-Baeza",
+    //     "Zijun Wu",
+    //     "Zhenjiang Zech Xu",
+    //     "Mingsong Sam Ye",
+    //     "Jianshu Zhao",
+    //     "Rob Knight",
+    //     "James T. Morton",
+    //     "Qiyun Zhu",
+    //   ],
+    //   venue: "Nature Methods (under review)",
+    //   citation: "100 citations",
+    //   citationLink: "https://scholar.google.com/scholar?oi=bibs&hl=en1&cites=10776899312694291117&as_sdt=5",
+    //   links: [
+    //     {
+    //       title: "Google Scholar",
+    //       href: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wVDeZtcAAAAJ&authuser=1&citation_for_view=wVDeZtcAAAAJ:u5HHmVD_uO8C",
+    //     },
+    //     {
+    //       title: "Tweet",
+    //       href: "https://x.com/HEI/status/1859239058163085709",
+    //     },
+    //   ],
+    // },
   ] as PublicationType[],
   skills: [
     "Java",
@@ -323,7 +386,7 @@ export const DATA = {
             Python
           </span>{" "}
           to improve comprehension of ambiguous human text, and co-authored an{" "}
-          <span style={{ fontWeight: "bold", color: "#00629B" }}>IEEE</span>{" "}
+          <span className="text-[#00629b] dark:text-[#0078d4]" style={{ fontWeight: "bold"}}>IEEE</span>{" "}
           BigData paper with Prof. Huan Liu and Dr. Amrita Bhattacharjee.
         </>
       ),
@@ -377,13 +440,13 @@ export const DATA = {
         <>
           Developed backend infrastructure for static assets and 3D models
           integration using{" "}
-          <span style={{ fontWeight: "bold", color: "#306998" }}>
+          <span className="text-[#306998] dark:text-[#4194d8]" style={{ fontWeight: "bold"}}>
             JavaScript
           </span>{" "}
           and{" "}
-          <span style={{ fontWeight: "bold", color: "#00629B" }}>React.js</span>
+          <span className="text-[#269bdf] dark:text-[#0078d4]" style={{ fontWeight: "bold"}}>React.js</span>
           , yielding 46% surge in customer satisfaction. Created{" "}
-          <span style={{ fontWeight: "bold", color: "#eb8f00" }}>Power BI</span>{" "}
+          <span className="text-[#eb8f00] dark:text-[#ffb900]" style={{ fontWeight: "bold"}}>Power BI</span>{" "}
           dashboards and automated data collection using Google Analytics API,
           increasing click-through-rate by 29%.
         </>
@@ -474,6 +537,57 @@ export const DATA = {
       ],
     },
     {
+      title: "DeepDial",
+      href: "https://dub.sh/deepdial",
+      dates: "2025",
+      active: true,
+      description:
+        "It's like deep research, but for phone calls. Deep Dial uses AI to call businesses and gather information for you, such as comparing prices or checking availability.",
+      technologies: [
+        "React.js",
+        "Node.js",
+        "TypeScript",
+        "Twilio",
+        "Express.js",
+        "Deepgram",
+        "Google Cloud",
+      ],
+      links: [
+        {
+          icon: <Icons.github className="size-4" />,
+          type: "GitHub",
+          href: "https://git.new/deepdial",
+        },
+        {
+          icon: <Icons.globe className="size-4" />,
+          type: "Website",
+          href: "https://dub.sh/deepdial",
+        },
+      ],
+    },
+    {
+      title: "irina (AI for Minesweeper)",
+      href: "https://git.new/irina",
+      dates: "2024",
+      active: true,
+      description:
+        "AI that solves Minesweeper in record-breaking time. Uses a probabilistic approach, scans the grid, trains a Reinforcement Learning model to make decisions.",
+      technologies: [
+        "Reinforcement Learning",
+        "Python",
+        "TensorFlow",
+        "Pytorch",
+        "Jupyter Notebook",
+      ],
+      links: [
+        {
+          icon: <Icons.github className="size-4" />,
+          type: "GitHub",
+          href: "https://git.new/irina",
+        },
+      ],
+    },
+    {
       title: "EasyWire",
       href: "https://dub.sh/easywire",
       dates: "2024",
@@ -503,24 +617,25 @@ export const DATA = {
       ],
     },
     {
-      title: "irina (AI for Minesweeper)",
-      href: "https://git.new/irina",
-      dates: "2024",
+      title: "SEOthing",
+      href: "https://npmjs.com/package/seothing",
+      dates: "2025",
       active: true,
       description:
-        "AI that solves Minesweeper in record-breaking time. Uses a probabilistic approach, scans the grid, trains a Reinforcement Learning model to make decisions.",
+        "CLI tool to skyrocket your Lighthouse score by converting images to WebP format, generating meta tags, and optimizing for better performance. `npx seothing`",
       technologies: [
-        "Reinforcement Learning",
-        "Python",
-        "TensorFlow",
-        "Pytorch",
-        "Jupyter Notebook",
+        "JavaScript",
+        "Gemini API",
+        "Node.js",
+        "npm",
+        "CLI",
+        "Image Compression",
       ],
       links: [
         {
           icon: <Icons.github className="size-4" />,
           type: "GitHub",
-          href: "https://git.new/irina",
+          href: "https://git.new/seothing",
         },
       ],
     },
@@ -552,29 +667,6 @@ export const DATA = {
           href: "https://dub.sh/melodysyncer",
         },
       ],
-    },
-    {
-      title: "SEOthing",
-      href: "https://npmjs.com/package/seothing",
-      dates: "2025",
-      active: true,
-      description:
-        "CLI tool to skyrocket your Lighthouse score by converting images to WebP format, generating meta tags, and optimizing for better performance. `npx seothing`",
-      technologies: [
-        "JavaScript",
-        "Gemini API",
-        "Node.js",
-        "npm",
-        "CLI",
-        "Image Compression",
-      ],
-      links: [
-        {
-          icon: <Icons.github className="size-4" />,
-          type: "GitHub",
-          href: "https://git.new/seothing",
-        },
-      ],
     },   
     {
       title: "AMRAS",
@@ -582,7 +674,7 @@ export const DATA = {
       dates: "2024",
       active: true,
       description:
-        "Web-app designed to efficiently allocate Extracorporeal Membrane Oxygenation (ECMO) machines to patients in critical need using a dynamic matching algorithm. Built for Mayo Clinic Phoenix, in a 6-member team.",
+        "Web-app designed to efficiently allocate ECMO machines to patients in critical need using a dynamic matching algorithm. Built for Mayo Clinic Phoenix, in a 6-member team.",
       technologies: [
         "ReactJS",
         "NodeJS",
@@ -600,53 +692,6 @@ export const DATA = {
           icon: <Icons.globe className="size-4" />,
           type: "Website",
           href: "https://dub.sh/amras",
-        },
-      ],
-    },    
-    {
-      title: "FreshUntil",
-      href: "https://git.new/fresh",
-      dates: "2024",
-      active: true,
-      description:
-        "Full stack web-app that reduces food wastage by automating expiry notifications, generating custom recipes, and creating a peer-to-peer network to share surplus food.",
-      technologies: [
-        "ReactJS",
-        "NodeJS",
-        "TypeScript",
-        "Python",
-        "Google Cloud",
-      ],
-      // image: "/freshuntil.png",
-      video: null,
-      links: [
-        {
-          icon: <Icons.github className="size-4" />,
-          type: "GitHub",
-          href: "https://git.new/fresh",
-        },
-      ],
-    },
-    {
-      title: "EdComposer",
-      href: "https://git.new/edcomposer",
-      dates: "2024",
-      active: true,
-      description:
-        "EdComposer is the best and the most efficient way to make beautiful educational videos with just one pdf and one prompt. Built in a 4-member team in October 2023, using cloud-rendering to generate slideshow-style videos.",
-      technologies: [
-        "TypeScript",
-        "Python",
-        "FastAPI",
-        "HTML",
-        "CSS",
-        "Google Cloud",
-      ],
-      links: [
-        {
-          icon: <Icons.github className="size-4" />,
-          type: "GitHub",
-          href: "https://git.new/edcomposer",
         },
       ],
     },
@@ -679,26 +724,49 @@ export const DATA = {
       ],
     },
     {
-      title: "IMDB Analysis",
-      href: "github.com/aryankeluskar/IMDB-Genres-Analysis",
+      title: "EdComposer",
+      href: "https://git.new/edcomposer",
       dates: "2024",
       active: true,
       description:
-        "Filtered IMDB&apos;s dataset of over 730,000 entries using SQL, producing a robust and reliable dataset. Developed a data processing and visualization algorithm in Python. Used Seasonal Trend Decomposition and Monte Carlo Dropout to forecast movie ratings.",
+        "EdComposer makes educational videos with just one pdf and one prompt. Built in a 4-member team in October 2023, using cloud-rendering to generate slideshow-style videos.",
       technologies: [
+        "TypeScript",
         "Python",
-        "SQL",
-        "Julia",
-        "DataFrames",
-        "Plots",
-        "Monte Carlo Dropout",
-        "Time Series",
+        "FastAPI",
+        "HTML",
+        "CSS",
+        "Google Cloud",
       ],
       links: [
         {
           icon: <Icons.github className="size-4" />,
           type: "GitHub",
-          href: "https://github.com/aryankeluskar/IMDB-Genres-Analysis",
+          href: "https://git.new/edcomposer",
+        },
+      ],
+    },    
+    {
+      title: "FreshUntil",
+      href: "https://git.new/fresh",
+      dates: "2024",
+      active: true,
+      description:
+        "Full stack web-app that reduces food wastage by automating expiry notifications, generating custom recipes, and creating a peer-to-peer network to share surplus food.",
+      technologies: [
+        "ReactJS",
+        "NodeJS",
+        "TypeScript",
+        "Python",
+        "Google Cloud",
+      ],
+      // image: "/freshuntil.png",
+      video: null,
+      links: [
+        {
+          icon: <Icons.github className="size-4" />,
+          type: "GitHub",
+          href: "https://git.new/fresh",
         },
       ],
     },
