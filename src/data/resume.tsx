@@ -66,7 +66,7 @@ export const DATA = {
   summary1:
     "I love to solve problems, learn intricate concepts, and build products. Solving daunting & ambiguous problems demand clarity under chaos, and I believe in creating intuitive designs with scalable engineering to . I'm currently a computer science and statistics senior at ASU, while researching saferty in large-language models.",
   summary2:
-    "I grew up with a deep passion for mathematics, and use bayesian statistics to explain the world around me. I have won awards at prestigious hackathons such as HackMIT 2024 and SFHacks 2024. In my free time, I'm probably reading psychoanalysis rabbit-holes or [cycling](https://www.strava.com/activities/13329957326) until I run out of roads.",
+    "I grew up with a deep passion for mathematics, and use bayesian statistics to explain the world around me. I have won awards at prestigious hackathons such as HackMIT 2024 and SFHacks 2024. In my free time, I'm probably going down rabbit-holes or [cycling](https://www.strava.com/activities/13329957326) until I run out of roads.",
   // avatarUrl: "/professional.webp",
   avatarUrl: "/pfp.webp",
   hackathons: [
@@ -293,7 +293,7 @@ export const DATA = {
   ],
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
-    { href: "#work", icon: BriefcaseIcon, label: "Work" },
+    { href: "#experience", icon: BriefcaseIcon, label: "Experience" },
     { href: "#projects", icon: HammerIcon, label: "Projects" },
     // { href: "/blog", icon: NotebookIcon, label: "Blog" }
   ],

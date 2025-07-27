@@ -13,7 +13,7 @@ export function HeroSection() {
               {`Hi, I'm ${DATA.name.split(" ")[0]} 👋`}
             </h1>
             <div className="max-w-[600px] md:text-xl">
-              <Markdown className="prose max-w-full w-fit text-pretty font-sans dark:prose-invert bg-white dark:bg-black mb-4">
+              <Markdown className="prose max-w-full w-fit text-pretty font-sans dark:prose-invert bg-[rgba(255,255,255,0.33)] dark:bg-black mb-4">
                 {DATA.description}
               </Markdown>
             </div>
@@ -22,9 +22,6 @@ export function HeroSection() {
                 {DATA.current}
               </Markdown>
             </div>
-            {/* <p className="max-w-[600px] md:text-xl">
-                {DATA.description2}
-            </p> */}
           </div>
           <Avatar className="size-28 border">
             <AvatarImage alt={DATA.name} src={DATA.avatarUrl} />

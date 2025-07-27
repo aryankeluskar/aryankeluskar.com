@@ -14,6 +14,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { ChevronDown, ChevronUp } from "lucide-react";
 import { Publications } from "@/components/sections/publications";
+import Image from "next/image";
 
 export default function Page() {
   const [showAllProjects, setShowAllProjects] = useState(false);
@@ -25,30 +26,34 @@ export default function Page() {
     <main className="flex flex-col min-h-[100dvh] space-y-10">
       <Hero />
       <section id="about">
-        <h2 className="text-xl font-bold bg-white dark:bg-black w-min">tldr</h2>
-        <div className="relative w-full mt-3 mb-8 p-4">
-          <img
+        <h2 className="text-xl font-bold w-min">tldr</h2>
+        <div className="relative w-full mt-3 mb-8 lg:p-4">
+          <Image
             src="/tldr.webp"
             alt="tldr"
-            className="w-full h-auto dark:hidden"
+            className="w-full h-auto dark:hidden lg:opacity-80"
+            width={1000}
+            height={1000}
           />
-          <img
+          <Image
             src="/tldr-dark.webp"
             alt="tldr"
-            className="w-full h-auto hidden dark:block"
+            className="w-full h-auto hidden dark:block lg:opacity-80"
+            width={1000}
+            height={1000}
           />
         </div>
 
-        <h2 className="text-xl font-bold bg-white dark:bg-black w-min">About</h2>
-        <Markdown className="prose max-w-full bg-white dark:bg-black text-pretty font-sans text-sm text-muted-foreground dark:prose-invert mb-4 mt-2">
+        <h2 className="text-xl font-bold w-min">About</h2>
+        <Markdown className="prose max-w-full bg-[rgba(255,255,255,0.2)] dark:bg-[rgba(0,0,0,0.2)] text-pretty font-sans text-sm text-muted-foreground dark:prose-invert mb-4 mt-2">
           {DATA.summary1}
         </Markdown>
-        <Markdown className="prose max-w-full bg-white dark:bg-black text-pretty font-sans text-sm text-muted-foreground dark:prose-invert">
+        <Markdown className="prose max-w-full bg-[rgba(255,255,255,0.2)] dark:bg-[rgba(0,0,0,0.2)] text-pretty font-sans text-sm text-muted-foreground dark:prose-invert">
           {DATA.summary2}
         </Markdown>
       </section>
       <HometownSection />
-      <section id="work">
+      <section id="experience">
         <div className="flex min-h-0 flex-col gap-y-3">
           <h2 className="text-xl font-bold">Work Experience</h2>
           {DATA.work.map((work) => (
