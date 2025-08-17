@@ -16,11 +16,13 @@ import { ChevronDown, ChevronUp } from "lucide-react";
 import { Publications } from "@/components/sections/publications";
 import Image from "next/image";
 
+const PROJECTS_TO_SHOW = 8;
+
 export default function Page() {
   const [showAllProjects, setShowAllProjects] = useState(false);
   const visibleProjects = showAllProjects
     ? DATA.projects
-    : DATA.projects.slice(0, 6);
+    : DATA.projects.slice(0, PROJECTS_TO_SHOW);
 
   return (
     <main className="flex flex-col min-h-[100dvh] space-y-10">
@@ -130,7 +132,7 @@ export default function Page() {
               />
             ))}
           </div>
-          {DATA.projects.length > 6 && (
+          {DATA.projects.length > PROJECTS_TO_SHOW && (
             <div className="flex justify-center mt-8 mb-0">
               <Button
                 variant="ghost"
@@ -144,7 +146,7 @@ export default function Page() {
                   </>
                 ) : (
                   <>
-                    Show More ({DATA.projects.length - 6})
+                    Show More ({DATA.projects.length - PROJECTS_TO_SHOW})
                     <ChevronDown className="h-4 w-4" />
                   </>
                 )}
