@@ -79,7 +79,7 @@ export const DATA = {
         "If you're participating as well, let's connect!"
     },
     {
-      title: "HackIllinois 2025",
+      title: "HackIllinois 2025 (Microgrant 🏆)",
       image: "/hackillinois.png",
       dates: "February 2025",
       location: "Urbana-Champaign, IL",
