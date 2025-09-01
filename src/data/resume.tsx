@@ -15,6 +15,7 @@ type ProjectType = {
   technologies: string[];
   image?: string;
   video?: string;
+  logo?: string;
   links?: readonly {
     icon: React.ReactNode;
     type: string;
@@ -64,7 +65,7 @@ export const DATA = {
   current:
     "Building [alice](https://dub.sh/wonderland) and [easywire](https://dub.sh/easywire).",
   summary1:
-    "I love to solve problems, learn intricate concepts, and build products. Solving daunting & ambiguous problems demand clarity under chaos, and I believe in creating intuitive designs with scalable engineering to . I'm currently a computer science and statistics senior at ASU, while researching saferty in large-language models.",
+    "I love to solve problems, learn intricate concepts, and build products. Solving daunting & ambiguous problems demand clarity under chaos, thus I believe in creating intuitive and scalable engineering to solve them from first principles. I'm currently a computer science and statistics senior at ASU, while researching saferty in large-language models.",
   summary2:
     "I grew up with a deep passion for mathematics, and use bayesian statistics to explain the world around me. I have won awards at prestigious hackathons such as HackMIT 2024 and SFHacks 2024. In my free time, I'm probably going down rabbit-holes or [cycling](https://www.strava.com/activities/13329957326) until I run out of roads.",
   // avatarUrl: "/professional.webp",
@@ -481,6 +482,7 @@ export const DATA = {
   projects: [
     {
       title: "Alice",
+      image: "https://alice.aryankeluskar.com/icon64.png",
       href: "https://dub.sh/wonderland",
       dates: "2025",
       active: true,

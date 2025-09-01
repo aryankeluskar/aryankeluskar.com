@@ -63,6 +63,16 @@ function getCustomRedirects() {
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'alice.aryankeluskar.com',
+        port: '',
+        pathname: '/**',
+      },
+    ],
+  },
   async redirects() {
     const dubRedirects = getDubRedirects();
     const customRedirects = getCustomRedirects();
