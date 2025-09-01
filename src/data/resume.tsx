@@ -482,7 +482,7 @@ export const DATA = {
   projects: [
     {
       title: "Alice",
-      image: "https://alice.aryankeluskar.com/icon64.png",
+      image: "/alice_banner.png",
       href: "https://dub.sh/wonderland",
       dates: "2025",
       active: true,
@@ -515,6 +515,7 @@ export const DATA = {
     {
       title: "canvas-mcp",
       href: "https://git.new/canvas-mcp",
+      image: "/canvas_mcp_banner.png",
       dates: "2024",
       active: true,
       description:
@@ -540,6 +541,7 @@ export const DATA = {
     },
     {
       title: "XML Builder",
+      image: "/xml_banner.png",
       href: "https://dub.sh/xml-builder",
       dates: "2025",
       active: true,
@@ -571,6 +573,7 @@ export const DATA = {
     {
       title: "irina (AI for Minesweeper)",
       href: "https://git.new/irina",
+      image: "/irina_banner.png",
       dates: "2024",
       active: true,
       description:
@@ -688,11 +691,6 @@ export const DATA = {
         "Google Cloud",
       ],
       links: [
-        {
-          icon: <Icons.github className="size-4" />,
-          type: "GitHub",
-          href: "https://git.new/deepdial",
-        },
         {
           icon: <Icons.globe className="size-4" />,
           type: "Website",

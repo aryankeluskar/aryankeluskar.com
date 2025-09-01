@@ -70,9 +70,9 @@ export function ProjectCard({
             <Image
               src={image}
               alt={`${title} logo`}
-              width={24}
-              height={24}
-              className="h-12 w-12 m-2 rounded-md object-cover"
+              width={1000}
+              height={1000}
+              className="pointer-events-none mx-auto h-40 w-full object-cover object-top"
             />
           </div>
         )}

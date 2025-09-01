@@ -16,7 +16,7 @@ import { ChevronDown, ChevronUp } from "lucide-react";
 import { Publications } from "@/components/sections/publications";
 import Image from "next/image";
 
-const PROJECTS_TO_SHOW = 8;
+const PROJECTS_TO_SHOW = 10;
 
 export default function Page() {
   const [showAllProjects, setShowAllProjects] = useState(false);
