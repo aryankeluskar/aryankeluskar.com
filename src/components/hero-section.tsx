@@ -13,13 +13,15 @@ export function HeroSection() {
               {`Hi, I'm ${DATA.name.split(" ")[0]} 👋`}
             </h1>
             <div className="max-w-[600px] md:text-xl">
-              <Markdown className="prose max-w-full text-pretty font-sans dark:prose-invert">
+              <Markdown className="prose max-w-full w-fit text-pretty font-sans dark:prose-invert bg-[rgba(255,255,255,0.33)] dark:bg-black mb-4">
                 {DATA.description}
               </Markdown>
             </div>
-            {/* <p className="max-w-[600px] md:text-xl">
-                {DATA.description2}
-            </p> */}
+            <div className="max-w-[600px] md:text-xl">
+              <Markdown className="prose max-w-full text-pretty font-sans dark:prose-invert">
+                {DATA.current}
+              </Markdown>
+            </div>
           </div>
           <Avatar className="size-28 border">
             <AvatarImage alt={DATA.name} src={DATA.avatarUrl} />
@@ -39,7 +41,8 @@ export function HeroSection() {
           </Link>
           <Link
             href="#projects"
-            className="px-11 py-2.5 font-solway font-semibold text-sm sm:text-base text-foreground bg-[rgba(24,0,255,0.33)] hover:bg-[rgba(24,0,255,0.5)] transition-colors "
+            className="px-11 py-2.5 font-solway font-semibold text-sm sm:text-base text-foreground bg-[rgba(2,0,255,0.33)] hover:bg-[rgba(2,0,255,0.5)] transition-colors "
+            // className="px-11 py-2.5 font-solway font-semibold text-sm sm:text-base text-foreground bg-[rgba(0,149,255,0.33)] hover:bg-[rgba(0,149,255,0.5)] transition-colors "
           >
             projects
           </Link>

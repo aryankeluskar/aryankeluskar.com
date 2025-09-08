@@ -15,6 +15,7 @@ type ProjectType = {
   technologies: string[];
   image?: string;
   video?: string;
+  logo?: string;
   links?: readonly {
     icon: React.ReactNode;
     type: string;
@@ -29,6 +30,8 @@ type PublicationType = {
   venue: string;
   imageSrc?: string;
   contributionNote?: string;
+  citation?: string;
+  citationLink?: string;
   links?: readonly {
     icon?: React.ReactNode;
     title: string;
@@ -58,15 +61,26 @@ export const DATA = {
   location: "Tempe, AZ",
   locationLink: "https://www.google.com/maps/place/tempe",
   description:
-    "19, building fast backends, scalable language models, and iOS apps. Experienced in full-stack development, machine learning, data analysis, and C++ \n\nBuilding [alice](https://dub.sh/wonderland) and [easywire](https://dub.sh/easywire).",
-  summary:
-    "I'm a 19 year old college junior studying computer science and statistics with a passion for solving problems, learning intricate concepts, and building products. I was first exposed to coding when I was 10. Solving problems by converting my thoughts to tangible results in languages that feel incredibly cryptic has been one of the most amazing feelings ever! \n\nI grew up with a deep passion for mathematics, and use bayesian statistics to read the world around me. I have won awards at prestigious hackathons such as HackMIT 2024 and SFHacks 2024. When I'm not coding, I'm probably [cycling](https://www.strava.com/activities/13329957326) until I run out of roads.",
-  // avatarUrl: "/professional.jpg",
-  avatarUrl: "/pfp.jpg",
+    "19, building fast backends, scalable language models, and iOS apps. I live to learn, create, and ship. Experienced in full-stack development, machine learning, and data analysis.",
+  current:
+    "Building [alice](https://dub.sh/wonderland) and [easywire](https://dub.sh/easywire).",
+  summary1:
+    "I love to solve problems, learn intricate concepts, and build products. Solving daunting & ambiguous problems demand clarity under chaos, thus I believe in creating intuitive and scalable engineering to solve them from first principles. I'm currently a computer science and statistics senior at ASU, while researching saferty in large-language models.",
+  summary2:
+    "I grew up with a deep passion for mathematics, and use bayesian statistics to explain the world around me. I have won awards at prestigious hackathons such as HackMIT 2024 and SFHacks 2024. In my free time, I'm probably going down rabbit-holes or [cycling](https://www.strava.com/activities/13329957326) until I run out of roads.",
+  // avatarUrl: "/professional.webp",
+  avatarUrl: "/pfp.webp",
   hackathons: [
     {
-      title: "HackIllinois 2025",
-      // project: "https://devpost.com/software/ai-in-education-by-scaleup",
+      title: "HackMIT 2025",
+      image: "/hackmit.png",
+      dates: "September 2025",
+      location: "Cambridge, MA",
+      description:
+        "If you're participating as well, let's connect!"
+    },
+    {
+      title: "HackIllinois 2025 (Microgrant 🏆)",
       image: "/hackillinois.png",
       dates: "February 2025",
       location: "Urbana-Champaign, IL",
@@ -189,8 +203,10 @@ export const DATA = {
       title:
         "Do LLMs Understand Ambiguity in Text? A Case Study in Open-world Question Answering",
       href: "https://ieeexplore.ieee.org/abstract/document/10825265",
-      authors: ["<u>Aryan Keluskar</u>", "Amrita Bhattacharjee", "Huan Liu"],
+      authors: ["<b>Aryan Keluskar</b>", "Amrita Bhattacharjee", "Huan Liu"],
       venue: "IEEE International Conference on Big Data 2024, Washington DC",
+      citation: "13 citations",
+      citationLink: "https://scholar.google.com/scholar?oi=bibs&hl=en1&cites=10776899312694291117&as_sdt=5",
       links: [
         {
           title: "Google Scholar",
@@ -200,6 +216,42 @@ export const DATA = {
           title: "Tweet",
           href: "https://x.com/HEI/status/1859239058163085709",
         },
+      ],
+    },
+    // {
+    //   title:
+    //     "Scikit-bio: a fundamental Python library for biological omic data analysis",
+    //   href: "https://ieeexplore.ieee.org/abstract/document/10825265",
+    //   venue: "",
+    //   // citation: "100 citations",
+    //   // citationLink: "https://scholar.google.com/scholar?oi=bibs&hl=en1&cites=10776899312694291117&as_sdt=5",
+    //   links: [
+    //     {
+    //       title: "Google Scholar",
+    //       href: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wVDeZtcAAAAJ&authuser=1&citation_for_view=wVDeZtcAAAAJ:u5HHmVD_uO8C",
+    //     },
+    //     {
+    //       title: "Tweet",
+    //       href: "https://x.com/HEI/status/1859239058163085709",
+    //     },
+    //   ],
+    // },
+    {
+      title:
+        "Tri-Accel: Curvature-Aware Precision-Adaptive and Memory-Elastic Optimization for Efficient GPU Usage",
+      href: "https://arxiv.org/abs/2508.16905",
+      venue: "arXiv preprint arXiv:2508.16905",
+      // citation: "11 citations",
+      // citationLink: "https://scholar.google.com/scholar?oi=bibs&hl=en1&cites=10776899312694291117&as_sdt=5",
+      links: [
+        {
+          title: "Google Scholar",
+          href: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wVDeZtcAAAAJ&authuser=1&citation_for_view=wVDeZtcAAAAJ:u-x6o8ySG0sC",
+        },
+        // {
+        //   title: "Tweet",
+        //   href: "https://x.com/HEI/status/1859239058163085709",
+        // },
       ],
     },
   ] as PublicationType[],
@@ -226,7 +278,7 @@ export const DATA = {
   ],
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
-    { href: "#work", icon: BriefcaseIcon, label: "Work" },
+    { href: "#experience", icon: BriefcaseIcon, label: "Experience" },
     { href: "#projects", icon: HammerIcon, label: "Projects" },
     // { href: "/blog", icon: NotebookIcon, label: "Blog" }
   ],
@@ -278,7 +330,7 @@ export const DATA = {
       badges: [],
       location: "Los Angeles, CA",
       title: "Artificial Intelligence Research Intern",
-      logoUrl: "/healthgc.jpeg",
+      logoUrl: "/healthgc.webp",
       start: "May 2025",
       end: "August 2025",
       description: (
@@ -303,7 +355,7 @@ export const DATA = {
       badges: [],
       location: "Arizona State University",
       title: "Undergraduate Researcher",
-      logoUrl: "/cropped-asu-icon.png",
+      logoUrl: "/cropped-asu-icon.webp",
       start: "April 2024",
       end: "Present",
       description: (
@@ -319,7 +371,7 @@ export const DATA = {
             Python
           </span>{" "}
           to improve comprehension of ambiguous human text, and co-authored an{" "}
-          <span style={{ fontWeight: "bold", color: "#00629B" }}>IEEE</span>{" "}
+          <span className="text-[#00629b] dark:text-[#0078d4]" style={{ fontWeight: "bold"}}>IEEE</span>{" "}
           BigData paper with Prof. Huan Liu and Dr. Amrita Bhattacharjee.
         </>
       ),
@@ -366,20 +418,20 @@ export const DATA = {
       badges: [],
       location: "Remote",
       title: "Website Development Intern",
-      logoUrl: "/rcv.jpeg",
+      logoUrl: "/rcv.webp",
       start: "June 2023",
       end: "July 2023",
       description: (
         <>
           Developed backend infrastructure for static assets and 3D models
           integration using{" "}
-          <span style={{ fontWeight: "bold", color: "#306998" }}>
+          <span className="text-[#306998] dark:text-[#4194d8]" style={{ fontWeight: "bold"}}>
             JavaScript
           </span>{" "}
           and{" "}
-          <span style={{ fontWeight: "bold", color: "#00629B" }}>React.js</span>
+          <span className="text-[#269bdf] dark:text-[#0078d4]" style={{ fontWeight: "bold"}}>React.js</span>
           , yielding 46% surge in customer satisfaction. Created{" "}
-          <span style={{ fontWeight: "bold", color: "#eb8f00" }}>Power BI</span>{" "}
+          <span className="text-[#eb8f00] dark:text-[#ffb900]" style={{ fontWeight: "bold"}}>Power BI</span>{" "}
           dashboards and automated data collection using Google Analytics API,
           increasing click-through-rate by 29%.
         </>
@@ -405,7 +457,7 @@ export const DATA = {
       school: "Buildspace",
       href: "https://buildspace.so",
       degree: "nights & weekends s5",
-      logoUrl: "/buildspace.jpg",
+      logoUrl: "/buildspace.webp",
       start: "May 2024",
       end: "June 2024",
       description: "Completed the Full Stack Developer course.",
@@ -414,6 +466,7 @@ export const DATA = {
   projects: [
     {
       title: "Alice",
+      image: "/alice_banner.png",
       href: "https://dub.sh/wonderland",
       dates: "2025",
       active: true,
@@ -446,6 +499,7 @@ export const DATA = {
     {
       title: "canvas-mcp",
       href: "https://git.new/canvas-mcp",
+      image: "/canvas_mcp_banner.png",
       dates: "2024",
       active: true,
       description:
@@ -466,6 +520,60 @@ export const DATA = {
           icon: <Icons.github className="size-4" />,
           type: "GitHub",
           href: "https://git.new/canvas-mcp",
+        },
+      ],
+    },
+    {
+      title: "XML Builder",
+      image: "/xml_banner.png",
+      href: "https://dub.sh/xml-builder",
+      dates: "2025",
+      active: true,
+      description:
+        "[Anthropic](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/use-xml-tags), [Google](https://cloud.google.com/vertex-ai/generative-ai/docs/learn/prompts/structure-prompts), [OpenAI](https://platform.openai.com/docs/guides/prompt-engineering) recommend using XML to structure your LLM prompts, so this tool helps you quickly generate structured XML prompts without the hassle of manual formatting.",
+      technologies: [
+        "React.js",
+        "Hono.js",
+        "TypeScript",
+        "SQL",
+        "Cloudflare R1",
+        "Google OAuth",
+        "Express.js",
+        "Vercel",
+      ],
+      links: [
+        {
+          icon: <Icons.github className="size-4" />,
+          type: "GitHub",
+          href: "https://git.new/xml-builder",
+        },
+        {
+          icon: <Icons.globe className="size-4" />,
+          type: "Website",
+          href: "https://dub.sh/xml-builder",
+        },
+      ],
+    },
+    {
+      title: "irina (AI for Minesweeper)",
+      href: "https://git.new/irina",
+      image: "/irina_banner.png",
+      dates: "2024",
+      active: true,
+      description:
+        "AI that solves Minesweeper in record-breaking time. Uses a probabilistic approach, scans the grid, trains a Reinforcement Learning model to make decisions.",
+      technologies: [
+        "Reinforcement Learning",
+        "Python",
+        "TensorFlow",
+        "Pytorch",
+        "Jupyter Notebook",
+      ],
+      links: [
+        {
+          icon: <Icons.github className="size-4" />,
+          type: "GitHub",
+          href: "https://git.new/irina",
         },
       ],
     },
@@ -499,24 +607,25 @@ export const DATA = {
       ],
     },
     {
-      title: "irina (AI for Minesweeper)",
-      href: "https://git.new/irina",
-      dates: "2024",
+      title: "SEOthing",
+      href: "https://npmjs.com/package/seothing",
+      dates: "2025",
       active: true,
       description:
-        "AI that solves Minesweeper in record-breaking time. Uses a probabilistic approach, scans the grid, trains a Reinforcement Learning model to make decisions.",
+        "CLI tool to skyrocket your Lighthouse score by converting images to WebP format, generating meta tags, and optimizing for better performance. `npx seothing`",
       technologies: [
-        "Reinforcement Learning",
-        "Python",
-        "TensorFlow",
-        "Pytorch",
-        "Jupyter Notebook",
+        "JavaScript",
+        "Gemini API",
+        "Node.js",
+        "npm",
+        "CLI",
+        "Image Compression",
       ],
       links: [
         {
           icon: <Icons.github className="size-4" />,
           type: "GitHub",
-          href: "https://git.new/irina",
+          href: "https://git.new/seothing",
         },
       ],
     },
@@ -548,7 +657,109 @@ export const DATA = {
           href: "https://dub.sh/melodysyncer",
         },
       ],
+    },    
+    {
+      title: "DeepDial",
+      href: "https://dub.sh/deepdial",
+      dates: "2025",
+      active: true,
+      description:
+        "It's like deep research, but for phone calls. Deep Dial uses AI to call businesses and gather information for you, such as comparing prices or checking availability.",
+      technologies: [
+        "React.js",
+        "Node.js",
+        "TypeScript",
+        "Twilio",
+        "Express.js",
+        "Deepgram",
+        "Google Cloud",
+      ],
+      links: [
+        {
+          icon: <Icons.globe className="size-4" />,
+          type: "Website",
+          href: "https://dub.sh/deepdial",
+        },
+      ],
+    },   
+    {
+      title: "AMRAS",
+      href: "https://git.new/ecmo-bridge",
+      dates: "2024",
+      active: true,
+      description:
+        "Web-app designed to efficiently allocate ECMO machines to patients in critical need using a dynamic matching algorithm. Built for Mayo Clinic Phoenix, in a 6-member team.",
+      technologies: [
+        "ReactJS",
+        "NodeJS",
+        "TypeScript",
+        "Python",
+        "Google Cloud",
+      ],
+      links: [
+        {
+          icon: <Icons.github className="size-4" />,
+          type: "GitHub",
+          href: "https://git.new/ecmo-bridge",
+        },
+        {
+          icon: <Icons.globe className="size-4" />,
+          type: "Website",
+          href: "https://dub.sh/amras",
+        },
+      ],
     },
+    {
+      title: "PicThis",
+      href: "https://npmjs.com/package/picthis",
+      dates: "2025",
+      active: true,
+      description:
+        "CLI tool to convert images to WebP format, reducing file sizes by at least 90% and automatically updating code references. `npx picthis`",
+      technologies: [
+        "JavaScript",
+        "TypeScript",
+        "Node.js",
+        "npm",
+        "CLI",
+        "Image Compression",
+      ],
+      links: [
+        {
+          icon: <Icons.github className="size-4" />,
+          type: "GitHub",
+          href: "https://git.new/picthis",
+        },        
+        {
+          icon: <Icons.globe className="size-4" />,
+          type: "NPM",
+          href: "https://npmjs.com/package/picthis",
+        },
+      ],
+    },
+    {
+      title: "EdComposer",
+      href: "https://git.new/edcomposer",
+      dates: "2024",
+      active: true,
+      description:
+        "EdComposer makes educational videos with just one pdf and one prompt. Built in a 4-member team in October 2023, using cloud-rendering to generate slideshow-style videos.",
+      technologies: [
+        "TypeScript",
+        "Python",
+        "FastAPI",
+        "HTML",
+        "CSS",
+        "Google Cloud",
+      ],
+      links: [
+        {
+          icon: <Icons.github className="size-4" />,
+          type: "GitHub",
+          href: "https://git.new/edcomposer",
+        },
+      ],
+    },    
     {
       title: "FreshUntil",
       href: "https://git.new/fresh",
@@ -574,86 +785,12 @@ export const DATA = {
       ],
     },
     {
-      title: "AMRAS",
-      href: "https://git.new/ecmo-bridge",
-      dates: "2024",
-      active: true,
-      description:
-        "Web-app designed to efficiently allocate Extracorporeal Membrane Oxygenation (ECMO) machines to patients in critical need using a dynamic matching algorithm. Built for Mayo Clinic Phoenix, in a 6-member team.",
-      technologies: [
-        "ReactJS",
-        "NodeJS",
-        "TypeScript",
-        "Python",
-        "Google Cloud",
-      ],
-      links: [
-        {
-          icon: <Icons.github className="size-4" />,
-          type: "GitHub",
-          href: "https://git.new/ecmo-bridge",
-        },
-        {
-          icon: <Icons.globe className="size-4" />,
-          type: "Website",
-          href: "https://dub.sh/amras",
-        },
-      ],
-    },
-    {
-      title: "EdComposer",
-      href: "https://git.new/edcomposer",
-      dates: "2024",
-      active: true,
-      description:
-        "EdComposer is the best and the most efficient way to make beautiful educational videos with just one pdf and one prompt. Built in a 4-member team in October 2023, using cloud-rendering to generate slideshow-style videos.",
-      technologies: [
-        "TypeScript",
-        "Python",
-        "FastAPI",
-        "HTML",
-        "CSS",
-        "Google Cloud",
-      ],
-      links: [
-        {
-          icon: <Icons.github className="size-4" />,
-          type: "GitHub",
-          href: "https://git.new/edcomposer",
-        },
-      ],
-    },
-    {
-      title: "IMDB Analysis",
-      href: "github.com/aryankeluskar/IMDB-Genres-Analysis",
-      dates: "2024",
-      active: true,
-      description:
-        "Filtered IMDB&apos;s dataset of over 730,000 entries using SQL, producing a robust and reliable dataset. Developed a data processing and visualization algorithm in Python. Used Seasonal Trend Decomposition and Monte Carlo Dropout to forecast movie ratings.",
-      technologies: [
-        "Python",
-        "SQL",
-        "Julia",
-        "DataFrames",
-        "Plots",
-        "Monte Carlo Dropout",
-        "Time Series",
-      ],
-      links: [
-        {
-          icon: <Icons.github className="size-4" />,
-          type: "GitHub",
-          href: "https://github.com/aryankeluskar/IMDB-Genres-Analysis",
-        },
-      ],
-    },
-    {
       title: "Portfolio",
       href: "https://aryankeluskar.com",
       dates: "2024",
       active: true,
       description:
-        "Personal website built with Next.js, Tailwind CSS, and TypeScript. Hosted on Vercel. I mean, you are looking at it right now. Shoutout to magicui for this amazing design!\n\nPS: Notice how the cursor has it's own personal spotlight wherever it goes.",
+        "Personal website built with Next.js, Tailwind CSS, and TypeScript. Hosted on Vercel. I mean, you are looking at it right now. Shoutout to magicui for this amazing design!\n\nPS: Notice how the cursor has it's own mini-spotlight wherever it goes.",
       technologies: ["Next.js", "Tailwind CSS", "TypeScript", "Vercel"],
       links: [
         {
