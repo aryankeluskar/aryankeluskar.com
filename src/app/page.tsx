@@ -14,24 +14,48 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { ChevronDown, ChevronUp } from "lucide-react";
 import { Publications } from "@/components/sections/publications";
+import Image from "next/image";
+
+const PROJECTS_TO_SHOW = 10;
 
 export default function Page() {
   const [showAllProjects, setShowAllProjects] = useState(false);
   const visibleProjects = showAllProjects
     ? DATA.projects
-    : DATA.projects.slice(0, 6);
+    : DATA.projects.slice(0, PROJECTS_TO_SHOW);
 
   return (
     <main className="flex flex-col min-h-[100dvh] space-y-10">
       <Hero />
       <section id="about">
-        <h2 className="text-xl font-bold">About</h2>
-        <Markdown className="prose max-w-full text-pretty font-sans text-sm text-muted-foreground dark:prose-invert">
-          {DATA.summary}
+        {/* <h2 className="text-xl font-bold w-min">tldr</h2>
+        <div className="relative w-full mt-3 mb-8 lg:p-4">
+          <Image
+            src="/tldr.webp"
+            alt="tldr"
+            className="w-full h-auto dark:hidden lg:opacity-80"
+            width={1000}
+            height={1000}
+          />
+          <Image
+            src="/tldr-dark.webp"
+            alt="tldr"
+            className="w-full h-auto hidden dark:block lg:opacity-80"
+            width={1000}
+            height={1000}
+          />
+        </div> */}
+
+        <h2 className="text-xl font-bold w-min">About</h2>
+        <Markdown className="prose max-w-full bg-[rgba(255,255,255,0.2)] dark:bg-[rgba(0,0,0,0.2)] text-pretty font-sans text-sm text-muted-foreground dark:prose-invert mb-4 mt-2">
+          {DATA.summary1}
+        </Markdown>
+        <Markdown className="prose max-w-full bg-[rgba(255,255,255,0.2)] dark:bg-[rgba(0,0,0,0.2)] text-pretty font-sans text-sm text-muted-foreground dark:prose-invert">
+          {DATA.summary2}
         </Markdown>
       </section>
       <HometownSection />
-      <section id="work">
+      <section id="experience">
         <div className="flex min-h-0 flex-col gap-y-3">
           <h2 className="text-xl font-bold">Work Experience</h2>
           {DATA.work.map((work) => (
@@ -74,12 +98,15 @@ export default function Page() {
           </div>
         </div>
       </section>
+
+      <Publications />
+
       <section id="projects">
         <div className="space-y-12 w-full py-12">
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
             <div className="space-y-2">
-              <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
-                My Projects
+              <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm mb-3">
+                Projects
               </div>
               <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
                 Check out my latest work
@@ -105,7 +132,7 @@ export default function Page() {
               />
             ))}
           </div>
-          {DATA.projects.length > 6 && (
+          {DATA.projects.length > PROJECTS_TO_SHOW && (
             <div className="flex justify-center mt-8 mb-0">
               <Button
                 variant="ghost"
@@ -119,7 +146,7 @@ export default function Page() {
                   </>
                 ) : (
                   <>
-                    Show More ({DATA.projects.length - 6})
+                    Show More ({DATA.projects.length - PROJECTS_TO_SHOW})
                     <ChevronDown className="h-4 w-4" />
                   </>
                 )}
@@ -128,7 +155,6 @@ export default function Page() {
           )}
         </div>
       </section>
-      {/* <Publications /> */}
       <section id="hackathons">
         <div className="space-y-12 w-full pb-12">
           <div className="flex flex-col items-center justify-center space-y-4 text-center">

@@ -20,6 +20,7 @@ interface Props {
   link?: string;
   image?: string;
   video?: string;
+  logo?: string;
   links?: readonly {
     icon: React.ReactNode;
     type: string;
@@ -37,6 +38,7 @@ export function ProjectCard({
   link,
   image,
   video,
+  logo,
   links,
   className,
 }: Props) {
@@ -46,32 +48,36 @@ export function ProjectCard({
         "flex flex-col overflow-hidden border hover:shadow-lg transition-all duration-300 ease-out h-full"
       }
     >
-      <Link
-        href={href || "#"}
-        className={cn("block cursor-pointer", className)}
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        {video && (
-          <video
-            src={video}
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="pointer-events-none mx-auto h-40 w-full object-cover object-top" // needed because random black line at bottom of video
-          />
+      <div className="relative">
+        <Link
+          href={href || "#"}
+          className={cn("block cursor-pointer", className)}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {video && (
+            <video
+              src={video}
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="pointer-events-none mx-auto h-40 w-full object-cover object-top" // needed because random black line at bottom of video
+            />
+          )}
+          {image && (
+          <div className="">
+            <Image
+              src={image}
+              alt={`${title} logo`}
+              width={1000}
+              height={1000}
+              className="pointer-events-none mx-auto h-40 w-full object-cover object-top"
+            />
+          </div>
         )}
-        {image && (
-          <Image
-            src={image}
-            alt={title}
-            width={500}
-            height={300}
-            className="h-40 w-full overflow-hidden object-cover object-top"
-          />
-        )}
-      </Link>
+        </Link>
+      </div>
       <CardHeader className="px-2 pt-2">
         <div className="space-y-1">
           <div className="flex items-center w-full">

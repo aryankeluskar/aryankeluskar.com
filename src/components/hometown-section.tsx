@@ -17,7 +17,7 @@ const HOMETOWNS = [
   },
   {
     name: "Mumbai, MH",
-    image: "/hometowns/dadar.jpg",
+    image: "/hometowns/dadar.webp",
     mapUrl: "https://maps.google.com/?q=Mumbai,Maharashtra,India",
   },
 ];
