@@ -205,7 +205,7 @@ export const DATA = {
       href: "https://ieeexplore.ieee.org/abstract/document/10825265",
       authors: ["<b>Aryan Keluskar</b>", "Amrita Bhattacharjee", "Huan Liu"],
       venue: "IEEE International Conference on Big Data 2024, Washington DC",
-      citation: "11 citations",
+      citation: "13 citations",
       citationLink: "https://scholar.google.com/scholar?oi=bibs&hl=en1&cites=10776899312694291117&as_sdt=5",
       links: [
         {
@@ -218,58 +218,42 @@ export const DATA = {
         },
       ],
     },
-    // {
-    //   title:
-    //     "Scikit-bio: a fundamental Python library for biological omic data analysis",
-    //   href: "https://ieeexplore.ieee.org/abstract/document/10825265",
-    //   authors: [
-    //     "Matthew Aton",
-    //     "Daniel McDonald",
-    //     "Jorge Cañardo Alastuey",
-    //     "Raeed Azom",
-    //     "Paarth Batra",
-    //     "Valentyn Bezshapkin",
-    //     "Evan Bolyen",
-    //     "Alexander Cagle",
-    //     "J. Gregory Caporaso",
-    //     "Justine W. Debelius",
-    //     "Kestrel Gorlick",
-    //     "Nirmitha Hamsanipally",
-    //     "Lars Hunger",
-    //     "<b>Aryan Keluskar</b>",
-    //     "Disen Liao",
-    //     "Yang Young Lu",
-    //     "Jose A. Navas-Molina",
-    //     "Anders Pitman",
-    //     "Jai Ram Rideout",
-    //     "Anton Sazonov",
-    //     "Bharath Sathappan",
-    //     "Karen Schwarzberg Lipson",
-    //     "Igor Sfiligoi",
-    //     "Chris Tapo",
-    //     "Yoshiki Vázquez-Baeza",
-    //     "Zijun Wu",
-    //     "Zhenjiang Zech Xu",
-    //     "Mingsong Sam Ye",
-    //     "Jianshu Zhao",
-    //     "Rob Knight",
-    //     "James T. Morton",
-    //     "Qiyun Zhu",
-    //   ],
-    //   venue: "Nature Methods (under review)",
-    //   citation: "100 citations",
-    //   citationLink: "https://scholar.google.com/scholar?oi=bibs&hl=en1&cites=10776899312694291117&as_sdt=5",
-    //   links: [
-    //     {
-    //       title: "Google Scholar",
-    //       href: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wVDeZtcAAAAJ&authuser=1&citation_for_view=wVDeZtcAAAAJ:u5HHmVD_uO8C",
-    //     },
-    //     {
-    //       title: "Tweet",
-    //       href: "https://x.com/HEI/status/1859239058163085709",
-    //     },
-    //   ],
-    // },
+    {
+      title:
+        "Scikit-bio: a fundamental Python library for biological omic data analysis",
+      href: "https://ieeexplore.ieee.org/abstract/document/10825265",
+      venue: "Nature Methods",
+      // citation: "100 citations",
+      // citationLink: "https://scholar.google.com/scholar?oi=bibs&hl=en1&cites=10776899312694291117&as_sdt=5",
+      links: [
+        {
+          title: "Google Scholar",
+          href: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wVDeZtcAAAAJ&authuser=1&citation_for_view=wVDeZtcAAAAJ:u5HHmVD_uO8C",
+        },
+        {
+          title: "Tweet",
+          href: "https://x.com/HEI/status/1859239058163085709",
+        },
+      ],
+    },
+    {
+      title:
+        "Tri-Accel: Curvature-Aware Precision-Adaptive and Memory-Elastic Optimization for Efficient GPU Usage",
+      href: "https://arxiv.org/abs/2508.16905",
+      venue: "arXiv preprint arXiv:2508.16905",
+      // citation: "11 citations",
+      // citationLink: "https://scholar.google.com/scholar?oi=bibs&hl=en1&cites=10776899312694291117&as_sdt=5",
+      links: [
+        {
+          title: "Google Scholar",
+          href: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wVDeZtcAAAAJ&authuser=1&citation_for_view=wVDeZtcAAAAJ:u-x6o8ySG0sC",
+        },
+        // {
+        //   title: "Tweet",
+        //   href: "https://x.com/HEI/status/1859239058163085709",
+        // },
+      ],
+    },
   ] as PublicationType[],
   skills: [
     "Java",

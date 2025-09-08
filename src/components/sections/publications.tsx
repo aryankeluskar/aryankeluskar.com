@@ -109,6 +109,7 @@ export function Publications() {
                     </a>
                   ))}
                   <a
+                      style={{ visibility: !publication.citationLink ? "hidden" : "visible" }}
                       href={publication.citationLink}
                       target="_blank"
                       rel="noopener noreferrer"
