@@ -72,12 +72,27 @@ export const DATA = {
   avatarUrl: "/pfp.webp",
   hackathons: [
     {
+      title: "CalHacks 2025",
+      image: "/calhacks.png",
+      dates: "October 2025",
+      location: "Berkeley, CA",
+      description:
+        "If you're participating as well, let's connect!"
+    },
+    {
       title: "HackMIT 2025",
       image: "/hackmit.png",
       dates: "September 2025",
-      location: "Cambridge, MA",
+      location: "Cambridge, MA",      
+      links: [
+        {
+          // icon: <Icons.devpost className="size-4" />,
+          title: "Flashback",
+          href: "https://plume.hackmit.org/project/bcwzf-xiqcx-nbsvp-nxrhk",
+        },
+      ],
       description:
-        "If you're participating as well, let's connect!"
+        "We built a RAG for videos and developed it with smart glasses as the base to create a social media platform. I worked on facial recognition and task matching algorithm using OpenCV and Modal's Compute Platform, so the RAG could match the user's contacts to the video content."
     },
     {
       title: "HackIllinois 2025 (Microgrant 🏆)",
