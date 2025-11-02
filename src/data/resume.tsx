@@ -76,8 +76,15 @@ export const DATA = {
       image: "/calhacks.png",
       dates: "October 2025",
       location: "Berkeley, CA",
+      links: [
+        {
+          // icon: <Icons.devpost className="size-4" />,
+          title: "Turing",
+          href: "https://devpost.com/software/turing",
+        },
+      ],
       description:
-        "If you're participating as well, let's connect!"
+        "Turing watches how you do tasks, how you reply to messages, how you work, and personalizes your computer-use agent so your workflows can be automated based on your patterns and habits."
     },
     {
       title: "HackMIT 2025",
@@ -593,6 +600,7 @@ export const DATA = {
     },
     {
       title: "EasyWire",
+      image: "/easywire_banner.jpeg",
       href: "https://dub.sh/easywire",
       dates: "2024",
       active: true,
@@ -617,6 +625,35 @@ export const DATA = {
           icon: <Icons.globe className="size-4" />,
           type: "Website",
           href: "https://dub.sh/easywire",
+        },
+      ],
+    },
+    {
+      title: "PicThis",
+      image: "/picthis_banner.png",
+      href: "https://npmjs.com/package/picthis",
+      dates: "2025",
+      active: true,
+      description:
+        "CLI tool to convert images to WebP format, reducing file sizes by at least 90% and automatically updating code references. `npx picthis`",
+      technologies: [
+        "JavaScript",
+        "TypeScript",
+        "Node.js",
+        "npm",
+        "CLI",
+        "Image Compression",
+      ],
+      links: [
+        {
+          icon: <Icons.github className="size-4" />,
+          type: "GitHub",
+          href: "https://git.new/picthis",
+        },        
+        {
+          icon: <Icons.globe className="size-4" />,
+          type: "NPM",
+          href: "https://npmjs.com/package/picthis",
         },
       ],
     },
@@ -720,34 +757,6 @@ export const DATA = {
           icon: <Icons.globe className="size-4" />,
           type: "Website",
           href: "https://dub.sh/amras",
-        },
-      ],
-    },
-    {
-      title: "PicThis",
-      href: "https://npmjs.com/package/picthis",
-      dates: "2025",
-      active: true,
-      description:
-        "CLI tool to convert images to WebP format, reducing file sizes by at least 90% and automatically updating code references. `npx picthis`",
-      technologies: [
-        "JavaScript",
-        "TypeScript",
-        "Node.js",
-        "npm",
-        "CLI",
-        "Image Compression",
-      ],
-      links: [
-        {
-          icon: <Icons.github className="size-4" />,
-          type: "GitHub",
-          href: "https://git.new/picthis",
-        },        
-        {
-          icon: <Icons.globe className="size-4" />,
-          type: "NPM",
-          href: "https://npmjs.com/package/picthis",
         },
       ],
     },
