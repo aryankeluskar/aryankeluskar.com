@@ -4,8 +4,11 @@ import path from "path";
 import rehypePrettyCode from "rehype-pretty-code";
 import rehypeStringify from "rehype-stringify";
 import remarkParse from "remark-parse";
+import remarkGfm from "remark-gfm";
 import remarkRehype from "remark-rehype";
 import { unified } from "unified";
+import remarkMath from "remark-math";
+import rehypeKatex from "rehype-katex";
 
 type Metadata = {
   title: string;
@@ -21,6 +24,8 @@ function getMDXFiles(dir: string) {
 export async function markdownToHTML(markdown: string) {
   const p = await unified()
     .use(remarkParse)
+    .use(remarkGfm)
+    .use(remarkMath)
     .use(remarkRehype)
     .use(rehypePrettyCode, {
       // https://rehype-pretty.pages.dev/#usage
@@ -30,6 +35,7 @@ export async function markdownToHTML(markdown: string) {
       },
       keepBackground: false,
     })
+    .use(rehypeKatex)
     .use(rehypeStringify)
     .process(markdown);
 

@@ -227,12 +227,12 @@ export const DATA = {
       href: "https://ieeexplore.ieee.org/abstract/document/10825265",
       authors: ["<b>Aryan Keluskar</b>", "Amrita Bhattacharjee", "Huan Liu"],
       venue: "IEEE International Conference on Big Data 2024, Washington DC",
-      citation: "13 citations",
+      citation: "19 citations",
       citationLink: "https://scholar.google.com/scholar?oi=bibs&hl=en1&cites=10776899312694291117&as_sdt=5",
       links: [
         {
           title: "Google Scholar",
-          href: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wVDeZtcAAAAJ&authuser=1&citation_for_view=wVDeZtcAAAAJ:u5HHmVD_uO8C",
+          href: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wVDeZtcAAAAJ&citation_for_view=wVDeZtcAAAAJ:u5HHmVD_uO8C",
         },
         {
           title: "Tweet",
@@ -240,24 +240,28 @@ export const DATA = {
         },
       ],
     },
-    // {
-    //   title:
-    //     "Scikit-bio: a fundamental Python library for biological omic data analysis",
-    //   href: "https://ieeexplore.ieee.org/abstract/document/10825265",
-    //   venue: "",
-    //   // citation: "100 citations",
-    //   // citationLink: "https://scholar.google.com/scholar?oi=bibs&hl=en1&cites=10776899312694291117&as_sdt=5",
-    //   links: [
-    //     {
-    //       title: "Google Scholar",
-    //       href: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wVDeZtcAAAAJ&authuser=1&citation_for_view=wVDeZtcAAAAJ:u5HHmVD_uO8C",
-    //     },
-    //     {
-    //       title: "Tweet",
-    //       href: "https://x.com/HEI/status/1859239058163085709",
-    //     },
-    //   ],
-    // },
+    {
+      title:
+        "Scikit-bio: a fundamental Python library for biological omic data analysis",
+      href: "https://www.nature.com/articles/s41592-025-02981-z",
+      venue: "Nature Methods",
+      // citation: "100 citations",
+      // citationLink: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wVDeZtcAAAAJ&citation_for_view=wVDeZtcAAAAJ:qjMakFHDy7sC",
+      links: [
+        {
+          title: "Google Scholar",
+          href: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wVDeZtcAAAAJ&citation_for_view=wVDeZtcAAAAJ:qjMakFHDy7sC",
+        },
+        {
+          title: "Tweet",
+          href: "https://x.com/zhuqiyun/status/1999176009497956702",
+        },
+        {
+          title: "GitHub",
+          href: "https://github.com/scikit-bio/scikit-bio",
+        }
+      ],
+    },
     {
       title:
         "Tri-Accel: Curvature-Aware Precision-Adaptive and Memory-Elastic Optimization for Efficient GPU Usage",
@@ -268,12 +272,24 @@ export const DATA = {
       links: [
         {
           title: "Google Scholar",
-          href: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wVDeZtcAAAAJ&authuser=1&citation_for_view=wVDeZtcAAAAJ:u-x6o8ySG0sC",
+          href: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wVDeZtcAAAAJ&citation_for_view=wVDeZtcAAAAJ:u-x6o8ySG0sC",
         },
         // {
         //   title: "Tweet",
         //   href: "https://x.com/HEI/status/1859239058163085709",
         // },
+      ],
+    },
+    {
+      title:
+        "Memory-Augmented RAG for Lifelong Autonomous Driving",
+      href: "https://soy.run/blog/Memory-Augmented-RAG-Driving",
+      venue: "Project Advised by Prof. Hua Wei",
+      links: [
+        {
+          title: "Blog Post",
+          href: "https://soy.run/blog/Memory-Augmented-RAG-Driving",
+        },
       ],
     },
   ] as PublicationType[],
