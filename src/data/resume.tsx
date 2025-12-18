@@ -280,18 +280,18 @@ export const DATA = {
         // },
       ],
     },
-    {
-      title:
-        "Memory-Augmented RAG for Lifelong Autonomous Driving",
-      href: "https://soy.run/blog/Memory-Augmented-RAG-Driving",
-      venue: "Project Advised by Prof. Hua Wei",
-      links: [
-        {
-          title: "Blog Post",
-          href: "https://soy.run/blog/Memory-Augmented-RAG-Driving",
-        },
-      ],
-    },
+    // {
+    //   title:
+    //     "Memory-Augmented RAG for Lifelong Autonomous Driving",
+    //   href: "https://soy.run/blog/Memory-Augmented-RAG-Driving",
+    //   venue: "Project Advised by Prof. Hua Wei",
+    //   links: [
+    //     {
+    //       title: "Blog Post",
+    //       href: "https://soy.run/blog/Memory-Augmented-RAG-Driving",
+    //     },
+    //   ],
+    // },
   ] as PublicationType[],
   skills: [
     "Java",
