@@ -341,18 +341,18 @@ export const DATA = {
         icon: Icons.x,
         navbar: true,
       },
-      Strava: {
-        name: "Strava",
-        url: "https://dub.sh/aryans-strava",
-        icon: Icons.strava,
-        navbar: true,
-      },
-      // "Google Scholar": {
-      //   name: "Google Scholar",
-      //   url: "https://scholar.google.com/citations?user=wVDeZtcAAAAJ&hl=en",
-      //   icon: Icons.googleScholar,
-      //   navbar: true
+      // Strava: {
+      //   name: "Strava",
+      //   url: "https://dub.sh/aryans-strava",
+      //   icon: Icons.strava,
+      //   navbar: true,
       // },
+      "Google Scholar": {
+        name: "Google Scholar",
+        url: "https://scholar.google.com/citations?user=wVDeZtcAAAAJ&hl=en",
+        icon: Icons.googleScholar,
+        navbar: true
+      },
       email: {
         name: "Send Email",
         url: "#",
