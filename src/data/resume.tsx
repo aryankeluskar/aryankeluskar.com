@@ -72,6 +72,36 @@ export const DATA = {
   avatarUrl: "/pfp.webp",
   hackathons: [
     {
+      title: "TreeHacks 2026",
+      image: "/treehacks.png",
+      dates: "February 2026",
+      location: "Palo Alto, CA",
+      // links: [
+      //   {
+      //     // icon: <Icons.devpost className="size-4" />,
+      //     title: "Turing",
+      //     href: "https://devpost.com/software/turing",
+      //   },
+      // ],
+      description:
+        "If you're participating as well, let's connect!"
+    },
+    {
+      title: "HackIllinois 2026",
+      image: "/hackillinois.png",
+      dates: "February 2026",
+      location: "Urbana-Champaign, IL",
+      // links: [
+      //   {
+      //     // icon: <Icons.devpost className="size-4" />,
+      //     title: "Turing",
+      //     href: "https://devpost.com/software/turing",
+      //   },
+      // ],
+      description:
+        "If you're participating as well, let's connect!"
+    },
+    {
       title: "CalHacks 2025",
       image: "/calhacks.png",
       dates: "October 2025",
