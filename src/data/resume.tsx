@@ -26,7 +26,7 @@ type ProjectType = {
 type PublicationType = {
   title: string;
   href: string;
-  authors: string[];
+  authors?: string[];
   venue: string;
   imageSrc?: string;
   contributionNote?: string;
@@ -58,16 +58,16 @@ export const DATA = {
   initials: "AK",
   url: "https://aryankeluskar.com",
   resumeUrl: "https://dub.sh/aryans-resume",
-  location: "Tempe, AZ",
-  locationLink: "https://www.google.com/maps/place/tempe",
+  location: "San Francisco, CA",
+  locationLink: "https://www.google.com/maps/place/san%20francisco",
   description:
-    "19, building fast backends, scalable language models, and iOS apps. I live to learn, create, and ship. Experienced in full-stack development, machine learning, and data analysis.",
+    "20, building fast backends, scalable language models, and iOS apps. I live to learn, create, and ship. Experienced in full-stack development, machine learning, and data analysis.",
   current:
-    "Building [alice](https://dub.sh/wonderland) and [easywire](https://dub.sh/easywire).",
+    "Building [alice](https://dub.sh/wonderland) and writing [research papers](https://scholar.google.com/citations?user=wVDeZtcAAAAJ).",
   summary1:
     "I love to solve problems, learn intricate concepts, and build products. Solving daunting & ambiguous problems demand clarity under chaos, thus I believe in creating intuitive interfaces and scalable engineering to solve them from first principles. I'm currently a computer science and statistics senior at ASU, while researching safety in large-language models.",
   summary2:
-    "I grew up with a deep passion for mathematics, and use bayesian statistics to explain the world around me. I have won awards at collegiate hackathons such as HackMIT 2024 and SFHacks 2024. In my free time, I'm probably going down rabbit-holes or [cycling](https://www.strava.com/activities/13329957326) till I run out of roads.",
+    "I grew up with a deep passion for mathematics, and use bayesian statistics to explain the world around me. I have won awards at collegiate hackathons such as HackMIT 2024 and SFHacks 2024. In my free time, I'm going down rabbit-holes or [cycling](https://www.strava.com/activities/13329957326) till I run out of roads.",
   // avatarUrl: "/professional.webp",
   avatarUrl: "/pfp.webp",
   hackathons: [
@@ -75,7 +75,7 @@ export const DATA = {
       title: "TreeHacks 2026",
       image: "/treehacks.png",
       dates: "February 2026",
-      location: "Palo Alto, CA",
+      location: "Stanford, CA",
       // links: [
       //   {
       //     // icon: <Icons.devpost className="size-4" />,
@@ -252,12 +252,29 @@ export const DATA = {
   ] as HackathonType[],
   publications: [
     {
+      title: "TM-Vec 2: Accelerated Protein Homology Detection for Structural Similarity",
+      href: "",
+      authors: ["<b>Aryan Keluskar</b>", "Paarth Batra", "Valentyn Bezshapkin", "James T. Morton", "Qiyun Zhu"],
+      venue: "Honors Thesis (under review at a major conference)",
+      citationLink: "",
+      links: [
+        {
+          title: "Google Scholar",
+          href: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wVDeZtcAAAAJ&citation_for_view=wVDeZtcAAAAJ:u5HHmVD_uO8C",
+        },
+        {
+          title: "GitHub",
+          href: "https://github.com/paarth-b/tmvec-bench",
+        },
+      ],
+    },
+    {
       title:
         "Do LLMs Understand Ambiguity in Text? A Case Study in Open-world Question Answering",
       href: "https://ieeexplore.ieee.org/abstract/document/10825265",
       authors: ["<b>Aryan Keluskar</b>", "Amrita Bhattacharjee", "Huan Liu"],
       venue: "IEEE International Conference on Big Data 2024, Washington DC",
-      citation: "19 citations",
+      citation: "20 citations",
       citationLink: "https://scholar.google.com/scholar?oi=bibs&hl=en1&cites=10776899312694291117&as_sdt=5",
       links: [
         {
@@ -274,6 +291,7 @@ export const DATA = {
       title:
         "Scikit-bio: a fundamental Python library for biological omic data analysis",
       href: "https://www.nature.com/articles/s41592-025-02981-z",
+      authors: ["Matthew Aton", "Daniel McDonald", "...", "<b>Aryan Keluskar</b>", "...", "Rob Knight", "James T. Morton", "Qiyun Zhu"],
       venue: "Nature Methods",
       // citation: "100 citations",
       // citationLink: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wVDeZtcAAAAJ&citation_for_view=wVDeZtcAAAAJ:qjMakFHDy7sC",
@@ -283,33 +301,33 @@ export const DATA = {
           href: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wVDeZtcAAAAJ&citation_for_view=wVDeZtcAAAAJ:qjMakFHDy7sC",
         },
         {
+          title: "GitHub",
+          href: "https://github.com/scikit-bio/scikit-bio",
+        },
+        {
           title: "Tweet",
           href: "https://x.com/zhuqiyun/status/1999176009497956702",
         },
-        {
-          title: "GitHub",
-          href: "https://github.com/scikit-bio/scikit-bio",
-        }
       ],
     },
-    {
-      title:
-        "Tri-Accel: Curvature-Aware Precision-Adaptive and Memory-Elastic Optimization for Efficient GPU Usage",
-      href: "https://arxiv.org/abs/2508.16905",
-      venue: "arXiv preprint arXiv:2508.16905",
-      // citation: "11 citations",
-      // citationLink: "https://scholar.google.com/scholar?oi=bibs&hl=en1&cites=10776899312694291117&as_sdt=5",
-      links: [
-        {
-          title: "Google Scholar",
-          href: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wVDeZtcAAAAJ&citation_for_view=wVDeZtcAAAAJ:u-x6o8ySG0sC",
-        },
-        // {
-        //   title: "Tweet",
-        //   href: "https://x.com/HEI/status/1859239058163085709",
-        // },
-      ],
-    },
+    // {
+    //   title:
+    //     "Tri-Accel: Curvature-Aware Precision-Adaptive and Memory-Elastic Optimization for Efficient GPU Usage",
+    //   href: "https://arxiv.org/abs/2508.16905",
+    //   venue: "arXiv preprint arXiv:2508.16905",
+    //   // citation: "11 citations",
+    //   // citationLink: "https://scholar.google.com/scholar?oi=bibs&hl=en1&cites=10776899312694291117&as_sdt=5",
+    //   links: [
+    //     {
+    //       title: "Google Scholar",
+    //       href: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wVDeZtcAAAAJ&citation_for_view=wVDeZtcAAAAJ:u-x6o8ySG0sC",
+    //     },
+    //     // {
+    //     //   title: "Tweet",
+    //     //   href: "https://x.com/HEI/status/1859239058163085709",
+    //     // },
+    //   ],
+    // },
     // {
     //   title:
     //     "Memory-Augmented RAG for Lifelong Autonomous Driving",
@@ -348,7 +366,7 @@ export const DATA = {
     { href: "/", icon: HomeIcon, label: "Home" },
     { href: "#experience", icon: BriefcaseIcon, label: "Experience" },
     { href: "#projects", icon: HammerIcon, label: "Projects" },
-    // { href: "/blog", icon: NotebookIcon, label: "Blog" }
+    // { href: "https://medium.com/@soydotrun", icon: NotebookIcon, label: "Blog" }
   ],
   contact: {
     email: "contact@aryankeluskar.com",
@@ -393,6 +411,58 @@ export const DATA = {
   },
   work: [
     {
+      company: "The Biodesign Institute",
+      href: "https://scikit.bio",
+      badges: [],
+      location: "Arizona State University",
+      title: "Software Engineer (ML Research)",
+      logoUrl: "/skbio.webp",
+      start: "May 2024",
+      end: "Present",
+      description: (
+        <>
+          Saved over 75% in GPU costs (approximating {" "}
+          <span style={{ fontWeight: "bold", color: "#3e9c35" }}>$3,850</span>
+          ) and{" "}
+          <span style={{ fontWeight: "bold", color: "#3e9c35" }}>6 weeks</span>{" "}
+          in training and inference times by implementing Knowledge Distillation and
+          Flash Attention for Protein Language Models. Created benchmarking
+          scripts using{" "}
+          <span style={{ fontWeight: "bold", color: "#3e9c35" }}>
+            HuggingFace
+          </span>{" "}
+          and{" "}
+          <span style={{ fontWeight: "bold", color: "#3e9c35" }}>
+            Python
+          </span>{" "}
+          with PyTorch & Transformers libraries. Wrote unit tests to increase
+          code coverage by 12.5%.
+        </>
+      ),
+    },
+    {
+      company: "Data Mining and Machine Learning Lab",
+      href: "https://dmml.asu.edu/",
+      badges: [],
+      location: "Arizona State University",
+      title: "Machine Learning Researcher (AI Safety)",
+      logoUrl: "/cropped-asu-icon.webp",
+      start: "August 2024",
+      end: "Present",
+      description: (
+        <>
+          Filtered text datasets over 2 TB in size and fine-tuned
+          large-language models using{" "}
+          <span className="text-[#8D1C41] dark:text-[#ff73a2]" style={{ fontWeight: "bold"}}>
+            Python
+          </span>{" "}
+          to improve accuracy in ambiguous human text. Co-authored an{" "}
+          <span className="text-[#8D1C41] dark:text-[#ff73a2]" style={{ fontWeight: "bold"}}>IEEE</span>{" "}
+          BigData paper. Implemented an optimized model inference API using <span className="text-[#8D1C41] dark:text-[#ff73a2]" style={{ fontWeight: "bold"}}>vLLM</span> for GPU memory management and <span className="text-[#8D1C41] dark:text-[#ff73a2]" style={{ fontWeight: "bold"}}>FastAPI</span> for RESTful endpoints, supporting concurrent requests which lowered inference latency by 30%.
+        </>
+      ),
+    },
+    {
       company: "HealthGC",
       href: "",
       badges: [],
@@ -404,78 +474,10 @@ export const DATA = {
       description: (
         <>
           Seed-stage startup backed by the{" "}
-          <span
-            style={{
-              fontWeight: "bold",
-              color: "var(--python-color, #306998)",
-            }}
-          >
+          <span className="text-[#F11D26] dark:text-[#ff73a2]" style={{ fontWeight: "bold"}}>
             Floodgate
           </span>{" "}
-          Fund. Building and optimizing large-language model pipelines for data
-          processing, and developing state-of-the-art voice agents.
-        </>
-      ),
-    },
-    {
-      company: "Data Mining and Machine Learning Lab",
-      href: "https://dmml.asu.edu/",
-      badges: [],
-      location: "Arizona State University",
-      title: "Machine Learning Researcher",
-      logoUrl: "/cropped-asu-icon.webp",
-      start: "April 2024",
-      end: "Present",
-      description: (
-        <>
-          Filtered text datasets with over a million rows and fine-tuned
-          large-language models using{" "}
-          <span
-            style={{
-              fontWeight: "bold",
-              color: "var(--python-color, #306998)",
-            }}
-          >
-            Python
-          </span>{" "}
-          to improve comprehension of ambiguous human text, and co-authored an{" "}
-          <span className="text-[#00629b] dark:text-[#0078d4]" style={{ fontWeight: "bold"}}>IEEE</span>{" "}
-          BigData paper with Prof. Huan Liu and Dr. Amrita Bhattacharjee.
-        </>
-      ),
-    },
-    {
-      company: "The Biodesign Institute",
-      href: "https://scikit.bio",
-      badges: [],
-      location: "Arizona State University",
-      title: "Software Engineering Intern",
-      logoUrl: "/skbio.webp",
-      start: "May 2024",
-      end: "August 2024",
-      description: (
-        <>
-          Saved over 75% in GPU costs (approximating {" "}
-          <span style={{ fontWeight: "bold", color: "#3e9c35" }}>$3,850</span>
-          ) and{" "}
-          <span style={{ fontWeight: "bold", color: "#3e9c35" }}>6 weeks</span>{" "}
-          in training and inference times by implementing Model Distillation and
-          Flash Attention for Protein Language Models. Created benchmarking
-          scripts using{" "}
-          <span style={{ fontWeight: "bold", color: "#eb8f00" }}>
-            HuggingFace
-          </span>{" "}
-          and{" "}
-          <span
-            style={{
-              fontWeight: "bold",
-              color: "var(--python-color, #306998)",
-            }}
-          >
-            Python
-          </span>{" "}
-          with PyTorch & Transformers libraries. Wrote unit tests to increase
-          code coverage by 12.5%.
+          Fund. Engineered a sub-200ms HIPAA-compliant RAG system using <span className="text-[#F11D26] dark:text-[#ff73a2]" style={{ fontWeight: "bold"}}>PostgreSQL</span> and <span className="text-[#F11D26] dark:text-[#ff73a2]" style={{ fontWeight: "bold"}}>WebAssembly</span> for retrieving multimodal data. Developed tool calling functionality for web search and RAG for an LLM-based Voice Agent.
         </>
       ),
     },
@@ -492,13 +494,13 @@ export const DATA = {
         <>
           Developed backend infrastructure for static assets and 3D models
           integration using{" "}
-          <span className="text-[#306998] dark:text-[#4194d8]" style={{ fontWeight: "bold"}}>
+          <span className="text-[#269bdf] dark:text-[#0078d4]" style={{ fontWeight: "bold"}}>
             JavaScript
           </span>{" "}
           and{" "}
           <span className="text-[#269bdf] dark:text-[#0078d4]" style={{ fontWeight: "bold"}}>React.js</span>
           , yielding 46% surge in customer satisfaction. Created{" "}
-          <span className="text-[#eb8f00] dark:text-[#ffb900]" style={{ fontWeight: "bold"}}>Power BI</span>{" "}
+          <span className="text-[#269bdf] dark:text-[#0078d4]" style={{ fontWeight: "bold"}}>Power BI</span>{" "}
           dashboards and automated data collection using Google Analytics API,
           increasing click-through-rate by 29%.
         </>
@@ -533,7 +535,7 @@ export const DATA = {
   projects: [
     {
       title: "Alice",
-      image: "/alice_banner.png",
+      image: "/alice_banner.webp",
       href: "https://dub.sh/wonderland",
       dates: "2025",
       active: true,
@@ -564,9 +566,9 @@ export const DATA = {
       ],
     },
     {
-      title: "canvas-mcp",
+      title: "Canvas MCP",
       href: "https://git.new/canvas-mcp",
-      image: "/canvas_mcp_banner.png",
+      image: "/canvas_mcp_banner.webp",
       dates: "2024",
       active: true,
       description:
@@ -591,8 +593,59 @@ export const DATA = {
       ],
     },
     {
+      title: "CloudStash",
+      href: "https://git.new/cloudstash",
+      image: "/cloudstash1.webp",
+      dates: "2025",
+      active: true,
+      description:
+        "CloudStash is a macOS menubar app that uploads files to Google Drive and generates shareable links.",
+      technologies: [
+        "SwiftUI",
+        "Xcode",
+        'UIKit',
+        "Google Drive API",
+        "Google OAuth",
+      ],
+      links: [
+        {
+          icon: <Icons.github className="size-4" />,
+          type: "GitHub",
+          href: "https://git.new/cloudstash",
+        },
+        {
+          icon: <Icons.globe className="size-4" />,
+          type: "Download",
+          href: "https://dub.sh/cloudstash",
+        },
+      ],
+    },
+    {
+      title: "Turing",
+      href: "https://dub.sh/turing",
+      image: "/turing.webp",
+      dates: "2025",
+      active: true,
+      description:
+        "Turing watches how you do tasks, how you reply to messages, how you work to learn your patterns and automate your tasks.",
+      technologies: [
+        "Python",
+        "Vision Language Models",
+        "Groq",
+        "Computer-Use Agent",
+        "Typescript",
+      ],
+      links: [
+        {
+          icon: <Icons.github className="size-4" />,
+          type: "Devpost",
+          href: "https://dub.sh/turing",
+        },
+      ],
+    },
+    {
       title: "XML Builder",
-      image: "/xml_banner.png",
+      image: "/xml_banner.webp",
       href: "https://dub.sh/xml-builder",
       dates: "2025",
       active: true,
@@ -624,7 +677,7 @@ export const DATA = {
     {
       title: "irina (AI for Minesweeper)",
       href: "https://git.new/irina",
-      image: "/irina_banner.png",
+      image: "/irina_banner.webp",
       dates: "2024",
       active: true,
       description:
@@ -646,7 +699,7 @@ export const DATA = {
     },
     {
       title: "EasyWire",
-      image: "/easywire_banner.jpeg",
+      image: "/easywire_banner.webp",
       href: "https://dub.sh/easywire",
       dates: "2024",
       active: true,
@@ -676,7 +729,7 @@ export const DATA = {
     },
     {
       title: "PicThis",
-      image: "/picthis_banner.png",
+      image: "/picthis_banner.webp",
       href: "https://npmjs.com/package/picthis",
       dates: "2025",
       active: true,

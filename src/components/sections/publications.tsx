@@ -5,8 +5,12 @@ import { LinkIcon, TrendingUp } from "lucide-react";
 import React from "react";
 
 // Separate component for author list with expand/collapse functionality
-function AuthorList({ authors }: { authors: string[] }) {
+function AuthorList({ authors }: { authors?: string[] }) {
   const [isExpanded, setIsExpanded] = React.useState(false);
+
+  if (!authors || authors.length === 0) {
+    return null;
+  }
 
   const fullAuthorList = authors
     .map(
@@ -76,9 +80,9 @@ export function Publications() {
             <div className="mt-2 text-sm">
               {" "}
               {/* Adjusted font size for readability */}
-              {/* <div className="text-gray-700 dark:text-gray-300">
+              <div className="text-gray-700 dark:text-gray-300">
                 <AuthorList authors={publication.authors} />
-              </div> */}
+              </div>
               {publication.contributionNote && (
                 <div className="mt-1 text-xs font-semibold">
                   {publication.contributionNote}
