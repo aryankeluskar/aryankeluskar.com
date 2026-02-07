@@ -79,20 +79,20 @@ export default function RootLayout({
         {/* <!-- Primary Meta Tags --> */}
           <title>Aryan Keluskar</title>
           <meta name="title" content="Aryan Keluskar" />
-          <meta name="description" content="19, building fast backends, scalable language models, and iOS apps. I live to learn, create, and ship. Experienced in full-stack development, machine learning, and data analysis." />
+          <meta name="description" content="19, building fast backends, scalable language models, and iOS apps. I live to learn, create, and ship. Experienced in full-stack development, AI research, and machine learning." />
 
           {/* <!-- Open Graph / Facebook --> */}
           <meta property="og:type" content="website" />
           <meta property="og:url" content="https://aryankeluskar.com/" />
           <meta property="og:title" content="Aryan Keluskar" />
-          <meta property="og:description" content="19, building fast backends, scalable language models, and iOS apps. I live to learn, create, and ship. Experienced in full-stack development, machine learning, and data analysis." />
+          <meta property="og:description" content="19, building fast backends, scalable language models, and iOS apps. I live to learn, create, and ship. Experienced in full-stack development, AI research, and machine learning." />
           <meta property="og:image" content="https://aryankeluskar.com/banner.webp" />
 
           {/* <!-- Twitter --> */}
           <meta property="twitter:card" content="summary_large_image" />
           <meta property="twitter:url" content="https://aryankeluskar.com/" />
           <meta property="twitter:title" content="Aryan Keluskar" />
-          <meta property="twitter:description" content="19, building fast backends, scalable language models, and iOS apps. I live to learn, create, and ship. Experienced in full-stack development, machine learning, and data analysis." />
+          <meta property="twitter:description" content="19, building fast backends, scalable language models, and iOS apps. I live to learn, create, and ship. Experienced in full-stack development, AI research, and machine learning." />
           <meta property="twitter:image" content="https://aryankeluskar.com/banner.webp" />
 
       </head>

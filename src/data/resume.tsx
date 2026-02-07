@@ -61,7 +61,7 @@ export const DATA = {
   location: "San Francisco, CA",
   locationLink: "https://www.google.com/maps/place/san%20francisco",
   description:
-    "20, building fast backends, scalable language models, and iOS apps. I live to learn, create, and ship. Experienced in full-stack development, machine learning, and data analysis.",
+    "20, building fast backends, scalable language models, and iOS apps. I live to learn, create, and ship. Experienced in full-stack development, AI research, and machine learning.",
   current:
     "Building [alice](https://dub.sh/wonderland) and writing [research papers](https://scholar.google.com/citations?user=wVDeZtcAAAAJ).",
   summary1:
@@ -254,7 +254,7 @@ export const DATA = {
     {
       title: "TM-Vec 2: Accelerated Protein Homology Detection for Structural Similarity",
       href: "",
-      authors: ["<b>Aryan Keluskar</b>", "Paarth Batra", "Valentyn Bezshapkin", "James T. Morton", "Qiyun Zhu"],
+      authors: ["<b>Aryan Keluskar</b>*", "Paarth Batra*", "Valentyn Bezshapkin*", "James T. Morton", "Qiyun Zhu"],
       venue: "Honors Thesis (under review at a major conference)",
       citationLink: "",
       links: [
@@ -421,22 +421,11 @@ export const DATA = {
       end: "Present",
       description: (
         <>
-          Saved over 75% in GPU costs (approximating {" "}
-          <span style={{ fontWeight: "bold", color: "#3e9c35" }}>$3,850</span>
-          ) and{" "}
-          <span style={{ fontWeight: "bold", color: "#3e9c35" }}>6 weeks</span>{" "}
-          in training and inference times by implementing Knowledge Distillation and
-          Flash Attention for Protein Language Models. Created benchmarking
-          scripts using{" "}
-          <span style={{ fontWeight: "bold", color: "#3e9c35" }}>
-            HuggingFace
-          </span>{" "}
-          and{" "}
-          <span style={{ fontWeight: "bold", color: "#3e9c35" }}>
-            Python
-          </span>{" "}
-          with PyTorch & Transformers libraries. Wrote unit tests to increase
-          code coverage by 12.5%.
+          - Saved over 75% in GPU costs (approximating <span style={{ fontWeight: "bold", color: "#3e9c35" }}>$3,850</span>) and <span style={{ fontWeight: "bold", color: "#3e9c35" }}>6 weeks</span> in training and inference times by implementing Knowledge Distillation and Flash Attention for Protein Language Models. 
+          <br />
+          - Created benchmarking scripts using <span style={{ fontWeight: "bold", color: "#3e9c35" }}>HuggingFace</span> and <span style={{ fontWeight: "bold", color: "#3e9c35" }}>Python</span> with PyTorch & Transformers libraries. 
+          <br />
+          - Wrote unit tests using <span style={{ fontWeight: "bold", color: "#3e9c35" }}>PyTest</span> to increase code coverage by 12.5%.
         </>
       ),
     },
@@ -451,14 +440,11 @@ export const DATA = {
       end: "Present",
       description: (
         <>
-          Filtered text datasets over 2 TB in size and fine-tuned
-          large-language models using{" "}
-          <span className="text-[#8D1C41] dark:text-[#ff73a2]" style={{ fontWeight: "bold"}}>
-            Python
-          </span>{" "}
-          to improve accuracy in ambiguous human text. Co-authored an{" "}
-          <span className="text-[#8D1C41] dark:text-[#ff73a2]" style={{ fontWeight: "bold"}}>IEEE</span>{" "}
-          BigData paper. Implemented an optimized model inference API using <span className="text-[#8D1C41] dark:text-[#ff73a2]" style={{ fontWeight: "bold"}}>vLLM</span> for GPU memory management and <span className="text-[#8D1C41] dark:text-[#ff73a2]" style={{ fontWeight: "bold"}}>FastAPI</span> for RESTful endpoints, supporting concurrent requests which lowered inference latency by 30%.
+          - Implemented an optimized model inference API using <span className="text-[#8D1C41] dark:text-[#ff73a2]" style={{ fontWeight: "bold"}}>vLLM</span> for GPU memory management and <span className="text-[#8D1C41] dark:text-[#ff73a2]" style={{ fontWeight: "bold"}}>FastAPI</span> for RESTful endpoints, supporting concurrent requests which lowered inference latency by 30%.
+          <br />
+          - Built classifiers for text datasets over 2TB in size and fine-tuned LLMs with <span className="text-[#8D1C41] dark:text-[#ff73a2]" style={{ fontWeight: "bold"}}> LoRA </span> using <span className="text-[#8D1C41] dark:text-[#ff73a2]" style={{ fontWeight: "bold"}}> Python </span> to improve accuracy in ambiguous human text. 
+          <br />
+          - Co-authored an <span className="text-[#8D1C41] dark:text-[#ff73a2]" style={{ fontWeight: "bold"}}>IEEE</span>{" "} BigData paper. 
         </>
       ),
     },
@@ -477,7 +463,11 @@ export const DATA = {
           <span className="text-[#F11D26] dark:text-[#ff73a2]" style={{ fontWeight: "bold"}}>
             Floodgate
           </span>{" "}
-          Fund. Engineered a sub-200ms HIPAA-compliant RAG system using <span className="text-[#F11D26] dark:text-[#ff73a2]" style={{ fontWeight: "bold"}}>PostgreSQL</span> and <span className="text-[#F11D26] dark:text-[#ff73a2]" style={{ fontWeight: "bold"}}>WebAssembly</span> for retrieving multimodal data. Developed tool calling functionality for web search and RAG for an LLM-based Voice Agent.
+          Fund. 
+          <br />
+          - Engineered a sub-200ms RAG system using <span className="text-[#F11D26] dark:text-[#ff73a2]" style={{ fontWeight: "bold"}}>PostgreSQL</span> and <span className="text-[#F11D26] dark:text-[#ff73a2]" style={{ fontWeight: "bold"}}>WebAssembly</span> for retrieving multimodal data with HIPAA compliance.
+          <br />
+          - Developed tool calling functionality for web search and RAG for an LLM-based Voice Agent using <span className="text-[#F11D26] dark:text-[#ff73a2]" style={{ fontWeight: "bold"}}>TypeScript</span> and <span className="text-[#F11D26] dark:text-[#ff73a2]" style={{ fontWeight: "bold"}}>Google Cloud</span>.
         </>
       ),
     },
@@ -492,17 +482,21 @@ export const DATA = {
       end: "July 2023",
       description: (
         <>
-          Developed backend infrastructure for static assets and 3D models
+          - Developed backend infrastructure for static assets and 3D models
           integration using{" "}
           <span className="text-[#269bdf] dark:text-[#0078d4]" style={{ fontWeight: "bold"}}>
             JavaScript
           </span>{" "}
           and{" "}
           <span className="text-[#269bdf] dark:text-[#0078d4]" style={{ fontWeight: "bold"}}>React.js</span>
-          , yielding 46% surge in customer satisfaction. Created{" "}
+          , yielding 46% surge in customer satisfaction.
+          <br />
+          - Created{" "}
           <span className="text-[#269bdf] dark:text-[#0078d4]" style={{ fontWeight: "bold"}}>Power BI</span>{" "}
           dashboards and automated data collection using Google Analytics API,
-          increasing click-through-rate by 29%.
+          which helped to increase click-through-rate by 29%.
+          {/* <br /> */}
+          {/* - Interned right after high school! */}
         </>
       ),
     },
@@ -645,7 +639,7 @@ export const DATA = {
     },
     {
       title: "XML Builder",
-      image: "/xml_banner.webp",
+      image: "/xml.webp",
       href: "https://dub.sh/xml-builder",
       dates: "2025",
       active: true,
