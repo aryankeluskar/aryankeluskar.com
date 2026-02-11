@@ -14,6 +14,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { ChevronDown, ChevronUp } from "lucide-react";
 import { Publications } from "@/components/sections/publications";
+import { Writing } from "@/components/sections/writing";
 import Image from "next/image";
 
 const PROJECTS_TO_SHOW = 10;
@@ -55,6 +56,7 @@ export default function Page() {
         </Markdown>
       </section>
       <HometownSection />
+      {/* <Writing /> */}
       <section id="experience">
         <div className="flex min-h-0 flex-col gap-y-3">
           <h2 className="text-xl font-bold">Work Experience</h2>

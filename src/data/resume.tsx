@@ -53,6 +53,13 @@ type HackathonType = {
   }[];
 };
 
+type WritingType = {
+  title: string;
+  href: string;
+  preview: string;
+  thumbnail: string;
+};
+
 export const DATA = {
   name: "Aryan Keluskar",
   initials: "AK",
@@ -65,7 +72,7 @@ export const DATA = {
   current:
     "Building [alice](https://dub.sh/wonderland) and writing [research papers](https://scholar.google.com/citations?user=wVDeZtcAAAAJ).",
   summary1:
-    "I love to solve problems, learn intricate concepts, and build products. Solving daunting & ambiguous problems demand clarity under chaos, thus I believe in creating intuitive interfaces and scalable engineering to solve them from first principles. I'm currently a computer science and statistics senior at ASU, while researching safety in large-language models.",
+    "I love to solve problems, research intricate concepts, and build things that people love. Solving daunting & ambiguous problems demand clarity under chaos, thus I believe in using first principles and technological advancements to solve them. I'm currently a Computer Science senior at ASU, researching safety in large-language models.",
   summary2:
     "I grew up with a deep passion for mathematics, and use bayesian statistics to explain the world around me. I have won awards at collegiate hackathons such as HackMIT 2024 and SFHacks 2024. In my free time, I'm going down rabbit-holes or [cycling](https://www.strava.com/activities/13329957326) till I run out of roads.",
   // avatarUrl: "/professional.webp",
@@ -250,10 +257,24 @@ export const DATA = {
       location: "Tempe, AZ",
     },
   ] as HackathonType[],
+  writing: [
+    {
+      title: "MCP Servers Should Be Agents in Disguise",
+      href: "https://medium.com/@soydotrun/how-torch-compile-solves-the-eager-execution-problem-in-pytorch-4d45ef7e7777",
+      preview: "[Collaboration with [Claude Builder Club](https://www.linkedin.com/company/claude-builder-club-asu/)]: Blog post about how token efficiency of MCP servers can be improved using an 'under-the-hood' agent.",
+      thumbnail: "/pfp.webp",
+    },
+    {
+      title: "How Computation Graphs solve the Eager Execution Problem in PyTorch (torch.compile)",
+      href: "https://medium.com/@soydotrun/how-torch-compile-solves-the-eager-execution-problem-in-pytorch-4d45ef7e7777",
+      preview: "I wrote a blog post, doing a technical deep-dive into how computation graphs help with memory management and computation amortization in PyTorch.",
+      thumbnail: "/pfp.webp",
+    },
+  ] as WritingType[],
   publications: [
     {
       title: "TM-Vec 2: Accelerated Protein Homology Detection for Structural Similarity",
-      href: "",
+      href: "https://www.biorxiv.org/content/10.64898/2026.02.05.704073v1",
       authors: ["<b>Aryan Keluskar</b>*", "Paarth Batra*", "Valentyn Bezshapkin*", "James T. Morton", "Qiyun Zhu"],
       venue: "Honors Thesis (under review at a major conference)",
       citationLink: "",
@@ -463,11 +484,13 @@ export const DATA = {
           <span className="text-[#F11D26] dark:text-[#ff73a2]" style={{ fontWeight: "bold"}}>
             Floodgate
           </span>{" "}
-          Fund. 
+          Fund.
           <br />
           - Engineered a sub-200ms RAG system using <span className="text-[#F11D26] dark:text-[#ff73a2]" style={{ fontWeight: "bold"}}>PostgreSQL</span> and <span className="text-[#F11D26] dark:text-[#ff73a2]" style={{ fontWeight: "bold"}}>WebAssembly</span> for retrieving multimodal data with HIPAA compliance.
           <br />
-          - Developed tool calling functionality for web search and RAG for an LLM-based Voice Agent using <span className="text-[#F11D26] dark:text-[#ff73a2]" style={{ fontWeight: "bold"}}>TypeScript</span> and <span className="text-[#F11D26] dark:text-[#ff73a2]" style={{ fontWeight: "bold"}}>Google Cloud</span>.
+          - Developed tool calling functionality for an LLM-based Voice Agent using <span className="text-[#F11D26] dark:text-[#ff73a2]" style={{ fontWeight: "bold"}}>TypeScript</span> and <span className="text-[#F11D26] dark:text-[#ff73a2]" style={{ fontWeight: "bold"}}>Google Cloud</span> that processed 10,000+ user queries.
+          <br />
+          - Built a product analytics pipeline and internal dashboard using <span className="text-[#F11D26] dark:text-[#ff73a2]" style={{ fontWeight: "bold"}}>PostHog</span> to track user engagement and feature adoption.
         </>
       ),
     },
