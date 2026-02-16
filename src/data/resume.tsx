@@ -79,21 +79,6 @@ export const DATA = {
   avatarUrl: "/pfp.webp",
   hackathons: [
     {
-      title: "TreeHacks 2026",
-      image: "/treehacks.png",
-      dates: "February 2026",
-      location: "Stanford, CA",
-      // links: [
-      //   {
-      //     // icon: <Icons.devpost className="size-4" />,
-      //     title: "Turing",
-      //     href: "https://devpost.com/software/turing",
-      //   },
-      // ],
-      description:
-        "If you're participating as well, let's connect!"
-    },
-    {
       title: "HackIllinois 2026",
       image: "/hackillinois.png",
       dates: "February 2026",
@@ -107,6 +92,21 @@ export const DATA = {
       // ],
       description:
         "If you're participating as well, let's connect!"
+    },
+    {
+      title: "TreeHacks 2026 (2x Sponsor Track Winner 🏆)",
+      image: "/treehacks.png",
+      dates: "February 2026",
+      location: "Stanford, CA",
+      links: [
+        {
+          // icon: <Icons.devpost className="size-4" />,
+          title: "Jiggle Wiggle",
+          href: "https://devpost.com/software/jiggle-wiggle",
+        },
+      ],
+      description:
+        "Jiggle Wiggle is a real-time AI movement coach that uses motion capture to analyze your body's movements and provide feedback to improve your limb coordination and balance. We won the Zoom x Render Track and runner-up award in Modal's AI Inference Track."
     },
     {
       title: "CalHacks 2025",
