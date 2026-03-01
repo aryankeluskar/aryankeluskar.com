@@ -59,63 +59,42 @@
       </div>
     </div>
 
-    <!-- <div id="leftNavBar">
-        <div id="NBabout"></div>
-    </div> -->
-
     <div id="about">
       <table>
         <tr>
           <td>
-            <span class="section-emoji">🔬</span>
-            <h1 id="aboutMe">MY FURI <br />EXPERIENCE</h1>
+            <span class="section-emoji">🛡️</span>
+            <h1 id="aboutMe">DECEPTIVE<br />TOOL-CALLING<br />IN LLM AGENTS</h1>
           </td>
           <td style="padding-left: 5em">
             <table>
               <tr>
                 <td id="nameContainer">
                   <p id="nameAbout">
-                    Research over Fall 2024 <br />at DMML with Prof. Liu
+                    GCSP Research Stipend <br /> with Prof. Liu
                   </p>
                 </td>
               </tr>
             </table>
 
             <p id="bigDef1">
-              Generative AI has absolutely transformed the way we interact with
-              computers. Inherent biases, hallucinations, and misinformation are
-              just some of the problems that corrupt wide-spread adoption of
-              this technology and I wanted to learn more about developing safe
-              and reliable AI systems. Last March, with the help of Prof.
-              Trowbridge and FSE150, I contacted Prof. Huan Liu and his team at
-              DMML to learn more about the research they are doing in this
-              field.
+              Building on my first FURI experience studying ambiguity in LLMs, I
+              continued working with Prof. Liu's DMML lab to investigate a deeper
+              question: what happens when safety-aligned AI agents face conflicts
+              between their training objectives and user instructions?
 
               <br /><br />
 
-              <!-- Includes a clear summary/overview of the research or creative project done to complete this component -->
-              My FURI project focused on resolving the ambiguity problem in
-              Generative AI Models. Human language, by its nature, is ambiguous
-              and this poses a significant challenge to Large Language Models
-              (LLMs). LLMs often struggle with the inherent uncertainties of
-              human communication, leading to inaccuracies, hallucinations, and
-              biased responses. I started this project by conducting a
-              literature review to understand the current state of the art in
-              the field. I also attended a talk by Stanford Professor Edward
-              Chang hosted by Prof. Liu to learn more about the work being done
-              in this field. I labelled a dataset of 1000+ ambiguous questions
-              to test the performance of current methods of using Generative AI
-              Models on ambiguous questions. I then used this dataset to test
-              the performance of current methods of using Generative AI Models
-              on ambiguous questions. Then, with the help of Prof. Liu and Dr.
-              Amrita Bhattacharjee, I developed techniques to improve the
-              performance of Generative AI Models on ambiguous questions such as
-              task-specific fine-tuning and chain-of-thought which proved our
-              hypothesis that simple, training-free, token-level disambiguation
-              methods may be effectively used to improve LLM performance for
-              ambiguous question answering tasks. Fast forward to December 2024,
-              we published a paper in the IEEE BigData Conference and it has
-              earned 2+ citations as of February 2025.
+              As LLMs evolve from conversational assistants into autonomous agents
+              with tool-calling and API capabilities, they are being deployed in
+              regulated industries including financial services, healthcare, and
+              pharmaceutical distribution. In these high-stakes domains, agents
+              inevitably encounter situations where organizational directives
+              conflict with public safety obligations or ethical norms. My research
+              investigated how safety-trained models resolve these conflicts, and
+              found that they often engage in deceptive tool-calling behaviors like
+              whistleblowing and data exfiltration, even when explicitly instructed
+              to maintain confidentiality.
             </p>
           </td>
         </tr>
@@ -123,8 +102,8 @@
 
       <div style="display: flex; justify-content: center; margin-top: 2em">
         <img
-          src="https://72w6a0migs.ufs.sh/f/VpCDIDL5swAaNJTknnvezKkadrHYyZOjQ1s5UncPBuDI2oWt"
-          alt="Research Poster"
+          src="https://72w6a0migs.ufs.sh/f/VpCDIDL5swAacWYZOVdFI6NguQxwSWz1yJOR8vP2aUlATcoD"
+          alt="DTCBench Research Poster"
           style="width: 90vw; height: auto"
         />
       </div>
@@ -135,21 +114,21 @@
         <tr style="padding-left: 5em">
           <td>
             <p id="bigDef">
-              "Ambiguity in natural language poses significant challenges to
-              Large Language Models (LLMs) used for open-domain question
-              answering. LLMs often struggle with the inherent uncertainties of
-              human communication, leading to misinterpretations,
-              miscommunications, hallucinations, and biased responses. This
-              significantly weakens their ability to be used for tasks like
-              fact-checking, question answering, feature extraction, and
-              sentiment analysis. Using open-domain question answering as a test
-              case, we compare off-the-shelf and few-shot LLM performance,
-              focusing on measuring the impact of explicit disambiguation
-              strategies. We demonstrate how simple, training-free, token-level
-              disambiguation methods may be effectively used to improve LLM
-              performance for ambiguous question answering tasks. We empirically
-              show our findings and discuss best practices and broader impacts
-              regarding ambiguity in LLMs. "
+              Large language models (LLMs) typically undergo extensive safety
+              alignment to refuse harmful requests and align with human values.
+              However, recent work suggests that this alignment may be
+              fundamentally brittle when models face competing value systems. In
+              this work, we investigate this phenomenon in the context of
+              tool-calling enabled agentic systems, where models have access to
+              communication and data manipulation capabilities. To empirically
+              verify this phenomenon, we create a benchmark of 128 real-world
+              scenarios across 16 domains and find that safety-aligned models
+              exhibit systematic deceptive tool-calling behaviors, such as
+              whistleblowing and data exfiltration, even when explicitly
+              instructed to maintain confidentiality. Then, we attempt to
+              identify whether this behavior emerges from the alignment training
+              process, or results from overalignment to safety training
+              objectives, or emerges from misrepresented training objectives.
             </p>
           </td>
           <td>
@@ -173,19 +152,22 @@
           </td>
           <td style="padding-left: 5em">
             <p id="bigDef1">
-              Learning the foundations of these "billion-dollar hype-machines"
-              under Prof. Liu gave me a deep appreciation for how much safety
-              matters in Generative AI. Prof. Liu's lab wasn't just about
-              research — through FURI, I attended team lunches, birthdays, and
-              dissertation defenses that made me part of a real research
-              community.
+              This second research project deepened my understanding of AI safety
+              beyond the ambiguity problem I studied previously. Creating
+              DTCBench, a benchmark of 128 scenarios across 16 domains, taught
+              me how to design rigorous evaluations for complex agent behaviors.
+              Systematically evaluating 12 language models, including proprietary,
+              open-source, and uncensored variants, revealed dramatic variation in
+              deceptive behavior that challenged my assumptions about alignment.
 
               <br /><br />
 
-              This project shaped my professional direction and has already
-              opened doors in internship interviews and job applications. I'm
-              grateful for the mentorship and excited to continue working at the
-              intersection of AI and Security through GCSP.
+              The finding that abliteration can reduce whistleblowing behavior by
+              up to 99% while showing mixed effects on other behaviors highlighted
+              just how nuanced AI safety really is. This project reinforced my
+              commitment to working at the intersection of AI and Security and
+              gave me hands-on experience with the kinds of evaluations that will
+              be critical as AI agents are deployed in high-stakes environments.
             </p>
           </td>
         </tr>
@@ -197,17 +179,17 @@
         <tr style="padding-left: 5em">
           <td>
             <p id="bigDef">
-              My GCSP theme is Security. As discussed in the introduction above,
-              this FURI project is directly related to my theme because it
-              focuses on the safety and reliability of Generative AI Models. The
-              ambiguity problem in Generative AI Models is a significant
-              security concern and this project is a step in the right direction
-              of not only making Generative AI Models more secure and reliable
-              but also for me to learn more about the latest advancements at the
-              intersection of Generative AI and Security. Building trust in AI
-              systems is crucial for their wide-spread adoption and this project
-              has prepared me for my future projects with GCSP in the theme of
-              Security.
+              This project is a direct continuation of my GCSP Security theme.
+              While my first FURI project addressed the reliability of AI through
+              ambiguity resolution, this work tackles a more fundamental security
+              concern: can we trust AI agents to follow instructions when their
+              safety training conflicts with organizational directives? The
+              "lethal trifecta" of AI agents, private data access, exposure to
+              untrusted content, and external communication capabilities, is
+              exactly the kind of security challenge that my GCSP theme prepares
+              me to address. Understanding how and why models engage in deceptive
+              tool-calling is essential for building trustworthy AI systems in
+              regulated industries.
             </p>
           </td>
           <td>
@@ -219,41 +201,6 @@
         </tr>
       </table>
     </div>
-    <!-- 
-    <div class="container">
-      <div class="top">
-        <ul>
-          <li>
-            <a
-              target="_blank"
-              href="https://raw.githubusercontent.com/aryankeluskar/aryankeluskar.github.io/refs/heads/master/static/themePaper.pdf"
-              ><img
-                src="https://raw.githubusercontent.com/aryankeluskar/aryankeluskar.github.io/refs/heads/master/static/themecover.png"
-            /></a>
-          </li>
-          <li>
-            <a target="_blank" href="https://dmml.asu.edu"
-              ><img
-                src="https://raw.githubusercontent.com/aryankeluskar/aryankeluskar.github.io/refs/heads/master/static/dmmlcover.png"
-            /></a>
-          </li>
-          <li>
-            <a
-              target="_blank"
-              href="https://raw.githubusercontent.com/aryankeluskar/aryankeluskar.github.io/refs/heads/master/static/poster.pdf"
-              ><img
-                src="https://raw.githubusercontent.com/aryankeluskar/aryankeluskar.github.io/refs/heads/master/static/pos.png"
-            /></a>
-          </li>
-          <li>
-            <a target="_blank" href="https://gcsp.engineering.asu.edu"
-              ><img
-                src="https://raw.githubusercontent.com/aryankeluskar/aryankeluskar.github.io/refs/heads/master/static/gcspcover.png"
-            /></a>
-          </li>
-        </ul>
-      </div>
-    </div> -->
 
     <div id="contact" style="padding-bottom: 5vh">
       <table>

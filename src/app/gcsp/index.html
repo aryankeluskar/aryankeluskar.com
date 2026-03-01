@@ -26,12 +26,30 @@
       <div class="topnav">
         <!-- using a empty character to set the height -->
         <a href="#home" class="active">‎ </a>
-        <div id="myLinks">
-          <a href="https://aryankeluskar.com/">about</a>
-          <a href="https://aryankeluskar.com/">experience</a>
-          <a href="/gcsp/furi">talent</a>
-          <a href="/gcsp/fse150">interdisciplinary</a>
-          <a href="/gcsp/humanevent">multicultural</a>
+        <div id="myLinks" style="padding-top: 2em">
+          <a href="/gcsp">about</a>
+          <div class="dropdown">
+            <a href="/gcsp/furi">talent ▾</a>
+            <div class="dropdown-content">
+              <a href="/gcsp/furi">FURI — Ambiguity in LLMs</a>
+              <a href="/gcsp/furi2">GCSP Stipend — Deceptive Tool-Calling</a>
+            </div>
+          </div>
+          <div class="dropdown">
+            <a href="/gcsp/fse150">interdisciplinary ▾</a>
+            <div class="dropdown-content">
+              <a href="/gcsp/fse150">FSE 150 — Grand Challenges</a>
+              <a href="/gcsp/sts330">STS 330 — IT &amp; Globalization</a>
+            </div>
+          </div>
+          <a href="/gcsp/venture">entrepreneurship</a>
+          <div class="dropdown">
+            <a href="/gcsp/humanevent">multicultural ▾</a>
+            <div class="dropdown-content">
+              <a href="/gcsp/humanevent">HON 272 — The Human Event</a>
+              <a href="/gcsp/globalization">ASB 378 — Globalization</a>
+            </div>
+          </div>
           <a href="/gcsp/epics">service</a>
         </div>
       </div>
@@ -78,12 +96,7 @@
       <table>
         <tr>
           <td>
-            <img
-              src="https://raw.githubusercontent.com/aryankeluskar/aryankeluskar.github.io/refs/heads/master/static/puzzle_piece3.png"
-              alt=""
-              id="puzzle"
-              srcset=""
-            />
+            <span class="section-emoji">👋</span>
             <h1 id="aboutMe">ABOUT <br />ME</h1>
           </td>
           <td style="padding-left: 5em">
@@ -102,7 +115,8 @@
               <tr>
                 <td>
                   <p id="smolDef">
-                    / Sophomore, Majoring in Computer Science /
+                    / Senior, Majoring in Computer Science, Minor in Statistics
+                    /
                   </p>
                 </td>
                 <!-- <td>
@@ -111,8 +125,22 @@
               </tr>
             </table>
 
-            <p id="locs">Hometown(s): Mumbai, MH; Hyderabad, TS; 🇮🇳</p>
+            <p id="locs">
+              Arizona State University (Barrett Honors) | Graduating Spring 2026
+            </p>
             <p id="bigDef1">
+              This is my
+              <span class="highlight">Grand Challenges Scholars Program</span>
+              portfolio. The NAE Grand Challenges Scholars Program is a national
+              program where engineering students work across five competencies
+              (Talent, Multidisciplinary, Entrepreneurship, Multicultural, and
+              Social Consciousness) to prepare themselves for the biggest
+              problems out there. This portfolio is my record of that work, all
+              tied together by my theme of
+              <span class="highlight">Security</span>.
+
+              <br /><br />
+
               I'm interested in the theme
               <span class="highlight"> Security. </span> GCSP, to me, is a
               community of people who are passionate about applying our
@@ -142,53 +170,76 @@
         <tr style="padding-left: 5em">
           <td>
             <p id="bigDef">
-              My Bridge (and why Security plays a big part): I love
-              <span class="highlight"> Statistics</span> and
-              <span class="highlight">Data</span> so much since it has given me
-              a bridge to connect my STEM interests with my emotions. May sound
-              a bit peculiar, but stats and data almost felt like
-              <span class="highlight">philosophy</span> to me after a while.
-              Therefore, to further walk upon this bridge with my engineering
-              mindset, I am actively involved in Research to make
-              <span class="">Machine Learning</span> less biased and more
-              humane! To accomplish this, Data Security is going to play a
-              critical role since humanity has always revolved around
-              <span class="highlight">trust</span>. Today, we trust our machine
-              with a significant portion of our lives and with this opportunity
-              of GCSP, I aspire to
+              My Bridge: I love
+              <span class="highlight">Statistics</span> and
+              <span class="highlight">Data</span> because they bridge my STEM
+              interests with my emotions — stats felt like
+              <span class="highlight">philosophy</span> after a while. I'm
+              actively researching how to make Machine Learning less biased and
+              more humane. Data Security is critical here since humanity
+              revolves around <span class="highlight">trust</span>, and through
+              GCSP I aspire to
               <span class="highlight">reduce the vulnerabilities</span> and
               <span class="highlight">biases of these machines.</span>
+
               <br /><br />
+
               Why I do What I do: Taking on
-              <span class="highlight">responsibility</span> has shaped me,
-              especially when I served as the Technology Captain on the
-              Prefectorial Board of my high school. What could have been (and
-              almost was) following instructions laid down by the previous batch
-              became a
-              <span class="highlight">life-changing experience</span> for me.
-              Long story short, I was lucky. To motivate and guide the untapped
-              talent of middle school, To organize fests where students could
-              showcase and <span class="highlight">live their talents</span>,
-              and To be inspired from those who dare to dreamers and develop
-              their lives around it! So, every morning when I have a cup of chai
-              and walk to my classes, my mind is beaming with excitement to
-              further form cherished memories, push new commits to GitHub, but
-              most importantly,
-              <span class="highlight">to earn the life</span> I constantly dream
-              of.
+              <span class="highlight">responsibility</span> shaped me — serving
+              as Technology Captain in high school became a
+              <span class="highlight">life-changing experience</span>. Every
+              morning with a cup of chai, I'm excited to form cherished
+              memories, push commits to GitHub, and most importantly,
+              <span class="highlight">to earn the life</span> I dream of.
             </p>
           </td>
           <td>
-            <img
-              src="https://raw.githubusercontent.com/aryankeluskar/aryankeluskar.github.io/refs/heads/master/static/globe.png"
-              alt=""
-              id="puzzle2"
-              srcset=""
-            />
+            <span class="section-emoji-right">💛</span>
             <h1 id="aboutMe2">LOVE & <br />REASON</h1>
           </td>
         </tr>
       </table>
+    </div>
+
+    <div id="about">
+      <p id="bigDef1" style="margin-top: 0; padding-bottom: 2em">
+        When I look back at my time in GCSP, the thing that strikes me is how
+        <span class="highlight">Security</span> kept showing up everywhere, and
+        not just in the way I originally expected. I came in thinking about
+        digital security, encryption, firewalls. I'm leaving with a much wider
+        view: safety, trust, who gets access to what, and why.
+
+        <br /><br />
+
+        My <span class="highlight">FURI research</span> on ambiguity in Large
+        Language Models was where this started clicking. LLMs hallucinate. They
+        get confused by the same ambiguities that confuse humans, except they do
+        it confidently and at scale. That work turned into an IEEE BigData paper
+        (20+ citations now), and it confirmed something for me: AI safety is
+        what I want to spend my career on.
+
+        <br /><br />
+
+        <span class="highlight">FSE150</span> changed how I think about
+        problems. The PESTLE framework forced me to look at engineering
+        solutions from political, economic, social, legal, and environmental
+        angles, not just technical ones. Then
+        <span class="highlight">STS 330</span> took that further by examining
+        how AI and data tracking are reshaping labor markets, democracies, and
+        privacy. These are security problems, even if they don't look like
+        traditional cybersecurity. HON 272 and
+        ASB 378 changed how I think about who my work actually affects. And
+        Venture Devils pushed me to ask whether the things I build will last
+        beyond a demo.
+
+        <br /><br />
+
+        I'm grateful for this program, for Professor Trowbridge and Professor
+        Liu and everyone else who pushed me, and for the other scholars who care
+        about this stuff as much as I do. GCSP taught me that good engineering
+        isn't just about writing good code. It's about understanding the world
+        your code lives in. That's what I'm taking with me.
+      </p>
     </div>
 
     <div id="contact">
@@ -298,14 +349,26 @@
     </div>
 
     <!-- BEGIN PLERDY CODE -->
-    <script type="text/javascript" defer data-plerdy_code='1'>
-      var _protocol="https:"==document.location.protocol?"https://":"http://";
-      _site_hash_code = "2bfa700d869c360b7955ebb0fed2fdd2",_suid=71636, plerdyScript=document.createElement("script");
-      plerdyScript.setAttribute("defer",""),plerdyScript.dataset.plerdymainscript="plerdymainscript",
-      plerdyScript.src="https://a.plerdy.com/public/js/click/main.js?v="+Math.random();
-      var plerdymainscript=document.querySelector("[data-plerdymainscript='plerdymainscript']");
-      plerdymainscript&&plerdymainscript.parentNode.removeChild(plerdymainscript);
-      try{document.head.appendChild(plerdyScript)}catch(t){console.log(t,"unable add script tag")}
+    <script type="text/javascript" defer data-plerdy_code="1">
+      var _protocol =
+        "https:" == document.location.protocol ? "https://" : "http://";
+      ((_site_hash_code = "2bfa700d869c360b7955ebb0fed2fdd2"),
+        (_suid = 71636),
+        (plerdyScript = document.createElement("script")));
+      (plerdyScript.setAttribute("defer", ""),
+        (plerdyScript.dataset.plerdymainscript = "plerdymainscript"),
+        (plerdyScript.src =
+          "https://a.plerdy.com/public/js/click/main.js?v=" + Math.random()));
+      var plerdymainscript = document.querySelector(
+        "[data-plerdymainscript='plerdymainscript']",
+      );
+      plerdymainscript &&
+        plerdymainscript.parentNode.removeChild(plerdymainscript);
+      try {
+        document.head.appendChild(plerdyScript);
+      } catch (t) {
+        console.log(t, "unable add script tag");
+      }
     </script>
     <!-- END PLERDY CODE -->
   </body>

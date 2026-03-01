@@ -21,37 +21,79 @@ div#name {
   background-image: url("../static/heroBGplain.png");
   background-size: contain;
   background-color: whitesmoke;
-
-  /* opacity: 90%; */
+  overflow: visible;
+  z-index: 100;
+  position: relative;
 }
 
 .topnav {
-  overflow: hidden;
+  overflow: visible;
   position: relative;
 }
 
 .topnav #myLinks {
-  display: block;
-  margin-left: 10em;
-  margin-top: 1em;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding-top: 2em;
+  gap: 0;
+  margin: 0;
+  padding: 0;
 }
 
-.topnav a {
-  float: left;
+.topnav #myLinks > a,
+.topnav #myLinks .dropdown > a {
   color: black;
-  padding: 5vh 2vw;
+  padding: 1.5vh 2vw;
   text-decoration: none;
   font-size: 2.5vh;
   font-family: "Solway", serif;
   font-weight: 600;
 }
 
-.topnav a.icon {
-  float: right;
+.topnav .dropdown {
+  position: relative;
 }
 
-.active {
-  color: white;
+.topnav .dropdown > a {
+  cursor: default;
+}
+
+.topnav .dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: whitesmoke;
+  min-width: 220px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  z-index: 10;
+}
+
+.topnav .dropdown-content a {
+  float: none;
+  display: block;
+  padding: 1.5vh 2vw;
+  font-size: 2vh;
+  font-weight: 400;
+  white-space: nowrap;
+}
+
+.topnav .dropdown-content a:hover {
+  background-color: #e8e8e8;
+}
+
+.topnav .dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.topnav .dropdown:hover > a {
+  background-color: #e8e8e8;
+}
+
+.topnav > a.active {
+  display: none;
 }
 
 p#landerName {
@@ -156,6 +198,21 @@ img#puzzle2 {
   margin-right: 5vw;
   margin-top: 0vh;
   width: 10vw;
+}
+
+.section-emoji {
+  font-size: 6vw;
+  margin-left: 10vw;
+  display: block;
+  line-height: 1.2;
+}
+
+.section-emoji-right {
+  font-size: 6vw;
+  margin-right: 5vw;
+  display: block;
+  text-align: right;
+  line-height: 1.2;
 }
 
 h1#aboutMe {
@@ -295,6 +352,6 @@ svg {
   color: whitesmoke;
 }
 
-span {
+span:not(.section-emoji):not(.section-emoji-right) {
   margin-top: -5em;
 }
