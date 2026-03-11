@@ -259,16 +259,16 @@ export const DATA = {
   ] as HackathonType[],
   writing: [
     {
-      title: "MCP Servers Should Be Agents in Disguise",
-      href: "https://medium.com/@soydotrun/how-torch-compile-solves-the-eager-execution-problem-in-pytorch-4d45ef7e7777",
-      preview: "[Collaboration with [Claude Builder Club](https://www.linkedin.com/company/claude-builder-club-asu/)]: Blog post about how token efficiency of MCP servers can be improved using an 'under-the-hood' agent.",
-      thumbnail: "/pfp.webp",
+      title: "Should MCP Servers be Agents in Disguise?",
+      href: "https://medium.com/@soydotrun/should-mcp-servers-be-agents-in-disguise-with-a-case-study-86ec263159e8",
+      preview: "Blog post + Case study on why 'under-the-hood' agents can improve the token efficiency of MCP servers.",
+      thumbnail: "/mcp_logo.jpg",
     },
     {
       title: "How Computation Graphs solve the Eager Execution Problem in PyTorch (torch.compile)",
       href: "https://medium.com/@soydotrun/how-torch-compile-solves-the-eager-execution-problem-in-pytorch-4d45ef7e7777",
-      preview: "I wrote a blog post, doing a technical deep-dive into how computation graphs help with memory management and computation amortization in PyTorch.",
-      thumbnail: "/pfp.webp",
+      preview: "Technical deep-dive into why computation graphs help with memory management and compute amortization in PyTorch.",
+      thumbnail: "/Pytorch_logo.png",
     },
   ] as WritingType[],
   publications: [
