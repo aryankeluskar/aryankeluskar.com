@@ -262,13 +262,13 @@ export const DATA = {
       title: "Should MCP Servers be Agents in Disguise?",
       href: "https://medium.com/@soydotrun/should-mcp-servers-be-agents-in-disguise-with-a-case-study-86ec263159e8",
       preview: "Blog post + Case study on why 'under-the-hood' agents can improve the token efficiency of MCP servers.",
-      thumbnail: "/mcp_logo.jpg",
+      thumbnail: "/mcp_logo.webp",
     },
     {
       title: "How Computation Graphs solve the Eager Execution Problem in PyTorch (torch.compile)",
       href: "https://medium.com/@soydotrun/how-torch-compile-solves-the-eager-execution-problem-in-pytorch-4d45ef7e7777",
       preview: "Technical deep-dive into why computation graphs help with memory management and compute amortization in PyTorch.",
-      thumbnail: "/Pytorch_logo.png",
+      thumbnail: "/Pytorch_logo.webp",
     },
   ] as WritingType[],
   publications: [
