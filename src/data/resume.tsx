@@ -281,7 +281,7 @@ export const DATA = {
       links: [
         {
           title: "Google Scholar",
-          href: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wVDeZtcAAAAJ&citation_for_view=wVDeZtcAAAAJ:u5HHmVD_uO8C",
+          href: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wVDeZtcAAAAJ&citation_for_view=wVDeZtcAAAAJ:UeHWp8X0CEIC",
         },
         {
           title: "GitHub",
