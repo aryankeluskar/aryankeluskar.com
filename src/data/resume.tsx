@@ -224,22 +224,22 @@ export const DATA = {
       dates: "March 2024",
       location: "Tempe, AZ",
     },
-    {
-      title: "SunHacks 2023",
-      // // project: "https://devpost.com/software/ai-in-education-by-scaleup",
-      image: "/sunhacks.png",
-      description:
-        "Built a peer-to-peer equipment rental marketplace for students. Disqualified since I was too young (I mentored this hackathon the very next year. Talk about redemption).",
-      dates: "November 2023",
-      location: "Tempe, AZ",
-      links: [
-        {
-          // icon: <Icons.devpost className="size-4" />,
-          title: "TradeDaddy",
-          href: "https://devpost.com/software/tradedaddy?ref_content=my-projects-tab&ref_feature=my_projects",
-        },
-      ],
-    },
+    // {
+    //   title: "SunHacks 2023",
+    //   // // project: "https://devpost.com/software/ai-in-education-by-scaleup",
+    //   image: "/sunhacks.png",
+    //   description:
+    //     "Built a peer-to-peer equipment rental marketplace for students. Disqualified since I was too young (I mentored this hackathon the very next year. Talk about redemption).",
+    //   dates: "November 2023",
+    //   location: "Tempe, AZ",
+    //   links: [
+    //     {
+    //       // icon: <Icons.devpost className="size-4" />,
+    //       title: "TradeDaddy",
+    //       href: "https://devpost.com/software/tradedaddy?ref_content=my-projects-tab&ref_feature=my_projects",
+    //     },
+    //   ],
+    // },
     {
       title: "AI in Education by ScaleU (Honorable Mention 🏆)",
       // project: "https://devpost.com/software/ai-in-education-by-scaleup",
