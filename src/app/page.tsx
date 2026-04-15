@@ -17,7 +17,7 @@ import { Publications } from "@/components/sections/publications";
 import { Writing } from "@/components/sections/writing";
 import Image from "next/image";
 
-const PROJECTS_TO_SHOW = 10;
+const PROJECTS_TO_SHOW = 12;
 
 export default function Page() {
   const [showAllProjects, setShowAllProjects] = useState(false);

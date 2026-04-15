@@ -101,14 +101,13 @@ export function Publications() {
                       href={link.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-x-1 text-xs md:text-sm text-muted-foreground hover:underline"
+                      className="relative inline-flex items-center gap-x-1 text-xs md:text-sm text-muted-foreground hover:underline before:absolute before:-inset-2 before:content-['']"
                     >
                       {link.icon ? (
                         link.icon
                       ) : (
                         <LinkIcon className="size-3 md:size-4" />
                       )}{" "}
-                      {/* Adjusted icon size */}
                       {link.title}
                     </a>
                   ))}

@@ -43,7 +43,7 @@ const BlurFade = ({
   };
   const combinedVariants = variant || defaultVariants;
   return (
-    <AnimatePresence>
+    <AnimatePresence initial={false}>
       <motion.div
         ref={ref}
         initial="hidden"

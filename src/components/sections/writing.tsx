@@ -72,7 +72,7 @@ export function Writing() {
                     alt={writing.title}
                     width={64}
                     height={64}
-                    className="rounded-lg object-cover"
+                    className="rounded-lg object-cover outline outline-1 outline-black/5"
                   />
                 </a>
               </div>

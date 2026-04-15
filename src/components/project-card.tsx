@@ -45,7 +45,7 @@ export function ProjectCard({
   return (
     <Card
       className={
-        "flex flex-col overflow-hidden border hover:shadow-lg transition-all duration-300 ease-out h-full"
+        "flex flex-col overflow-hidden hover:shadow-lg transition-shadow duration-300 ease-out h-full shadow-[0_0_0_1px_rgba(0,0,0,.06),0_1px_3px_rgba(0,0,0,.1),0_2px_8px_rgba(0,0,0,.04)]"
       }
     >
       <div className="relative">
@@ -72,7 +72,7 @@ export function ProjectCard({
               alt={`${title} logo`}
               width={1000}
               height={1000}
-              className="pointer-events-none mx-auto h-40 w-full object-cover object-top"
+              className="pointer-events-none mx-auto h-40 w-full object-cover object-top outline outline-1 outline-black/5"
             />
           </div>
         )}

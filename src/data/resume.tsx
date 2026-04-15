@@ -610,6 +610,63 @@ export const DATA = {
       ],
     },
     {
+      title: "Git Sandbox",
+      href: "https://github.soy.run/",
+      image: "/gitsandbox.webp",
+      dates: "2026",
+      active: true,
+      description:
+        "Use your Claude / Codex / Copilot subscription to instantly chat with any Github repository fully in your browser.",
+      technologies: [
+        "TypeScript",
+        "xterm.js",
+        "Cloudflare Workers",
+        "Cloudflare Containers",
+        "Pi-Agent",
+        "just-bash"
+      ],
+      links: [
+        {
+          icon: <Icons.github className="size-4" />,
+          type: "GitHub",
+          href: "https://git.new/git-sandbox",
+        },
+        {
+          icon: <Icons.globe className="size-4" />,
+          type: "Website",
+          href: "https://github.soy.run/",
+        },
+      ],
+    },
+    {
+      title: "Polymarket MCP",
+      href: "https://dub.sh/polymarket-mcp",
+      image: "/polymarket_mcp.webp",
+      dates: "2024",
+      active: true,
+      description:
+        "Lets AI-agents access Polymarket market data in the AI app of your choice. Over **45K tool calls** on Smithery's leaderboard of April 2026.",
+      technologies: [
+        "TypeScript",
+        "Cloudflare Workers",
+        "Polymarket",
+        "Bun",
+        "Model Context Protocol",
+      ],
+      links: [
+        {
+          icon: <Icons.github className="size-4" />,
+          type: "GitHub",
+          href: "https://git.new/polymarket-mcp",
+        },
+        {
+          icon: <Icons.globe className="size-4" />,
+          type: "",
+          href: "https://dub.sh/polymarket-mcp",
+        }
+      ],
+    },
+    {
       title: "CloudStash",
       href: "https://git.new/cloudstash",
       image: "/cloudstash1.webp",

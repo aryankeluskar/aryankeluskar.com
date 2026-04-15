@@ -48,13 +48,13 @@ export function HometownSection() {
             rel="noopener noreferrer"
             className={`group relative overflow-hidden rounded-lg ${
               isMobile ? "aspect-[4/3]" : "aspect-[3/4]"
-            } hover:scale-105 transition-transform duration-300`}
+            } hover:scale-[1.03] active:scale-[0.96] transition-transform duration-300`}
           >
             <Image
               src={hometown.image}
               alt={`Sunset in ${hometown.name}`}
               fill
-              className="object-cover"
+              className="object-cover outline outline-1 outline-black/5"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
             <div className="absolute bottom-4 left-4 text-white">

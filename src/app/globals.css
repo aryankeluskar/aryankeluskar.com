@@ -98,6 +98,11 @@ html {
   h5,
   h6 {
     font-family: var(--font-solway);
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
   }
 }
 

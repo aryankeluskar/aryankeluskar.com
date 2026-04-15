@@ -35,20 +35,19 @@ export function HeroSection() {
             href={DATA.resumeUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="px-11 py-2.5 font-solway font-semibold text-sm sm:text-base text-foreground bg-[rgba(0,255,75,0.33)] hover:bg-[rgba(0,255,75,0.5)] transition-colors "
+            className="px-11 py-2.5 font-solway font-semibold text-sm sm:text-base text-foreground bg-[rgba(0,255,75,0.33)] hover:bg-[rgba(0,255,75,0.5)] transition-[background-color,transform] active:scale-[0.96]"
           >
             resume
           </Link>
           <Link
             href="#projects"
-            className="px-11 py-2.5 font-solway font-semibold text-sm sm:text-base text-foreground bg-[rgba(2,0,255,0.33)] hover:bg-[rgba(2,0,255,0.5)] transition-colors "
-            // className="px-11 py-2.5 font-solway font-semibold text-sm sm:text-base text-foreground bg-[rgba(0,149,255,0.33)] hover:bg-[rgba(0,149,255,0.5)] transition-colors "
+            className="px-11 py-2.5 font-solway font-semibold text-sm sm:text-base text-foreground bg-[rgba(2,0,255,0.33)] hover:bg-[rgba(2,0,255,0.5)] transition-[background-color,transform] active:scale-[0.96]"
           >
             projects
           </Link>
           <Link
             href="#contact"
-            className="px-11 py-2.5 font-solway font-semibold text-sm sm:text-base text-foreground bg-[rgba(255,0,0,0.33)] hover:bg-[rgba(255,0,0,0.5)] transition-colors "
+            className="px-11 py-2.5 font-solway font-semibold text-sm sm:text-base text-foreground bg-[rgba(255,0,0,0.33)] hover:bg-[rgba(255,0,0,0.5)] transition-[background-color,transform] active:scale-[0.96]"
           >
             contact
           </Link>
