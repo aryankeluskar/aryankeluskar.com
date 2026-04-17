@@ -275,7 +275,7 @@ export const DATA = {
     {
       title: "TM-Vec 2: Accelerated Protein Homology Detection for Structural Similarity",
       href: "https://www.biorxiv.org/content/10.64898/2026.02.05.704073v1",
-      authors: ["<b>Aryan Keluskar</b>*", "Paarth Batra*", "Valentyn Bezshapkin*", "James T. Morton", "Qiyun Zhu"],
+      authors: ["<b>Aryan Keluskar</b>*", "Paarth Batra*", "Valentyn Bezshapkin", "James T. Morton", "Qiyun Zhu"],
       venue: "Honors Thesis (under review at a major conference)",
       citationLink: "",
       links: [
@@ -295,26 +295,26 @@ export const DATA = {
       href: "https://ieeexplore.ieee.org/abstract/document/10825265",
       authors: ["<b>Aryan Keluskar</b>", "Amrita Bhattacharjee", "Huan Liu"],
       venue: "IEEE International Conference on Big Data 2024, Washington DC",
-      citation: "20 citations",
+      citation: "33 citations",
       citationLink: "https://scholar.google.com/scholar?oi=bibs&hl=en1&cites=10776899312694291117&as_sdt=5",
       links: [
         {
           title: "Google Scholar",
           href: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wVDeZtcAAAAJ&citation_for_view=wVDeZtcAAAAJ:u5HHmVD_uO8C",
         },
-        {
-          title: "Tweet",
-          href: "https://x.com/HEI/status/1859239058163085709",
-        },
+        // {
+        //   title: "Tweet",
+        //   href: "https://x.com/HEI/status/1859239058163085709",
+        // },
       ],
     },
     {
       title:
         "Scikit-bio: a fundamental Python library for biological omic data analysis",
       href: "https://www.nature.com/articles/s41592-025-02981-z",
-      authors: ["Matthew Aton", "Daniel McDonald", "...", "<b>Aryan Keluskar</b>", "...", "Rob Knight", "James T. Morton", "Qiyun Zhu"],
-      venue: "Nature Methods",
-      // citation: "100 citations",
+      authors: ["Matthew Aton", "Daniel McDonald", "...", "<b>Aryan Keluskar</b>", "...", "James T. Morton", "Qiyun Zhu"],
+      venue: "Nature Methods (December 2025)",
+      // citation: "11 citations",
       // citationLink: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wVDeZtcAAAAJ&citation_for_view=wVDeZtcAAAAJ:qjMakFHDy7sC",
       links: [
         {

@@ -65,9 +65,9 @@ export function Publications() {
             {" "}
             {/* Centered content and added max-width */}
             <div>
-              <h3 className="text-lg font-semibold leading-tight">
+              <h3 className="w-full text-lg font-semibold leading-tight [text-wrap:wrap]">
                 <a
-                  className="hover:underline"
+                  className="block w-full hover:underline"
                   href={publication.href}
                   target="_blank"
                   rel="noopener noreferrer"
