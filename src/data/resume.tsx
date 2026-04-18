@@ -442,11 +442,13 @@ export const DATA = {
       end: "Present",
       description: (
         <>
-          - Saved over 75% in GPU costs (approximating <span style={{ fontWeight: "bold", color: "#3e9c35" }}>$3,850</span>) and <span style={{ fontWeight: "bold", color: "#3e9c35" }}>6 weeks</span> in training and inference times by implementing Knowledge Distillation and Flash Attention for Protein Language Models. 
+          ∙ Saved over 75% in GPU costs (approximating <span style={{ fontWeight: "bold", color: "#3e9c35" }}>$3,850</span>) and <span style={{ fontWeight: "bold", color: "#3e9c35" }}>6 weeks</span> in training and inference times by implementing Knowledge Distillation and Flash Attention for Protein Language Models. 
           <br />
-          - Created benchmarking scripts using <span style={{ fontWeight: "bold", color: "#3e9c35" }}>HuggingFace</span> and <span style={{ fontWeight: "bold", color: "#3e9c35" }}>Python</span> with PyTorch & Transformers libraries. 
+          ∙ Optimized GPU inference, implemented distributed computing in <span style={{ fontWeight: "bold", color: "#3e9c35" }}>Ray</span> with gradient checkpointing and memory-efficient batching using <span style={{ fontWeight: "bold", color: "#3e9c35" }}>PyTorch</span>, cutting compute time by 30% and throughput time by 25%.
+	<br />          
+          ∙ Created benchmarking scripts using <span style={{ fontWeight: "bold", color: "#3e9c35" }}>HuggingFace</span> and <span style={{ fontWeight: "bold", color: "#3e9c35" }}>Python</span> with PyTorch & Transformers libraries. 
           <br />
-          {/* - Wrote unit tests using <span style={{ fontWeight: "bold", color: "#3e9c35" }}>PyTest</span> to increase code coverage by 12.5%. */}
+          {/* ∙ Wrote unit tests using <span style={{ fontWeight: "bold", color: "#3e9c35" }}>PyTest</span> to increase code coverage by 12.5%. */}
         </>
       ),
     },
@@ -461,11 +463,11 @@ export const DATA = {
       end: "Present",
       description: (
         <>
-          - Implemented an optimized model inference API using <span className="text-[#8D1C41] dark:text-[#ff73a2]" style={{ fontWeight: "bold"}}>vLLM</span> for GPU memory management and <span className="text-[#8D1C41] dark:text-[#ff73a2]" style={{ fontWeight: "bold"}}>FastAPI</span> for RESTful endpoints, supporting concurrent requests which lowered inference latency by 30%.
+          ∙ Implemented an optimized model inference API using <span className="text-[#8D1C41] dark:text-[#ff73a2]" style={{ fontWeight: "bold"}}>vLLM</span> for GPU memory management and <span className="text-[#8D1C41] dark:text-[#ff73a2]" style={{ fontWeight: "bold"}}>FastAPI</span> for RESTful endpoints, supporting concurrent requests which lowered inference latency by 30%.
           <br />
-          - Built classifiers for text datasets over 2TB in size and fine-tuned LLMs with <span className="text-[#8D1C41] dark:text-[#ff73a2]" style={{ fontWeight: "bold"}}> LoRA </span> using <span className="text-[#8D1C41] dark:text-[#ff73a2]" style={{ fontWeight: "bold"}}> Python </span> to improve accuracy in ambiguous human text. 
+          ∙ Built classifiers for text datasets over 2TB in size and fine-tuned LLMs with <span className="text-[#8D1C41] dark:text-[#ff73a2]" style={{ fontWeight: "bold"}}> LoRA </span> using <span className="text-[#8D1C41] dark:text-[#ff73a2]" style={{ fontWeight: "bold"}}> Python </span> to improve accuracy in ambiguous human text. 
           <br />
-          - Co-authored an <span className="text-[#8D1C41] dark:text-[#ff73a2]" style={{ fontWeight: "bold"}}>IEEE</span>{" "} BigData paper. 
+          ∙ Co-authored an <span className="text-[#8D1C41] dark:text-[#ff73a2]" style={{ fontWeight: "bold"}}>IEEE</span>{" "} BigData paper. 
         </>
       ),
     },
@@ -486,11 +488,11 @@ export const DATA = {
           </span>{" "}
           Fund.
           <br />
-          - Engineered a sub-200ms RAG system using <span className="text-[#F11D26] dark:text-[#ff73a2]" style={{ fontWeight: "bold"}}>PostgreSQL</span> and <span className="text-[#F11D26] dark:text-[#ff73a2]" style={{ fontWeight: "bold"}}>WebAssembly</span> for retrieving multimodal data with HIPAA compliance.
+          ∙ Engineered a sub-200ms RAG system using <span className="text-[#F11D26] dark:text-[#ff73a2]" style={{ fontWeight: "bold"}}>PostgreSQL</span> and <span className="text-[#F11D26] dark:text-[#ff73a2]" style={{ fontWeight: "bold"}}>WebAssembly</span> for retrieving multimodal data with HIPAA compliance.
           <br />
-          - Developed tool calling functionality for an LLM-based Voice Agent using <span className="text-[#F11D26] dark:text-[#ff73a2]" style={{ fontWeight: "bold"}}>TypeScript</span> and <span className="text-[#F11D26] dark:text-[#ff73a2]" style={{ fontWeight: "bold"}}>Google Cloud</span> that processed 10,000+ user queries.
+          ∙ Developed tool calling functionality for an LLM-based Voice Agent using <span className="text-[#F11D26] dark:text-[#ff73a2]" style={{ fontWeight: "bold"}}>TypeScript</span> and <span className="text-[#F11D26] dark:text-[#ff73a2]" style={{ fontWeight: "bold"}}>Google Cloud</span> that processed 10,000+ user queries.
           <br />
-          - Built a product analytics pipeline and internal dashboard using <span className="text-[#F11D26] dark:text-[#ff73a2]" style={{ fontWeight: "bold"}}>PostHog</span> to track user engagement and feature adoption.
+          ∙ Built a product analytics pipeline and internal dashboard using <span className="text-[#F11D26] dark:text-[#ff73a2]" style={{ fontWeight: "bold"}}>PostHog</span> to track user engagement and feature adoption.
         </>
       ),
     },
@@ -505,7 +507,7 @@ export const DATA = {
       end: "July 2023",
       description: (
         <>
-          - Developed backend infrastructure for static assets and 3D models
+          ∙ Developed backend infrastructure for static assets and 3D models
           integration using{" "}
           <span className="text-[#269bdf] dark:text-[#0078d4]" style={{ fontWeight: "bold"}}>
             JavaScript
@@ -514,12 +516,12 @@ export const DATA = {
           <span className="text-[#269bdf] dark:text-[#0078d4]" style={{ fontWeight: "bold"}}>React.js</span>
           , yielding 46% surge in customer satisfaction.
           <br />
-          - Created{" "}
+          ∙ Created{" "}
           <span className="text-[#269bdf] dark:text-[#0078d4]" style={{ fontWeight: "bold"}}>Power BI</span>{" "}
           dashboards and automated data collection using Google Analytics API,
           which helped to increase click-through-rate by 29%.
           {/* <br /> */}
-          {/* - Interned right after high school! */}
+          {/* ∙ Interned right after high school! */}
         </>
       ),
     },
