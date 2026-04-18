@@ -442,11 +442,11 @@ export const DATA = {
       end: "Present",
       description: (
         <>
-          ∙ Saved over 75% in GPU costs (approximating <span style={{ fontWeight: "bold", color: "#3e9c35" }}>$3,850</span>) and <span style={{ fontWeight: "bold", color: "#3e9c35" }}>6 weeks</span> in training and inference times by implementing Knowledge Distillation and Flash Attention for Protein Language Models. 
-          <br />
           ∙ Optimized GPU inference, implemented distributed computing in <span style={{ fontWeight: "bold", color: "#3e9c35" }}>Ray</span> with gradient checkpointing and memory-efficient batching using <span style={{ fontWeight: "bold", color: "#3e9c35" }}>PyTorch</span>, cutting compute time by 30% and throughput time by 25%.
+          <br />
+          ∙ Saved over 75% in GPU costs and <span style={{ fontWeight: "bold", color: "#3e9c35" }}>6 weeks</span> in training times by implementing Knowledge Distillation and Flash Attention for Language Models. 
 	<br />          
-          ∙ Created benchmarking scripts using <span style={{ fontWeight: "bold", color: "#3e9c35" }}>HuggingFace</span> and <span style={{ fontWeight: "bold", color: "#3e9c35" }}>Python</span> with PyTorch & Transformers libraries. 
+          ∙ Created benchmarking scripts using <span style={{ fontWeight: "bold", color: "#3e9c35" }}>Slurm</span> and <span style={{ fontWeight: "bold", color: "#3e9c35" }}>Python</span> with PyTorch & Transformers libraries for reproducible workflows. 
           <br />
           {/* ∙ Wrote unit tests using <span style={{ fontWeight: "bold", color: "#3e9c35" }}>PyTest</span> to increase code coverage by 12.5%. */}
         </>
@@ -463,7 +463,7 @@ export const DATA = {
       end: "Present",
       description: (
         <>
-          ∙ Implemented an optimized model inference API using <span className="text-[#8D1C41] dark:text-[#ff73a2]" style={{ fontWeight: "bold"}}>vLLM</span> for GPU memory management and <span className="text-[#8D1C41] dark:text-[#ff73a2]" style={{ fontWeight: "bold"}}>FastAPI</span> for RESTful endpoints, supporting concurrent requests which lowered inference latency by 30%.
+          ∙ Implemented a model inference API using <span className="text-[#8D1C41] dark:text-[#ff73a2]" style={{ fontWeight: "bold"}}>vLLM</span> for GPU memory management and <span className="text-[#8D1C41] dark:text-[#ff73a2]" style={{ fontWeight: "bold"}}>FastAPI</span> for RESTful endpoints, supporting concurrent requests which lowered inference latency by 30%.
           <br />
           ∙ Built classifiers for text datasets over 2TB in size and fine-tuned LLMs with <span className="text-[#8D1C41] dark:text-[#ff73a2]" style={{ fontWeight: "bold"}}> LoRA </span> using <span className="text-[#8D1C41] dark:text-[#ff73a2]" style={{ fontWeight: "bold"}}> Python </span> to improve accuracy in ambiguous human text. 
           <br />
@@ -476,7 +476,7 @@ export const DATA = {
       href: "",
       badges: [],
       location: "Los Angeles, CA",
-      title: "Artificial Intelligence Research Intern",
+      title: "AI Research Intern",
       logoUrl: "/healthgc.webp",
       start: "May 2025",
       end: "December 2025",
