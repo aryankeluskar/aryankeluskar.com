@@ -78,21 +78,21 @@ export const DATA = {
   // avatarUrl: "/professional.webp",
   avatarUrl: "/pfp.webp",
   hackathons: [
-    {
-      title: "HackIllinois 2026",
-      image: "/hackillinois.png",
-      dates: "February 2026",
-      location: "Urbana-Champaign, IL",
-      // links: [
-      //   {
-      //     // icon: <Icons.devpost className="size-4" />,
-      //     title: "Turing",
-      //     href: "https://devpost.com/software/turing",
-      //   },
-      // ],
-      description:
-        "If you're participating as well, let's connect!"
-    },
+    // {
+    //   title: "HackIllinois 2026",
+    //   image: "/hackillinois.png",
+    //   dates: "February 2026",
+    //   location: "Urbana-Champaign, IL",
+    //   links: [
+    //     {
+    //       // icon: <Icons.devpost className="size-4" />,
+    //       title: "Turing",
+    //       href: "https://devpost.com/software/turing",
+    //     },
+    //   ],
+    //   description:
+    //     "If you're participating as well, let's connect!"
+    // },
     {
       title: "TreeHacks 2026 (2x Sponsor Track Winner 🏆)",
       image: "/treehacks.png",
@@ -446,7 +446,7 @@ export const DATA = {
           <br />
           - Created benchmarking scripts using <span style={{ fontWeight: "bold", color: "#3e9c35" }}>HuggingFace</span> and <span style={{ fontWeight: "bold", color: "#3e9c35" }}>Python</span> with PyTorch & Transformers libraries. 
           <br />
-          - Wrote unit tests using <span style={{ fontWeight: "bold", color: "#3e9c35" }}>PyTest</span> to increase code coverage by 12.5%.
+          {/* - Wrote unit tests using <span style={{ fontWeight: "bold", color: "#3e9c35" }}>PyTest</span> to increase code coverage by 12.5%. */}
         </>
       ),
     },
@@ -557,7 +557,7 @@ export const DATA = {
       dates: "2025",
       active: true,
       description:
-        "Browser Extension that provides instant context, summaries, and code for cited papers. Developed custom algorithms and optimized LLM pipelines to extract information from PDFs for **less than a cent**.",
+        "Browser Extension that provides instant context and summaries for cited papers. Developed LLM pipelines to extract information from PDFs.",
       technologies: [
         "JavaScript",
         "TypeScript",
@@ -589,7 +589,7 @@ export const DATA = {
       dates: "2024",
       active: true,
       description:
-        "Built an AI-agent protocol that allows you to query your courses in the AI app of your choice. This MCP Server is a collection of Canvas LMS tools for the [model context protocol](https://modelcontextprotocol.io/introduction).",
+        "MCP Server that allows you to query your courses in the AI app of your choice. Built for the [model context protocol](https://modelcontextprotocol.io/introduction).",
       technologies: [
         "Python",
         "JavaScript",
@@ -610,16 +610,16 @@ export const DATA = {
       ],
     },
     {
-      title: "Git Sandbox",
+      title: "git-fs",
       href: "https://github.soy.run/",
       image: "/gitsandbox.webp",
       dates: "2026",
       active: true,
       description:
-        "Use your Claude / Codex / Copilot subscription to instantly chat with any Github repository fully in your browser.",
+        "Faking a filesystem over GitHub API to run coding agents and instantly chat with any repository fully in your browser. Wrote a [blog about this](https://dub.sh/gitfs-blog).",
       technologies: [
         "TypeScript",
-        "xterm.js",
+        "Bash",
         "Cloudflare Workers",
         "Cloudflare Containers",
         "Pi-Agent",
@@ -629,7 +629,7 @@ export const DATA = {
         {
           icon: <Icons.github className="size-4" />,
           type: "GitHub",
-          href: "https://git.new/git-sandbox",
+          href: "https://git.new/git-fs",
         },
         {
           icon: <Icons.globe className="size-4" />,
@@ -645,7 +645,7 @@ export const DATA = {
       dates: "2024",
       active: true,
       description:
-        "Lets AI-agents access Polymarket market data in the AI app of your choice. Over **45K tool calls** on Smithery's leaderboard of April 2026.",
+        "Lets agents access Polymarket market data in the AI app of your choice. Over **50K tool calls** on Smithery's leaderboard of April 2026.",
       technologies: [
         "TypeScript",
         "Cloudflare Workers",
