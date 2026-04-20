@@ -57,6 +57,8 @@ Allow: /
 
 Crawl-delay: 1
 
+Content-Signal: ai-train=no, search=yes, ai-input=yes
+
 Sitemap: https://aryankeluskar.com/sitemap.xml
 
 # Additional notes:
