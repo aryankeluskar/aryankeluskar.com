@@ -3,7 +3,7 @@ import {
   BriefcaseIcon,
   HomeIcon,
   HammerIcon,
-  NotebookIcon,
+  // NotebookIcon,
 } from "lucide-react";
 
 type ProjectType = {
