@@ -1,71 +1,170 @@
 import { NextResponse } from "next/server";
+import React from "react";
+import { DATA } from "@/data/resume";
 
 const SITE_URL = "https://aryankeluskar.com";
 
-const pages: Record<string, { title: string; description: string; content: string }> = {
-  "/": {
-    title: "Aryan Keluskar",
-    description:
-      "20, building fast backends, scalable language models, and iOS apps. I live to learn, create, and ship.",
-    content: `# Aryan Keluskar
+function jsxToText(node: React.ReactNode): string {
+  if (node == null || typeof node === "boolean") return "";
+  if (typeof node === "string") return node;
+  if (typeof node === "number") return String(node);
+  if (Array.isArray(node)) return node.map(jsxToText).join("");
+  if (typeof node === "object" && "type" in node && "props" in node) {
+    const el = node as React.ReactElement;
+    if (el.type === "br") return "\n";
+    if (el.type === "span") {
+      const style = el.props.style || {};
+      if (style.fontWeight === "bold") {
+        return `**${jsxToText(el.props.children)}**`;
+      }
+      return jsxToText(el.props.children);
+    }
+    if (el.type === "b" || el.type === "strong") {
+      return `**${jsxToText(el.props.children)}**`;
+    }
+    return jsxToText(el.props.children);
+  }
+  return "";
+}
 
-> 20, building fast backends, scalable language models, and iOS apps. I live to learn, create, and ship.
+function stripHtmlTags(str: string): string {
+  return str.replace(/<[^>]+>/g, "");
+}
 
-## About
+function buildHomePageMarkdown(): string {
+  const d = DATA;
+  let md = "";
 
-I love to solve problems, research intricate concepts, and build things that people love. Solving daunting & ambiguous problems demand clarity under chaos, thus I believe in using first principles and technological advancements to solve them. I'm currently a Computer Science senior at ASU, researching safety in large-language models.
+  md += `# ${d.name}\n\n`;
+  md += `> ${d.description}\n\n`;
+  md += `**Currently:** ${d.current}\n\n`;
 
-I grew up with a deep passion for mathematics, and use bayesian statistics to explain the world around me. I have won awards at collegiate hackathons such as HackMIT 2024 and SFHacks 2024. In my free time, I'm going down rabbit-holes or cycling till I run out of roads.
+  md += `## About\n\n${d.summary1}\n\n${d.summary2}\n\n`;
 
-## Links
+  md += `## Links\n\n`;
+  md += `- **Resume**: [${d.resumeUrl}](${d.resumeUrl})\n`;
+  const socials = Object.values(d.contact.social);
+  for (const s of socials) {
+    if (s.name === "Send Email") {
+      md += `- **Email**: [${d.contact.email}](mailto:${d.contact.email})\n`;
+    } else {
+      md += `- **${s.name}**: [${s.name}](${s.url})\n`;
+    }
+  }
+  md += "\n";
 
-- **Resume**: [dub.sh/aryans-resume](https://dub.sh/aryans-resume)
-- **Google Scholar**: [scholar.google.com](https://scholar.google.com/citations?user=wVDeZtcAAAAJ)
-- **GitHub**: [github.com/aryankeluskar](https://github.com/aryankeluskar)
-- **LinkedIn**: [linkedin.com/in/aryankeluskar](https://linkedin.com/in/aryankeluskar)
-- **Twitter/X**: [x.com/aryankeluskar](https://x.com/aryankeluskar)
-- **Email**: [aryan@aryankeluskar.com](mailto:aryan@aryankeluskar.com)
-`,
-  },
-  "/resume": {
-    title: "Resume | Aryan Keluskar",
-    description: "Aryan Keluskar's resume and professional experience.",
-    content: `# Aryan Keluskar — Resume
+  md += `## Experience\n\n`;
+  for (const job of d.work) {
+    md += `### ${job.title} @ ${job.company}\n\n`;
+    md += `${job.location} | ${job.start} – ${job.end}\n\n`;
+    md += `${jsxToText(job.description)}\n\n`;
+  }
 
-San Francisco, CA | [aryan@aryankeluskar.com](mailto:aryan@aryankeluskar.com)
+  md += `## Education\n\n`;
+  for (const edu of d.education) {
+    const degree =
+      typeof edu.degree === "string" ? edu.degree : jsxToText(edu.degree);
+    md += `**${edu.school}** — ${degree} (${edu.start} – ${edu.end})\n\n`;
+    if (edu.description) md += `${edu.description}\n\n`;
+  }
 
-**Currently building [alice](https://dub.sh/wonderland) and writing [research papers](https://scholar.google.com/citations?user=wVDeZtcAAAAJ).**
+  md += `## Skills\n\n${d.skills.join(", ")}\n\n`;
 
-## Education
+  md += `## Writing\n\n`;
+  for (const w of d.writing) {
+    md += `- [${w.title}](${w.href}) — ${w.preview}\n`;
+  }
+  md += "\n";
 
-**Arizona State University** — B.S. Computer Science, Minor in Statistics (Aug 2023 – May 2027)
+  md += `## Publications\n\n`;
+  for (const pub of d.publications) {
+    md += `### [${pub.title}](${pub.href})\n\n`;
+    if (pub.authors) {
+      const authors = pub.authors.map((a) => stripHtmlTags(a)).join(", ");
+      md += `Authors: ${authors}\n\n`;
+    }
+    md += `Venue: ${pub.venue}\n\n`;
+    if (pub.citation) md += `Citations: ${pub.citation}\n\n`;
+    if (pub.links) {
+      for (const link of pub.links) {
+        md += `- [${link.title}](${link.href})\n`;
+      }
+      md += "\n";
+    }
+  }
 
-## Experience
+  md += `## Projects\n\n`;
+  for (const proj of d.projects) {
+    md += `### [${proj.title}](${proj.href})\n\n`;
+    md += `${proj.description}\n\n`;
+    md += `Technologies: ${proj.technologies.join(", ")}\n\n`;
+    if (proj.links) {
+      for (const link of proj.links) {
+        const label = link.type || "Link";
+        if (label) md += `- [${label}](${link.href})\n`;
+      }
+      md += "\n";
+    }
+  }
 
-See full resume at [dub.sh/aryans-resume](https://dub.sh/aryans-resume)
-`,
-  },
-  "/blog": {
-    title: "Blog | Aryan Keluskar",
-    description: "Aryan Keluskar's blog posts.",
-    content: `# Blog — Aryan Keluskar
+  md += `## Hackathons\n\n`;
+  for (const hack of d.hackathons) {
+    md += `**${hack.title}**`;
+    if (hack.dates) md += ` — ${hack.dates}`;
+    if (hack.location) md += ` | ${hack.location}`;
+    md += "\n\n";
+    if (hack.description) md += `${hack.description}\n\n`;
+    if (hack.links) {
+      for (const link of hack.links) {
+        md += `- [${link.title}](${link.href})\n`;
+      }
+      md += "\n";
+    }
+  }
 
-Posts and writings on AI, systems, and building.
+  return md;
+}
 
-Visit [aryankeluskar.com/blog](https://aryankeluskar.com/blog) for the full list.
-`,
-  },
-};
+function buildResumeMarkdown(): string {
+  const d = DATA;
+  let md = `# ${d.name} — Resume\n\n`;
+  md += `${d.location} | [${d.contact.email}](mailto:${d.contact.email})\n\n`;
+  md += `**${d.current}**\n\n`;
+
+  md += `## Education\n\n`;
+  for (const edu of d.education) {
+    const degree =
+      typeof edu.degree === "string" ? edu.degree : jsxToText(edu.degree);
+    md += `**${edu.school}** — ${degree} (${edu.start} – ${edu.end})\n\n`;
+    if (edu.description) md += `${edu.description}\n\n`;
+  }
+
+  md += `## Experience\n\n`;
+  for (const job of d.work) {
+    md += `### ${job.title} @ ${job.company}\n\n`;
+    md += `${job.location} | ${job.start} – ${job.end}\n\n`;
+    md += `${jsxToText(job.description)}\n\n`;
+  }
+
+  md += `See full resume at [${d.resumeUrl}](${d.resumeUrl})\n`;
+  return md;
+}
 
 export async function GET(request: Request) {
   const { searchParams } = new URL(request.url);
   const path = searchParams.get("path") || "/";
 
-  const page = pages[path];
+  let markdown: string;
 
-  const markdown = page
-    ? page.content
-    : `# Aryan Keluskar\n\nVisit [aryankeluskar.com](${SITE_URL}${path}) for more information.`;
+  if (path === "/") {
+    markdown = buildHomePageMarkdown();
+  } else if (path === "/resume") {
+    markdown = buildResumeMarkdown();
+  } else if (path === "/blog") {
+    markdown = `# Blog — ${DATA.name}\n\nPosts and writings on AI, systems, and building.\n\nVisit [${DATA.name}'s Blog](${SITE_URL}/blog) for the full list.`;
+  } else {
+    markdown = `# ${DATA.name}\n\nVisit [${SITE_URL}${path}](${SITE_URL}${path}) for more information.`;
+  }
 
   return new NextResponse(markdown, {
     status: 200,

@@ -259,6 +259,12 @@ export const DATA = {
   ] as HackathonType[],
   writing: [
     {
+      title: "Faking a Virtual Filesystem Over GitHub's API for Browser-based Agents",
+      href: "https://x.com/soydotrun/status/2047015769146298698",
+      preview: "Engineering details on how I built git-fs, which is an coding agent that runs completely in your browser.",
+      thumbnail: "/git-fs.webp",
+    },
+    {
       title: "Should MCP Servers be Agents in Disguise?",
       href: "https://medium.com/@soydotrun/should-mcp-servers-be-agents-in-disguise-with-a-case-study-86ec263159e8",
       preview: "Blog post + Case study on why 'under-the-hood' agents can improve the token efficiency of MCP servers.",
