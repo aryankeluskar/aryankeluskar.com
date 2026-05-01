@@ -279,23 +279,6 @@ export const DATA = {
   ] as WritingType[],
   publications: [
     {
-      title: "TM-Vec 2: Accelerated Protein Homology Detection for Structural Similarity",
-      href: "https://www.biorxiv.org/content/10.64898/2026.02.05.704073v1",
-      authors: ["<b>Aryan Keluskar</b>*", "Paarth Batra*", "Valentyn Bezshapkin", "James T. Morton", "Qiyun Zhu"],
-      venue: "Honors Thesis (under review at a major conference)",
-      citationLink: "",
-      links: [
-        {
-          title: "Google Scholar",
-          href: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wVDeZtcAAAAJ&citation_for_view=wVDeZtcAAAAJ:UeHWp8X0CEIC",
-        },
-        {
-          title: "GitHub",
-          href: "https://github.com/paarth-b/tmvec-bench",
-        },
-      ],
-    },
-    {
       title:
         "Do LLMs Understand Ambiguity in Text? A Case Study in Open-world Question Answering",
       href: "https://ieeexplore.ieee.org/abstract/document/10825265",
@@ -315,13 +298,25 @@ export const DATA = {
       ],
     },
     {
+      title: "Evaluating Adaptive Personalization of Educational Readings with Simulated Learners",
+      href: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wVDeZtcAAAAJ&authuser=1&citation_for_view=wVDeZtcAAAAJ:zYLM7Y9cAGgC",
+      authors: ["Ryan T. Woo*", "Anmol Rao*", "<b>Aryan Keluskar</b>", "Yinong Chen"],
+      venue: "ACL 2026 Workshop on Innovative Use of NLP for Building Educational Applications",
+      links: [
+        {
+          title: "Google Scholar",
+          href: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wVDeZtcAAAAJ&authuser=1&citation_for_view=wVDeZtcAAAAJ:zYLM7Y9cAGgC",
+        },
+      ]
+    },
+    {
       title:
         "Scikit-bio: a fundamental Python library for biological omic data analysis",
       href: "https://www.nature.com/articles/s41592-025-02981-z",
       authors: ["Matthew Aton", "Daniel McDonald", "...", "<b>Aryan Keluskar</b>", "...", "James T. Morton", "Qiyun Zhu"],
       venue: "Nature Methods (December 2025)",
-      // citation: "11 citations",
-      // citationLink: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wVDeZtcAAAAJ&citation_for_view=wVDeZtcAAAAJ:qjMakFHDy7sC",
+      citation: "12 citations",
+      citationLink: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wVDeZtcAAAAJ&citation_for_view=wVDeZtcAAAAJ:qjMakFHDy7sC",
       links: [
         {
           title: "Google Scholar",
@@ -331,9 +326,26 @@ export const DATA = {
           title: "GitHub",
           href: "https://github.com/scikit-bio/scikit-bio",
         },
+        // {
+        //   title: "Tweet",
+        //   href: "https://x.com/zhuqiyun/status/1999176009497956702",
+        // },
+      ],
+    },
+    {
+      title: "TM-Vec 2: Accelerated Protein Homology Detection for Structural Similarity",
+      href: "https://www.biorxiv.org/content/10.64898/2026.02.05.704073v1",
+      authors: ["<b>Aryan Keluskar</b>*", "Paarth Batra*", "Valentyn Bezshapkin", "James T. Morton", "Qiyun Zhu"],
+      venue: "Honors Thesis (under review at a major conference)",
+      citationLink: "",
+      links: [
         {
-          title: "Tweet",
-          href: "https://x.com/zhuqiyun/status/1999176009497956702",
+          title: "Google Scholar",
+          href: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wVDeZtcAAAAJ&citation_for_view=wVDeZtcAAAAJ:UeHWp8X0CEIC",
+        },
+        {
+          title: "GitHub",
+          href: "https://github.com/paarth-b/tmvec-bench",
         },
       ],
     },
