@@ -114,24 +114,23 @@ export default function RootLayout({
         <SpeedInsights />
         <Analytics />
 
-        <script
-          type="text/javascript"
-          defer
+        <Script
+          id="plerdy"
+          strategy="lazyOnload"
           data-plerdy_code="1"
-          dangerouslySetInnerHTML={{
-            __html: `
-              if (typeof document !== 'undefined') {
-                var _protocol="https:"==document.location.protocol?"https://":"http://";
-                _site_hash_code = "2bfa700d869c360b7955ebb0fed2fdd2",_suid=71636, plerdyScript=document.createElement("script");
-                plerdyScript.setAttribute("defer",""),plerdyScript.dataset.plerdymainscript="plerdymainscript",
-                plerdyScript.src="https://a.plerdy.com/public/js/click/main.js?v="+Math.random();
-                var plerdymainscript=document.querySelector("[data-plerdymainscript='plerdymainscript']");
-                plerdymainscript&&plerdymainscript.parentNode.removeChild(plerdymainscript);
-                try{document.head.appendChild(plerdyScript)}catch(t){console.log(t,"unable add script tag")}
-              }
-            `,
-          }}
-        />
+        >
+          {`
+            if (typeof document !== 'undefined') {
+              var _protocol="https:"==document.location.protocol?"https://":"http://";
+              _site_hash_code = "2bfa700d869c360b7955ebb0fed2fdd2",_suid=71636, plerdyScript=document.createElement("script");
+              plerdyScript.setAttribute("defer",""),plerdyScript.dataset.plerdymainscript="plerdymainscript",
+              plerdyScript.src="https://a.plerdy.com/public/js/click/main.js?v="+Math.random();
+              var plerdymainscript=document.querySelector("[data-plerdymainscript='plerdymainscript']");
+              plerdymainscript&&plerdymainscript.parentNode.removeChild(plerdymainscript);
+              try{document.head.appendChild(plerdyScript)}catch(t){console.log(t,"unable add script tag")}
+            }
+          `}
+        </Script>
       </body>
     </html>
   );

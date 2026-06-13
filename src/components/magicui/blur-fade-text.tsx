@@ -1,7 +1,7 @@
 "use client";
 
 import { cn } from "@/lib/utils";
-import { AnimatePresence, motion, Variants } from "framer-motion";
+import { AnimatePresence, domAnimation, LazyMotion, m, Variants } from "framer-motion";
 import { useMemo } from "react";
 
 interface BlurFadeTextProps {
@@ -35,50 +35,54 @@ const BlurFadeText = ({
 
   if (animateByCharacter) {
     return (
-      <div className="flex">
-        <AnimatePresence>
-          {characters.map((char, i) => (
-            <motion.span
-              key={i}
-              initial="hidden"
-              animate="visible"
-              exit="hidden"
-              variants={combinedVariants}
-              transition={{
-                yoyo: Infinity,
-                delay: delay + i * characterDelay,
-                ease: "easeOut",
-              }}
-              className={cn("inline-block", className)}
-              style={{ width: char.trim() === "" ? "0.2em" : "auto" }}
-            >
-              {char}
-            </motion.span>
-          ))}
-        </AnimatePresence>
-      </div>
+      <LazyMotion features={domAnimation}>
+        <div className="flex">
+          <AnimatePresence>
+            {characters.map((char, i) => (
+              <m.span
+                key={`${char}-${i}`}
+                initial="hidden"
+                animate="visible"
+                exit="hidden"
+                variants={combinedVariants}
+                transition={{
+                  yoyo: Infinity,
+                  delay: delay + i * characterDelay,
+                  ease: "easeOut",
+                }}
+                className={cn("inline-block", className)}
+                style={{ width: char.trim() === "" ? "0.2em" : "auto" }}
+              >
+                {char}
+              </m.span>
+            ))}
+          </AnimatePresence>
+        </div>
+      </LazyMotion>
     );
   }
 
   return (
-    <div className="flex">
-      <AnimatePresence>
-        <motion.span
-          initial="hidden"
-          animate="visible"
-          exit="hidden"
-          variants={combinedVariants}
-          transition={{
-            yoyo: Infinity,
-            delay,
-            ease: "easeOut",
-          }}
-          className={cn("inline-block", className)}
-        >
-          {text}
-        </motion.span>
-      </AnimatePresence>
-    </div>
+    <LazyMotion features={domAnimation}>
+      <div className="flex">
+        <AnimatePresence>
+          <m.span
+            initial="hidden"
+            animate="visible"
+            exit="hidden"
+            variants={combinedVariants}
+            transition={{
+              yoyo: Infinity,
+              delay,
+              ease: "easeOut",
+            }}
+            className={cn("inline-block", className)}
+          >
+            {text}
+          </m.span>
+        </AnimatePresence>
+      </div>
+    </LazyMotion>
   );
 };
 

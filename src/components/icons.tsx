@@ -1,3 +1,4 @@
+/* eslint-disable react-doctor/rendering-svg-precision */
 import { GlobeIcon, MailIcon } from "lucide-react";
 
 export type IconProps = React.SVGProps<SVGSVGElement> & {

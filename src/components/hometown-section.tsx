@@ -35,12 +35,12 @@ export function HometownSection() {
 
   return (
     <section id="hometowns" className="py-12">
-      <h2 className="text-xl font-bold font-solway mb-6">
+      <h2 className="text-xl font-semibold font-solway mb-6">
         I Grew Up in Six Cities
       </h2>
       <p className="text-sm mb-6">Here are some of my favorite clicks:</p>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        {HOMETOWNS.map((hometown, index) => (
+        {HOMETOWNS.map((hometown) => (
           <Link
             key={hometown.name}
             href={hometown.mapUrl}
@@ -54,11 +54,12 @@ export function HometownSection() {
               src={hometown.image}
               alt={`Sunset in ${hometown.name}`}
               fill
+              sizes="(max-width: 768px) 100vw, 33vw"
               className="object-cover outline outline-1 outline-black/5"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
             <div className="absolute bottom-4 left-4 text-white">
-              <h3 className="font-solway font-bold text-lg group-hover:underline">
+              <h3 className="font-solway font-semibold text-lg group-hover:underline">
                 {hometown.name}
               </h3>
             </div>

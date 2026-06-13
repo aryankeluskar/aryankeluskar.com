@@ -72,6 +72,7 @@ export default async function Blog({
       <script
         type="application/ld+json"
         suppressHydrationWarning
+        // eslint-disable-next-line react/no-danger
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
@@ -103,6 +104,7 @@ export default async function Blog({
       </div>
       <article
         className="prose dark:prose-invert"
+        // eslint-disable-next-line react/no-danger
         dangerouslySetInnerHTML={{ __html: post.source }}
       ></article>
     </section>

@@ -40,14 +40,14 @@ export function HackathonCard({
           <span className="text-sm text-muted-foreground flex items-center gap-2">
             {links && links.length > 0 && (
               <span className="flex flex-row flex-wrap my-1 items-start gap-1">
-                {links?.map((link, idx) => (
+                {links?.map((link) => (
                   <Link
                     href={link.href}
-                    key={idx}
+                    key={link.href}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <Badge key={idx} title={link.title} className="flex gap-1">
+                    <Badge title={link.title} className="flex gap-1">
                       {link.icon}
                       {link.title}
                     </Badge>

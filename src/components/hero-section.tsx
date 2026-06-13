@@ -8,12 +8,12 @@ export function HeroSection() {
     <section id="hero" className="relative w-full overflow-hidden">
       <div className="relative mx-auto w-full max-w-2xl space-y-8 pt-16 pb-6">
         <div className="gap-2 flex justify-between">
-          <div className="flex-col flex flex-1 space-y-1.5">
-            <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none font-solway">
+          <div className="flex-col flex flex-1 gap-y-1.5">
+            <h1 className="text-3xl font-semibold tracking-tighter sm:text-5xl xl:text-6xl/none font-solway">
               {`Hi, I'm ${DATA.name.split(" ")[0]} 👋`}
             </h1>
             <div className="max-w-[600px] md:text-xl">
-              <Markdown className="prose max-w-full w-fit text-pretty font-sans dark:prose-invert bg-[rgba(255,255,255,0.33)] dark:bg-black mb-4">
+              <Markdown className="prose max-w-full w-fit text-pretty font-sans dark:prose-invert bg-[rgba(255,255,255,0.33)] dark:bg-gray-950 mb-4">
                 {DATA.description}
               </Markdown>
             </div>

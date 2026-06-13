@@ -12,11 +12,8 @@ import {
 import { DATA } from "@/data/resume";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 
 export default function Navbar() {
-  const pathname = usePathname();
-
   return (
     <div className="pointer-events-none fixed inset-x-0 bottom-0 z-30 mx-auto mb-4 flex origin-bottom h-full max-h-14">
       <div className="fixed bottom-0 inset-x-0 h-16 w-full bg-background to-transparent backdrop-blur-lg [-webkit-mask-image:linear-gradient(to_top,black,transparent)] dark:bg-background"></div>
@@ -28,7 +25,7 @@ export default function Navbar() {
                 <Link
                   href={item.href}
                   onClick={(event) => {
-                    if (item.label === "Home" && pathname === "/") {
+                    if (item.label === "Home" && window.location.pathname === "/") {
                       event.preventDefault();
                       window.scrollTo({ top: 0, behavior: "smooth" });
                       if (window.location.hash) {
@@ -51,28 +48,30 @@ export default function Navbar() {
           </DockIcon>
         ))}
         <Separator orientation="vertical" className="h-full" />
-        {Object.entries(DATA.contact.social)
-          .filter(([_, social]) => social.navbar)
-          .map(([name, social]) => (
-            <DockIcon key={name}>
-              <Tooltip>
-                <TooltipTrigger asChild>
-                  <Link
-                    href={social.url}
-                    className={cn(
-                      buttonVariants({ variant: "ghost", size: "icon" }),
-                      "size-12",
-                    )}
-                  >
-                    <social.icon className="size-4" />
-                  </Link>
-                </TooltipTrigger>
-                <TooltipContent>
-                  <p>{name}</p>
-                </TooltipContent>
-              </Tooltip>
-            </DockIcon>
-          ))}
+        {Object.entries(DATA.contact.social).flatMap(([name, social]) =>
+          social.navbar
+            ? [
+                <DockIcon key={name}>
+                  <Tooltip>
+                    <TooltipTrigger asChild>
+                      <Link
+                        href={social.url}
+                        className={cn(
+                          buttonVariants({ variant: "ghost", size: "icon" }),
+                          "size-12",
+                        )}
+                      >
+                        <social.icon className="size-4" />
+                      </Link>
+                    </TooltipTrigger>
+                    <TooltipContent>
+                      <p>{name}</p>
+                    </TooltipContent>
+                  </Tooltip>
+                </DockIcon>,
+              ]
+            : [],
+        )}
         <Separator orientation="vertical" className="h-full py-2" />
         <DockIcon>
           <Tooltip>

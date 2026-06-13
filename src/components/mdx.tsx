@@ -3,13 +3,13 @@ import Link from "next/link";
 import React from "react";
 
 function Table({ data }: { data: { headers: string[]; rows: string[][] } }) {
-  let headers = data.headers.map((header, index) => (
-    <th key={index}>{header}</th>
+  let headers = data.headers.map((header) => (
+    <th key={header}>{header}</th>
   ));
-  let rows = data.rows.map((row, index) => (
-    <tr key={index}>
+  let rows = data.rows.map((row, rowIndex) => (
+    <tr key={`row-${rowIndex}-${row.join("|")}`}>
       {row.map((cell, cellIndex) => (
-        <td key={cellIndex}>{cell}</td>
+        <td key={`cell-${cellIndex}-${cell}`}>{cell}</td>
       ))}
     </tr>
   ));

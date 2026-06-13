@@ -280,6 +280,20 @@ export const DATA = {
   publications: [
     {
       title:
+        "ToolAlignBench: Investigating Alignment Conflicts in Tool-Calling Enabled LLMs",
+      href: "https://openreview.net/forum?id=KJTiUm8b7d",
+      authors: ["<b>Aryan Keluskar</b>", "Amrita Bhattacharjee", "Huan Liu"],
+      venue: "Pluralistic Alignment Workshop at ICML 2026",
+      citationLink: "",
+      links: [
+        {
+          title: "OpenReview",
+          href: "https://openreview.net/forum?id=KJTiUm8b7d",
+        },
+      ],
+    },
+    {
+      title:
         "Do LLMs Understand Ambiguity in Text? A Case Study in Open-world Question Answering",
       href: "https://ieeexplore.ieee.org/abstract/document/10825265",
       authors: ["<b>Aryan Keluskar</b>", "Amrita Bhattacharjee", "Huan Liu"],

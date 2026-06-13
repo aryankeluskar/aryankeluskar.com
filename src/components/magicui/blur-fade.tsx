@@ -1,6 +1,6 @@
 "use client";
 
-import { AnimatePresence, motion, useInView, Variants } from "framer-motion";
+import { AnimatePresence, domAnimation, LazyMotion, m, useInView, Variants } from "framer-motion";
 import { useRef } from "react";
 
 type IntersectionObserverMargin =
@@ -43,23 +43,25 @@ const BlurFade = ({
   };
   const combinedVariants = variant || defaultVariants;
   return (
-    <AnimatePresence initial={false}>
-      <motion.div
-        ref={ref}
-        initial="hidden"
-        animate={isInView ? "visible" : "hidden"}
-        exit="hidden"
-        variants={combinedVariants}
-        transition={{
-          delay: 0.04 + delay,
-          duration,
-          ease: "easeOut",
-        }}
-        className={className}
-      >
-        {children}
-      </motion.div>
-    </AnimatePresence>
+    <LazyMotion features={domAnimation}>
+      <AnimatePresence initial={false}>
+        <m.div
+          ref={ref}
+          initial="hidden"
+          animate={isInView ? "visible" : "hidden"}
+          exit="hidden"
+          variants={combinedVariants}
+          transition={{
+            delay: 0.04 + delay,
+            duration,
+            ease: "easeOut",
+          }}
+          className={className}
+        >
+          {children}
+        </m.div>
+      </AnimatePresence>
+    </LazyMotion>
   );
 };
 

@@ -13,18 +13,15 @@ export default async function BlogPage() {
     <section>
       <h1 className="font-medium text-2xl mb-8 tracking-tighter">blog</h1>
       {posts
-        .sort((a, b) => {
-          if (
-            new Date(a.metadata.publishedAt) > new Date(b.metadata.publishedAt)
-          ) {
-            return -1;
-          }
-          return 1;
-        })
+        .sort(
+          (a, b) =>
+            Date.parse(b.metadata.publishedAt) -
+            Date.parse(a.metadata.publishedAt),
+        )
         .map((post) => (
           <Link
             key={post.slug}
-            className="flex flex-col space-y-1 mb-4"
+            className="flex flex-col gap-y-1 mb-4"
             href={`/blog/${post.slug}`}
           >
             <div className="w-full flex flex-col">

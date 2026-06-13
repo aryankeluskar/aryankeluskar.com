@@ -4,7 +4,6 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardHeader } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
-import { motion } from "framer-motion";
 import { ChevronRightIcon } from "lucide-react";
 import Link from "next/link";
 import React from "react";
@@ -53,11 +52,11 @@ export const ResumeCard = ({
               </span>
               {badges && (
                 <span className="inline-flex gap-x-1">
-                  {badges.map((badge, index) => (
+                  {badges.map((badge) => (
                     <Badge
                       variant="secondary"
                       className="align-middle text-xs"
-                      key={index}
+                      key={badge}
                     >
                       {badge}
                     </Badge>

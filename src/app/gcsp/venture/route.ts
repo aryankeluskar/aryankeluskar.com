@@ -2,10 +2,11 @@ import { readFile } from "fs/promises";
 import { NextResponse } from "next/server";
 import path from "path";
 
+const htmlPromise = readFile(path.join(process.cwd(), "src/app/gcsp/venture.html"), "utf-8");
+
 export async function GET() {
   try {
-    const filePath = path.join(process.cwd(), "src/app/gcsp/venture.html");
-    const htmlContent = await readFile(filePath, "utf-8");
+    const htmlContent = await htmlPromise;
     return new NextResponse(htmlContent, {
       headers: {
         "Content-Type": "text/html",
