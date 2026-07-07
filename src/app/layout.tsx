@@ -73,11 +73,14 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <Script
-          src="https://umami-psi-henna.vercel.app/script.js"
-          data-website-id="19f7b60d-c6ba-468a-8f90-25fe1473c03c"
-          strategy="afterInteractive"
-        />
+        {process.env.NEXT_PUBLIC_UMAMI_WEBSITE_ID && (
+          <Script
+            src={process.env.NEXT_PUBLIC_UMAMI_SCRIPT_URL ?? "https://cloud.umami.is/script.js"}
+            data-website-id={process.env.NEXT_PUBLIC_UMAMI_WEBSITE_ID}
+            data-domains="aryankeluskar.com,www.aryankeluskar.com,soy.run,dev.soy.run"
+            strategy="afterInteractive"
+          />
+        )}
         {/* <!-- Primary Meta Tags --> */}
           <title>Aryan Keluskar</title>
           <meta name="title" content="Aryan Keluskar" />
