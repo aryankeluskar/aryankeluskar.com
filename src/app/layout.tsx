@@ -11,6 +11,7 @@ import { BlueprintGrid } from "@/components/blueprint-grid";
 import Script from "next/script";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/next";
+import { UmamiEvents } from "@/components/umami-events";
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -73,7 +74,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <head>
         <Script
-          src="https://cloud.umami.is/script.js"
+          src="https://umami-psi-henna.vercel.app/script.js"
           data-website-id="19f7b60d-c6ba-468a-8f90-25fe1473c03c"
           strategy="afterInteractive"
         />
@@ -113,6 +114,7 @@ export default function RootLayout({
         </ThemeProvider>
         <SpeedInsights />
         <Analytics />
+        <UmamiEvents />
 
         <Script
           id="plerdy"
