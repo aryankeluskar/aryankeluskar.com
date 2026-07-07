@@ -77,7 +77,6 @@ export default function RootLayout({
           <Script
             src={process.env.NEXT_PUBLIC_UMAMI_SCRIPT_URL ?? "https://cloud.umami.is/script.js"}
             data-website-id={process.env.NEXT_PUBLIC_UMAMI_WEBSITE_ID}
-            data-domains="aryankeluskar.com,www.aryankeluskar.com,soy.run,dev.soy.run"
             strategy="afterInteractive"
           />
         )}
