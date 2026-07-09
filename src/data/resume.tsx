@@ -316,7 +316,7 @@ export const DATA = {
       href: "https://ieeexplore.ieee.org/abstract/document/10825265",
       authors: ["<b>Aryan Keluskar</b>", "Amrita Bhattacharjee", "Huan Liu"],
       venue: "IEEE International Conference on Big Data 2024, Washington DC",
-      citation: "33 citations",
+      citation: "39 citations",
       citationLink: "https://scholar.google.com/scholar?oi=bibs&hl=en1&cites=10776899312694291117&as_sdt=5",
       links: [
         {
@@ -347,7 +347,7 @@ export const DATA = {
       href: "https://www.nature.com/articles/s41592-025-02981-z",
       authors: ["Matthew Aton", "Daniel McDonald", "...", "<b>Aryan Keluskar</b>", "...", "James T. Morton", "Qiyun Zhu"],
       venue: "Nature Methods (December 2025)",
-      citation: "12 citations",
+      citation: "32 citations",
       citationLink: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wVDeZtcAAAAJ&citation_for_view=wVDeZtcAAAAJ:qjMakFHDy7sC",
       links: [
         {
