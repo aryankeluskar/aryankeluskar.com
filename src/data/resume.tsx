@@ -280,6 +280,24 @@ export const DATA = {
   publications: [
     {
       title:
+        "When Does Personality Composition Matter for Multi-Agent LLM Teams?",
+      href: "https://arxiv.org/pdf/2606.27443",
+      authors: ["<b>Aryan Keluskar</b>", "Amrita Bhattacharjee", "Huan Liu"],
+      venue: "Third Conference on Language Modeling (COLM 2026)",
+      citationLink: "",
+      links: [
+        {
+          title: "arXiv",
+          href: "https://arxiv.org/abs/2606.27443",
+        },
+        {
+          title: "Openreview",
+          href: "https://openreview.net/forum?id=MS8jsgZC62",
+        },
+      ],
+    },
+    {
+      title:
         "ToolAlignBench: Investigating Alignment Conflicts in Tool-Calling Enabled LLMs",
       href: "https://openreview.net/forum?id=KJTiUm8b7d",
       authors: ["<b>Aryan Keluskar</b>", "Amrita Bhattacharjee", "Huan Liu"],
