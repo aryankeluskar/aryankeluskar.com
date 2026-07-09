@@ -298,6 +298,25 @@ export const DATA = {
     },
     {
       title:
+        "Do LLMs Understand Ambiguity in Text? A Case Study in Open-world Question Answering",
+      href: "https://ieeexplore.ieee.org/abstract/document/10825265",
+      authors: ["<b>Aryan Keluskar</b>", "Amrita Bhattacharjee", "Huan Liu"],
+      venue: "IEEE International Conference on Big Data 2024, Washington DC",
+      citation: "39 citations",
+      citationLink: "https://scholar.google.com/scholar?oi=bibs&hl=en1&cites=10776899312694291117&as_sdt=5",
+      links: [
+        {
+          title: "arXiv",
+          href: "https://arxiv.org/pdf/2411.12395",
+        },
+        {
+          title: "IEEE Xplore",
+          href: "https://ieeexplore.ieee.org/abstract/document/10825265",
+        }
+      ],
+    },
+    {
+      title:
         "ToolAlignBench: Investigating Alignment Conflicts in Tool-Calling Enabled LLMs",
       href: "https://openreview.net/forum?id=KJTiUm8b7d",
       authors: ["<b>Aryan Keluskar</b>", "Amrita Bhattacharjee", "Huan Liu"],
@@ -311,30 +330,15 @@ export const DATA = {
       ],
     },
     {
-      title:
-        "Do LLMs Understand Ambiguity in Text? A Case Study in Open-world Question Answering",
-      href: "https://ieeexplore.ieee.org/abstract/document/10825265",
-      authors: ["<b>Aryan Keluskar</b>", "Amrita Bhattacharjee", "Huan Liu"],
-      venue: "IEEE International Conference on Big Data 2024, Washington DC",
-      citation: "39 citations",
-      citationLink: "https://scholar.google.com/scholar?oi=bibs&hl=en1&cites=10776899312694291117&as_sdt=5",
-      links: [
-        {
-          title: "Google Scholar",
-          href: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wVDeZtcAAAAJ&citation_for_view=wVDeZtcAAAAJ:u5HHmVD_uO8C",
-        },
-        // {
-        //   title: "Tweet",
-        //   href: "https://x.com/HEI/status/1859239058163085709",
-        // },
-      ],
-    },
-    {
       title: "Evaluating Adaptive Personalization of Educational Readings with Simulated Learners",
       href: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wVDeZtcAAAAJ&authuser=1&citation_for_view=wVDeZtcAAAAJ:zYLM7Y9cAGgC",
       authors: ["Ryan T. Woo*", "Anmol Rao*", "<b>Aryan Keluskar</b>", "Yinong Chen"],
-      venue: "ACL 2026 Workshop on Innovative Use of NLP for Building Educational Applications",
+      venue: "Proceedings of the BEA Workshop at ACL 2026",
       links: [
+        {
+          title: "ACL Aclanthology",
+          href: "https://aclanthology.org/2026.bea-1.63.pdf",
+        },
         {
           title: "Google Scholar",
           href: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wVDeZtcAAAAJ&authuser=1&citation_for_view=wVDeZtcAAAAJ:zYLM7Y9cAGgC",
@@ -351,13 +355,17 @@ export const DATA = {
       citationLink: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wVDeZtcAAAAJ&citation_for_view=wVDeZtcAAAAJ:qjMakFHDy7sC",
       links: [
         {
-          title: "Google Scholar",
-          href: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wVDeZtcAAAAJ&citation_for_view=wVDeZtcAAAAJ:qjMakFHDy7sC",
+          title: "Nature Methods",
+          href: "https://www.nature.com/articles/s41592-025-02981-z",
         },
         {
           title: "GitHub",
           href: "https://github.com/scikit-bio/scikit-bio",
         },
+        // {
+        //   title: "Google Scholar",
+        //   href: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wVDeZtcAAAAJ&citation_for_view=wVDeZtcAAAAJ:qjMakFHDy7sC",
+        // },
         // {
         //   title: "Tweet",
         //   href: "https://x.com/zhuqiyun/status/1999176009497956702",
@@ -372,13 +380,9 @@ export const DATA = {
       citationLink: "",
       links: [
         {
-          title: "Google Scholar",
-          href: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wVDeZtcAAAAJ&citation_for_view=wVDeZtcAAAAJ:UeHWp8X0CEIC",
-        },
-        {
-          title: "GitHub",
-          href: "https://github.com/paarth-b/tmvec-bench",
-        },
+          title: "bioRxiv",
+          href: "https://www.biorxiv.org/content/10.64898/2026.02.05.704073v1",
+        }
       ],
     },
     // {
