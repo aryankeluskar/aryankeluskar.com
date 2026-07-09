@@ -336,7 +336,7 @@ export const DATA = {
       venue: "Proceedings of the BEA Workshop at ACL 2026",
       links: [
         {
-          title: "ACL Aclanthology",
+          title: "ACL Anthology",
           href: "https://aclanthology.org/2026.bea-1.63.pdf",
         },
         {
