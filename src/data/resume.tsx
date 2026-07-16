@@ -283,7 +283,7 @@ export const DATA = {
         "When Does Personality Composition Matter for Multi-Agent LLM Teams?",
       href: "https://arxiv.org/pdf/2606.27443",
       authors: ["<b>Aryan Keluskar</b>", "Amrita Bhattacharjee", "Huan Liu"],
-      venue: "Third Conference on Language Modeling (COLM 2026)",
+      venue: "Conference on Language Modeling (COLM 2026), San Francisco",
       citationLink: "",
       links: [
         {
@@ -320,7 +320,7 @@ export const DATA = {
         "ToolAlignBench: Investigating Alignment Conflicts in Tool-Calling Enabled LLMs",
       href: "https://openreview.net/forum?id=KJTiUm8b7d",
       authors: ["<b>Aryan Keluskar</b>", "Amrita Bhattacharjee", "Huan Liu"],
-      venue: "Pluralistic Alignment Workshop at ICML 2026",
+      venue: "Pluralistic Alignment Workshop at ICML 2026, Seoul",
       citationLink: "",
       links: [
         {
@@ -333,7 +333,7 @@ export const DATA = {
       title: "Evaluating Adaptive Personalization of Educational Readings with Simulated Learners",
       href: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wVDeZtcAAAAJ&authuser=1&citation_for_view=wVDeZtcAAAAJ:zYLM7Y9cAGgC",
       authors: ["Ryan T. Woo*", "Anmol Rao*", "<b>Aryan Keluskar</b>", "Yinong Chen"],
-      venue: "Proceedings of the BEA Workshop at ACL 2026",
+      venue: "Proceedings of the BEA Workshop at ACL 2026, San Diego",
       links: [
         {
           title: "ACL Anthology",
@@ -487,7 +487,7 @@ export const DATA = {
   work: [
     {
       company: "The Biodesign Institute",
-      href: "https://scikit.bio",
+      href: "https://www.biorxiv.org/content/biorxiv/early/2026/02/09/2026.02.05.704073.full.pdf",
       badges: [],
       location: "Arizona State University",
       title: "Software Engineer (ML Research)",
@@ -527,7 +527,7 @@ export const DATA = {
     },
     {
       company: "HealthGC",
-      href: "",
+      href: "https://ktla.com/news/how-a-phone-call-is-helping-seniors-use-ai/",
       badges: [],
       location: "Los Angeles, CA",
       title: "AI Research Intern",
