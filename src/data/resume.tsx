@@ -68,13 +68,14 @@ export const DATA = {
   location: "San Francisco, CA",
   locationLink: "https://www.google.com/maps/place/san%20francisco",
   description:
-    "20, [researching](https://scholar.google.com/citations?user=wVDeZtcAAAAJ) how language models (mis)behave and [building](#projects) tools/infra to point them in the right direction.",
+    // "I tinker, therefore I am",
+  "20, [researching](https://scholar.google.com/citations?user=wVDeZtcAAAAJ) how language models (mis)behave and [building](#projects) tools/infra to extract their best",
   // "Building  and writing [research papers](https://scholar.google.com/citations?user=wVDeZtcAAAAJ).",
   current: "",
   summary1:
-    "In an agent-native world, I love to go down rabbit-holes and build things that people love. I grew up with a deep passion for math and stats. Solving ambiguous problems demand clarity under chaos, thus I believe in using first principles and technological advancements to solve them.",
+    "Currently training language models at the [Biodesign Institute](https://www.biorxiv.org/content/biorxiv/early/2026/02/09/2026.02.05.704073.full.pdf) and building RL environments for agents at [Polymath (YC W26)](https://fellows.polymathlabs.ai/). On the side, I've been [researching](https://scholar.google.com/citations?user=wVDeZtcAAAAJ) alignment, post-training and multi-agent systems.",
   summary2:
-    "Currently training language models at the [Biodesign Institute](https://www.biorxiv.org/content/biorxiv/early/2026/02/09/2026.02.05.704073.full.pdf) and building RL environments for agents at [Polymath (YC W26)](https://fellows.polymathlabs.ai/). I have won awards at collegiate hackathons such as TreeHacks 2026. In my free time, I'm cycling until I run out of roads.",
+    "In an agent-native world, I am obsessed with rabbit-holes of engineering and building things that people love. I love travelling and doing hackathons (recently won two awards at TreeHacks 2026). In my free time, I'm cycling until I run out of roads.",
   avatarUrl: "/pfp.webp",
   hackathons: [
     // {
