@@ -32,9 +32,9 @@ export const metadata: Metadata = {
   },
   description: DATA.description,
   icons: {
-    icon: "/some pfp.webp",
-    shortcut: "/some pfp.webp",
-    apple: "/some pfp.webp",
+    icon: "/pfp.webp",
+    shortcut: "/pfp.webp",
+    apple: "/pfp.webp",
   },
   openGraph: {
     title: `${DATA.name}`,
