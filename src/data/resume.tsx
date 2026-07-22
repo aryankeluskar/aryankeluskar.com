@@ -68,13 +68,13 @@ export const DATA = {
   location: "San Francisco, CA",
   locationLink: "https://www.google.com/maps/place/san%20francisco",
   description:
-    "20, building fast backends, scalable language models, and iOS apps. I live to learn, create, and ship. Experienced in full-stack development, AI research, and machine learning.",
-  current:
-    "Building [alice](https://dub.sh/wonderland) and writing [research papers](https://scholar.google.com/citations?user=wVDeZtcAAAAJ).",
+    "20, [researching](https://scholar.google.com/citations?user=wVDeZtcAAAAJ) how language models (mis)behave and [building](#projects) tools/infra to point them in the right direction.",
+  // "Building  and writing [research papers](https://scholar.google.com/citations?user=wVDeZtcAAAAJ).",
+  current: "",
   summary1:
-    "I love to solve problems, research intricate concepts, and build things that people love. Solving daunting & ambiguous problems demand clarity under chaos, thus I believe in using first principles and technological advancements to solve them. I'm currently a Computer Science senior at ASU, researching safety in large-language models.",
+    "In an agent-native world, I love to go down rabbit-holes and build things that people love. I grew up with a deep passion for math and stats. Solving ambiguous problems demand clarity under chaos, thus I believe in using first principles and technological advancements to solve them.",
   summary2:
-    "I grew up with a deep passion for mathematics, and use bayesian statistics to explain the world around me. I have won awards at collegiate hackathons such as HackMIT 2024 and SFHacks 2024. In my free time, I'm going down rabbit-holes or [cycling](https://www.strava.com/activities/13329957326) till I run out of roads.",
+    "Currently training language models at the [Biodesign Institute](https://www.biorxiv.org/content/biorxiv/early/2026/02/09/2026.02.05.704073.full.pdf) and building RL environments for agents at [Polymath (YC W26)](https://fellows.polymathlabs.ai/). I have won awards at collegiate hackathons such as TreeHacks 2026. In my free time, I'm cycling until I run out of roads.",
   // avatarUrl: "/professional.webp",
   avatarUrl: "/pfp.webp",
   hackathons: [
@@ -127,7 +127,7 @@ export const DATA = {
       title: "HackMIT 2025",
       image: "/hackmit.png",
       dates: "September 2025",
-      location: "Cambridge, MA",      
+      location: "Cambridge, MA",
       links: [
         {
           // icon: <Icons.devpost className="size-4" />,
@@ -261,7 +261,7 @@ export const DATA = {
     {
       title: "Faking a Virtual Filesystem Over GitHub's API for Browser-based Agents",
       href: "https://x.com/soydotrun/status/2047015769146298698",
-      preview: "Engineering details on how I built git-fs, which is an coding agent that runs completely in your browser.",
+      preview: "Engineering details on how I built git-fs, a coding agent that runs completely inside your browser.",
       thumbnail: "/git-fs.webp",
     },
     {
@@ -283,7 +283,7 @@ export const DATA = {
         "When Does Personality Composition Matter for Multi-Agent LLM Teams?",
       href: "https://arxiv.org/pdf/2606.27443",
       authors: ["<b>Aryan Keluskar</b>", "Amrita Bhattacharjee", "Huan Liu"],
-      venue: "Conference on Language Modeling (COLM 2026), San Francisco",
+      venue: "Conference on Language Modeling (COLM 2026)",
       citationLink: "",
       links: [
         {
@@ -301,7 +301,7 @@ export const DATA = {
         "Do LLMs Understand Ambiguity in Text? A Case Study in Open-world Question Answering",
       href: "https://ieeexplore.ieee.org/abstract/document/10825265",
       authors: ["<b>Aryan Keluskar</b>", "Amrita Bhattacharjee", "Huan Liu"],
-      venue: "IEEE International Conference on Big Data 2024, Washington DC",
+      venue: "IEEE International Conference on Big Data 2024",
       citation: "39 citations",
       citationLink: "https://scholar.google.com/scholar?oi=bibs&hl=en1&cites=10776899312694291117&as_sdt=5",
       links: [
@@ -320,7 +320,7 @@ export const DATA = {
         "ToolAlignBench: Investigating Alignment Conflicts in Tool-Calling Enabled LLMs",
       href: "https://openreview.net/forum?id=KJTiUm8b7d",
       authors: ["<b>Aryan Keluskar</b>", "Amrita Bhattacharjee", "Huan Liu"],
-      venue: "Pluralistic Alignment Workshop at ICML 2026, Seoul",
+      venue: "Pluralistic Alignment Workshop at ICML 2026",
       citationLink: "",
       links: [
         {
@@ -333,7 +333,7 @@ export const DATA = {
       title: "Evaluating Adaptive Personalization of Educational Readings with Simulated Learners",
       href: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wVDeZtcAAAAJ&authuser=1&citation_for_view=wVDeZtcAAAAJ:zYLM7Y9cAGgC",
       authors: ["Ryan T. Woo*", "Anmol Rao*", "<b>Aryan Keluskar</b>", "Yinong Chen"],
-      venue: "Proceedings of the BEA Workshop at ACL 2026, San Diego",
+      venue: "Proceedings of the BEA Workshop at ACL 2026",
       links: [
         {
           title: "ACL Anthology",
@@ -350,8 +350,8 @@ export const DATA = {
         "Scikit-bio: a fundamental Python library for biological omic data analysis",
       href: "https://www.nature.com/articles/s41592-025-02981-z",
       authors: ["Matthew Aton", "Daniel McDonald", "...", "<b>Aryan Keluskar</b>", "...", "James T. Morton", "Qiyun Zhu"],
-      venue: "Nature Methods (December 2025)",
-      citation: "32 citations",
+      venue: "Nature Methods (Dec 2025)",
+      citation: "35 citations",
       citationLink: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wVDeZtcAAAAJ&citation_for_view=wVDeZtcAAAAJ:qjMakFHDy7sC",
       links: [
         {
@@ -496,32 +496,26 @@ export const DATA = {
       end: "Present",
       description: (
         <>
-          ∙ Optimized GPU inference, implemented distributed computing in <span style={{ fontWeight: "bold", color: "#3e9c35" }}>Ray</span> with gradient checkpointing and memory-efficient batching using <span style={{ fontWeight: "bold", color: "#3e9c35" }}>PyTorch</span>, cutting compute time by 30% and throughput time by 25%.
+          - Optimized GPU usage by implementing distributed training with gradient checkpointing and memory-efficient batching using <span style={{ fontWeight: "bold", color: "#3e9c35" }}>JAX</span> and <span style={{ fontWeight: "bold", color: "#3e9c35" }}>Slurm</span>, cutting training compute time by 30%.
           <br />
-          ∙ Saved over 75% in GPU costs and <span style={{ fontWeight: "bold", color: "#3e9c35" }}>6 weeks</span> in training times by implementing Knowledge Distillation and Flash Attention for Language Models. 
-	<br />          
-          ∙ Created benchmarking scripts using <span style={{ fontWeight: "bold", color: "#3e9c35" }}>Slurm</span> and <span style={{ fontWeight: "bold", color: "#3e9c35" }}>Python</span> with PyTorch & Transformers libraries for reproducible workflows. 
+          - Cut inference costs by 75% using quantization, distillation & Flash Attention for protein language models using <span style={{ fontWeight: "bold", color: "#3e9c35" }}>PyTorch</span> and <span style={{ fontWeight: "bold", color: "#3e9c35" }}>Transformers</span> libraries in Python.
           <br />
-          {/* ∙ Wrote unit tests using <span style={{ fontWeight: "bold", color: "#3e9c35" }}>PyTest</span> to increase code coverage by 12.5%. */}
+          - Increased model throughput by <span style={{ fontWeight: "bold", color: "#3e9c35" }}>13x</span> and reduced parameter count by <span style={{ fontWeight: "bold", color: "#3e9c35" }}>85%</span> while maintaining accuracy within 1% of state-of-the-art protein language models.
         </>
       ),
     },
     {
-      company: "Data Mining and Machine Learning Lab",
-      href: "https://dmml.asu.edu/",
+      company: "Polymath (YC W26)",
+      href: "https://fellows.polymathlabs.ai/",
       badges: [],
-      location: "Arizona State University",
-      title: "Machine Learning Researcher (AI Safety)",
-      logoUrl: "/cropped-asu-icon.webp",
-      start: "August 2024",
+      location: "San Francisco, CA",
+      title: "Fellow",
+      logoUrl: "/polymath.webp",
+      start: "Jul 2026",
       end: "Present",
       description: (
         <>
-          ∙ Implemented a model inference API using <span className="text-[#8D1C41] dark:text-[#ff73a2]" style={{ fontWeight: "bold"}}>vLLM</span> for GPU memory management and <span className="text-[#8D1C41] dark:text-[#ff73a2]" style={{ fontWeight: "bold"}}>FastAPI</span> for RESTful endpoints, supporting concurrent requests which lowered inference latency by 30%.
-          <br />
-          ∙ Built classifiers for text datasets over 2TB in size and fine-tuned LLMs with <span className="text-[#8D1C41] dark:text-[#ff73a2]" style={{ fontWeight: "bold"}}> LoRA </span> using <span className="text-[#8D1C41] dark:text-[#ff73a2]" style={{ fontWeight: "bold"}}> Python </span> to improve accuracy in ambiguous human text. 
-          <br />
-          ∙ Co-authored an <span className="text-[#8D1C41] dark:text-[#ff73a2]" style={{ fontWeight: "bold"}}>IEEE</span>{" "} BigData paper. 
+          - Building RL environments for benchmarking long-horizon AI agents
         </>
       ),
     },
@@ -533,20 +527,35 @@ export const DATA = {
       title: "AI Research Intern",
       logoUrl: "/healthgc.webp",
       start: "May 2025",
-      end: "December 2025",
+      end: "Dec 2025",
       description: (
         <>
-          Seed-stage startup backed by the{" "}
-          <span className="text-[#F11D26] dark:text-[#ff73a2]" style={{ fontWeight: "bold"}}>
-            Floodgate
-          </span>{" "}
-          Fund.
+          Seed-stage startup backed by the Floodgate Fund. First Intern.
           <br />
-          ∙ Engineered a sub-200ms RAG system using <span className="text-[#F11D26] dark:text-[#ff73a2]" style={{ fontWeight: "bold"}}>PostgreSQL</span> and <span className="text-[#F11D26] dark:text-[#ff73a2]" style={{ fontWeight: "bold"}}>WebAssembly</span> for retrieving multimodal data with HIPAA compliance.
+          - Engineered a sub-200ms RAG system using <span className="text-[#F11D26] dark:text-[#ff73a2]" style={{ fontWeight: "bold" }}>PostgreSQL</span> and <span className="text-[#F11D26] dark:text-[#ff73a2]" style={{ fontWeight: "bold" }}>WebAssembly</span> for retrieving multimodal data with HIPAA compliance.
           <br />
-          ∙ Developed tool calling functionality for an LLM-based Voice Agent using <span className="text-[#F11D26] dark:text-[#ff73a2]" style={{ fontWeight: "bold"}}>TypeScript</span> and <span className="text-[#F11D26] dark:text-[#ff73a2]" style={{ fontWeight: "bold"}}>Google Cloud</span> that processed 10,000+ user queries.
+          - Developed tool calling functionality for an LLM-based Voice Agent using <span className="text-[#F11D26] dark:text-[#ff73a2]" style={{ fontWeight: "bold" }}>TypeScript</span> and <span className="text-[#F11D26] dark:text-[#ff73a2]" style={{ fontWeight: "bold" }}>Google Cloud</span> that processed 10,000+ user queries.
           <br />
-          ∙ Built a product analytics pipeline and internal dashboard using <span className="text-[#F11D26] dark:text-[#ff73a2]" style={{ fontWeight: "bold"}}>PostHog</span> to track user engagement and feature adoption.
+          - Built a product analytics pipeline and internal dashboard using <span className="text-[#F11D26] dark:text-[#ff73a2]" style={{ fontWeight: "bold" }}>PostHog</span> to track user engagement and feature adoption.
+        </>
+      ),
+    },
+    {
+      company: "Data Mining and Machine Learning Lab",
+      href: "https://dmml.asu.edu/",
+      badges: [],
+      location: "Arizona State University",
+      title: "Machine Learning Researcher",
+      logoUrl: "/cropped-asu-icon.webp",
+      start: "Aug 2024",
+      end: "Dec 2025",
+      description: (
+        <>
+          - Implemented a model inference API using <span className="text-[#8D1C41] dark:text-[#ff73a2]" style={{ fontWeight: "bold" }}>vLLM</span> for GPU memory management and <span className="text-[#8D1C41] dark:text-[#ff73a2]" style={{ fontWeight: "bold" }}>FastAPI</span> for RESTful endpoints, supporting concurrent requests which lowered inference latency by 30%.
+          <br />
+          - Built classifiers for text datasets over 2TB in size and fine-tuned LLMs with <span className="text-[#8D1C41] dark:text-[#ff73a2]" style={{ fontWeight: "bold" }}> LoRA </span> using <span className="text-[#8D1C41] dark:text-[#ff73a2]" style={{ fontWeight: "bold" }}> Python </span> to improve accuracy in ambiguous human text.
+          {/* <br />
+          - Co-authored an <span className="text-[#8D1C41] dark:text-[#ff73a2]" style={{ fontWeight: "bold" }}>IEEE</span>{" "} BigData paper. */}
         </>
       ),
     },
@@ -555,27 +564,27 @@ export const DATA = {
       href: "https://rcvinnovations.com/",
       badges: [],
       location: "Remote",
-      title: "Website Development Intern",
+      title: "Software Engineer Intern",
       logoUrl: "/rcv.webp",
-      start: "June 2023",
-      end: "July 2023",
+      start: "Jun 2023",
+      end: "Jul 2023",
       description: (
         <>
-          ∙ Developed backend infrastructure for static assets and 3D models
+          - Developed backend infrastructure for static assets and 3D models
           integration using{" "}
-          <span className="text-[#269bdf] dark:text-[#0078d4]" style={{ fontWeight: "bold"}}>
+          <span className="text-[#269bdf] dark:text-[#0078d4]" style={{ fontWeight: "bold" }}>
             JavaScript
           </span>{" "}
           and{" "}
-          <span className="text-[#269bdf] dark:text-[#0078d4]" style={{ fontWeight: "bold"}}>React.js</span>
+          <span className="text-[#269bdf] dark:text-[#0078d4]" style={{ fontWeight: "bold" }}>React.js</span>
           , yielding 46% surge in customer satisfaction.
           <br />
-          ∙ Created{" "}
-          <span className="text-[#269bdf] dark:text-[#0078d4]" style={{ fontWeight: "bold"}}>Power BI</span>{" "}
+          - Created{" "}
+          <span className="text-[#269bdf] dark:text-[#0078d4]" style={{ fontWeight: "bold" }}>Power BI</span>{" "}
           dashboards and automated data collection using Google Analytics API,
           which helped to increase click-through-rate by 29%.
           {/* <br /> */}
-          {/* ∙ Interned right after high school! */}
+          {/* - Interned right after high school! */}
         </>
       ),
     },
@@ -586,26 +595,79 @@ export const DATA = {
       href: "https://asu.edu",
       degree: (
         <>
-          <strong>BS in Computer Science</strong>, Minor in Statistics
+          BS in Computer Science
         </>
       ),
       logoUrl: "/maroon.webp",
-      start: "August 2023",
-      end: "May 2026",
       description:
-        "GPA: 3.94\nCoursework: Data Structures & Algorithms, Programming with C/C++, Computer Organization, Assembly, Object-Oriented Programming, Digital Design, Software Engineering, Operating Systems, Information Assurance.",
+        "GPA: 3.99\nCoursework: Data Structures & Algorithms, Programming with C/C++, Computer Organization, Assembly, Object-Oriented Programming, Digital Design, Software Engineering, Operating Systems, Information Assurance.",
     },
-    {
-      school: "Buildspace",
-      href: "https://buildspace.so",
-      degree: "nights & weekends s5",
-      logoUrl: "/buildspace.webp",
-      start: "May 2024",
-      end: "June 2024",
-      description: "Completed the Full Stack Developer course.",
-    },
+    // {
+    //   school: "Buildspace",
+    //   href: "https://buildspace.so",
+    //   degree: "nights & weekends s5",
+    //   logoUrl: "/buildspace.webp",
+    //   description: "Completed the Full Stack Developer course.",
+    // },
   ],
   projects: [
+    {
+      title: "git-fs",
+      href: "https://github.soy.run/",
+      image: "/gitsandbox.webp",
+      dates: "2026",
+      active: true,
+      description:
+        "Faking a filesystem over GitHub API to run coding agents and instantly chat with any repository fully in your browser. Wrote a [blog about this](https://dub.sh/gitfs-blog).",
+      technologies: [
+        "TypeScript",
+        "Bash",
+        "Cloudflare Workers",
+        "Cloudflare Containers",
+        "Pi-Agent",
+        "just-bash"
+      ],
+      links: [
+        {
+          icon: <Icons.github className="size-4" />,
+          type: "GitHub",
+          href: "https://git.new/git-fs",
+        },
+        {
+          icon: <Icons.globe className="size-4" />,
+          type: "Website",
+          href: "https://github.soy.run/",
+        },
+      ],
+    },
+
+    {
+      title: "Canvas MCP",
+      href: "https://git.new/canvas-mcp",
+      image: "/canvas_mcp_banner.webp",
+      dates: "2024",
+      active: true,
+      description:
+        "MCP Server that allows you to query your courses in the AI app of your choice. Over **2K tool calls** in April 2026.",
+      technologies: [
+        "Python",
+        "JavaScript",
+        "httpx",
+        "Rest API",
+        "FastMCP",
+        "UV",
+        "Anthropic",
+        "EdTech",
+        "Agentic AI",
+      ],
+      links: [
+        {
+          icon: <Icons.github className="size-4" />,
+          type: "GitHub",
+          href: "https://git.new/canvas-mcp",
+        },
+      ],
+    },
     {
       title: "Alice",
       image: "/alice_banner.webp",
@@ -635,62 +697,6 @@ export const DATA = {
           icon: <Icons.chrome className="size-4" />,
           type: "Extension",
           href: "https://dub.sh/wonderland",
-        },
-      ],
-    },
-    {
-      title: "Canvas MCP",
-      href: "https://git.new/canvas-mcp",
-      image: "/canvas_mcp_banner.webp",
-      dates: "2024",
-      active: true,
-      description:
-        "MCP Server that allows you to query your courses in the AI app of your choice. Built for the [model context protocol](https://modelcontextprotocol.io/introduction).",
-      technologies: [
-        "Python",
-        "JavaScript",
-        "httpx",
-        "Rest API",
-        "FastMCP",
-        "UV",
-        "Anthropic",
-        "EdTech",
-        "Agentic AI",
-      ],
-      links: [
-        {
-          icon: <Icons.github className="size-4" />,
-          type: "GitHub",
-          href: "https://git.new/canvas-mcp",
-        },
-      ],
-    },
-    {
-      title: "git-fs",
-      href: "https://github.soy.run/",
-      image: "/gitsandbox.webp",
-      dates: "2026",
-      active: true,
-      description:
-        "Faking a filesystem over GitHub API to run coding agents and instantly chat with any repository fully in your browser. Wrote a [blog about this](https://dub.sh/gitfs-blog).",
-      technologies: [
-        "TypeScript",
-        "Bash",
-        "Cloudflare Workers",
-        "Cloudflare Containers",
-        "Pi-Agent",
-        "just-bash"
-      ],
-      links: [
-        {
-          icon: <Icons.github className="size-4" />,
-          type: "GitHub",
-          href: "https://git.new/git-fs",
-        },
-        {
-          icon: <Icons.globe className="size-4" />,
-          type: "Website",
-          href: "https://github.soy.run/",
         },
       ],
     },
@@ -878,7 +884,7 @@ export const DATA = {
           icon: <Icons.github className="size-4" />,
           type: "GitHub",
           href: "https://git.new/picthis",
-        },        
+        },
         {
           icon: <Icons.globe className="size-4" />,
           type: "NPM",
@@ -937,7 +943,7 @@ export const DATA = {
           href: "https://dub.sh/melodysyncer",
         },
       ],
-    },    
+    },
     {
       title: "DeepDial",
       href: "https://dub.sh/deepdial",
@@ -961,7 +967,7 @@ export const DATA = {
           href: "https://dub.sh/deepdial",
         },
       ],
-    },   
+    },
     {
       title: "AMRAS",
       href: "https://git.new/ecmo-bridge",
@@ -1011,7 +1017,7 @@ export const DATA = {
           href: "https://git.new/edcomposer",
         },
       ],
-    },    
+    },
     {
       title: "FreshUntil",
       href: "https://git.new/fresh",

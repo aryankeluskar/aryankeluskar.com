@@ -12,16 +12,16 @@ export function HeroSection() {
             <h1 className="text-3xl font-semibold tracking-tighter sm:text-5xl xl:text-6xl/none font-solway">
               {`Hi, I'm ${DATA.name.split(" ")[0]} 👋`}
             </h1>
-            <div className="max-w-[600px] md:text-xl">
+            <div className="max-w-[600px] md:text-xl pt-5">
               <Markdown className="prose max-w-full w-fit text-pretty font-sans dark:prose-invert bg-[rgba(255,255,255,0.33)] dark:bg-gray-950 mb-4">
                 {DATA.description}
               </Markdown>
             </div>
-            <div className="max-w-[600px] md:text-xl">
+            {/* <div className="max-w-[600px] md:text-xl">
               <Markdown className="prose max-w-full text-pretty font-sans dark:prose-invert">
                 {DATA.current}
               </Markdown>
-            </div>
+            </div> */}
           </div>
           <Avatar className="size-28 border">
             <AvatarImage alt={DATA.name} src={DATA.avatarUrl} />
@@ -30,7 +30,7 @@ export function HeroSection() {
         </div>
 
         {/* Navigation Buttons */}
-        <div className="flex flex-wrap gap-4 pt-10">
+        <div className="flex flex-wrap gap-4">
           <Link
             href={DATA.resumeUrl}
             target="_blank"

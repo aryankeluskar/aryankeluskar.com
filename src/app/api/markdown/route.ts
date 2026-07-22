@@ -64,7 +64,7 @@ function buildHomePageMarkdown(): string {
   for (const edu of d.education) {
     const degree =
       typeof edu.degree === "string" ? edu.degree : jsxToText(edu.degree);
-    md += `**${edu.school}** — ${degree} (${edu.start} – ${edu.end})\n\n`;
+    md += `**${edu.school}** — ${degree}\n\n`;
     if (edu.description) md += `${edu.description}\n\n`;
   }
 
@@ -135,7 +135,7 @@ function buildResumeMarkdown(): string {
   for (const edu of d.education) {
     const degree =
       typeof edu.degree === "string" ? edu.degree : jsxToText(edu.degree);
-    md += `**${edu.school}** — ${degree} (${edu.start} – ${edu.end})\n\n`;
+    md += `**${edu.school}** — ${degree}\n\n`;
     if (edu.description) md += `${edu.description}\n\n`;
   }
 

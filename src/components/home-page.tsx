@@ -53,6 +53,7 @@ export function HomePage() {
           ))}
         </div>
       </section>
+
       <section id="education">
         <div className="flex min-h-0 flex-col gap-y-3">
           <h2 className="text-xl font-semibold">Education</h2>
@@ -64,19 +65,9 @@ export function HomePage() {
               altText={education.school}
               title={education.school}
               subtitle={education.degree}
-              period={`${education.start} - ${education.end}`}
+              period={``}
             />
           ))}
-        </div>
-      </section>
-      <section id="skills">
-        <div className="flex min-h-0 flex-col gap-y-3">
-          <h2 className="text-xl font-semibold">Skills & Tech Stack</h2>
-          <div className="flex flex-wrap gap-1">
-            {DATA.skills.map((skill) => (
-              <Badge key={skill}>{skill}</Badge>
-            ))}
-          </div>
         </div>
       </section>
 
@@ -174,6 +165,18 @@ export function HomePage() {
           </ul>
         </div>
       </section>
+
+      <section id="skills">
+        <div className="flex min-h-0 flex-col gap-y-3">
+          <h2 className="text-xl font-semibold">Skills & Tech Stack</h2>
+          <div className="flex flex-wrap gap-1">
+            {DATA.skills.map((skill) => (
+              <Badge key={skill}>{skill}</Badge>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section id="contact">
         <div className="grid items-center justify-center gap-4 px-4 text-center md:px-6 w-full py-12">
           <div className="space-y-3">

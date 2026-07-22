@@ -9,7 +9,7 @@ This repository is my personal website. It is a NextJS-based website that is hos
 # TODO
 
 - [x] Add a favicon which is same as aryankeluskar.com
-- [x] Have hyperlinks and beautiful sunset images to hometowns, in order: Chandler, AZ; Hyderabad, TS; Mumbai, MH
+- [x] Have hyperlinks and beautiful sunset images to hometowns
 - [x] Update the resume link to aryankeluskar.com/resume
 - [x] Paralax scrolling on the home page
 - [x] Use `Solway` font for text
