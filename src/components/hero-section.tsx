@@ -9,14 +9,37 @@ export function HeroSection() {
       <div className="relative mx-auto w-full max-w-2xl space-y-8 pt-16 pb-6">
         <div className="gap-2 flex justify-between">
           <div className="flex-col flex flex-1 gap-y-1.5">
-            <h1 className="text-3xl font-semibold tracking-tighter sm:text-5xl xl:text-6xl/none font-solway">
+            <h1 className="text-3xl font-semibold tracking-tighter sm:text-5xl xl:text-6xl/none font-solway mb-12">
               {`Hi, I'm ${DATA.name.split(" ")[0]} 👋`}
             </h1>
-            <div className="max-w-[600px] md:text-xl pt-5">
+            {/* Navigation Buttons */}
+            <div className="flex flex-wrap gap-4">
+              <Link
+                href={DATA.resumeUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-11 py-2.5 font-solway font-semibold text-sm sm:text-base text-foreground bg-[rgba(0,255,75,0.33)] hover:bg-[rgba(0,255,75,0.5)] transition-[background-color,transform] active:scale-[0.96]"
+              >
+                resume
+              </Link>
+              <Link
+                href="#projects"
+                className="px-11 py-2.5 font-solway font-semibold text-sm sm:text-base text-foreground bg-[rgba(2,0,255,0.33)] hover:bg-[rgba(2,0,255,0.5)] transition-[background-color,transform] active:scale-[0.96]"
+              >
+                projects
+              </Link>
+              <Link
+                href="#contact"
+                className="px-11 py-2.5 font-solway font-semibold text-sm sm:text-base text-foreground bg-[rgba(255,0,0,0.33)] hover:bg-[rgba(255,0,0,0.5)] transition-[background-color,transform] active:scale-[0.96]"
+              >
+                contact
+              </Link>
+            </div>
+            {/* <div className="max-w-[600px] md:text-xl pt-5">
               <Markdown className="prose max-w-full w-fit text-pretty font-sans dark:prose-invert bg-[rgba(255,255,255,0.33)] dark:bg-gray-950 mb-4">
                 {DATA.description}
               </Markdown>
-            </div>
+            </div> */}
             {/* <div className="max-w-[600px] md:text-xl">
               <Markdown className="prose max-w-full text-pretty font-sans dark:prose-invert">
                 {DATA.current}
@@ -29,29 +52,7 @@ export function HeroSection() {
           </Avatar>
         </div>
 
-        {/* Navigation Buttons */}
-        <div className="flex flex-wrap gap-4">
-          <Link
-            href={DATA.resumeUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="px-11 py-2.5 font-solway font-semibold text-sm sm:text-base text-foreground bg-[rgba(0,255,75,0.33)] hover:bg-[rgba(0,255,75,0.5)] transition-[background-color,transform] active:scale-[0.96]"
-          >
-            resume
-          </Link>
-          <Link
-            href="#projects"
-            className="px-11 py-2.5 font-solway font-semibold text-sm sm:text-base text-foreground bg-[rgba(2,0,255,0.33)] hover:bg-[rgba(2,0,255,0.5)] transition-[background-color,transform] active:scale-[0.96]"
-          >
-            projects
-          </Link>
-          <Link
-            href="#contact"
-            className="px-11 py-2.5 font-solway font-semibold text-sm sm:text-base text-foreground bg-[rgba(255,0,0,0.33)] hover:bg-[rgba(255,0,0,0.5)] transition-[background-color,transform] active:scale-[0.96]"
-          >
-            contact
-          </Link>
-        </div>
+
       </div>
     </section>
   );
