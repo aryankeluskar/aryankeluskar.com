@@ -6,15 +6,20 @@ import { useState, useEffect } from "react";
 
 const HOMETOWNS = [
   {
+    name: "San Francisco, CA",
+    image: "/hometowns/sanfr.webp",
+    mapUrl: "https://maps.google.com/?q=San%20Francisco,CA",
+  },
+  {
     name: "Chandler, AZ",
     image: "/hometowns/chandler.webp",
     mapUrl: "https://maps.google.com/?q=Chandler,AZ",
   },
-  {
-    name: "Hyderabad, TS",
-    image: "/hometowns/hps.webp",
-    mapUrl: "https://maps.google.com/?q=Hyderabad,Telangana,India",
-  },
+  // {
+  //   name: "Hyderabad, TS",
+  //   image: "/hometowns/hps.webp",
+  //   mapUrl: "https://maps.google.com/?q=Hyderabad,Telangana,India",
+  // },
   {
     name: "Mumbai, MH",
     image: "/hometowns/dadar.webp",
@@ -46,9 +51,8 @@ export function HometownSection() {
             href={hometown.mapUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className={`group relative overflow-hidden rounded-lg ${
-              isMobile ? "aspect-[4/3]" : "aspect-[3/4]"
-            } hover:scale-[1.03] active:scale-[0.96] transition-transform duration-300`}
+            className={`group relative overflow-hidden rounded-lg ${isMobile ? "aspect-[4/3]" : "aspect-[3/4]"
+              } hover:scale-[1.03] active:scale-[0.96] transition-transform duration-300`}
           >
             <Image
               src={hometown.image}
