@@ -31,10 +31,17 @@ export const ResumeCard = ({
   return (
     <Card className="flex pb-4">
       <div className="flex-none">
-        <Avatar className="border size-12 m-auto bg-muted-background dark:bg-foreground">
-          <AvatarImage src={logoUrl} alt={altText} className="object-contain" />
-          <AvatarFallback>{altText[0]}</AvatarFallback>
-        </Avatar>
+        <a
+          href={href || "#"}
+          className="hover:underline"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Avatar className="border size-12 m-auto bg-muted-background dark:bg-foreground">
+            <AvatarImage src={logoUrl} alt={altText} className="object-contain" />
+            <AvatarFallback>{altText[0]}</AvatarFallback>
+          </Avatar>
+        </a>
       </div>
       <div className="flex-grow ml-4 items-center flex-col group">
         <CardHeader>

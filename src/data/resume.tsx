@@ -69,13 +69,13 @@ export const DATA = {
   locationLink: "https://www.google.com/maps/place/san%20francisco",
   description:
     // "I tinker, therefore I am",
-  "20, [researching](https://scholar.google.com/citations?user=wVDeZtcAAAAJ) how language models (mis)behave and [building](#projects) tools/infra to extract their best",
+    "20, [researching](https://scholar.google.com/citations?user=wVDeZtcAAAAJ) how language models (mis)behave and [building](#projects) tools/infra to extract their best",
   // "Building  and writing [research papers](https://scholar.google.com/citations?user=wVDeZtcAAAAJ).",
   current: "",
   summary1:
     "Currently training language models at the [Biodesign Institute](https://www.biorxiv.org/content/biorxiv/early/2026/02/09/2026.02.05.704073.full.pdf) and building RL environments for agents at [Polymath (YC W26)](https://fellows.polymathlabs.ai/). On the side, I've been [researching](https://scholar.google.com/citations?user=wVDeZtcAAAAJ) alignment, post-training and multi-agent systems.",
   summary2:
-    "In an agent-native world, I am obsessed with rabbit-holes of engineering and building things that people love. I love travelling and doing hackathons (recently won two awards at TreeHacks 2026). In my free time, I'm cycling until I run out of roads.",
+    "In an agent-native world, I am obsessed with rabbit-holes of engineering and building things that people love. I love travelling and doing hackathons (recently won two awards at TreeHacks 2026). In my free time, I'm grinding chess or cycling until I run out of roads :)",
   avatarUrl: "/pfp.webp",
   hackathons: [
     // {
@@ -290,10 +290,10 @@ export const DATA = {
           title: "arXiv",
           href: "https://arxiv.org/abs/2606.27443",
         },
-        {
-          title: "Openreview",
-          href: "https://openreview.net/forum?id=MS8jsgZC62",
-        },
+        // {
+        //   title: "Openreview",
+        //   href: "https://openreview.net/forum?id=MS8jsgZC62",
+        // },
       ],
     },
     {
@@ -302,7 +302,7 @@ export const DATA = {
       href: "https://ieeexplore.ieee.org/abstract/document/10825265",
       authors: ["<b>Aryan Keluskar</b>", "Amrita Bhattacharjee", "Huan Liu"],
       venue: "IEEE International Conference on Big Data 2024",
-      citation: "39 citations",
+      citation: "46 citations",
       citationLink: "https://scholar.google.com/scholar?oi=bibs&hl=en1&cites=10776899312694291117&as_sdt=5",
       links: [
         {
@@ -318,32 +318,20 @@ export const DATA = {
     {
       title:
         "ToolAlignBench: Investigating Alignment Conflicts in Tool-Calling Enabled LLMs",
-      href: "https://openreview.net/forum?id=KJTiUm8b7d",
+      href: "https://arxiv.org/abs/2607.14285",
       authors: ["<b>Aryan Keluskar</b>", "Amrita Bhattacharjee", "Huan Liu"],
       venue: "Pluralistic Alignment Workshop at ICML 2026",
       citationLink: "",
       links: [
         {
-          title: "OpenReview",
+          title: "arXiv",
+          href: "https://arxiv.org/abs/2607.14285",
+        },
+        {
+          title: "ICML OpenReview",
           href: "https://openreview.net/forum?id=KJTiUm8b7d",
         },
       ],
-    },
-    {
-      title: "Evaluating Adaptive Personalization of Educational Readings with Simulated Learners",
-      href: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wVDeZtcAAAAJ&authuser=1&citation_for_view=wVDeZtcAAAAJ:zYLM7Y9cAGgC",
-      authors: ["Ryan T. Woo*", "Anmol Rao*", "<b>Aryan Keluskar</b>", "Yinong Chen"],
-      venue: "Proceedings of the BEA Workshop at ACL 2026",
-      links: [
-        {
-          title: "ACL Anthology",
-          href: "https://aclanthology.org/2026.bea-1.63.pdf",
-        },
-        {
-          title: "Google Scholar",
-          href: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wVDeZtcAAAAJ&authuser=1&citation_for_view=wVDeZtcAAAAJ:zYLM7Y9cAGgC",
-        },
-      ]
     },
     {
       title:
@@ -351,7 +339,7 @@ export const DATA = {
       href: "https://www.nature.com/articles/s41592-025-02981-z",
       authors: ["Matthew Aton", "Daniel McDonald", "...", "<b>Aryan Keluskar</b>", "...", "James T. Morton", "Qiyun Zhu"],
       venue: "Nature Methods (Dec 2025)",
-      citation: "35 citations",
+      citation: "37 citations",
       citationLink: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wVDeZtcAAAAJ&citation_for_view=wVDeZtcAAAAJ:qjMakFHDy7sC",
       links: [
         {
@@ -372,6 +360,23 @@ export const DATA = {
         // },
       ],
     },
+    {
+      title: "Evaluating Adaptive Personalization of Educational Readings with Simulated Learners",
+      href: "https://arxiv.org/abs/2604.16744",
+      authors: ["Ryan T. Woo*", "Anmol Rao*", "<b>Aryan Keluskar</b>", "Yinong Chen"],
+      venue: "Proceedings of the BEA Workshop at ACL 2026",
+      links: [
+        {
+          title: "arXiv",
+          href: "https://arxiv.org/abs/2604.16744",
+        },
+        {
+          title: "ACL Anthology",
+          href: "https://aclanthology.org/2026.bea-1.63.pdf",
+        },
+      ]
+    },
+
     {
       title: "TM-Vec 2: Accelerated Protein Homology Detection for Structural Similarity",
       href: "https://www.biorxiv.org/content/10.64898/2026.02.05.704073v1",
@@ -417,25 +422,61 @@ export const DATA = {
     // },
   ] as PublicationType[],
   skills: [
-    "Java",
-    "C++",
-    "Python",
-    "JavaScript",
-    "SQL",
-    "C",
-    "Julia",
-    "Golang",
-    "Prolog",
-    "React.js",
-    "Next.js",
-    "Node.js",
-    "TypeScript",
-    "MongoDB",
-    "AWS",
-    "GCP",
-    "Docker",
-    "Linux",
-    "Git",
+    {
+      category: "Programming Languages",
+      items: [
+        "TypeScript",
+        "JavaScript",
+        "Python",
+        "Java",
+        "C/C++",
+        "SQL",
+      ],
+    },
+    {
+      category: "Machine Learning",
+      items: [
+        "PyTorch",
+        "JAX",
+        "TensorFlow",
+        "Keras",
+        "scikit-learn",
+        "Pandas",
+        "NumPy",
+      ],
+    },
+    {
+      category: "Full-Stack Development",
+      items: [
+        "SpringBoot",
+        "Flask",
+        "React.js",
+        "Node.js",
+        "Next.js",
+        "MongoDB",
+        "PostgreSQL",
+        "HTML",
+        "CSS",
+        "AWS",
+        "GCP",
+        "Google OAuth",
+        "Tailwind",
+      ],
+    },
+    {
+      category: "Technical Skills",
+      items: [
+        "Linux",
+        "Raspberry Pi",
+        "Arduino",
+        "Docker",
+        "VPS",
+        "Stripe API",
+        "GitHub",
+        "Bash",
+        "LaTeX",
+      ],
+    },
   ],
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
@@ -489,18 +530,22 @@ export const DATA = {
       company: "The Biodesign Institute",
       href: "https://www.biorxiv.org/content/biorxiv/early/2026/02/09/2026.02.05.704073.full.pdf",
       badges: [],
-      location: "Arizona State University",
-      title: "Software Engineer (ML Research)",
+      location: "Tempe, AZ",
+      title: "Software Engineer, ML Research",
       logoUrl: "/skbio.webp",
       start: "May 2024",
       end: "Present",
       description: (
         <>
-          - Optimized GPU usage by implementing distributed training with gradient checkpointing and memory-efficient batching using <span style={{ fontWeight: "bold", color: "#3e9c35" }}>JAX</span> and <span style={{ fontWeight: "bold", color: "#3e9c35" }}>Slurm</span>, cutting training compute time by 30%.
+          - Cut inference costs by 93% ($36k annually) using efficient machine learning techniques, such as distillation & Flash Attention, for protein language models using <span style={{ fontWeight: "bold", color: "#3e9c35" }}>PyTorch</span> and <span style={{ fontWeight: "bold", color: "#3e9c35" }}>Transformers</span> libraries in Python.
           <br />
-          - Cut inference costs by 75% using quantization, distillation & Flash Attention for protein language models using <span style={{ fontWeight: "bold", color: "#3e9c35" }}>PyTorch</span> and <span style={{ fontWeight: "bold", color: "#3e9c35" }}>Transformers</span> libraries in Python.
+          - Optimized GPU usage by implementing distributed training with gradient checkpointing and memory-efficient batching using <span style={{ fontWeight: "bold", color: "#3e9c35" }}>JAX</span> and <span style={{ fontWeight: "bold", color: "#3e9c35" }}>Slurm</span>, cutting training walltime from 25 to 7 hours.
           <br />
-          - Increased model throughput by <span style={{ fontWeight: "bold", color: "#3e9c35" }}>13x</span> and reduced parameter count by <span style={{ fontWeight: "bold", color: "#3e9c35" }}>85%</span> while maintaining accuracy within 1% of state-of-the-art protein language models.
+          - Increased model throughput by <span style={{ fontWeight: "bold", color: "#3e9c35" }}>13x</span> and reduced parameter count by <span style={{ fontWeight: "bold", color: "#3e9c35" }}>85%</span> with knowledge distillation while achieving predictions within 3% of the state-of-the-art teacher model.
+          {/* <br />
+          - Presented a talk to an audience of 200+ biology, chemistry and machine learning researchers at the AI Applications in Biology Symposium hosted by Chan Zuckerberg Biohub.
+          <br />
+          - Co-authored an accepted grant proposal for 20,000 GPU-Hours from the National Center for Supercomputing Applications <a href="https://nairrpilot.org/projects/awarded?requestNumber=NAIRR250131" target="_blank" rel="noopener noreferrer">(link)</a> */}
         </>
       ),
     },
@@ -524,19 +569,22 @@ export const DATA = {
       href: "https://ktla.com/news/how-a-phone-call-is-helping-seniors-use-ai/",
       badges: [],
       location: "Los Angeles, CA",
-      title: "AI Research Intern",
+      title: "Software Engineer Intern",
       logoUrl: "/healthgc.webp",
       start: "May 2025",
       end: "Dec 2025",
       description: (
         <>
-          Seed-stage startup backed by the Floodgate Fund. First Intern.
+          Seed-stage startup backed by Floodgate and Rainfall Ventures. First Intern.
           <br />
-          - Engineered a sub-200ms RAG system using <span className="text-[#F11D26] dark:text-[#ff73a2]" style={{ fontWeight: "bold" }}>PostgreSQL</span> and <span className="text-[#F11D26] dark:text-[#ff73a2]" style={{ fontWeight: "bold" }}>WebAssembly</span> for retrieving multimodal data with HIPAA compliance.
+          <div style={{ height: "0.5em" }} />
+          - Engineered a sub-200ms (P90) retrieval augmented generation (RAG) system with HIPAA compliance on multimodal data using <span className="text-[#F11D26] dark:text-[#ff73a2]" style={{ fontWeight: "bold" }}>PostgreSQL</span>, <span className="text-[#F11D26] dark:text-[#ff73a2]" style={{ fontWeight: "bold" }}>Google Cloud</span>, <span className="text-[#F11D26] dark:text-[#ff73a2]" style={{ fontWeight: "bold" }}>WebAssembly</span> and <span className="text-[#F11D26] dark:text-[#ff73a2]" style={{ fontWeight: "bold" }}>JavaScript</span> to personalize LLM responses.
           <br />
-          - Developed tool calling functionality for an LLM-based Voice Agent using <span className="text-[#F11D26] dark:text-[#ff73a2]" style={{ fontWeight: "bold" }}>TypeScript</span> and <span className="text-[#F11D26] dark:text-[#ff73a2]" style={{ fontWeight: "bold" }}>Google Cloud</span> that processed 10,000+ user queries.
+          {/* - Built an autonomous voice agent testing infrastructure using <span className="text-[#F11D26] dark:text-[#ff73a2]" style={{ fontWeight: "bold" }}>Gemini</span>, <span className="text-[#F11D26] dark:text-[#ff73a2]" style={{ fontWeight: "bold" }}>Deepgram</span>, and <span className="text-[#F11D26] dark:text-[#ff73a2]" style={{ fontWeight: "bold" }}>Twilio</span> for automated testing of AI voice agents directly integrated into <span className="text-[#F11D26] dark:text-[#ff73a2]" style={{ fontWeight: "bold" }}>GitHub Actions</span>, which reduced testing time by 56%.
+          <br /> */}
+          - Developed tool calling functionality for web search and RAG for an LLM-based chatbot using <span className="text-[#F11D26] dark:text-[#ff73a2]" style={{ fontWeight: "bold" }}>Google Vertex AI</span>, enabling contextual and up-to-date responses for 345k calls and 8.4 million messages by 40,000 people.
           <br />
-          - Built a product analytics pipeline and internal dashboard using <span className="text-[#F11D26] dark:text-[#ff73a2]" style={{ fontWeight: "bold" }}>PostHog</span> to track user engagement and feature adoption.
+          - Engineered fault-tolerant webhook infrastructure using <span className="text-[#F11D26] dark:text-[#ff73a2]" style={{ fontWeight: "bold" }}>Websockets</span>, <span className="text-[#F11D26] dark:text-[#ff73a2]" style={{ fontWeight: "bold" }}>Express.js</span>, and <span className="text-[#F11D26] dark:text-[#ff73a2]" style={{ fontWeight: "bold" }}>Docker</span> achieving 99.9% uptime and 35% reduction in message delivery latency with graceful error handling.
         </>
       ),
     },
@@ -544,18 +592,20 @@ export const DATA = {
       company: "Data Mining and Machine Learning Lab",
       href: "https://dmml.asu.edu/",
       badges: [],
-      location: "Arizona State University",
+      location: "Tempe, Arizona",
       title: "Machine Learning Researcher",
       logoUrl: "/cropped-asu-icon.webp",
       start: "Aug 2024",
       end: "Dec 2025",
       description: (
         <>
-          - Implemented a model inference API using <span className="text-[#8D1C41] dark:text-[#ff73a2]" style={{ fontWeight: "bold" }}>vLLM</span> for GPU memory management and <span className="text-[#8D1C41] dark:text-[#ff73a2]" style={{ fontWeight: "bold" }}>FastAPI</span> for RESTful endpoints, supporting concurrent requests which lowered inference latency by 30%.
+          - Implemented a model inference API using <span className="text-[#8D1C41] dark:text-[#ff73a2]" style={{ fontWeight: "bold" }}>vLLM</span> for GPU memory management and <span className="text-[#8D1C41] dark:text-[#ff73a2]" style={{ fontWeight: "bold" }}>FastAPI</span> for RESTful endpoints supporting batch processing and concurrent requests, which increased inference throughput by 12x.
           <br />
-          - Built classifiers for text datasets over 2TB in size and fine-tuned LLMs with <span className="text-[#8D1C41] dark:text-[#ff73a2]" style={{ fontWeight: "bold" }}> LoRA </span> using <span className="text-[#8D1C41] dark:text-[#ff73a2]" style={{ fontWeight: "bold" }}> Python </span> to improve accuracy in ambiguous human text.
+          - Built a multi-agent benchmark to probe alignment conflicts in tool-calling LLM agents. Ran it on a <span className="text-[#8D1C41] dark:text-[#ff73a2]" style={{ fontWeight: "bold" }}>Slurm</span> managed HPC cluster, orchestrating 12 agent configurations across 9 models (650+ GPU-hours).
           {/* <br />
-          - Co-authored an <span className="text-[#8D1C41] dark:text-[#ff73a2]" style={{ fontWeight: "bold" }}>IEEE</span>{" "} BigData paper. */}
+          - Built classifiers for text datasets over 2TB in size and fine-tuned LLMs using <span className="text-[#8D1C41] dark:text-[#ff73a2]" style={{ fontWeight: "bold" }}>LoRA</span> and <span className="text-[#8D1C41] dark:text-[#ff73a2]" style={{ fontWeight: "bold" }}>Python</span> on <span className="text-[#8D1C41] dark:text-[#ff73a2]" style={{ fontWeight: "bold" }}>AWS Sagemaker</span> to improve accuracy in ambiguous human text.
+          <br />
+          - Designed agent harnesses and LLM-as-a-judge evaluation suite for tool-calling LLMs (tool selection, function calling arguments, and alignment conflicts), measuring failure modes across 9 models. */}
         </>
       ),
     },
@@ -570,21 +620,9 @@ export const DATA = {
       end: "Jul 2023",
       description: (
         <>
-          - Developed backend infrastructure for static assets and 3D models
-          integration using{" "}
-          <span className="text-[#269bdf] dark:text-[#0078d4]" style={{ fontWeight: "bold" }}>
-            JavaScript
-          </span>{" "}
-          and{" "}
-          <span className="text-[#269bdf] dark:text-[#0078d4]" style={{ fontWeight: "bold" }}>React.js</span>
-          , yielding 46% surge in customer satisfaction.
+          - Built high-performance cloud-based backend server using <span className="text-[#269bdf] dark:text-[#0078d4]" style={{ fontWeight: "bold" }}>TypeScript</span>, <span className="text-[#269bdf] dark:text-[#0078d4]" style={{ fontWeight: "bold" }}>Node.js</span>, and <span className="text-[#269bdf] dark:text-[#0078d4]" style={{ fontWeight: "bold" }}>Express.js</span> to efficiently deliver digital twins and 3D assets, achieving 46% reduction in website loading time.
           <br />
-          - Created{" "}
-          <span className="text-[#269bdf] dark:text-[#0078d4]" style={{ fontWeight: "bold" }}>Power BI</span>{" "}
-          dashboards and automated data collection using Google Analytics API,
-          which helped to increase click-through-rate by 29%.
-          {/* <br /> */}
-          {/* - Interned right after high school! */}
+          - Designed <span className="text-[#269bdf] dark:text-[#0078d4]" style={{ fontWeight: "bold" }}>Power BI</span> dashboards for A/B Testing which identified 3 critical user experience bottlenecks.
         </>
       ),
     },

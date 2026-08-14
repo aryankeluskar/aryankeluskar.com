@@ -46,7 +46,3 @@ Tailwind CSS with `@tailwindcss/typography`. Theme toggling via `next-themes`. T
 
 - `/resume` — Redirects to resume PDF
 - `/gcsp/*` — Redirect routes
-
-### Images
-
-Remote images served from `alice.aryankeluskar.com`. Uses `next/image` with that hostname configured in `next.config.mjs`.

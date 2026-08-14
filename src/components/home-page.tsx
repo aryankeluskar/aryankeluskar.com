@@ -169,9 +169,18 @@ export function HomePage() {
       <section id="skills">
         <div className="flex min-h-0 flex-col gap-y-3">
           <h2 className="text-xl font-semibold">Skills & Tech Stack</h2>
-          <div className="flex flex-wrap gap-1">
-            {DATA.skills.map((skill) => (
-              <Badge key={skill}>{skill}</Badge>
+          <div className="flex flex-col gap-y-3">
+            {DATA.skills.map((group) => (
+              <div key={group.category} className="flex flex-col gap-1.5">
+                <div className="text-sm font-medium text-muted-foreground">
+                  {group.category}
+                </div>
+                <div className="flex flex-wrap gap-1.5">
+                  {group.items.map((skill) => (
+                    <Badge key={skill}>{skill}</Badge>
+                  ))}
+                </div>
+              </div>
             ))}
           </div>
         </div>
