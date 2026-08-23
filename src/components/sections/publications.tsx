@@ -3,6 +3,29 @@ import { DATA } from "@/data/resume";
 // import Image from "next/image"; // Image component is no longer needed
 import { LinkIcon, TrendingUp } from "lucide-react";
 import React from "react";
+import { resolveCitation } from "@/lib/citations";
+
+function CitationLink({
+  publication,
+}: {
+  publication: { title: string; citation?: string; citationLink?: string };
+}) {
+  const { citation, citationLink } = resolveCitation(publication);
+
+  if (!citation || !citationLink) return null;
+
+  return (
+    <a
+      href={citationLink}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="inline-flex items-center gap-x-1 text-xs md:text-sm text-muted-foreground hover:underline"
+    >
+      <TrendingUp className="size-3 md:size-4" />
+      {citation}
+    </a>
+  );
+}
 
 function AuthorList({ authors }: { authors?: string[] }) {
   const [isExpanded, setIsExpanded] = React.useState(false);
@@ -96,17 +119,7 @@ export function Publications() {
                       {link.title}
                     </a>
                   ))}
-                  <a
-                      style={{ visibility: !publication.citationLink ? "hidden" : "visible" }}
-                      href={publication.citationLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-x-1 text-xs md:text-sm text-muted-foreground hover:underline"
-                    >
-                      <TrendingUp className="size-3 md:size-4" />
-                      {/* Adjusted icon size */}
-                      {publication.citation}
-                    </a>
+                  <CitationLink publication={publication} />
                 </div>
               )}
             </div>

@@ -1,0 +1,48 @@
+{
+  "updatedAt": "2026-08-23T00:00:00.000Z",
+  "source": "scholar-manual",
+  "authorId": "wVDeZtcAAAAJ",
+  "totals": {
+    "citations": 88,
+    "hIndex": 2,
+    "i10Index": 2
+  },
+  "articles": [
+    {
+      "key": "do llms understand ambiguity in text a case study in open world question answering",
+      "title": "Do LLMs Understand Ambiguity in Text? A Case Study in Open-world Question Answering",
+      "citations": 46,
+      "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=10776899312694291117,378258881956993642,6106901872104705566"
+    },
+    {
+      "key": "evaluating adaptive personalization of educational readings with simulated learners",
+      "title": "Evaluating Adaptive Personalization of Educational Readings with Simulated Learners",
+      "citations": 0,
+      "link": ""
+    },
+    {
+      "key": "scikit bio a fundamental python library for biological omic data analysis",
+      "title": "Scikit-bio: a fundamental Python library for biological omic data analysis",
+      "citations": 40,
+      "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=15971703398130207774"
+    },
+    {
+      "key": "tm vec 2 accelerated protein homology detection for structural similarity",
+      "title": "TM-Vec 2: Accelerated Protein Homology Detection for Structural Similarity",
+      "citations": 1,
+      "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=17197181516265414185"
+    },
+    {
+      "key": "toolalignbench investigating alignment conflicts in tool calling enabled llms",
+      "title": "ToolAlignBench: Investigating Alignment Conflicts in Tool-Calling Enabled LLMs",
+      "citations": 0,
+      "link": ""
+    },
+    {
+      "key": "when does personality composition matter for multi agent llm teams",
+      "title": "When Does Personality Composition Matter for Multi-Agent LLM Teams?",
+      "citations": 1,
+      "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=12310471239664580850"
+    }
+  ]
+}

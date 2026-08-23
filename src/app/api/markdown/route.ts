@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import React from "react";
 import { DATA } from "@/data/resume";
+import { resolveCitation } from "@/lib/citations";
 
 const SITE_URL = "https://aryankeluskar.com";
 
@@ -84,7 +85,8 @@ function buildHomePageMarkdown(): string {
       md += `Authors: ${authors}\n\n`;
     }
     md += `Venue: ${pub.venue}\n\n`;
-    if (pub.citation) md += `Citations: ${pub.citation}\n\n`;
+    const { citation } = resolveCitation(pub);
+    if (citation) md += `Citations: ${citation}\n\n`;
     if (pub.links) {
       for (const link of pub.links) {
         md += `- [${link.title}](${link.href})\n`;
