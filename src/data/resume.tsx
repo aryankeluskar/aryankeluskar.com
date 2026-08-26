@@ -73,7 +73,7 @@ export const DATA = {
   // "Building  and writing [research papers](https://scholar.google.com/citations?user=wVDeZtcAAAAJ).",
   current: "",
   summary1:
-    "Currently training language models at the [Biodesign Institute](https://www.biorxiv.org/content/biorxiv/early/2026/02/09/2026.02.05.704073.full.pdf) and building RL environments for agents at [Polymath (YC W26)](https://fellows.polymathlabs.ai/). On the side, I've been [researching](https://scholar.google.com/citations?user=wVDeZtcAAAAJ) alignment, post-training and multi-agent systems.",
+    "Currently training language models at the [Biodesign Institute](https://www.biorxiv.org/content/biorxiv/early/2026/02/09/2026.02.05.704073.full.pdf). On the side, I've been [researching](https://scholar.google.com/citations?user=wVDeZtcAAAAJ) alignment, post-training and multi-agent systems.",
   summary2:
     "In an agent-native world, I am obsessed with rabbit-holes of engineering and building things that people love. I love travelling and doing hackathons (recently won two awards at TreeHacks 2026). In my free time, I'm grinding chess or cycling until I run out of roads :)",
   avatarUrl: "/pfp.webp",
@@ -539,9 +539,9 @@ export const DATA = {
         <>
           - Cut inference costs by 93% ($36k annually) using efficient machine learning techniques, such as distillation & Flash Attention, for protein language models using <span style={{ fontWeight: "bold", color: "#3e9c35" }}>PyTorch</span> and <span style={{ fontWeight: "bold", color: "#3e9c35" }}>Transformers</span> libraries in Python.
           <br />
-          - Optimized GPU usage by implementing distributed training with gradient checkpointing and memory-efficient batching using <span style={{ fontWeight: "bold", color: "#3e9c35" }}>JAX</span> and <span style={{ fontWeight: "bold", color: "#3e9c35" }}>Slurm</span>, cutting training walltime from 25 to 7 hours.
+          - Optimized GPU usage by implementing distributed training with gradient checkpointing and memory-efficient batching using <span style={{ fontWeight: "bold", color: "#3e9c35" }}>JAX</span> and <span style={{ fontWeight: "bold", color: "#3e9c35" }}>Slurm</span>.
           <br />
-          - Increased model throughput by <span style={{ fontWeight: "bold", color: "#3e9c35" }}>13x</span> and reduced parameter count by <span style={{ fontWeight: "bold", color: "#3e9c35" }}>85%</span> with knowledge distillation while achieving predictions within 3% of the state-of-the-art teacher model.
+          - Increased model throughput by <span style={{ fontWeight: "bold", color: "#3e9c35" }}>13x</span> while achieving predictions within 3% of the state-of-the-art teacher model.
           {/* <br />
           - Presented a talk to an audience of 200+ biology, chemistry and machine learning researchers at the AI Applications in Biology Symposium hosted by Chan Zuckerberg Biohub.
           <br />
@@ -549,21 +549,21 @@ export const DATA = {
         </>
       ),
     },
-    {
-      company: "Polymath (YC W26)",
-      href: "https://fellows.polymathlabs.ai/",
-      badges: [],
-      location: "San Francisco, CA",
-      title: "Fellow",
-      logoUrl: "/polymath.webp",
-      start: "Jul 2026",
-      end: "Present",
-      description: (
-        <>
-          - Building RL environments for benchmarking long-horizon AI agents
-        </>
-      ),
-    },
+    // {
+    //   company: "Polymath (YC W26)",
+    //   href: "https://fellows.polymathlabs.ai/",
+    //   badges: [],
+    //   location: "San Francisco, CA",
+    //   title: "Fellow",
+    //   logoUrl: "/polymath.webp",
+    //   start: "Jul 2026",
+    //   end: "Present",
+    //   description: (
+    //     <>
+    //       - Building RL environments for benchmarking long-horizon AI agents
+    //     </>
+    //   ),
+    // },
     {
       company: "HealthGC",
       href: "https://ktla.com/news/how-a-phone-call-is-helping-seniors-use-ai/",
@@ -582,9 +582,9 @@ export const DATA = {
           <br />
           {/* - Built an autonomous voice agent testing infrastructure using <span className="text-[#F11D26] dark:text-[#ff73a2]" style={{ fontWeight: "bold" }}>Gemini</span>, <span className="text-[#F11D26] dark:text-[#ff73a2]" style={{ fontWeight: "bold" }}>Deepgram</span>, and <span className="text-[#F11D26] dark:text-[#ff73a2]" style={{ fontWeight: "bold" }}>Twilio</span> for automated testing of AI voice agents directly integrated into <span className="text-[#F11D26] dark:text-[#ff73a2]" style={{ fontWeight: "bold" }}>GitHub Actions</span>, which reduced testing time by 56%.
           <br /> */}
-          - Developed tool calling functionality for web search and RAG for an LLM-based chatbot using <span className="text-[#F11D26] dark:text-[#ff73a2]" style={{ fontWeight: "bold" }}>Google Vertex AI</span>, enabling contextual and up-to-date responses for 345k calls and 8.4 million messages by 40,000 people.
+          - Developed tool calling functionality for web search and RAG for an LLM-based chatbot using <span className="text-[#F11D26] dark:text-[#ff73a2]" style={{ fontWeight: "bold" }}>Google Vertex AI</span>, and scaled it to 345k calls and 8.4 million messages by 40,000 people.
           <br />
-          - Engineered fault-tolerant webhook infrastructure using <span className="text-[#F11D26] dark:text-[#ff73a2]" style={{ fontWeight: "bold" }}>Websockets</span>, <span className="text-[#F11D26] dark:text-[#ff73a2]" style={{ fontWeight: "bold" }}>Express.js</span>, and <span className="text-[#F11D26] dark:text-[#ff73a2]" style={{ fontWeight: "bold" }}>Docker</span> achieving 99.9% uptime and 35% reduction in message delivery latency with graceful error handling.
+          {/* - Engineered fault-tolerant webhook infrastructure using <span className="text-[#F11D26] dark:text-[#ff73a2]" style={{ fontWeight: "bold" }}>Websockets</span>, <span className="text-[#F11D26] dark:text-[#ff73a2]" style={{ fontWeight: "bold" }}>Express.js</span>, and <span className="text-[#F11D26] dark:text-[#ff73a2]" style={{ fontWeight: "bold" }}>Docker</span> achieving 99.9% uptime and 35% reduction in message delivery latency with graceful error handling. */}
         </>
       ),
     },
