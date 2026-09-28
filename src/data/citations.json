@@ -1,9 +1,9 @@
 {
-  "updatedAt": "2026-09-26T07:39:41.713Z",
+  "updatedAt": "2026-09-28T07:39:41.755Z",
   "source": "serpapi",
   "authorId": "wVDeZtcAAAAJ",
   "totals": {
-    "citations": 104,
+    "citations": 108,
     "hIndex": 2,
     "i10Index": 2
   },
@@ -17,13 +17,13 @@
     {
       "key": "evaluating adaptive personalization of educational readings with simulated learners",
       "title": "Evaluating Adaptive Personalization of Educational Readings with Simulated Learners",
-      "citations": 0,
-      "link": ""
+      "citations": 1,
+      "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=3911021985014878544"
     },
     {
       "key": "scikit bio a fundamental python library for biological omic data analysis",
       "title": "Scikit-bio: a fundamental Python library for biological omic data analysis",
-      "citations": 55,
+      "citations": 58,
       "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=15971703398130207774"
     },
     {
