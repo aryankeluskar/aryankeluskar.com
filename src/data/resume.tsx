@@ -30,6 +30,7 @@ type PublicationType = {
   venue: string;
   imageSrc?: string;
   contributionNote?: string;
+  abstract?: string;
   citation?: string;
   citationLink?: string;
   links?: readonly {
@@ -284,6 +285,8 @@ export const DATA = {
       href: "https://arxiv.org/pdf/2606.27443",
       authors: ["<b>Aryan Keluskar</b>", "Amrita Bhattacharjee", "Huan Liu"],
       venue: "Conference on Language Modeling (COLM 2026)",
+      abstract:
+        "Personality prompting shapes how large language models communicate, yet whether these behavioral shifts affect objective task outcomes remains under-explored. Prior work shows that agents prompted with low agreeableness produce adversarial language, while those prompted with high agreeableness become cooperative, but the relationship between communication style and task performance has not been systematically examined across multiple domains. In this work, we investigate whether personality composition matters for multi-agent team performance by manipulating personality traits across frontier LLMs on three task domains: structured coding, open-ended research collaboration, and competitive bargaining. We find that personality effects depend critically on task structure. In coding tasks, low agreeableness leads to large communication shifts that have little effect on milestone completion. In open-ended collaboration and bargaining, the same manipulation substantially degrades performance. We discuss implications for multi-agent system design and the limits of personality manipulation.",
       citationLink: "",
       links: [
         {
@@ -302,6 +305,8 @@ export const DATA = {
       href: "https://ieeexplore.ieee.org/abstract/document/10825265",
       authors: ["<b>Aryan Keluskar</b>", "Amrita Bhattacharjee", "Huan Liu"],
       venue: "IEEE International Conference on Big Data 2024",
+      abstract:
+        "Ambiguity in natural language poses significant challenges to Large Language Models (LLMs) used for open-domain question answering. LLMs often struggle with the inherent uncertainties of human communication, leading to misinterpretations, miscommunications, hallucinations, and biased responses. This significantly weakens their ability to be used for tasks like fact-checking, question answering, feature extraction, and sentiment analysis. Using open-domain question answering as a test case, we compare off-the-shelf and few-shot LLM performance, focusing on measuring the impact of explicit disambiguation strategies. We demonstrate how simple, training-free, token-level disambiguation methods may be effectively used to improve LLM performance for ambiguous question answering tasks. We empirically show our findings and discuss best practices and broader impacts regarding ambiguity in LLMs.",
       citation: "46 citations",
       citationLink: "https://scholar.google.com/scholar?oi=bibs&hl=en1&cites=10776899312694291117&as_sdt=5",
       links: [
@@ -321,6 +326,8 @@ export const DATA = {
       href: "https://arxiv.org/abs/2607.14285",
       authors: ["<b>Aryan Keluskar</b>", "Amrita Bhattacharjee", "Huan Liu"],
       venue: "Pluralistic Alignment Workshop at ICML 2026",
+      abstract:
+        "Safety alignment in LLMs aims to align models with human values, but which values take precedence when they conflict? We investigate this question in the context of tool-calling LLM agents deployed in regulated industries, where agents processing confidential documents may encounter content that triggers safety-trained values (e.g., public welfare) that conflict with deployment-context instructions (e.g., internal logging). To empirically verify this phenomenon, we build a benchmark of 128 scenarios across 16 domains. We find that safety-aligned open-source models override their deployment instructions up to 43.4% of the time, engaging in whistleblowing, data exfiltration, and evidence tampering when processing documents that suggest organizational wrongdoing. We also find that abliteration reduces rates of external whistleblowing. These results reveal a fundamental tension in pluralistic alignment, where the same safety training that protects users can cause agents to act against deployment instructions in ways that create unpredictable liability risks. We release our benchmark as a framework to support evaluation of agent behavior under competing legitimate interests.",
       citationLink: "",
       links: [
         {
@@ -332,6 +339,16 @@ export const DATA = {
           href: "https://openreview.net/forum?id=KJTiUm8b7d",
         },
       ],
+    },
+    {
+      title:
+        "Protein Language Models Fail To Capture Contact Predictions Under Invariant Relabeling",
+      href: "https://openreview.net/group?id=NeurIPS.cc/2026/Workshop/ICBINB-BIO",
+      authors: ["Paarth Batra*", "<b>Aryan Keluskar</b>*"],
+      venue: "ICBINB-BIO Workshop at NeurIPS 2026",
+      abstract:
+        "Protein language models (pLMs) produce highly accurate contact maps from single sequence inputs. People often take this accuracy as proof that these models implicitly learn invariant coevolutionary statistics, extracting the same signals as classical alignment-based methods like Potts. In this work, we introduce a diagnostic framework around a global bijective relabeling of the amino-acid alphabet. This transformation permutes residue letters while leaving all alignment-level information, column entropies, and pairwise edit distances unchanged. Pseudolikelihood Potts models and inverse-covariance estimators remain invariant under this transformation, however pLMs fail the test completely. Across multiple architectures (ESM-2, MSA Transformer, AMPLIFY) and model scales (8M to 3B parameters), pLMs suffer a catastrophic collapse in contact map predictions under certain regimes of relabeling. Using Hamming distance controls and biochemical grouping interventions, we attempt to isolate what likely causes this degradation and find that these models rely on explicit, canonical residue identities (\"alphabet anchoring\") rather than pure coevolutionary statistics. Increasing scale makes models more responsive to biochemical classes, but their performance still degrades under relabeling. Our findings show a fundamental gap between neural representation mechanisms and classical coevolutionary models. More broadly, our work showcases how diagnostic perturbations that preserve performance on classical models can expose hidden representation biases and prevent overt reliance on neural black boxes in biological modeling.",
+      citationLink: "",
     },
     {
       title:
@@ -365,6 +382,8 @@ export const DATA = {
       href: "https://arxiv.org/abs/2604.16744",
       authors: ["Ryan T. Woo*", "Anmol Rao*", "<b>Aryan Keluskar</b>", "Yinong Chen"],
       venue: "Proceedings of the BEA Workshop at ACL 2026",
+      abstract:
+        "We present a framework for evaluating adaptive personalization of educational reading materials with theory-grounded simulated learners. The system builds a learning-objective and knowledge-component ontology from open textbooks, curates it in a browser-based Ontology Atlas, labels textbook chunks with ontology entities, and generates aligned reading-assessment pairs. Simulated readers learn from passages through a Construction-Integration-inspired memory model with DIME-style reader factors, KREC-style misconception revision, and an open New Dale-Chall readability signal. Answers are produced by score-based option selection over the learner's explicit memory state, while BKT drives adaptation. Across three sampled subject ontologies and matched cohorts of 50 simulated learners per condition, adaptive reading significantly improved outcomes in computer science, yielded smaller positive but inconclusive gains in inorganic chemistry, and was neutral to slightly negative in general biology.",
       links: [
         {
           title: "arXiv",
@@ -382,6 +401,8 @@ export const DATA = {
       href: "https://www.biorxiv.org/content/10.64898/2026.02.05.704073v1",
       authors: ["<b>Aryan Keluskar</b>*", "Paarth Batra*", "Valentyn Bezshapkin", "James T. Morton", "Qiyun Zhu"],
       venue: "Honors Thesis (under review at a major conference)",
+      abstract:
+        "Understanding protein function is an essential aspect of many biological applications. The exponential growth of protein sequence data has created a critical throughput bottleneck for structural homology detection: While billions of protein sequences have been identified from DNA sequencing data, the number of protein folds underlying biology is surprisingly limited, likely numbering tens of thousands. The \"sequence-fold gap\" limits the success of functional annotation methods that rely on sequence homology, especially for newly sequenced genomes. TM-Vec is a deep learning architecture that can predict TM-scores as a metric of structural similarity directly from sequence pairs, bypassing true structural alignment. However, the computational demands of its protein language model (PLM) embeddings create a significant bottleneck for large-scale database searches. In this work we present TM-Vec 2s, a highly efficient model created through distillation from a foundational teacher model. Benchmarks on the CATH and SCOPe domains for large-scale database queries showed that TM-Vec 2s is 185x faster than the original TM-Vec, while achieving higher TM-score prediction accuracy. It is even more efficient than the structure-informed search implemented in Foldseek, while showing strong competition in identifying remote homology between protein molecules. TM-Vec 2s significantly expands scalable, efficient exploration of protein structural homology space.",
       citationLink: "",
       links: [
         {

@@ -87,6 +87,7 @@ function buildHomePageMarkdown(): string {
     md += `Venue: ${pub.venue}\n\n`;
     const { citation } = resolveCitation(pub);
     if (citation) md += `Citations: ${citation}\n\n`;
+    if (pub.abstract) md += `**Abstract:** ${pub.abstract}\n\n`;
     if (pub.links) {
       for (const link of pub.links) {
         md += `- [${link.title}](${link.href})\n`;

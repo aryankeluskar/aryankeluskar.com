@@ -1,9 +1,10 @@
 import { DATA } from "@/data/resume";
 // import { Card, CardHeader, CardContent } from "@/components/ui/card"; // Card components are no longer needed
 // import Image from "next/image"; // Image component is no longer needed
-import { LinkIcon, TrendingUp } from "lucide-react";
+import { ChevronRight, LinkIcon, TrendingUp } from "lucide-react";
 import React from "react";
 import { resolveCitation } from "@/lib/citations";
+import { cn } from "@/lib/utils";
 
 function CitationLink({
   publication,
@@ -51,6 +52,18 @@ function AuthorList({ authors }: { authors?: string[] }) {
 }
 
 export function Publications() {
+  const [openAbstracts, setOpenAbstracts] = React.useState<Set<number>>(
+    () => new Set()
+  );
+
+  const toggleAbstract = (id: number) =>
+    setOpenAbstracts((prev) => {
+      const next = new Set(prev);
+      if (next.has(id)) next.delete(id);
+      else next.add(id);
+      return next;
+    });
+
   return (
     <section id="publications" className="py-12">
       {" "}
@@ -99,11 +112,29 @@ export function Publications() {
               <div className="mt-1 text-[#0894ff]">
                 {publication.venue}
               </div>
-              {publication.links && publication.links.length > 0 && (
+              {((publication.links && publication.links.length > 0) ||
+                publication.abstract) && (
                 <div className="mt-3 flex flex-wrap gap-x-3 gap-y-2">
                   {" "}
                   {/* Increased gap slightly */}
-                  {publication.links.map((link, linkId) => (
+                  {publication.abstract && (
+                    <button
+                      type="button"
+                      onClick={() => toggleAbstract(id)}
+                      aria-expanded={openAbstracts.has(id)}
+                      aria-controls={`publication-abstract-${id}`}
+                      className="relative inline-flex items-center gap-x-1 text-xs md:text-sm text-muted-foreground hover:underline before:absolute before:-inset-2 before:content-['']"
+                    >
+                      <ChevronRight
+                        className={cn(
+                          "size-3 md:size-4 transition-transform duration-200 motion-reduce:transition-none",
+                          openAbstracts.has(id) && "rotate-90"
+                        )}
+                      />
+                      Abstract
+                    </button>
+                  )}
+                  {publication.links?.map((link, linkId) => (
                     <a
                       key={linkId}
                       href={link.href}
@@ -120,6 +151,22 @@ export function Publications() {
                     </a>
                   ))}
                   <CitationLink publication={publication} />
+                </div>
+              )}
+              {publication.abstract && (
+                <div
+                  id={`publication-abstract-${id}`}
+                  inert={!openAbstracts.has(id)}
+                  className={cn(
+                    "grid transition-[grid-template-rows] duration-200 ease-out motion-reduce:transition-none",
+                    openAbstracts.has(id) ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
+                  )}
+                >
+                  <div className="overflow-hidden">
+                    <p className="mt-3 border-l-2 border-border pl-3 text-sm leading-relaxed text-muted-foreground text-pretty">
+                      {publication.abstract}
+                    </p>
+                  </div>
                 </div>
               )}
             </div>
