@@ -363,12 +363,18 @@ export const DATA = {
     {
       title:
         "Protein Language Models Fail To Capture Contact Predictions Under Invariant Relabeling",
-      href: "https://openreview.net/group?id=NeurIPS.cc/2026/Workshop/ICBINB-BIO",
+      href: "https://openreview.net/forum?id=dmp6tFw406",
       authors: ["Paarth Batra*", "<b>Aryan Keluskar</b>*"],
       venue: "ICBINB-BIO Workshop at NeurIPS 2026",
       abstract:
         "Protein language models (pLMs) produce highly accurate contact maps from single sequence inputs. People often take this accuracy as proof that these models implicitly learn invariant coevolutionary statistics, extracting the same signals as classical alignment-based methods like Potts. In this work, we introduce a diagnostic framework around a global bijective relabeling of the amino-acid alphabet. This transformation permutes residue letters while leaving all alignment-level information, column entropies, and pairwise edit distances unchanged. Pseudolikelihood Potts models and inverse-covariance estimators remain invariant under this transformation, however pLMs fail the test completely. Across multiple architectures (ESM-2, MSA Transformer, AMPLIFY) and model scales (8M to 3B parameters), pLMs suffer a catastrophic collapse in contact map predictions under certain regimes of relabeling. Using Hamming distance controls and biochemical grouping interventions, we attempt to isolate what likely causes this degradation and find that these models rely on explicit, canonical residue identities (\"alphabet anchoring\") rather than pure coevolutionary statistics. Increasing scale makes models more responsive to biochemical classes, but their performance still degrades under relabeling. Our findings show a fundamental gap between neural representation mechanisms and classical coevolutionary models. More broadly, our work showcases how diagnostic perturbations that preserve performance on classical models can expose hidden representation biases and prevent overt reliance on neural black boxes in biological modeling.",
       citationLink: "",
+      links: [
+        {
+          title: "OpenReview",
+          href: "https://openreview.net/forum?id=dmp6tFw406",
+        },
+      ],
     },
     {
       title:
