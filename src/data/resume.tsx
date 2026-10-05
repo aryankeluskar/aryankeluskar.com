@@ -342,6 +342,26 @@ export const DATA = {
     },
     {
       title:
+        "Reading Documents out of Weight Updates: Hypernetwork-Written LoRA Adapters Linearly Encode Their Document",
+      href: "https://openreview.net/forum?id=Vsuhr8sbG8",
+      authors: ["<b>Aryan Keluskar</b>"],
+      venue: "COLM Workshop on Context Beyond the Window (<b>Oral</b>, Top 4 of 63 accepted)",
+      abstract:
+        "Hypernetworks such as Doc-to-LoRA write an entire document into a low-rank weight update in a single forward pass. We ask whether the document can be read back out, and find that it can, but only when a hypernetwork wrote it. A linear probe from the low-rank factors of a Doc-to-LoRA update to the document's bag-of-words identifies the held-out document at recall@5 = 0.86–0.99 across three model families (chance < 0.16). Ordinary SGD adapters that internalize the same documents are decodable only at chance, a 10–20σ gap at matched effective update norm. A Doc-to-LoRA update is a near-linear image of the document embedding (held-out R² = 0.97) confined to a low-dimensional subspace, whereas an SGD update is not a function of any shared embedding. However, the leak does not require the weights, and an attacker who can only query a deployed adapter recovers its document from output logits alone (recall@5 0.94, and 0.50 when the API exposes only its top-20 logprobs). An SGD adapter, unreadable from its weights, still regurgitates its document when queried (0.59). Whether a weight update is readable therefore depends on its generator, and any deployed document fine-tune leaks its training text to anyone who can query it.",
+      citationLink: "",
+      links: [
+        {
+          title: "OpenReview",
+          href: "https://openreview.net/forum?id=Vsuhr8sbG8",
+        },
+        {
+          title: "Slides",
+          href: "/cbw-orals.pdf",
+        },
+      ],
+    },
+    {
+      title:
         "Protein Language Models Fail To Capture Contact Predictions Under Invariant Relabeling",
       href: "https://openreview.net/group?id=NeurIPS.cc/2026/Workshop/ICBINB-BIO",
       authors: ["Paarth Batra*", "<b>Aryan Keluskar</b>*"],

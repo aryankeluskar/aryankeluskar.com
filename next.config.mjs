@@ -80,6 +80,14 @@ const nextConfig = {
     // Combine both types of redirects
     return [...dubRedirects, ...customRedirects];
   },
+  async rewrites() {
+    return [
+      {
+        source: "/cbw",
+        destination: "/cbw-orals.pdf",
+      },
+    ];
+  },
 };
 
 export default nextConfig;

@@ -20,6 +20,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: "monthly",
       priority: 0.8,
     },
+    {
+      url: `${baseUrl}/cbw-orals.pdf`,
+      lastModified: new Date(),
+      changeFrequency: "yearly",
+      priority: 0.6,
+    },
   ];
 
   // Blog posts

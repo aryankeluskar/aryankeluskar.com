@@ -84,7 +84,7 @@ function buildHomePageMarkdown(): string {
       const authors = pub.authors.map((a) => stripHtmlTags(a)).join(", ");
       md += `Authors: ${authors}\n\n`;
     }
-    md += `Venue: ${pub.venue}\n\n`;
+    md += `Venue: ${stripHtmlTags(pub.venue)}\n\n`;
     const { citation } = resolveCitation(pub);
     if (citation) md += `Citations: ${citation}\n\n`;
     if (pub.abstract) md += `**Abstract:** ${pub.abstract}\n\n`;

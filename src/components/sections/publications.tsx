@@ -109,9 +109,10 @@ export function Publications() {
                   {publication.contributionNote}
                 </div>
               )}
-              <div className="mt-1 text-[#0894ff]">
-                {publication.venue}
-              </div>
+              <div
+                className="mt-1 text-[#0894ff]"
+                dangerouslySetInnerHTML={{ __html: publication.venue }}
+              />
               {((publication.links && publication.links.length > 0) ||
                 publication.abstract) && (
                 <div className="mt-3 flex flex-wrap gap-x-3 gap-y-2">
