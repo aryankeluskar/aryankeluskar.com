@@ -1,9 +1,9 @@
 {
-  "updatedAt": "2026-10-13T07:39:40.225Z",
+  "updatedAt": "2026-10-14T07:39:40.232Z",
   "source": "serpapi",
   "authorId": "wVDeZtcAAAAJ",
   "totals": {
-    "citations": 115,
+    "citations": 116,
     "hIndex": 2,
     "i10Index": 2
   },
@@ -23,7 +23,7 @@
     {
       "key": "scikit bio a fundamental python library for biological omic data analysis",
       "title": "Scikit-bio: a fundamental Python library for biological omic data analysis",
-      "citations": 65,
+      "citations": 66,
       "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=15971703398130207774"
     },
     {
