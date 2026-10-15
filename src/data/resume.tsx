@@ -725,7 +725,34 @@ export const DATA = {
         },
       ],
     },
-
+    {
+      title: "Polymarket MCP",
+      href: "https://dub.sh/polymarket-mcp",
+      image: "/polymarket_mcp.webp",
+      dates: "2024",
+      active: true,
+      description:
+        "Lets agents access Polymarket market data in the AI app of your choice. Over **50K tool calls** on Smithery's leaderboard of April 2026.",
+      technologies: [
+        "TypeScript",
+        "Cloudflare Workers",
+        "Polymarket",
+        "Bun",
+        "Model Context Protocol",
+      ],
+      links: [
+        {
+          icon: <Icons.github className="size-4" />,
+          type: "GitHub",
+          href: "https://git.new/polymarket-mcp",
+        },
+        {
+          icon: <Icons.globe className="size-4" />,
+          type: "",
+          href: "https://dub.sh/polymarket-mcp",
+        }
+      ],
+    },
     {
       title: "Canvas MCP",
       href: "https://git.new/canvas-mcp",
@@ -750,6 +777,37 @@ export const DATA = {
           icon: <Icons.github className="size-4" />,
           type: "GitHub",
           href: "https://git.new/canvas-mcp",
+        },
+      ],
+    },
+    {
+      title: "Jiggle Wiggle",
+      href: "https://devpost.com/software/jiggle-wiggle",
+      image: "/jiggle-wiggle.webp",
+      dates: "2026",
+      active: true,
+      description:
+        "Real-time AI dance and fitness coach. Compare your webcam to any YouTube video or Zoom instructor.",
+      technologies: [
+        "TypeScript",
+        "Next.js",
+        "MediaPipe",
+        "Zoom SDK",
+        "OpenAI",
+        "Groq",
+        "HeyGen",
+        "SAM2",
+      ],
+      links: [
+        {
+          icon: <Icons.github className="size-4" />,
+          type: "GitHub",
+          href: "https://github.com/cindyzli/jigglewiggle",
+        },
+        {
+          icon: <Icons.globe className="size-4" />,
+          type: "Website",
+          href: "https://devpost.com/software/jiggle-wiggle",
         },
       ],
     },
@@ -786,31 +844,34 @@ export const DATA = {
       ],
     },
     {
-      title: "Polymarket MCP",
-      href: "https://dub.sh/polymarket-mcp",
-      image: "/polymarket_mcp.webp",
-      dates: "2024",
+      title: "VibeCheck",
+      href: "https://vercel-ff-five.vercel.app",
+      image: "/vibecheck.webp",
+      dates: "2026",
       active: true,
       description:
-        "Lets agents access Polymarket market data in the AI app of your choice. Over **50K tool calls** on Smithery's leaderboard of April 2026.",
+        "Mixed-reality dance and fitness coach using Meta Quest 3. Get a real-time voice coach with a limb-by-limb scorecard.",
       technologies: [
         "TypeScript",
-        "Cloudflare Workers",
-        "Polymarket",
-        "Bun",
-        "Model Context Protocol",
+        "Next.js",
+        "WebXR",
+        "Meta Quest 3",
+        "MediaPipe",
+        "Vercel AI Gateway",
+        "Vercel Blob",
+        "Llama",
       ],
       links: [
         {
           icon: <Icons.github className="size-4" />,
           type: "GitHub",
-          href: "https://git.new/polymarket-mcp",
+          href: "https://github.com/aryankeluskar/vercel_ff",
         },
         {
-          icon: <Icons.globe className="size-4" />,
+          icon: <Icons.youtube className="size-4" />,
           type: "",
-          href: "https://dub.sh/polymarket-mcp",
-        }
+          href: "https://youtu.be/oF5_4Gov9E8",
+        },
       ],
     },
     {
