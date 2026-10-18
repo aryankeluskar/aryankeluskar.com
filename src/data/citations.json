@@ -1,9 +1,9 @@
 {
-  "updatedAt": "2026-10-17T07:00:50.656Z",
+  "updatedAt": "2026-10-18T07:00:51.354Z",
   "source": "serpapi",
   "authorId": "wVDeZtcAAAAJ",
   "totals": {
-    "citations": 119,
+    "citations": 121,
     "hIndex": 2,
     "i10Index": 2
   },
@@ -29,7 +29,7 @@
     {
       "key": "tm vec 2 accelerated protein homology detection for structural similarity",
       "title": "TM-Vec 2: Accelerated Protein Homology Detection for Structural Similarity",
-      "citations": 1,
+      "citations": 2,
       "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=17197181516265414185"
     },
     {
@@ -41,7 +41,7 @@
     {
       "key": "when does personality composition matter for multi agent llm teams",
       "title": "When Does Personality Composition Matter for Multi-Agent LLM Teams?",
-      "citations": 1,
+      "citations": 2,
       "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=12310471239664580850"
     }
   ]
