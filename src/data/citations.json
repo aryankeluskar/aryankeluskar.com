@@ -1,9 +1,9 @@
 {
-  "updatedAt": "2026-10-18T07:00:51.354Z",
+  "updatedAt": "2026-10-19T07:00:55.415Z",
   "source": "serpapi",
   "authorId": "wVDeZtcAAAAJ",
   "totals": {
-    "citations": 121,
+    "citations": 123,
     "hIndex": 2,
     "i10Index": 2
   },
@@ -11,7 +11,7 @@
     {
       "key": "do llms understand ambiguity in text a case study in open world question answering",
       "title": "Do LLMs Understand Ambiguity in Text? A Case Study in Open-world Question Answering",
-      "citations": 47,
+      "citations": 48,
       "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=10776899312694291117,378258881956993642,6106901872104705566"
     },
     {
@@ -23,7 +23,7 @@
     {
       "key": "scikit bio a fundamental python library for biological omic data analysis",
       "title": "Scikit-bio: a fundamental Python library for biological omic data analysis",
-      "citations": 69,
+      "citations": 70,
       "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=15971703398130207774"
     },
     {
