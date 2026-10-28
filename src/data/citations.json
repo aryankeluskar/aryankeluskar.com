@@ -1,9 +1,9 @@
 {
-  "updatedAt": "2026-10-24T07:00:51.763Z",
+  "updatedAt": "2026-10-28T07:00:50.017Z",
   "source": "serpapi",
   "authorId": "wVDeZtcAAAAJ",
   "totals": {
-    "citations": 125,
+    "citations": 127,
     "hIndex": 2,
     "i10Index": 2
   },
@@ -11,8 +11,8 @@
     {
       "key": "do llms understand ambiguity in text a case study in open world question answering",
       "title": "Do LLMs Understand Ambiguity in Text? A Case Study in Open-world Question Answering",
-      "citations": 48,
-      "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=10776899312694291117,378258881956993642,6106901872104705566"
+      "citations": 50,
+      "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=10776899312694291117,6106901872104705566,378258881956993642"
     },
     {
       "key": "evaluating adaptive personalization of educational readings with simulated learners",
