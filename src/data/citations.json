@@ -1,9 +1,9 @@
 {
-  "updatedAt": "2026-10-28T07:00:50.017Z",
+  "updatedAt": "2026-10-29T07:00:50.579Z",
   "source": "serpapi",
   "authorId": "wVDeZtcAAAAJ",
   "totals": {
-    "citations": 127,
+    "citations": 126,
     "hIndex": 2,
     "i10Index": 2
   },
@@ -11,7 +11,7 @@
     {
       "key": "do llms understand ambiguity in text a case study in open world question answering",
       "title": "Do LLMs Understand Ambiguity in Text? A Case Study in Open-world Question Answering",
-      "citations": 50,
+      "citations": 49,
       "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=10776899312694291117,6106901872104705566,378258881956993642"
     },
     {
