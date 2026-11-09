@@ -260,7 +260,13 @@ export const DATA = {
   ] as HackathonType[],
   writing: [
     {
-      title: "Faking a Virtual Filesystem Over GitHub's API for Browser-based Agents",
+      title: "Personalizing Personalization: Post training helps in meta-learning for coding agent memory",
+      href: "/blog/post-training-helps-in-meta-learning-for-agent-memory",
+      preview: "Today's memory systems are great at remembering and delivering context, but nobody has trained models for knowing how (and how not) to use these systems.",
+      thumbnail: "",
+    },
+    {
+      title: "Faking a Virtual Filesystem for Browser-based Agents",
       href: "https://x.com/soydotrun/status/2047015769146298698",
       preview: "Engineering details on how I built git-fs, a coding agent that runs completely inside your browser.",
       thumbnail: "/git-fs.webp",
@@ -272,7 +278,7 @@ export const DATA = {
       thumbnail: "/mcp_logo.webp",
     },
     {
-      title: "How Computation Graphs solve the Eager Execution Problem in PyTorch (torch.compile)",
+      title: "How Graphs solve Memory Management in PyTorch",
       href: "https://medium.com/@soydotrun/how-torch-compile-solves-the-eager-execution-problem-in-pytorch-4d45ef7e7777",
       preview: "Technical deep-dive into why computation graphs help with memory management and compute amortization in PyTorch.",
       thumbnail: "/Pytorch_logo.webp",

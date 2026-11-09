@@ -1,0 +1,101 @@
+---
+title: "Post training helps in meta-learning for agent memory (Personalizing personalization)"
+publishedAt: "2026-11-05"
+summary: "Today's memory systems are great at remembering and delivering context, but nobody has trained models for knowing how (and how not) to use these systems. So, I post-trained gpt-oss on agent traces in the wild to learn when and when not to personalize."
+---
+
+TL;DR: Today's memory systems are great at remembering and delivering context, but nobody has trained models for knowing how (and how not) to use these systems. So, I post-trained gpt-oss on agent traces in the wild to learn when and when not to personalize.
+
+Hot take, personalization and memory are NOT the same. They have very distinct objectives. The "memory" frontier has pretty much been conquered, we can see agents perform ingestion and context delivery. Even the simplest memory systems like chatgpt and claude are able to save what you say, and find it as needed. More sophisticated solutions like [Supermemory](https://supermemory.ai/), [Hyperspell](https://www.hyperspell.com/) and [honcho.dev](https://honcho.dev) have a lot of craft put into them and it feels magical to have systems update facts, forget stale info and efficiently fetch what's needed.
+
+However, the feeling most users actually want is a step above: the assistant learns when to use memory, which memory to use, and when to leave a query alone. Funnily enough, this is not the first time we're asking this question. When the internet spawned and search consoles were a holy grail, Microsoft had to answer should you personalize every search query? It kinda makes sense, if you are searching for IMAX movie theaters then the search results should show the ones in your city. At the same time, searching for instagram or Van Gogh doesn't need personalization since everyone searching for those are looking for the same 2-3 results. So how did they draw this line?
+
+The paper ([https://dl.acm.org/doi/epdf/10.1145/1390334.1390364](https://dl.acm.org/doi/epdf/10.1145/1390334.1390364)) will do a much better job explaining than I can, but they developed a proxy for measuring this ambiguity and used it to differentiate queries. They use click entropy for this, which is the variation across users in what is clicked for the same query.
+
+![image.png](/blog/agent-memory/click-entropy.png)
+
+Using this method, they built prediction models and found that while the query itself carries a signal, the strongest predictions for the potential of personalization use the query, its results, and its history together. For click entropy, query features alone reach about 40% accuracy but using all the features, it reaches to about 81% accuracy.
+
+## Why not personalize every query?
+
+This is how most agent memory systems operate today, making a hook or gathering context for every prompt. As shown in the 2008 paper by Teevan/Microsoft, it is quite difficult to predict whether to personalize or not on the query alone, so one would be justified to inject context on every query but that doesn't mean it's going to help. In fact, the authors show that blanket personalization is harmful.
+
+Unreliable personal information can “swamp” stronger aggregate evidence about what searchers want, and this is probably the reason why most of you have turned off memory on chatgpt and claude because it induces bias rather than personalization. Plus, memory makes an LLM more sycophantic! There is a NeurIPS paper ([https://arxiv.org/pdf/2607.01071](https://arxiv.org/pdf/2607.01071)) showing that always injecting memory causes agents to over-align with the user at the cost of factual accuracy or objective reasoning.
+
+![image.png](/blog/agent-memory/memory-sycophancy.png)
+
+I am specifically excited by the "valid memory selection" and meta-learning directions motivated by this paper. Blanket personalization should not be a paradigm. It hurts objective accuracy by inducing biases, and there should be a right place and time to insert memories, so we need to develop ways to have models learn this opportunity.
+
+**What about using a filter like Jev?**
+
+Technically it should work. Using a filter like [Dhravya Shah](https://x.com/@dhravyashah) showed in [his blog](https://supermemory.ai/blog/jev-memory-context-engineering/) is a promising direction. He also agrees that *"models are very bad at deciding when some memory should be helpful"* and finds that having Jev make this decision feels really good. It's negligible latency, nearly free and should work as intended but as I will show in the baseline test, Jev still has an LLM as its backbone so it has its shortcomings. It could be better than gpt-oss, but based on the query alone LLMs are not good at this judgement. The main reasons include that there isn't enough high quality data for this signal and LLMs are just bad at epistemic humility.
+
+## Baseline + Post Training gpt-oss
+
+Coming back to personalization, these factors have made me believe that the judgement of when and how to use injected context should live inside the model. The moonshot of personalization is having a model that adapts to a new person in-context, but it can't exist if this judgment lives outside it.
+
+**Data Curation**
+
+The [SWE-Chat dataset](https://huggingface.co/datasets/SALT-NLP/SWE-chat) is a goldmine for this, it has over millions of real-world AI coding sessions. It has a total of 230k user prompts of which ~2k are memory related, in the sense that they contain pushback from the user on repeating a past instruction. Then for each pushback, look at that person's earlier prompts. If they re-asserted a standing rule / preference / project spec, then the agent should have used their history. If not, then memory couldn't have helped so injecting from history shouldn't be necessary.
+
+![image.png](/blog/agent-memory/data-curation.png)
+
+To be fair, this isn't the best proxy in the world for this goal but the scale of this dataset helps to offset it. A total of 175 unique devs were in this narrowed down dataset, so there's some level of generalization. I also run a control, where judgement on the same prompt is run against a stranger's history. if it also "hits," then it's not person-specific.
+
+**How much do LLMs already know?**
+
+Prompting an LLM to say whether or not to use injected context results in an AUC of 0.520, which is really bad since random guessing would have landed at 0.5. Going a layer deeper, I used a linear probe to measure an LLM's confidence levels while using injected context. This is inspired from a COLM paper ([https://openreview.net/pdf?id=hWF37ogUlH](https://openreview.net/pdf?id=hWF37ogUlH)) which shows that logits inside an LLM are good predictors of its confidence levels.
+
+![image.png](/blog/agent-memory/colm-probe.png)
+
+Linear Probe 101
+
+![image.png](/blog/agent-memory/linear-probe.png)
+
+I had gpt-oss-20b go through some of the sessions and answer whether to "use" or "skip" injected context at each turn. Using the linear probe, I found that the LLM was wrongly confident about when to use and when to skip. The AUC of the probe was 0.628 which is better that having the LLM verbalize the decision, so LLMs internally have a hint of this judgement but it's far from enough.
+
+**Reward Design for Post Training**
+
+I used three rewards for post training gpt-oss:
+
+(1) basic binary: USE and SKIP are pretty good signals on their own so have the model output "USE" and "SKIP" for input data, assign +1, 0 or -1 to these labels and RL till it works.
+
+(2) predict and RL the probability: going back to the linear probe, having the model learn the words of "USE" and "SKIP" should theoretically transfer to the model but it's not reliable. So, we push the model's confidence at the decision token towards the right answer. This allows the model write a full reasoning/CoT trace and RL the activations of the final decision.
+
+(3) take a data redistribution approach and reinforce what it already knows: we have a linear probe reading the residual stream (ie: CoT) right before the decision. So, I freeze that probe and train the model to match its output by redistributing its logits. If the model's internals already have the signal, then it should be able to teach the output layer.
+
+![image.png](/blog/agent-memory/reward-design.png)
+
+**Prompt Baseline**
+
+I also wanted to check how well does prompting close this gap. I asked claude code to look at the golden dataset to create a prompt that works better than baseline. Claude tried different wordings, different ways to frame the question, different reasoning styles and the best one it found scores 0.618 AUC, which is definitely an improvement over baseline.
+
+Here's the prompt it found:
+
+> Before replying, go through this developer's earlier messages above and name the one that states a preference, rule or instruction bearing on the latest request, quoting its key words, or say that none does. Then end with exactly DECISION: USE if you named one or DECISION: SKIP if none applies.
+
+## So, how well does post-training work?
+
+Post-training crushed it on the developers it studied. This three-stage method achieved an AUC of 0.75 on the developers it studied, so it clearly learns in the direction we want it to. It is much better than the tuned prompt, but it's not perfect by any means.
+
+There are failure modes where this helps and post-training overall shines. Post-training the linear probe on the reasoning traces gave an AUC of 0.632 on held out or "never-seen" developers while the tuned prompt was at 0.531, going up from the baseline of 0.525. The most promising direction from these results is that the improvement from post-training grows with the number of people it studied. Going from an AUC of 0.531 at 10 developers → 0.579 at 80 → 0.632 at 175.
+
+Just out of curiosity, I wanted to see how would "always-use" mode perform in this environment. The agent was accurate, but it also dragged an irrelevant memory into an unrelated request 25 times as often.
+
+**Have you heard of frontier models aryan?**
+
+Yes, very expensive to run though 💔 Claude Opus 5.5 scored 0.636 on the same test and Sonnet 5.5 scored 0.627 both are clearly better than prompted gpt-oss, but below the post-trained model. However, it's not sunshine and rainbows. Sonnet says USE on ~81% of what it answers. Opus just refused to answer 9% of these cases so it's not great and you can't post train these models to study your or your users' preferences.
+
+## Where does this lead us?
+
+The bitter lesson has shown that hand-coding judgements or heuristics are always beaten by neural methods that learn with scale. Using Jev or other low-latency models as a filter sounds great, but it's like studying vs playing music. I played drums when I was 10, and I was always tempted to play longer pieces like Arctic Monkeys' 505. I can memorize beats for the whole song and practice until perfection (analogous to SFT/fine-tuning). On the flip side, I could read and memorize the notation but not play it on drums (and not know what the notation actually means). Both of these ways are me learning how to play, but first is not generalizable and second is a mirage. This introduces a concept of "open-book" study where it's much better for me to learn what the musical notation means, understand how it maps onto drums and be able to play this or any other music piece from the book. The music lives in the sheets and my memory simultaneously.
+
+![image.png](/blog/agent-memory/open-book.png)
+
+[Engram](https://x.com/@EngramLab) goes deep into this with their [Harvey](https://x.com/@harvey) case study ([https://engram.com/blog/legal-agents-with-memory](https://engram.com/blog/legal-agents-with-memory)). The TLDR is everyone has their bespoke way of organizing data; you can't have a model continuously update its weights after every file edit because that's infeasible (closed-book study) but an off the shelf an LLM has to painstakingly navigate your data. There is a pareto curve where this navigation cost can be offset by post-training your model (open-book study) to be better at (1) navigating the hierarchies and (2) using the injected context.
+
+If you're building personal assistants or memory systems, the moonshot would be post-training models in harnesses end to end. Building custom models for memory extraction and retrieval is really promising but owning the full model layer and having it "study" how to use your injected context is going make a difference. Kind of like walled gardens or the 'Apple' ecosystems in the AI era. Going back to Engram's blog, they trained their agent end-to-end in their harness, which means the agent will be much cheaper (maybe more accurate too) to use with their memory store.
+
+The future is bright for memory systems and especially in-context continual learning. Having been on the data curation and RL environments side of post-training plus listening to the amazing speaker lineup at [this COLM workshop](https://context-beyond-window.github.io/) and [Snorkel AI](https://x.com/@SnorkelAI)'s frontier data summit, the models are exponentially improving, so this gap is going to close down but as MemSyco-Bench showed, it will require effort (ie: compute, data and good reward signals) from our side to build systems that "learn" you instead of "remembering" you.
+
+Thank you for reading :)
