@@ -1,9 +1,9 @@
-import { getBlogPosts } from "@/data/blog";
+import { BLOG_DESCRIPTION, BLOG_TITLE, getBlogPosts } from "@/data/blog";
 import Link from "next/link";
 
 export const metadata = {
-  title: "Blog",
-  description: "My thoughts on software development, life, and more.",
+  title: BLOG_TITLE,
+  description: BLOG_DESCRIPTION,
 };
 
 export default async function BlogPage() {

@@ -18,7 +18,7 @@ export async function GET() {
         name: "markdown-negotiation",
         type: "content",
         description:
-          "Request any HTML page with Accept: text/markdown to get a markdown version",
+          "Request /, /resume, /blog, or a blog post with Accept: text/markdown to get that page as markdown",
         url: "https://aryankeluskar.com/api/markdown",
         sha256:
           "0000000000000000000000000000000000000000000000000000000000000000",

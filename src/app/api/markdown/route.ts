@@ -1,9 +1,37 @@
 import { NextResponse } from "next/server";
 import React from "react";
+import {
+  BLOG_DESCRIPTION,
+  BLOG_TITLE,
+  blogPostingJsonLd,
+  formatPublishedDate,
+  listPostSources,
+  postImageUrl,
+  publishedAtTime,
+  readPostSource,
+  type PostSource,
+} from "@/data/blog";
 import { DATA } from "@/data/resume";
 import { resolveCitation } from "@/lib/citations";
+import {
+  absolutizeRootLinks,
+  canonicalLink,
+  classifyMarkdownPath,
+  discoveryLinkHeaders,
+  escapeMarkdownLinkLabel,
+  SITE_URL,
+} from "@/lib/content-negotiation";
 
-const SITE_URL = "https://aryankeluskar.com";
+if (DATA.url !== SITE_URL) {
+  throw new Error(
+    `DATA.url (${DATA.url}) does not match SITE_URL (${SITE_URL})`,
+  );
+}
+
+export const runtime = "nodejs";
+export const dynamic = "force-dynamic";
+
+const CONTENT_SIGNAL = "ai-train=no, search=yes, ai-input=yes";
 
 function jsxToText(node: React.ReactNode): string {
   if (node == null || typeof node === "boolean") return "";
@@ -153,27 +181,159 @@ function buildResumeMarkdown(): string {
   return md;
 }
 
+function buildBlogIndexMarkdown(posts: PostSource[]): string {
+  const sorted = [...posts].sort((a, b) => {
+    const delta =
+      publishedAtTime(b.metadata.publishedAt) -
+      publishedAtTime(a.metadata.publishedAt);
+    if (delta !== 0) return delta;
+    return a.slug.localeCompare(b.slug);
+  });
+
+  const sections = sorted.map((post) => {
+    const href = `${SITE_URL}/blog/${post.slug}`;
+    return [
+      `## [${escapeMarkdownLinkLabel(post.metadata.title)}](${href})`,
+      "",
+      formatPublishedDate(post.metadata.publishedAt),
+      "",
+      post.metadata.summary,
+      "",
+    ].join("\n");
+  });
+
+  return [
+    "---",
+    `title: ${JSON.stringify(`${BLOG_TITLE} | ${DATA.name}`)}`,
+    `description: ${JSON.stringify(BLOG_DESCRIPTION)}`,
+    "---",
+    "",
+    `# ${BLOG_TITLE}`,
+    "",
+    BLOG_DESCRIPTION,
+    "",
+    sections.join("\n"),
+  ].join("\n");
+}
+
+function buildBlogPostMarkdown(post: PostSource): string {
+  const image = postImageUrl(post, SITE_URL);
+  const body = absolutizeRootLinks(post.content.trim(), SITE_URL);
+  const jsonLd = blogPostingJsonLd(post, { url: SITE_URL, name: DATA.name });
+
+  return [
+    "---",
+    `title: ${JSON.stringify(`${post.metadata.title} | ${DATA.name}`)}`,
+    `description: ${JSON.stringify(post.metadata.summary)}`,
+    `publishedAt: ${JSON.stringify(post.metadata.publishedAt)}`,
+    `image: ${JSON.stringify(image)}`,
+    "---",
+    "",
+    `# ${post.metadata.title}`,
+    "",
+    formatPublishedDate(post.metadata.publishedAt),
+    "",
+    body,
+    "",
+    "```json",
+    JSON.stringify(jsonLd, null, 2),
+    "```",
+    "",
+  ].join("\n");
+}
+
+function markdownResponse(
+  body: string,
+  init: { status?: number; links?: string[] } = {},
+) {
+  const markdown = body.endsWith("\n") ? body : `${body}\n`;
+  const tokens = Math.floor(Buffer.byteLength(markdown, "utf8") / 4);
+  const headers = new Headers({
+    "Content-Type": "text/markdown; charset=utf-8",
+    Vary: "Accept",
+    "X-Content-Type-Options": "nosniff",
+    "x-markdown-tokens": String(tokens),
+    "Content-Signal": CONTENT_SIGNAL,
+    "Cache-Control": "no-store",
+  });
+  if (init.links && init.links.length > 0) {
+    headers.set("Link", init.links.join(", "));
+  }
+  return new NextResponse(markdown, {
+    status: init.status ?? 200,
+    headers,
+  });
+}
+
+function pageLinks(pathname: string): string[] {
+  return [canonicalLink(pathname), ...discoveryLinkHeaders()];
+}
+
+function markdownTarget(request: Request): string {
+  const url = new URL(request.url);
+  // A rewrite keeps the visitor's URL. Direct /api/markdown?path= calls
+  // carry the page in the query string instead.
+  if (url.pathname === "/api/markdown") {
+    return url.searchParams.get("path") ?? "/";
+  }
+  return url.pathname;
+}
+
 export async function GET(request: Request) {
-  const { searchParams } = new URL(request.url);
-  const path = searchParams.get("path") || "/";
+  const classified = classifyMarkdownPath(markdownTarget(request));
 
-  let markdown: string;
-
-  if (path === "/") {
-    markdown = buildHomePageMarkdown();
-  } else if (path === "/resume") {
-    markdown = buildResumeMarkdown();
-  } else if (path === "/blog") {
-    markdown = `# Blog — ${DATA.name}\n\nPosts and writings on AI, systems, and building.\n\nVisit [${DATA.name}'s Blog](${SITE_URL}/blog) for the full list.`;
-  } else {
-    markdown = `# ${DATA.name}\n\nVisit [${SITE_URL}${path}](${SITE_URL}${path}) for more information.`;
+  if (classified.kind === "none") {
+    return markdownResponse(
+      [
+        "---",
+        `title: ${JSON.stringify("Not Found")}`,
+        "---",
+        "",
+        "# Not Found",
+        "",
+        "No markdown representation exists for this path.",
+        "",
+      ].join("\n"),
+      { status: 404 },
+    );
   }
 
-  return new NextResponse(markdown, {
-    status: 200,
-    headers: {
-      "Content-Type": "text/markdown; charset=utf-8",
-      "X-Markdown-Tokens": "true",
-    },
+  if (classified.kind === "home") {
+    return markdownResponse(buildHomePageMarkdown(), {
+      links: pageLinks(classified.pathname),
+    });
+  }
+
+  if (classified.kind === "resume") {
+    return markdownResponse(buildResumeMarkdown(), {
+      links: pageLinks(classified.pathname),
+    });
+  }
+
+  if (classified.kind === "blog-index") {
+    return markdownResponse(buildBlogIndexMarkdown(listPostSources()), {
+      links: pageLinks(classified.pathname),
+    });
+  }
+
+  const post = readPostSource(classified.slug);
+  if (!post) {
+    return markdownResponse(
+      [
+        "---",
+        `title: ${JSON.stringify("Not Found")}`,
+        "---",
+        "",
+        "# Not Found",
+        "",
+        `No blog post exists for \`${classified.slug}\`.`,
+        "",
+      ].join("\n"),
+      { status: 404 },
+    );
+  }
+
+  return markdownResponse(buildBlogPostMarkdown(post), {
+    links: pageLinks(classified.pathname),
   });
 }

@@ -1,4 +1,4 @@
-import { getBlogPosts, getPost } from "@/data/blog";
+import { blogPostingJsonLd, getBlogPosts, getPost, postImageUrl } from "@/data/blog";
 import { DATA } from "@/data/resume";
 import { formatDate } from "@/lib/utils";
 import type { Metadata } from "next";
@@ -19,15 +19,17 @@ export async function generateMetadata({
   }>;
 }): Promise<Metadata | undefined> {
   const { slug } = await params;
-  let post = await getPost(slug);
+  const post = await getPost(slug);
+  if (!post) {
+    notFound();
+  }
 
-  let {
+  const {
     title,
     publishedAt: publishedTime,
     summary: description,
-    image,
   } = post.metadata;
-  let ogImage = image ? `${DATA.url}${image}` : `${DATA.url}/og?title=${title}`;
+  const ogImage = postImageUrl(post, DATA.url);
 
   return {
     title,
@@ -74,22 +76,9 @@ export default async function Blog({
         suppressHydrationWarning
         // eslint-disable-next-line react/no-danger
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "BlogPosting",
-            headline: post.metadata.title,
-            datePublished: post.metadata.publishedAt,
-            dateModified: post.metadata.publishedAt,
-            description: post.metadata.summary,
-            image: post.metadata.image
-              ? `${DATA.url}${post.metadata.image}`
-              : `${DATA.url}/og?title=${post.metadata.title}`,
-            url: `${DATA.url}/blog/${post.slug}`,
-            author: {
-              "@type": "Person",
-              name: DATA.name,
-            },
-          }),
+          __html: JSON.stringify(
+            blogPostingJsonLd(post, { url: DATA.url, name: DATA.name }),
+          ),
         }}
       />
       <h1 className="title font-medium text-2xl tracking-tighter max-w-[650px]">
