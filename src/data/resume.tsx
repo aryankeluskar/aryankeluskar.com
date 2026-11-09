@@ -161,7 +161,7 @@ export const DATA = {
       dates: "October 2024",
       location: "Berkeley, CA",
       description:
-        "Built a full stack web-app that allows users to track their medication schedules. Designed a multi-modal Agentic AI System to check-in on patients and detect for potential side effects using sentiment analysis.",
+        "Designed a multi-modal agentic AI System to regularly check-in on patients and detect for potential side effects using sentiment analysis.",
       links: [
         {
           // icon: <Icons.devpost className="size-4" />,
@@ -703,70 +703,13 @@ export const DATA = {
   ],
   projects: [
     {
-      title: "git-fs",
-      href: "https://github.soy.run/",
-      image: "/gitsandbox.webp",
-      dates: "2026",
-      active: true,
-      description:
-        "Faking a filesystem over GitHub API to run coding agents and instantly chat with any repository fully in your browser. Wrote a [blog about this](https://dub.sh/gitfs-blog).",
-      technologies: [
-        "TypeScript",
-        "Bash",
-        "Cloudflare Workers",
-        "Cloudflare Containers",
-        "Pi-Agent",
-        "just-bash"
-      ],
-      links: [
-        {
-          icon: <Icons.github className="size-4" />,
-          type: "GitHub",
-          href: "https://git.new/git-fs",
-        },
-        {
-          icon: <Icons.globe className="size-4" />,
-          type: "Website",
-          href: "https://github.soy.run/",
-        },
-      ],
-    },
-    {
-      title: "Polymarket MCP",
-      href: "https://dub.sh/polymarket-mcp",
-      image: "/polymarket_mcp.webp",
-      dates: "2024",
-      active: true,
-      description:
-        "Lets agents access Polymarket market data in the AI app of your choice. Over **50K tool calls** on Smithery's leaderboard of April 2026.",
-      technologies: [
-        "TypeScript",
-        "Cloudflare Workers",
-        "Polymarket",
-        "Bun",
-        "Model Context Protocol",
-      ],
-      links: [
-        {
-          icon: <Icons.github className="size-4" />,
-          type: "GitHub",
-          href: "https://git.new/polymarket-mcp",
-        },
-        {
-          icon: <Icons.globe className="size-4" />,
-          type: "",
-          href: "https://dub.sh/polymarket-mcp",
-        }
-      ],
-    },
-    {
       title: "Canvas MCP",
       href: "https://git.new/canvas-mcp",
       image: "/canvas_mcp_banner.webp",
       dates: "2024",
       active: true,
       description:
-        "MCP Server that allows you to query your courses in the AI app of your choice. Over **2K tool calls** in April 2026.",
+        "MCP Server that allows you to query your courses in the AI app of your choice. Over **2,000 users** in April 2026.",
       technologies: [
         "Python",
         "JavaScript",
@@ -818,6 +761,63 @@ export const DATA = {
       ],
     },
     {
+      title: "git-fs",
+      href: "https://github.soy.run/",
+      image: "/gitsandbox.webp",
+      dates: "2026",
+      active: true,
+      description:
+        "Faking a filesystem over GitHub API to run coding agents and instantly chat with any repository fully in your browser. Wrote a [blog about this](https://dub.sh/gitfs-blog).",
+      technologies: [
+        "TypeScript",
+        "Bash",
+        "Cloudflare Workers",
+        "Cloudflare Containers",
+        "Pi-Agent",
+        "just-bash"
+      ],
+      links: [
+        {
+          icon: <Icons.github className="size-4" />,
+          type: "GitHub",
+          href: "https://git.new/git-fs",
+        },
+        {
+          icon: <Icons.globe className="size-4" />,
+          type: "Website",
+          href: "https://github.soy.run/",
+        },
+      ],
+    },
+    {
+      title: "Polymarket MCP",
+      href: "https://dub.sh/polymarket-mcp",
+      image: "/polymarket_mcp.webp",
+      dates: "2024",
+      active: true,
+      description:
+        "Lets agents access Polymarket market data in the AI app of your choice. Over **50,000 tool calls** on Smithery's leaderboard of April 2026.",
+      technologies: [
+        "TypeScript",
+        "Cloudflare Workers",
+        "Polymarket",
+        "Bun",
+        "Model Context Protocol",
+      ],
+      links: [
+        {
+          icon: <Icons.github className="size-4" />,
+          type: "GitHub",
+          href: "https://git.new/polymarket-mcp",
+        },
+        {
+          icon: <Icons.globe className="size-4" />,
+          type: "",
+          href: "https://dub.sh/polymarket-mcp",
+        }
+      ],
+    },
+    {
       title: "Alice",
       image: "/alice_banner.webp",
       href: "https://dub.sh/wonderland",
@@ -856,7 +856,7 @@ export const DATA = {
       dates: "2024",
       active: true,
       description:
-        "AI that solves Minesweeper in record-breaking time. Uses a probabilistic approach, scans the grid, trains a Reinforcement Learning model to make decisions.",
+        "AI that solves Minesweeper in record-breaking time. Uses a probabilistic approach and trains a Reinforcement Learning model.",
       technologies: [
         "Reinforcement Learning",
         "Python",
@@ -879,7 +879,7 @@ export const DATA = {
       dates: "2026",
       active: true,
       description:
-        "Mixed-reality dance and fitness coach using Meta Quest 3. Get a real-time voice coach with a limb-by-limb scorecard.",
+        "Mixed-reality dance and fitness coach using Meta Quest 3. Get a real-time voice coach with a limb-by-limb feedback while learning a routine.",
       technologies: [
         "TypeScript",
         "Next.js",
@@ -928,29 +928,6 @@ export const DATA = {
           icon: <Icons.globe className="size-4" />,
           type: "Download",
           href: "https://dub.sh/cloudstash",
-        },
-      ],
-    },
-    {
-      title: "Turing",
-      href: "https://dub.sh/turing",
-      image: "/turing.webp",
-      dates: "2025",
-      active: true,
-      description:
-        "Turing watches how you do tasks, how you reply to messages, how you work to learn your patterns and automate your tasks.",
-      technologies: [
-        "Python",
-        "Vision Language Models",
-        "Groq",
-        "Computer-Use Agent",
-        "Typescript",
-      ],
-      links: [
-        {
-          icon: <Icons.github className="size-4" />,
-          type: "Devpost",
-          href: "https://dub.sh/turing",
         },
       ],
     },
@@ -1017,7 +994,7 @@ export const DATA = {
     },
     {
       title: "PicThis",
-      image: "/picthis_banner.webp",
+      // image: "/picthis_banner.webp",
       href: "https://npmjs.com/package/picthis",
       dates: "2025",
       active: true,
@@ -1117,31 +1094,6 @@ export const DATA = {
           icon: <Icons.globe className="size-4" />,
           type: "Website",
           href: "https://dub.sh/deepdial",
-        },
-      ],
-    },
-    {
-      title: "Cura Rx",
-      href: "https://devpost.com/software/cura-rx",
-      dates: "2024",
-      active: true,
-      description:
-        "Mental health medication tracker that logs doses, runs voice check-ins, and gives doctors a live view of adherence and mood between appointments. Built the FastAPI backend, Supabase database, FDA drug embeddings, and medicinal chatbot at Cal Hacks 11.0.",
-      technologies: [
-        "Python",
-        "FastAPI",
-        "Supabase",
-        "Vercel",
-        "Hume",
-        "Deepgram",
-        "Llama",
-        "React Native",
-      ],
-      links: [
-        {
-          icon: <Icons.devpost className="size-4" />,
-          type: "Devpost",
-          href: "https://devpost.com/software/cura-rx",
         },
       ],
     },
