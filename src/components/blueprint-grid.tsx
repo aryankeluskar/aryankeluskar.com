@@ -1,6 +1,9 @@
 "use client";
 
 import * as React from "react";
+import { usePathname } from "next/navigation";
+
+const FADED_OPACITY = 0.02;
 
 interface GridState {
   opacity: number;
@@ -38,20 +41,18 @@ function computeOpacity(scrollPosition: number): number {
   const fadeStartPoint = 100;
   const fadeEndPoint = 400;
   if (scrollPosition <= fadeStartPoint) return 0.08;
-  if (scrollPosition >= fadeEndPoint) return 0.02;
+  if (scrollPosition >= fadeEndPoint) return FADED_OPACITY;
   const fadeRange = fadeEndPoint - fadeStartPoint;
   return 0.08 * (1 - (scrollPosition - fadeStartPoint) / fadeRange);
 }
 
 export function BlueprintGrid() {
+  const pathname = usePathname();
+  const isHome = pathname === "/";
   const [state, dispatch] = React.useReducer(reducer, initialState);
 
   React.useEffect(() => {
     dispatch({ type: "mount" });
-
-    const handleScroll = () => {
-      dispatch({ type: "scroll", opacity: computeOpacity(window.scrollY) });
-    };
 
     const handleMouseMove = (event: MouseEvent) => {
       const { clientX, clientY } = event;
@@ -62,18 +63,29 @@ export function BlueprintGrid() {
       dispatch({ type: "mouse", x: clientX, y: clientY, isOverText: isText });
     };
 
-    handleScroll();
-    window.addEventListener("scroll", handleScroll, { passive: true });
     window.addEventListener("mousemove", handleMouseMove, { passive: true });
     return () => {
-      window.removeEventListener("scroll", handleScroll);
       window.removeEventListener("mousemove", handleMouseMove);
     };
   }, []);
 
+  React.useEffect(() => {
+    if (!isHome) return;
+
+    const handleScroll = () => {
+      dispatch({ type: "scroll", opacity: computeOpacity(window.scrollY) });
+    };
+
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [isHome]);
+
   if (!state.isMounted) return null;
 
-  const baseOpacity = state.opacity;
+  const baseOpacity = isHome ? state.opacity : FADED_OPACITY;
   const spotlightOpacity = baseOpacity + (state.isOverText ? -0.02 : 0.035);
 
   return (
