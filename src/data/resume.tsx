@@ -850,6 +850,29 @@ export const DATA = {
       ],
     },
     {
+      title: "irina (AI for Minesweeper)",
+      href: "https://git.new/irina",
+      image: "/irina_banner.webp",
+      dates: "2024",
+      active: true,
+      description:
+        "AI that solves Minesweeper in record-breaking time. Uses a probabilistic approach, scans the grid, trains a Reinforcement Learning model to make decisions.",
+      technologies: [
+        "Reinforcement Learning",
+        "Python",
+        "TensorFlow",
+        "Pytorch",
+        "Jupyter Notebook",
+      ],
+      links: [
+        {
+          icon: <Icons.github className="size-4" />,
+          type: "GitHub",
+          href: "https://git.new/irina",
+        },
+      ],
+    },
+    {
       title: "VibeCheck",
       href: "https://vercel-ff-five.vercel.app",
       image: "/vibecheck.webp",
@@ -959,29 +982,6 @@ export const DATA = {
           icon: <Icons.globe className="size-4" />,
           type: "Website",
           href: "https://dub.sh/xml-builder",
-        },
-      ],
-    },
-    {
-      title: "irina (AI for Minesweeper)",
-      href: "https://git.new/irina",
-      image: "/irina_banner.webp",
-      dates: "2024",
-      active: true,
-      description:
-        "AI that solves Minesweeper in record-breaking time. Uses a probabilistic approach, scans the grid, trains a Reinforcement Learning model to make decisions.",
-      technologies: [
-        "Reinforcement Learning",
-        "Python",
-        "TensorFlow",
-        "Pytorch",
-        "Jupyter Notebook",
-      ],
-      links: [
-        {
-          icon: <Icons.github className="size-4" />,
-          type: "GitHub",
-          href: "https://git.new/irina",
         },
       ],
     },
@@ -1117,6 +1117,31 @@ export const DATA = {
           icon: <Icons.globe className="size-4" />,
           type: "Website",
           href: "https://dub.sh/deepdial",
+        },
+      ],
+    },
+    {
+      title: "Cura Rx",
+      href: "https://devpost.com/software/cura-rx",
+      dates: "2024",
+      active: true,
+      description:
+        "Mental health medication tracker that logs doses, runs voice check-ins, and gives doctors a live view of adherence and mood between appointments. Built the FastAPI backend, Supabase database, FDA drug embeddings, and medicinal chatbot at Cal Hacks 11.0.",
+      technologies: [
+        "Python",
+        "FastAPI",
+        "Supabase",
+        "Vercel",
+        "Hume",
+        "Deepgram",
+        "Llama",
+        "React Native",
+      ],
+      links: [
+        {
+          icon: <Icons.devpost className="size-4" />,
+          type: "Devpost",
+          href: "https://devpost.com/software/cura-rx",
         },
       ],
     },

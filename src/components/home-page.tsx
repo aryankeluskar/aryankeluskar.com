@@ -15,7 +15,7 @@ import { ChevronDown, ChevronUp } from "lucide-react";
 import { Publications } from "@/components/sections/publications";
 import { Writing } from "@/components/sections/writing";
 
-const PROJECTS_TO_SHOW = 12;
+const PROJECTS_TO_SHOW = 10;
 
 export function HomePage() {
   const [showAllProjects, setShowAllProjects] = useState(false);
