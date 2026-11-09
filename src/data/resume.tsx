@@ -260,9 +260,9 @@ export const DATA = {
   ] as HackathonType[],
   writing: [
     {
-      title: "Personalizing Personalization: Post training helps in meta-learning for coding agent memory",
+      title: "Personalizing Personalization",
       href: "https://x.com/soydotrun/status/2118091861260951784",
-      preview: "Today's memory systems are great at remembering and delivering context, but nobody has trained models for knowing how (and how not) to use these systems.",
+      preview: "Post training helps in meta-learning for coding agent memory.",
       thumbnail: "/agent-memory.webp",
     },
     {
