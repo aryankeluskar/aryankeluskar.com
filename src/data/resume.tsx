@@ -263,7 +263,7 @@ export const DATA = {
       title: "Personalizing Personalization: Post training helps in meta-learning for coding agent memory",
       href: "/blog/post-training-helps-in-meta-learning-for-agent-memory",
       preview: "Today's memory systems are great at remembering and delivering context, but nobody has trained models for knowing how (and how not) to use these systems.",
-      thumbnail: "",
+      thumbnail: "/agent-memory.webp",
     },
     {
       title: "Faking a Virtual Filesystem for Browser-based Agents",
