@@ -158,6 +158,7 @@ export function HomePage() {
                 })}
                 {...(project.dates && { dates: project.dates })}
                 {...(project.location && { location: project.location })}
+                {...(project.emojiIcon && { emojiIcon: project.emojiIcon })}
                 {...(project.image && { image: project.image })}
                 {...(project.links && { links: project.links })}
               />

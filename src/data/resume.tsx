@@ -43,6 +43,7 @@ type PublicationType = {
 type HackathonType = {
   title: string;
   project?: string;
+  emojiIcon?: string;
   image?: string;
   dates?: string;
   location?: string;
@@ -76,25 +77,11 @@ export const DATA = {
   summary1:
     "Currently training language models at the [Biodesign Institute](https://www.biorxiv.org/content/biorxiv/early/2026/02/09/2026.02.05.704073.full.pdf). On the side, I've been [researching](https://scholar.google.com/citations?user=wVDeZtcAAAAJ) alignment, post-training and multi-agent systems.",
   summary2:
-    "In an agent-native world, I am obsessed with rabbit-holes of engineering and building things that people love. I love travelling and doing hackathons (recently won two awards at TreeHacks 2026). In my free time, I'm grinding chess or cycling until I run out of roads :)",
+    "In an agent-native world, I am obsessed with rabbit-holes of engineering and building things that people love. I love travelling and taking part in hackathons (most recently won two awards at TreeHacks 2026). In my free time, I'm either grinding chess or cycling until I run out of roads :)",
   avatarUrl: "/pfp.webp",
   hackathons: [
-    // {
-    //   title: "HackIllinois 2026",
-    //   image: "/hackillinois.png",
-    //   dates: "February 2026",
-    //   location: "Urbana-Champaign, IL",
-    //   links: [
-    //     {
-    //       // icon: <Icons.devpost className="size-4" />,
-    //       title: "Turing",
-    //       href: "https://devpost.com/software/turing",
-    //     },
-    //   ],
-    //   description:
-    //     "If you're participating as well, let's connect!"
-    // },
     {
+      emojiIcon: "🌲",
       title: "TreeHacks 2026 (2x Sponsor Track Winner 🏆)",
       image: "/treehacks.png",
       dates: "February 2026",
@@ -110,6 +97,7 @@ export const DATA = {
         "Jiggle Wiggle is a real-time AI movement coach that uses motion capture to analyze your body's movements and provide feedback to improve your limb coordination and balance. We won the Zoom x Render Track and runner-up award in Modal's AI Inference Track."
     },
     {
+      emojiIcon: "🧸",
       title: "CalHacks 2025",
       image: "/calhacks.png",
       dates: "October 2025",
@@ -125,6 +113,7 @@ export const DATA = {
         "Turing watches how you do tasks, how you reply to messages, how you work, and personalizes your computer-use agent so your workflows can be automated based on your patterns and habits."
     },
     {
+      emojiIcon: "🦫",
       title: "HackMIT 2025",
       image: "/hackmit.png",
       dates: "September 2025",
@@ -140,6 +129,7 @@ export const DATA = {
         "We built a RAG for videos and developed it with smart glasses as the base to create a social media platform. I worked on facial recognition and task matching algorithm using OpenCV and Modal's Compute Platform, so the RAG could match the user's contacts to the video content."
     },
     {
+      emojiIcon: "🧡",
       title: "HackIllinois 2025 (Microgrant 🏆)",
       image: "/hackillinois.png",
       dates: "February 2025",
@@ -155,13 +145,14 @@ export const DATA = {
       ],
     },
     {
+      emojiIcon: "🧸",
       title: "CalHacks 2024",
       // project: "https://devpost.com/software/ai-in-education-by-scaleup",
       image: "/calhacks.png",
       dates: "October 2024",
       location: "Berkeley, CA",
       description:
-        "Designed a multi-modal agentic AI System to regularly check-in on patients and detect for potential side effects using sentiment analysis.",
+        "Designed a multi-modal agentic AI System to regularly check-in on patients with voice agents and monitor for potential side effects using sentiment analysis.",
       links: [
         {
           // icon: <Icons.devpost className="size-4" />,
@@ -171,11 +162,12 @@ export const DATA = {
       ],
     },
     {
+      emojiIcon: "🦫",
       title: "HackMIT 2024 (Sponsor Prize 🏆)",
       // project: "https://devpost.com/software/ai-in-education-by-scaleup",
       image: "/hackmit.png",
       description:
-        "Awarded 1000$ in `Best Use of AI without an API`! Built a Python-Flask backend that uses Language Models to re-rank resumes and web-crawl to validate applicant resumes.",
+        "Awarded $1,000 in `Best Use of AI without an API`! Built a Python-Flask backend that uses Language Models to re-rank resumes and web-crawl to validate applicant resumes.",
       dates: "September 2024",
       location: "Cambridge, MA",
       links: [
@@ -187,6 +179,7 @@ export const DATA = {
       ],
     },
     {
+      emojiIcon: "🌉",
       title: "SFHacks 2024 (Sponsor Track 🏆)",
       // project: "https://devpost.com/software/ai-in-education-by-scaleup",
       image: "/sfhacks.png",
@@ -202,6 +195,7 @@ export const DATA = {
       ],
     },
     {
+      emojiIcon: "🐻",
       title: "LAHacks 2024",
       // project: "https://devpost.com/software/ai-in-education-by-scaleup",
       image: "/lahacks.png",
@@ -218,7 +212,8 @@ export const DATA = {
       ],
     },
     {
-      title: "WiCS Coding Contest 2024 + HKD Code-a-thon 2024",
+      emojiIcon: "🐰",
+      title: "WiCS Coding Contest + HKD Code-a-thon",
       image: "/wics.png",
       description:
         "Won 1st Place Undergraduate Team (out of 150+ participants) at WiCS and 1st Place Overall at HKD Code-a-thon. Both of these were Leetcode-style coding competitions with questions in Data Structures and Algorithms.",
@@ -242,6 +237,7 @@ export const DATA = {
     //   ],
     // },
     {
+      emojiIcon: "📚",
       title: "AI in Education by ScaleU (Honorable Mention 🏆)",
       // project: "https://devpost.com/software/ai-in-education-by-scaleup",
       image: "/scaleup.png",
@@ -299,10 +295,10 @@ export const DATA = {
           title: "arXiv",
           href: "https://arxiv.org/abs/2606.27443",
         },
-        // {
-        //   title: "Openreview",
-        //   href: "https://openreview.net/forum?id=MS8jsgZC62",
-        // },
+        {
+          title: "COLM OpenReview",
+          href: "https://openreview.net/forum?id=MS8jsgZC62",
+        },
       ],
     },
     {
@@ -351,7 +347,7 @@ export const DATA = {
         "Reading Documents out of Weight Updates: Hypernetwork-Written LoRA Adapters Linearly Encode Their Document",
       href: "https://openreview.net/forum?id=Vsuhr8sbG8",
       authors: ["<b>Aryan Keluskar</b>"],
-      venue: "COLM Workshop on Context Beyond the Window (<b>Oral</b>, Top 4 of 63 accepted)",
+      venue: "Context Beyond the Window Workshop at COLM 2026 (<b>Selected Oral</b>, Top 4 of 63 accepted)",
       abstract:
         "Hypernetworks such as Doc-to-LoRA write an entire document into a low-rank weight update in a single forward pass. We ask whether the document can be read back out, and find that it can, but only when a hypernetwork wrote it. A linear probe from the low-rank factors of a Doc-to-LoRA update to the document's bag-of-words identifies the held-out document at recall@5 = 0.86–0.99 across three model families (chance < 0.16). Ordinary SGD adapters that internalize the same documents are decodable only at chance, a 10–20σ gap at matched effective update norm. A Doc-to-LoRA update is a near-linear image of the document embedding (held-out R² = 0.97) confined to a low-dimensional subspace, whereas an SGD update is not a function of any shared embedding. However, the leak does not require the weights, and an attacker who can only query a deployed adapter recovers its document from output logits alone (recall@5 0.94, and 0.50 when the API exposes only its top-20 logprobs). An SGD adapter, unreadable from its weights, still regurgitates its document when queried (0.59). Whether a weight update is readable therefore depends on its generator, and any deployed document fine-tune leaks its training text to anyone who can query it.",
       citationLink: "",
@@ -363,22 +359,6 @@ export const DATA = {
         {
           title: "Slides",
           href: "/cbw-orals.pdf",
-        },
-      ],
-    },
-    {
-      title:
-        "Protein Language Models Fail To Capture Contact Predictions Under Invariant Relabeling",
-      href: "https://openreview.net/forum?id=dmp6tFw406",
-      authors: ["Paarth Batra*", "<b>Aryan Keluskar</b>*"],
-      venue: "ICBINB-BIO Workshop at NeurIPS 2026",
-      abstract:
-        "Protein language models (pLMs) produce highly accurate contact maps from single sequence inputs. People often take this accuracy as proof that these models implicitly learn invariant coevolutionary statistics, extracting the same signals as classical alignment-based methods like Potts. In this work, we introduce a diagnostic framework around a global bijective relabeling of the amino-acid alphabet. This transformation permutes residue letters while leaving all alignment-level information, column entropies, and pairwise edit distances unchanged. Pseudolikelihood Potts models and inverse-covariance estimators remain invariant under this transformation, however pLMs fail the test completely. Across multiple architectures (ESM-2, MSA Transformer, AMPLIFY) and model scales (8M to 3B parameters), pLMs suffer a catastrophic collapse in contact map predictions under certain regimes of relabeling. Using Hamming distance controls and biochemical grouping interventions, we attempt to isolate what likely causes this degradation and find that these models rely on explicit, canonical residue identities (\"alphabet anchoring\") rather than pure coevolutionary statistics. Increasing scale makes models more responsive to biochemical classes, but their performance still degrades under relabeling. Our findings show a fundamental gap between neural representation mechanisms and classical coevolutionary models. More broadly, our work showcases how diagnostic perturbations that preserve performance on classical models can expose hidden representation biases and prevent overt reliance on neural black boxes in biological modeling.",
-      citationLink: "",
-      links: [
-        {
-          title: "OpenReview",
-          href: "https://openreview.net/forum?id=dmp6tFw406",
         },
       ],
     },
@@ -399,14 +379,26 @@ export const DATA = {
           title: "GitHub",
           href: "https://github.com/scikit-bio/scikit-bio",
         },
-        // {
-        //   title: "Google Scholar",
-        //   href: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wVDeZtcAAAAJ&citation_for_view=wVDeZtcAAAAJ:qjMakFHDy7sC",
-        // },
-        // {
-        //   title: "Tweet",
-        //   href: "https://x.com/zhuqiyun/status/1999176009497956702",
-        // },
+      ],
+    },
+    {
+      title:
+        "Protein Language Models Fail To Capture Contact Predictions Under Invariant Relabeling",
+      href: "https://arxiv.org/abs/2611.16881",
+      authors: ["Paarth Batra*", "<b>Aryan Keluskar</b>*"],
+      venue: "ICBINB - Failure Modes of AI in Biology Workshop at NeurIPS 2026",
+      abstract:
+        "Protein language models (pLMs) produce highly accurate contact maps from single sequence inputs. People often take this accuracy as proof that these models implicitly learn invariant coevolutionary statistics, extracting the same signals as classical alignment-based methods like Potts. In this work, we introduce a diagnostic framework around a global bijective relabeling of the amino-acid alphabet. This transformation permutes residue letters while leaving all alignment-level information, column entropies, and pairwise edit distances unchanged. Pseudolikelihood Potts models and inverse-covariance estimators remain invariant under this transformation, however pLMs fail the test completely. Across multiple architectures (ESM-2, MSA Transformer, AMPLIFY) and model scales (8M to 3B parameters), pLMs suffer a catastrophic collapse in contact map predictions under certain regimes of relabeling. Using Hamming distance controls and biochemical grouping interventions, we attempt to isolate what likely causes this degradation and find that these models rely on explicit, canonical residue identities (\"alphabet anchoring\") rather than pure coevolutionary statistics. Increasing scale makes models more responsive to biochemical classes, but their performance still degrades under relabeling. Our findings show a fundamental gap between neural representation mechanisms and classical coevolutionary models. More broadly, our work showcases how diagnostic perturbations that preserve performance on classical models can expose hidden representation biases and prevent overt reliance on neural black boxes in biological modeling.",
+      citationLink: "",
+      links: [
+        {
+          title: "NeurIPS OpenReview",
+          href: "https://openreview.net/forum?id=dmp6tFw406",
+        },
+        {
+          title: "arXiv",
+          href: "https://arxiv.org/abs/2611.16881",
+        }
       ],
     },
     {
@@ -442,37 +434,7 @@ export const DATA = {
           href: "https://www.biorxiv.org/content/10.64898/2026.02.05.704073v1",
         }
       ],
-    },
-    // {
-    //   title:
-    //     "Tri-Accel: Curvature-Aware Precision-Adaptive and Memory-Elastic Optimization for Efficient GPU Usage",
-    //   href: "https://arxiv.org/abs/2508.16905",
-    //   venue: "arXiv preprint arXiv:2508.16905",
-    //   // citation: "11 citations",
-    //   // citationLink: "https://scholar.google.com/scholar?oi=bibs&hl=en1&cites=10776899312694291117&as_sdt=5",
-    //   links: [
-    //     {
-    //       title: "Google Scholar",
-    //       href: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=wVDeZtcAAAAJ&citation_for_view=wVDeZtcAAAAJ:u-x6o8ySG0sC",
-    //     },
-    //     // {
-    //     //   title: "Tweet",
-    //     //   href: "https://x.com/HEI/status/1859239058163085709",
-    //     // },
-    //   ],
-    // },
-    // {
-    //   title:
-    //     "Memory-Augmented RAG for Lifelong Autonomous Driving",
-    //   href: "https://soy.run/blog/Memory-Augmented-RAG-Driving",
-    //   venue: "Project Advised by Prof. Hua Wei",
-    //   links: [
-    //     {
-    //       title: "Blog Post",
-    //       href: "https://soy.run/blog/Memory-Augmented-RAG-Driving",
-    //     },
-    //   ],
-    // },
+    }
   ] as PublicationType[],
   skills: [
     {

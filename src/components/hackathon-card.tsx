@@ -7,6 +7,7 @@ interface Props {
   description?: string;
   dates?: string;
   location?: string;
+  emojiIcon?: string;
   image?: string;
   links?: readonly {
     icon: React.ReactNode;
@@ -20,6 +21,7 @@ export function HackathonCard({
   description,
   dates,
   location,
+  emojiIcon,
   image,
   links,
 }: Props) {
@@ -27,8 +29,16 @@ export function HackathonCard({
     <li className="relative ml-10 py-4">
       <div className="absolute -left-16 top-2 flex items-center justify-center bg-white rounded-full">
         <Avatar className="border size-12 m-auto">
-          <AvatarImage src={image} alt={title} className="object-contain" />
-          <AvatarFallback>{title[0]}</AvatarFallback>
+          {emojiIcon ? (
+            <AvatarFallback className="bg-white text-2xl">
+              {emojiIcon}
+            </AvatarFallback>
+          ) : (
+            <>
+              <AvatarImage src={image} alt={title} className="object-contain" />
+              <AvatarFallback>{title[0]}</AvatarFallback>
+            </>
+          )}
         </Avatar>
       </div>
       <div className="flex flex-1 flex-col justify-start gap-1">
