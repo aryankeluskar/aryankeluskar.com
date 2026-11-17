@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026-11-14T07:44:39.452Z",
+  "updatedAt": "2026-11-17T07:44:37.394Z",
   "source": "serpapi",
   "authorId": "wVDeZtcAAAAJ",
   "totals": {
-    "citations": 129,
-    "hIndex": 2,
+    "citations": 130,
+    "hIndex": 3,
     "i10Index": 2
   },
   "articles": [
@@ -19,6 +19,12 @@
       "title": "Evaluating Adaptive Personalization of Educational Readings with Simulated Learners",
       "citations": 1,
       "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=3911021985014878544"
+    },
+    {
+      "key": "protein language models fail to capture contact predictions under invariant relabeling",
+      "title": "Protein Language Models Fail To Capture Contact Predictions Under Invariant Relabeling",
+      "citations": 0,
+      "link": ""
     },
     {
       "key": "scikit bio a fundamental python library for biological omic data analysis",
@@ -41,7 +47,7 @@
     {
       "key": "when does personality composition matter for multi agent llm teams",
       "title": "When Does Personality Composition Matter for Multi-Agent LLM Teams?",
-      "citations": 2,
+      "citations": 3,
       "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=12310471239664580850"
     }
   ]
