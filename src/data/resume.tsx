@@ -313,6 +313,10 @@ export const DATA = {
       citationLink: "https://scholar.google.com/scholar?oi=bibs&hl=en1&cites=10776899312694291117&as_sdt=5",
       links: [
         {
+          title: "Project page",
+          href: "https://llm-ambiguity.github.io/",
+        },
+        {
           title: "arXiv",
           href: "https://arxiv.org/pdf/2411.12395",
         },
